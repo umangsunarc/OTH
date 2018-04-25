@@ -1,0 +1,3312 @@
+﻿@model Wollo.Web.Models.QueueTradingModel
+@{
+    ViewBag.Title = @Html.DisplayNameFor(model => model.QueueTradingViewModel.trading);
+}
+<style>
+    .volumehrading {
+        font-size: 25px;
+        color: white;
+    }
+
+    #hidedisplayask {
+        display: initial;
+    }
+
+    .left-td {
+        width: 50%;
+    }
+
+    #hidedisplaybid {
+        display: initial;
+    }
+
+    #tooltip {
+        border-radius: 10px;
+        background-color: white;
+        border: 0px solid;
+        color: #272727;
+        font-size: x-small;
+    }
+
+    .volumeDivFirstLeft {
+        float: left;
+        text-align: center;
+        width: 50%;
+        //text-transform: capitalize;
+        //font-size: larger;
+        //color: gray;
+        //font-weight: 500;
+    }
+
+    .volumeDivFirstRight {
+        float: left;
+        text-align: center;
+        //font-size: larger;
+        width: 50%;
+    }
+
+    .volumeDivSecondLeft {
+        float: left;
+        width: 50%;
+        //font-size: larger;
+        //color: gray;
+        //font-weight: 500;
+        text-align: center;
+    }
+
+    .volumeDivSecondRight {
+        float: left;
+        text-align: center;
+        //font-size: larger;
+        width: 50%;
+    }
+
+    #tdHideLeftBorder {
+        border-left-color: transparent;
+        border-left-width: 10px;
+    }
+
+    td {
+        width: 50px;
+    }
+
+    .table th {
+        text-align: center;
+    }
+
+    .table td {
+        text-align: center;
+    }
+
+    .modal-open {
+        overflow: scroll;
+    }
+
+    #tblTraded {
+        border-collapse: collapse;
+        width: 100%;
+        -webkit-overflow-scrolling: touch;
+        -webkit-border-horizontal-spacing: 0;
+    }
+
+        #tblTraded th,
+        #tblTraded td {
+            text-align: center;
+            padding: 10px 10px;
+            width: 28%;
+            font-size: small;
+            min-width: 100px;
+            word-wrap: break-word;
+            word-break: break-all;
+            -webkit-hyphens: auto;
+            hyphens: auto;
+        }
+
+        #tblTraded thead {
+            border: none;
+        }
+
+            #tblTraded thead tr {
+                display: block;
+                position: relative;
+            }
+
+        #tblTraded tbody {
+            display: block;
+            overflow: auto;
+            max-height: 200px;
+        }
+
+    /*For My Order table */
+    #tblOrder {
+        border-collapse: collapse;
+        width: 100%;
+        -webkit-overflow-scrolling: touch;
+        -webkit-border-horizontal-spacing: 0;
+    }
+
+        #tblOrder th,
+        #tblOrder td {
+            text-align: center;
+            padding: 10px 10px;
+            width: 28%;
+            font-size: small;
+            min-width: 100px;
+            //word-wrap: break-word;
+            //word-break: break-all;
+            -webkit-hyphens: auto;
+            hyphens: auto;
+        }
+
+        #tblOrder thead {
+            border: none;
+        }
+
+            #tblOrder thead tr {
+                display: block;
+                position: relative;
+            }
+
+        #tblOrder tbody {
+            display: block;
+            overflow: auto;
+            max-height: 200px;
+        }
+
+    .btn-color {
+        background-color: #337ab7;
+        color: white;
+    }
+
+    #tblOrder th, #tblOrder td {
+        padding: 10px 9px;
+        width: 16%;
+        padding-left: 12px;
+    }
+</style>
+
+<body class="modal-open">
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <!-- Page Heading -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">
+                        @Html.LabelFor(model => model.QueueTradingViewModel.trading)
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li class="active">
+                            <i class="fa fa-dashboard"></i> @Html.LabelFor(model => model.QueueTradingViewModel.dashboard_trading)
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    @{string select_label = @Html.DisplayNameFor(y => y.QueueTradingViewModel.select_stock).ToString();}
+                    @Html.DropDownList("Stock", new SelectList(ViewBag.StockCode, "id", "full_name", ViewBag.StockId), select_label, new { @onchange = "GetAllQueueTradingDataByStock()", @class = "btn btn-default" })
+                    <select id="chartUpdate" style="visibility:hidden;">
+                        <option value="0" selected="selected"></option>
+                        <option value="1"></option>
+                    </select>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-sm-12 btn-group btn-group-justified">
+                    <div class="btn-group">
+                        <button type="button" id="OneDay" class="btn btn-md btn-color" onclick="GetChartByStock()">1D</button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" id="FiveDay" class="btn btn-md btn-warning">5D</button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" id="OneMonth" class="btn btn-md btn-color">1M</button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" id="SixMonth" class="btn btn-md btn-warning">6M</button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" id="OneYear" class="btn btn-md btn-color">1Y</button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" id="FiveYear" class="btn btn-md btn-warning">5Y</button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" id="Total" class="btn btn-md btn-color">T</button>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <br />
+                <div class="col-sm-12">
+                    <div style="height: 20em;">
+                        @*background-color: azure;*@
+
+                        <div id="chartDiv" style="height: 20em;width:100%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div style="height: 12em;">
+                        @*background-color:aliceblue;*@
+                        <div id="volumeChartDiv" style="height: 12em;width:100%;"></div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div id="row_statistics" class="col-sm-12">
+                    @*@{string lastTraded=Model.QueueData.lastTradedPrice.}*@
+                    <table class="table table-bordered table-responsive">
+                        <thead>
+                            <tr class="volumehrading bid-loud blue">
+                                <td style="padding-top:26px;">
+                                    <strong><span id="lastTradedPrice">@Model.QueueTradingViewModel.QueueData.lastTradedPrice.ToString("0.00")</span></strong>
+                                    <strong>@*@Html.DisplayFor(model => model.QueueData.lastTradedPrice.ToString("0.00"))*@</strong>
+                                </td>
+                                <td id="tdHideLeftBorder">
+                                    @{float lasttradeddiff = Model.QueueTradingViewModel.QueueData.lastTradedPriceDifference;}
+                                    @if (lasttradeddiff < 0)
+                                    {
+                                        <div class="elem_price_difference" style="color:red;"><strong><span id="lastTradedPriceDifference">@Model.QueueTradingViewModel.QueueData.lastTradedPriceDifference.ToString("0.00")</span></strong></div>
+                                        <div class="elem_percent_difference" style="color:red;"><strong><span id="lastTradedPricePercentDifference">@Model.QueueTradingViewModel.QueueData.lastTradedPricePercentDifference.ToString("0.00")</span>%</strong></div>
+                                    }
+                                    else
+                                    {
+                                        <div class="elem_price_difference" style="color: greenyellow;"><strong><span id="lastTradedPriceDifference">@Model.QueueTradingViewModel.QueueData.lastTradedPriceDifference.ToString("0.00")</span></strong></div>
+                                        <div class="elem_percent_difference" style="color: greenyellow;"><strong><span id="lastTradedPricePercentDifference">@Model.QueueTradingViewModel.QueueData.lastTradedPricePercentDifference.ToString("0.00")</span>%</strong></div>
+                                    }
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="left-td"><div class="volumeDivFirstLeft" style="color: black; ">@Html.LabelFor(model => model.QueueTradingViewModel.last_traded)</div><div class="volumeDivFirstRight"></div></td>
+                                <td class="right-td"><div style="color:black;text-align:center"> <strong><span id="lastTradedTime">@Html.DisplayFor(model => model.QueueTradingViewModel.QueueData.lastTradedTime)</span></strong></div><div class="volumeDivSecondRight"></div></td> @*21 May 2016, 5:00 PM   GMT +8*@
+                            </tr>
+                            <tr>
+                                <td class="left-td">
+                                    <div class="volumeDivFirstLeft">@Html.LabelFor(model => model.QueueTradingViewModel.QueueData.dayHigh)</div>
+                                    <div class="volumeDivFirstRight">
+                                        @if (Model.QueueTradingViewModel.QueueData.dayHigh == 0.0F)
+                                        {
+                                            <span id="dayHigh">-</span>
+                                        }
+                                        else
+                                        {
+                                            <span id="dayHigh">@Model.QueueTradingViewModel.QueueData.dayHigh.ToString("0.00")</span>
+                                        }
+                                    </div>
+                                </td>
+                                <td class="right-td">
+                                    <div class="volumeDivSecondLeft">@Html.LabelFor(model => model.QueueTradingViewModel.QueueData.dayLow)</div>
+                                    <div class="volumeDivSecondRight">
+                                        @if (Model.QueueTradingViewModel.QueueData.dayLow == 0.0F)
+                                        {
+                                            <span id="dayLow">-</span>
+                                        }
+                                        else
+                                        {
+                                            <span id="dayLow">@Model.QueueTradingViewModel.QueueData.dayLow.ToString("0.00")</span>
+                                        }
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left-td">
+                                    <div class="volumeDivFirstLeft">@Html.LabelFor(model => model.QueueTradingViewModel.QueueData.prevClose)</div>
+                                    <div class="volumeDivFirstRight">
+                                        @if (Model.QueueTradingViewModel.QueueData.prevClose == 0.0F)
+                                        {
+                                            <span id="prevClose">-</span>
+                                        }
+                                        else
+                                        {
+                                            <span id="prevClose">@Model.QueueTradingViewModel.QueueData.prevClose.ToString("0.00")</span>
+                                        }
+                                    </div>
+                                </td>
+                                <td class="right-td">
+                                    <div class="volumeDivSecondLeft">@Html.LabelFor(model => model.QueueTradingViewModel.QueueData.open)</div>
+                                    <div class="volumeDivSecondRight">
+                                        @if (Model.QueueTradingViewModel.QueueData.open == 0.0F)
+                                        {
+                                            <span id="open">-</span>
+                                        }
+                                        else
+                                        {
+                                            <span id="open">@Model.QueueTradingViewModel.QueueData.open.ToString("0.00")</span>
+                                        }
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left-td">
+                                    <div class="volumeDivFirstLeft">
+                                        @Html.LabelFor(model => model.QueueTradingViewModel.totatl_volume)
+                                    </div>
+                                    <div class="volumeDivFirstRight">
+                                        @if (Model.QueueTradingViewModel.QueueData.totatlVolume == 0)
+                                        {
+                                            <span id="totatlVolume">-</span>
+                                        }
+                                        else
+                                        {
+                                            <span id="totatlVolume">@Html.DisplayFor(model => model.QueueTradingViewModel.QueueData.totatlVolume)</span>
+                                        }
+                                    </div>
+                                </td>
+                                <td class="right-td">
+                                    <div class="volumeDivSecondLeft">@Html.LabelFor(model => model.QueueTradingViewModel.QueueData.noOfTraded)</div>
+                                    <div class="volumeDivSecondRight">
+                                        @if (Model.QueueTradingViewModel.QueueData.noOfTraded == 0)
+                                        {
+                                            <span id="noOfTraded">-</span>
+                                        }
+                                        else
+                                        {
+                                            <span id="noOfTraded">@Html.DisplayFor(model => model.QueueTradingViewModel.QueueData.noOfTraded)</span>
+                                        }
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left-td">
+                                    <div class="volumeDivFirstLeft">@Html.LabelFor(model => model.QueueTradingViewModel.fiftytwo_Weeks)</div>
+                                    <div class="volumeDivFirstRight">
+                                        <span id="oneYearMinMaxRate">@Html.DisplayFor(model => model.QueueTradingViewModel.QueueData.oneYearMinMaxRate)</span>
+                                    </div>
+                                </td>
+                                <td class="right-td">
+                                    <div class="volumeDivSecondLeft">@Html.LabelFor(model => model.QueueTradingViewModel.value_traded)</div>
+                                    <div class="volumeDivSecondRight">
+                                        @if (Model.QueueTradingViewModel.QueueData.valueTraded == 0.0F)
+                                        {
+                                            <span id="valueTraded">-</span>
+                                        }
+                                        else
+                                        {
+                                            <span id="valueTraded">@Model.QueueTradingViewModel.QueueData.valueTraded.ToString("0.00")</span>
+                                        }
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            <h2 class="page-header">@Html.LabelFor(model => model.QueueTradingViewModel.in_queue)</h2>
+            <div class="col-lg-6">
+                @if (!User.IsInRole("Super Admin 1") && !User.IsInRole("Super Admin 2"))
+                {
+                    <div class="col-lg-6 bid-loud blue bidDiv" style="font-size:18px;">
+                        <i class="fa fa-signal"></i>&nbsp;<span>@Html.LabelFor(model => model.QueueTradingViewModel.bid_property, new { id = "hidedisplaybid" })</span>
+                    </div>
+                }
+                else
+                {
+                    <div class="col-lg-6 bid-loud blue" style="font-size:18px;">
+                        <i class="fa fa-signal"></i>&nbsp;<span>@Html.LabelFor(model => model.QueueTradingViewModel.bid_property, new { id = "hidedisplaybid" })</span>
+                    </div>
+                }
+                <div class="col-lg-6 bid-loud orange" style="font-size:18px;">
+                    <i class="fa fa-usd"></i> 		 <span id="bidRateDiv">@Model.QueueTradingViewModel.QueueData.highestBidRate.ToString("0.00")@*@Html.DisplayFor(model => model.QueueData.highestBidRate)*@</span>
+                </div>
+                <div class="clearfix"></div>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover table-striped" id="tblBid">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.LabelFor(model => model.QueueTradingViewModel.price)
+                                </th>
+                                <th>
+                                    @Html.LabelFor(model => model.QueueTradingViewModel.quantity)
+                                </th>
+                                <th>
+                                    @Html.LabelFor(model => model.QueueTradingViewModel.number_of_users)
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var group in Model.QueueTradingViewModel.Bid.GroupBy(item => item.rate))
+                            {
+                                <tr>
+                                    <td>
+                                        @{string rate = group.FirstOrDefault().rate.ToString("0.00");}
+                                        @*@Html.DisplayFor(model => group.FirstOrDefault().rate.ToString("0.00"))*@
+                                        @Html.Raw(rate)
+                                    </td>
+                                    <td>
+                                        @group.Sum(i => i.reward_points)
+                                    </td>
+                                    <td>
+                                        @group.Count()
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div class="col-lg-6">
+                @if (!User.IsInRole("Super Admin 1") && !User.IsInRole("Super Admin 2"))
+                {
+                    <div class="col-lg-6 bid-loud blue askDiv" style="font-size:18px;">
+                        <i class="fa fa-signal"></i>&nbsp;<span>@Html.LabelFor(model => model.QueueTradingViewModel.ask, new { @id = "hidedisplayask" })</span>
+                    </div>
+                }
+                else
+                {
+                    <div class="col-lg-6 bid-loud blue" style="font-size:18px;">
+                        <i class="fa fa-signal"></i>&nbsp;<span>@Html.LabelFor(model => model.QueueTradingViewModel.ask, new { @id = "hidedisplayask" })</span>
+                    </div>
+                }
+
+                <div class="col-lg-6 bid-loud orange" style="font-size:18px;">
+                    <i class="fa fa-usd"></i> <span id="askRateDiv">@Model.QueueTradingViewModel.QueueData.LowestAskRate.ToString("0.00")@*@Html.DisplayFor(model => model.QueueData.LowestAskRate)*@</span>
+                </div>
+                <div class="clearfix"></div>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover table-striped" id="tblAsk">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.LabelFor(model => model.QueueTradingViewModel.price)
+                                </th>
+                                <th>
+                                    @Html.LabelFor(model => model.QueueTradingViewModel.quantity)
+                                </th>
+                                <th>
+                                    @Html.LabelFor(model => model.QueueTradingViewModel.number_of_users)
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var group in Model.QueueTradingViewModel.Ask.GroupBy(item => item.rate))
+                            {
+                                <tr>
+                                    <td>
+                                        @*@Html.DisplayFor(model => group.FirstOrDefault().rate.ToString("0.00"))*@
+                                        @{string rate = group.FirstOrDefault().rate.ToString("0.00");}
+                                        @*@Html.DisplayFor(model => group.FirstOrDefault().rate.ToString("0.00"))*@
+                                        @Html.Raw(rate)
+                                    </td>
+                                    <td>
+                                        @group.Sum(i => i.reward_points)
+                                    </td>
+                                    <td>
+                                        @group.Count()
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <br />
+            </div>
+
+            <div class="clearfix"></div>
+            <h2 class="page-header"> @Html.LabelFor(model => model.QueueTradingViewModel.traded)</h2>
+            <div class="col-lg-12">
+                <div class="table-responsive">
+                    <table id="tblTraded" class="table table-hover table-striped">
+                        <thead>
+                            <tr class="info">
+                                <th>
+                                    @Html.LabelFor(model => model.QueueTradingViewModel.timestamp)
+                                </th>
+                                <th>
+                                    @Html.LabelFor(model => model.QueueTradingViewModel.TradedHistory.FirstOrDefault().queue_action)
+                                </th>
+                                <th>
+                                    @Html.LabelFor(model => model.QueueTradingViewModel.quantity)
+                                </th>
+                                <th>
+                                <th>@*<label for="bid_price">Bid Price</label>*@ @Html.LabelFor(model => model.QueueTradingViewModel.TradedHistory.FirstOrDefault().bid_price)</th>
+                                @*
+                                    <th>@Html.LabelFor(model => model.TradedHistory.FirstOrDefault().bid_price)</th>*@
+                                <th>@Html.LabelFor(model => model.QueueTradingViewModel.TradedHistory.FirstOrDefault().ask_price)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.QueueTradingViewModel.TradedHistory)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(model => item.updated_date)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(model => item.queue_action)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(model => item.amount)
+                                    </td>
+                                    <td>
+                                        @{string bidrice = item.bid_price.ToString("0.00");}
+                                        @Html.Raw(bidrice)
+                                        @*@Html.DisplayFor(model => item.bid_price)*@
+                                    </td>
+                                    <td>
+                                        @{string askrice = item.ask_price.ToString("0.00");}
+                                        @Html.Raw(askrice)
+                                        @*@Html.DisplayFor(model => item.ask_price)*@
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <br />
+            </div>
+
+            <!-- /#page-wrapper -->
+            @{string UserId = ViewBag.user_id;}
+            @if (!User.IsInRole("Super Admin 1") && !User.IsInRole("Super Admin 2"))
+            {
+                <h2 class="page-header"> <strong>@Html.LabelFor(model => model.QueueTradingViewModel.my_orders)</strong></h2>
+                <div class="col-lg-12">
+                    <div id="upper-birth">
+
+                        <div class="table-responsive">
+                            <table id="tblOrder" class="table table-hover table-striped">
+                                <thead>
+                                    <tr class="info">
+                                        <th style="">@Html.LabelFor(model => model.QueueTradingViewModel.Stock_Code.FirstOrDefault().stock_code)</th>
+                                        <th style="">@Html.LabelFor(model => model.QueueTradingViewModel.Transaction_History.FirstOrDefault().created_date)</th>
+                                        <th style="">@Html.LabelFor(model => model.QueueTradingViewModel.Transaction_History.FirstOrDefault().id)</th>
+                                        <th style="">@Html.LabelFor(model => model.QueueTradingViewModel.Stock_Code.FirstOrDefault().stock_name)</th>
+                                        <th style="">@Html.LabelFor(model => model.QueueTradingViewModel.Transaction_History.FirstOrDefault().QueueStatusMaster.name)</th>
+                                        <th style="">@Html.LabelFor(model => model.QueueTradingViewModel.Transaction_History.FirstOrDefault().queue_action)</th>
+                                        <th style="">@Html.LabelFor(model => model.QueueTradingViewModel.Transaction_History.FirstOrDefault().original_order_quantity)</th>
+                                        <th style="">@Html.LabelFor(model => model.QueueTradingViewModel.Transaction_History.FirstOrDefault().reward_points)</th>
+                                        <th style="">@Html.LabelFor(model => model.QueueTradingViewModel.Transaction_History.FirstOrDefault().price)</th>
+                                        <th style="">@Html.LabelFor(model => model.QueueTradingViewModel.actions)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.QueueTradingViewModel.Transaction_History)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(model => item.StockCode.stock_code)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(model => item.created_date)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(model => item.id)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(model => item.StockCode.stock_name)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(model => item.QueueStatusMaster.name)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(model => item.queue_action)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(model => item.original_order_quantity)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(model => item.reward_points)
+                                            </td>
+                                            <td>
+                                                @{string price = item.price.ToString("0.00");}
+                                                @Html.Raw(price)
+                                                @*@Html.DisplayFor(model => item.price)*@
+                                            </td>
+                                            @if (item.QueueStatusMaster.name.ToLower() == "queued")
+                                            {
+                                                <td>
+                                                    <a id='@item.id' data-stockid="@item.stock_code_id" onclick="CancelTransaction(this)">@Html.LabelFor(model => model.QueueTradingViewModel.cancel)</a> |
+                                                    <a href="javascript:void(0)" data-id="@item.id" data-queue-action="@item.queue_action" data-price="@item.price" data-amount="@item.reward_points" data-stockid="@item.stock_code_id" class="edit">@Html.LabelFor(model => model.QueueTradingViewModel.modify)</a>
+                                                </td>
+                                            }
+                                            else
+                                            {
+                                                <td></td>
+                                            }
+
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            }
+            <div class="clearfix"></div>
+            <div class="row">
+                <div class="col-md-12"></div>
+            </div>
+
+            <div class="modal fade" id="bidModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document" style="width:60%;">
+                    <div class="modal-content" style="text-align:center;">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Update Bid</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <form class="form-inline">
+                                    <strong>@Html.LabelFor(model => model.QueueTradingViewModel.i_want_to_buy)</strong>
+                                    <div class="form-group">
+                                        <input type="hidden" id="BidStock" />
+                                        <label class="sr-only" for="bidamount">Amount (in dollars)</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">$</div>
+                                            <input type="text" class="form-control" id="updatebidamount" placeholder="Amount">
+                                            <div class="input-group-addon">.00</div>
+                                        </div>
+                                    </div>
+                                    <strong>@Html.LabelFor(model => model.QueueTradingViewModel.for_a_price_of)</strong>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="bidprice">Amount (in dollars)</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">$</div>
+                                            <input type="text" class="form-control" id="updatebidprice" placeholder="Price">
+                                            <div class="input-group-addon">.00</div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">@Html.LabelFor(model => model.QueueTradingViewModel.cancel)</button>
+                            <button type="button" class="btn btn-primary UpdateBid">@Html.LabelFor(model => model.QueueTradingViewModel.modify)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="askModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document" style="width:60%;">
+                    <div class="modal-content" style="text-align:center;">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Update Ask</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <form class="form-inline">
+                                    <strong>I want to sell</strong>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="bidamount">Amount (in dollars)</label>
+                                        <div class="input-group">
+                                            <input type="hidden" id="AskStock" />
+                                            <div class="input-group-addon">$</div>
+                                            <input type="text" class="form-control" id="updateaskamount" placeholder="Amount">
+                                            <div class="input-group-addon">.00</div>
+                                        </div>
+                                    </div>
+                                    <strong>@Html.LabelFor(model => model.QueueTradingViewModel.for_a_price_of)</strong>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="bidprice">Amount (in dollars)</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">$</div>
+                                            <input type="text" class="form-control" id="updateaskprice" placeholder="Price">
+                                            <div class="input-group-addon">.00</div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">@Html.LabelFor(model => model.QueueTradingViewModel.cancel)</button>
+                            <button type="button" class="btn btn-primary UpdateAsk">@Html.LabelFor(model => model.QueueTradingViewModel.modify)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--model window-->
+            <div class="modal fade" id="addBidModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content" style="text-align:center;">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">@Html.DisplayNameFor(model => model.QueueTradingViewModel.bid_property)</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="dropdown col-sm-3">
+                                    <strong>@Html.LabelFor(model => model.QueueTradingViewModel.i_want_to_buy)</strong>
+                                </div>
+                                <div class="dropdown col-sm-6">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="bidamount">Amount (in dollars)</label>
+                                        <div class="input-group">
+                                            <div id="divbuyminus" class="input-group-addon">-</div>
+                                            <input type="text" class="form-control" id="bidamount" placeholder="Quantity(Lot)">
+                                            <div id="divbuyplus" class="input-group-addon">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <br />
+                                <div class="dropdown col-sm-3">
+                                    <strong>@Html.LabelFor(model => model.QueueTradingViewModel.for_a_price_of)</strong>
+                                </div>
+                                <div class="dropdown col-sm-6">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="bidprice">Amount (in dollars)</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">$</div>
+                                            <input type="text" class="form-control" id="bidprice" placeholder=@Html.DisplayNameFor(model => model.QueueTradingViewModel.amount)>
+                                            <div class="input-group-addon">.00</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="clearfix"></div>
+                                <br />
+                                <div class="dropdown col-sm-12">
+                                    <b>@Html.DisplayNameFor(model => model.QueueTradingViewModel.price_per_Lot): $ <label id="lblpriceperlotbuy"> </label></b>
+                                </div>
+                                <div class="dropdown col-sm-12">
+                                    @{string point = Model.QueueTradingViewModel.unit_master.points_equivalent > 1 ? "Points" : "Point";}
+                                    <b>@Html.DisplayNameFor(model => model.QueueTradingViewModel.total_points) (<label id="lbllotbuy">1</label> lot = @Html.DisplayFor(x => x.QueueTradingViewModel.unit_master.points_equivalent) @Html.Raw(point)): <label id="lbllotbuytotal"></label></b>
+                                </div>
+                                <div class="dropdown col-sm-2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">@Html.LabelFor(model => model.QueueTradingViewModel.cancel)</button>
+                            <input type="button" class="btn btn-primary" value="Buy" id="buyBtn" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="addAskModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content" style="text-align:center;">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">@Html.DisplayNameFor(model => model.QueueTradingViewModel.ask_property)</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="dropdown col-sm-3">
+                                    <strong>I want to sell</strong>
+                                </div>
+                                <div class="dropdown col-sm-6">
+
+                                    <div class="form-group">
+                                        <label class="sr-only" for="askamount">Quantity(Lot)</label>
+                                        <div class="input-group">
+                                            <div id="divsellminus" class="input-group-addon">-</div>
+                                            <input type="text" class="form-control" id="askamount" placeholder="Quantity(Lot)">
+                                            <div id="divsellplus" class="input-group-addon">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <br />
+                                <div class="dropdown col-sm-3">
+                                    <strong>@Html.LabelFor(model => model.QueueTradingViewModel.for_a_price_of)</strong>
+                                </div>
+                                <div class="dropdown col-sm-6">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="askprice">Amount (in dollars)</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">$</div>
+                                            <input type="text" class="form-control" id="askprice" placeholder=@Html.DisplayNameFor(model => model.QueueTradingViewModel.amount)>
+                                            <div class="input-group-addon">.00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <br />
+                                <div class="dropdown col-sm-12">
+                                    <b>@Html.DisplayNameFor(model => model.QueueTradingViewModel.price_per_Lot): $ <label id="lblpriceperlotsell"> </label></b>
+                                </div>
+                                <div class="dropdown col-sm-12">
+                                    <b>@Html.DisplayNameFor(model => model.QueueTradingViewModel.total_points) (<label id="lbllotsell">1</label> lot = @Html.DisplayFor(x => x.QueueTradingViewModel.unit_master.points_equivalent) @Html.Raw(point)): <label id="lbllotselltotal"></label></b>
+                                </div>
+                                <div class="dropdown col-sm-2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">@Html.LabelFor(model => model.QueueTradingViewModel.cancel)</button>
+                            <input type="button" class="btn btn-primary" value=@Html.DisplayNameFor(model => model.QueueTradingViewModel.sell) id="sellBtn" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+@section scripts{
+    <!--Reference the SignalR library. -->
+    <script src="~/js/jquery.js"></script>
+    <script src="/Scripts/jquery.signalR-2.2.0.min.js"></script>
+    <!--Reference the autogenerated SignalR hub script. -->
+    <script src="/signalr/hubs"></script>
+    @*
+        <script src="/Scripts/signalR/queueHub.server.js"></script>
+        <script src="~/Scripts/signalR/queueHub.client.js"></script>*@
+    @*
+        <script src="~/Scripts/jquery-1.7.1.js"></script>*@
+    @*
+        <script src="~/Scripts/bootstrap.js"></script>*@
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/jquery.flot.js"></script>
+    <script src="~/Scripts/jquery.flot.time.js"></script>
+    <script src="~/Scripts/jquery.flot.axislabels.js"></script>
+    <script src="~/Scripts/jquery.flot.navigate.min.js"></script>
+    @*
+        <script src="~/Scripts/jquery.flot.selection.js"></script>*@
+    <script src="~/Scripts/jquery.flot.image.js"></script>
+    @*
+        <script src="~/Scripts/jquery.flot.pie.js"></script>*@
+    <script src="~/Scripts/jquery.flot.resize.js"></script>
+    @*
+        <script src="~/Scripts/jquery.flot.stack.js"></script>*@
+    <script src="~/Scripts/jquery.flot.symbol.js"></script>
+    <script src="~/Scripts/jquery.flot.crosshair.js"></script>
+
+    <script>
+        var language = '@ViewBag.CurrentLanguage';
+        $(document).ready(function () {
+            $('#myGroup ul li a').click(function () {
+                $('#myGroup ul li ul.collapse ').removeClass('in');
+                $('#myGroup ul li').removeClass('active');
+            });
+            GetChartByStock();
+        })
+
+        $("#chartUpdate").change(function () {
+            if (type == "1D") {
+                GetChartByStock();
+            }
+            else if (type == "5D") {
+                $("#FiveDay").trigger('click');
+            }
+            else if (type == "1M") {
+                $("#OneMonth").trigger('click');
+            }
+            else if (type == "6M") {
+                $("#SixMonth").trigger('click');
+            }
+            else if (type == "1Y") {
+                $("#OneYear").trigger('click');
+            }
+            else if (type == "5Y") {
+                $("#FiveYear").trigger('click');
+            }
+            else {
+                $("#Total").trigger('click');
+            }
+
+        })
+
+        var type = "";
+        var queueHub = {
+            send: function (name, stockId, data, userId) {
+                return queue.server.send(name, stockId, data, userId);
+            },
+            drawchart: function (type) {
+                GetChartByStock();
+            }
+        };
+
+        var queue = $.connection.queueHub;
+
+        $.connection.hub.start().done(function () {
+        });
+
+        queue.client.broadcastMessage = function (name, result) {
+            var $ctrl = "";
+            var $bidRateDiv = $("#bidRateDiv");
+            var $askRateDiv = $("#askRateDiv");
+            var $lastTraded = $("#lastTradedPrice");
+            var $lastTradedPriceDifference = $("#lastTradedPriceDifference");
+            var $lastTradedPricePercentDifference = $("#lastTradedPricePercentDifference");
+            var $dayHigh = $("#dayHigh");
+            var $dayLow = $("#dayLow");
+            var $prevClose = $("#prevClose");
+            var $open = $("#open");
+            var $totVolume = $("#totatlVolume");
+            var $numOfTraded = $("#noOfTraded");
+            var $oneYearMinMax = $("#oneYearMinMaxRate");
+            var $valueTraded = $("#valueTraded");
+            var $lastTradedTime = $("#lastTradedTime");
+
+            switch (name) {
+                case 'bid': $ctrl = $('#tblBid tbody'); break;
+                case 'ask': $ctrl = $('#tblAsk tbody'); break;
+                case 'completed': $ctrl = $('#tblTraded tbody'); break;
+                case 'GetQueueData': $ctrl = $("#askRateDiv"); break;
+            }
+            //var $ctrl = name == 'bid' ? $('#tblBid tbody') : $('#tblAsk tbody');
+            var data = JSON.parse(result);
+            if (data.length != 0 && name == "ask") {
+                $("#Stock").val(data[0].stock_code_id);
+            }
+            $ctrl.html('');
+            if (name == 'bid' || name == 'ask') {
+                for (item in data) {
+                    var $tr = $('<tr>').append(
+                       $('<td>').text(data[item].Rate.toFixed(2)),
+                       $('<td>').text(data[item].Points),
+                      $('<td>').text(data[item].Total)
+                      //$('<td>').text(Math.floor((Math.random() * 10) + 1))
+                   );
+                    $ctrl.append($tr);
+                }
+            }
+            else if (name == "GetQueueData") {
+                if (data.lastTradedPriceDifference < 0) {
+                    $('.elem_price_difference').css("color", "red");
+                    $('.elem_percent_difference').css("color", "red");
+                }
+                else {
+                    $('.elem_price_difference').css("color", "greenyellow");
+                    $('.elem_percent_difference').css("color", "greenyellow");
+                }
+                $bidRateDiv.html('');
+                $askRateDiv.html('');
+                $lastTraded.text('');
+                $lastTradedPriceDifference.text('');
+                $lastTradedPricePercentDifference.text('');
+                $dayHigh.text('');
+                $dayLow.text('');
+                $prevClose.text('');
+                $open.text('');
+                $totVolume.text('');
+                $numOfTraded.text('');
+                $oneYearMinMax.text('');
+                $valueTraded.text('');
+                $lastTradedTime.text('');
+
+                $bidRateDiv.html(parseFloat(data.highestBidRate).toFixed(2));
+                $askRateDiv.html(parseFloat(data.LowestAskRate).toFixed(2));
+                $lastTraded.text(parseFloat(data.lastTradedPrice).toFixed(2));
+                $lastTradedTime.text(data.lastTradedTime);
+                $lastTradedPriceDifference.text(parseFloat(data.lastTradedPriceDifference).toFixed(2));
+                $lastTradedPricePercentDifference.text(parseFloat(data.lastTradedPricePercentDifference).toFixed(2));
+                if (data.dayHigh == 0) {
+                    data.dayHigh = "-";
+                    $dayHigh.text(data.dayHigh);
+                }
+                else {
+                    $dayHigh.text(parseFloat(data.dayHigh).toFixed(2));
+                }
+                if (data.dayLow == 0) {
+                    data.dayLow = "-";
+                    $dayLow.text(data.dayLow);
+                }
+                else {
+                    $dayLow.text(parseFloat(data.dayLow).toFixed(2));
+                }
+                if (data.prevClose == 0) {
+                    data.prevClose = "-";
+                    $prevClose.text(data.prevClose);
+                }
+                else {
+                    $prevClose.text(parseFloat(data.prevClose).toFixed(2));
+                }
+                if (data.open == 0) {
+                    data.open = "-";
+                    $open.text(data.open);
+                }
+                else {
+                    $open.text(parseFloat(data.open).toFixed(2));
+                }
+                if (data.totatlVolume == 0) {
+                    data.totatlVolume = "-";
+                    $totVolume.text(data.totatlVolume);
+                }
+                else {
+                    $totVolume.text(data.totatlVolume);
+                }
+                if (data.noOfTraded == 0) {
+                    data.noOfTraded = "-";
+                    $numOfTraded.text(data.noOfTraded);
+                }
+                else {
+                    $numOfTraded.text(data.noOfTraded);
+                }
+                if (data.valueTraded == 0) {
+                    data.valueTraded = "-";
+                    $valueTraded.text(data.valueTraded);
+                }
+                else {
+                    $valueTraded.text(parseFloat(data.valueTraded).toFixed(2));
+                }
+                $oneYearMinMax.text(data.oneYearMinMaxRate);
+            }
+            else {
+                for (item in data) {
+                    var $tr = $('<tr>').append(
+                       $('<td>').text(data[item].created_date),
+                       $('<td>').text(data[item].queue_action),
+                       $('<td>').text(data[item].amount),
+                      $('<td>').text(data[item].bid_price.toFixed(2)),
+                      $('<td>').text(data[item].ask_price.toFixed(2))
+                   );
+                    $ctrl.append($tr);
+                }
+                $('#chartUpdate').trigger('change');
+            }
+        };
+
+        queue.client.createchart = function (type, data) {
+
+        }
+
+        function getObjects(obj, key, val) {
+            var objects = [];
+            for (var i in obj) {
+                if (!obj.hasOwnProperty(i)) continue;
+                if (typeof obj[i] == 'object') {
+                    objects = objects.concat(getObjects(obj[i], key, val));
+                } else if (i == key && obj[key] == val) {
+                    objects.push(obj);
+                }
+            }
+            return objects;
+        }
+
+        function GetChartByStock() {
+            type = "1D";
+            var stockId = $("#Stock option:selected").val();
+            $.ajax({
+                type: 'Get',
+                datatype: 'json',
+                url: '/Trading/CreateMarketRateGraph/' + '?stockId=' + stockId + "&duration=" + 1,
+                success: function (data) {
+                    debugger;
+                    var chartData = JSON.parse(data.data1);
+                    var volumeData = JSON.parse(data.data2);
+                    var priceArray = [];
+                    var volumeArray = [];
+                    $.each(chartData, function (i, val) {
+                        priceArray.push(chartData[i][1]);
+                        volumeArray.push(volumeData[i][1]);
+                    })
+                    var maxPrice = Math.max.apply(Math, priceArray);
+                    var maxVolume = Math.max.apply(Math, volumeArray);
+                    var max = maxVolume > maxPrice ? maxVolume : maxPrice;
+                    var minDate = data.data3;
+                    var maxDate = data.data4;
+                    var toolTipData = JSON.parse(data.data5)
+                    var chartOptions = {
+                        series: {
+                            lines: { show: true, lineWidth: 1, fill: true, fillColor: "#b3daff" },
+                            //points: { show: true,symbol: "circle"  },
+                            shadowSize: 0
+                        },
+                        crosshair: {
+                            mode: "x",
+                            stay: true,
+                            lineWidth: 1
+                        },
+                        colors: ["#006699"],
+                        grid: {
+                            hoverable: true,
+                            //labelMargin: 20,
+                            backgroundColor: "white", //{ colors: ["#D1D1D1", "#7A7A7A"] }
+                            borderWidth: { top: 1, right: 1, bottom: 1, left: 1 },
+                            borderColor: { top: "#e6f5ff", left: "#e6f5ff", right: "#e6f5ff", bottom: "#e6f5ff" },
+                            //margin:10
+                        },
+                        yaxis: {
+                            position: "left",
+                            color: "#e6f5ff",
+                            axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.price)',
+                            axisLabelUseCanvas: true,
+                            axisLabelFontSizePixels: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            //axisLabelPadding: 15,
+                            minTickSize: 1,
+                            tickDecimals: 2,
+                            max: max
+                        },
+                        xaxis: {
+                            color: "#e6f5ff",
+                            axisLabelFontSizePixels: 15,
+                            axisLabelUseCanvas: true,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            mode: "time",
+                            timeformat: "%I:%M %p",//"%H:%M", // HH:MM am/pm  //"%I:%M %p"
+                            tickSize: [1, "hour"], // tick every hour
+                            twelveHourClock: true,
+                            timezone: "HKT",
+                            axisLabelPadding: 15,
+
+                        }
+                    };
+
+                    var volumeChartOptions = {
+                        series: {
+                            bars: {
+                                show: true,
+                                //fill: 1,
+                                //color: "#e6f5ff"
+                            }
+                        },
+                        crosshair: {
+                            mode: "x",
+                            stay: true,
+                            lineWidth: 1
+                        },
+                        bars: {
+                            //align: "center",
+                            //barWidth: 900000,
+                            //color: "#e6f5ff"
+                        },
+                        grid: {
+                            hoverable: true,
+                            //labelMargin: 20,
+                            backgroundColor: "white", //{ colors: ["#D1D1D1", "#7A7A7A"] }
+                            borderWidth: { top: 1, right: 1, bottom: 1, left: 1 },
+                            borderColor: { top: "#e6f5ff", left: "#e6f5ff", right: "#e6f5ff", bottom: "#e6f5ff" },
+                            //margin: 10
+                        },
+                        xaxis: {
+                            color: "#e6f5ff",
+                            axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.trading_time)',
+                            axisLabelFontSizePixels: 15,
+                            axisLabelUseCanvas: true,
+                            axisLabelPadding: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            mode: "time",
+                            timeformat: "%I:%M %p", // HH:MM am/pm
+                            tickSize: [1, "hour"], // tick every hour
+                            twelveHourClock: true,
+                            timezone: "HKT",
+                        },
+                        yaxis: {
+                            position: "left",
+                            color: "#e6f5ff",
+                            axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.volume)',
+                            axisLabelUseCanvas: true,
+                            axisLabelFontSizePixels: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            axisLabelPadding: 15,
+                            minTickSize: 1,
+                            tickDecimals: 0,
+                            max: max
+                        }
+
+                    };
+                    var tradeplot = $.plot($("#chartDiv"), [chartData], chartOptions);
+                    var volumeplot = $.plot("#volumeChartDiv", [volumeData], volumeChartOptions);
+
+                    function showTooltip(x, y, contents) {
+                        $('<div id="tooltip">' + contents + '</div>').css({
+                            position: 'absolute',
+                            display: 'none',
+                            top: y + 5,
+                            left: x + 5,
+                            padding: '5px',
+                            'background-color': ''
+                        }).appendTo("body").fadeIn(200);
+                    }
+
+                    function addZero(x, n) {
+                        while (x.toString().length < n) {
+                            x = "0" + x;
+                        }
+                        return x;
+                    }
+
+                    var previousPoint = null;
+                    $("#chartDiv").bind("plothover", function (event, pos, item) {
+                        tradeplot.setCrosshair({ x: pos.x });
+                        volumeplot.setCrosshair({ x: pos.x });
+                        if (item) {
+                            if (previousPoint != item.dataIndex) {
+                                //previousPoint = item.dataIndex;
+                                //var date = new Date(item.datapoint[0]);
+                                //var mm = date.getMonth() + 1;
+                                //var dd = date.getDate();
+                                //var yy = new String(date.getFullYear()).substring(2);
+                                //var h = addZero(date.getHours(), 2);
+                                //var m = addZero(date.getMinutes(), 2);
+                                //var s = addZero(date.getSeconds(), 2);
+                                //var z = h + ":" + m + ":" + s;
+                                //if (mm < 10) mm = "0" + mm;
+                                //if (dd < 10) dd = "0" + dd;
+                                //var d = dd + "-" + mm + "-" + yy;
+                                ////var h = addZero(date.getHours(), 2);
+                                //var m = addZero(date.getMinutes(), 2);
+                                ////var s = addZero(date.getSeconds(), 2);
+                                ////var z = h + ":" + m + ":" + s;
+                                //$("#tooltip").remove();
+                                ////var x = d,
+                                ////    y = item.datapoint[1].toFixed(3);
+                                //showTooltip(item.pageX, item.pageY, "Date:" + "(" + d + ")" + "," + "<br/>" + "Open: - " + "," + "<br/>" + "Close: - " + "," + "<br/>" + "Low: - " + "," + "<br/>" + "High: - " + "," + "<br/>" + "Volume: - ");
+                                previousPoint = item.dataIndex;
+                                var date = new Date(item.datapoint[0]);
+                                var tipData = getObjects(toolTipData, "Date", item.datapoint[0])
+                                var mm = date.getMonth() + 1;
+                                var dd = date.getDate();
+                                var yy = new String(date.getFullYear()).substring(2);
+                                var open = tipData[0].Open,
+                                close = tipData[0].Close,
+                                low = tipData[0].Low,
+                                high = tipData[0].High,
+                                volume = tipData[0].Volume;
+                                //var h = addZero(date.getHours(), 2);
+                                //var m = addZero(date.getMinutes(), 2);
+                                //var s = addZero(date.getSeconds(), 2);
+                                //var z = h + ":" + m + ":" + s;
+                                if (mm < 10) mm = "0" + mm;
+                                if (dd < 10) dd = "0" + dd;
+                                var d = dd + "-" + mm + "-" + yy;
+                                $("#tooltip").remove();
+                                //var x = d,
+                                //    y = item.datapoint[1].toFixed(3);
+                                showTooltip(item.pageX, item.pageY, "Date:" + "(" + d + ")" + "," + "<br/>" + "Open:" + "(" + open + ")" + "," + "<br/>" + "Close:" + "(" + close + ")" + "," + "<br/>" + "Low:" + "(" + low + ")" + "," + "<br/>" + "High:" + "(" + high + ")" + "," + "<br/>" + "Volume:" + "(" + volume + ")" + "," + "<br/>");
+                            }
+                        }
+                        else {
+                            $("#tooltip").remove();
+                            previousPoint = null;
+                        }
+                    });
+
+                    $("#volumeChartDiv").bind("plothover", function (event, pos, item) {
+                        tradeplot.setCrosshair({ x: pos.x });
+                        volumeplot.setCrosshair({ x: pos.x });
+                    });
+
+                },
+                error: function (e) {
+                    debugger;
+                    $("#loader").css("display", "none");
+                    //alert("Oops! Something went wrong while executing the request.");
+                }
+
+            });
+        }
+
+        $("#FiveDay").click(function () {
+            type = "5D";
+            var stockId = $("#Stock option:selected").val();
+            $.ajax({
+                type: 'Get',
+                datatype: 'json',
+                url: '/Trading/CreateFiveDayGraph/' + '?stockId=' + stockId + "&duration=" + 5,
+                success: function (data) {
+                    var chartData = JSON.parse(data.data1);
+                    var volumeData = JSON.parse(data.data2);
+                    var toolTipData = JSON.parse(data.data3)
+                    var chartOptions = {
+                        series: {
+                            lines: { show: true, lineWidth: 1, fill: true, fillColor: "#b3daff" },
+                            //points: { show: true, symbol: "circle" },
+                            shadowSize: 0
+                        },
+                        crosshair: {
+                            mode: "x",
+                            stay: true,
+                            lineWidth: 1
+                        },
+                        colors: ["#006699"],
+                        grid: {
+                            hoverable: true,
+                            backgroundColor: "white", //{ colors: ["#D1D1D1", "#7A7A7A"] }
+                            borderWidth: { top: 1, right: 1, bottom: 1, left: 1 },
+                            borderColor: { top: "#e6f5ff", left: "#e6f5ff", right: "#e6f5ff", bottom: "#e6f5ff" },
+                            //margin: 10
+                        },
+                        yaxis: {
+                            position: "left",
+                            color: "#e6f5ff",
+                            axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.price)',
+                            axisLabelUseCanvas: true,
+                            axisLabelFontSizePixels: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            //axisLabelPadding: 15,
+                            minTickSize: 1,
+                            tickDecimals: 2,
+                            max: 100
+                        },
+                        xaxis: {
+                            color: "#e6f5ff",
+                            //axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.trading_time)',
+                            axisLabelFontSizePixels: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            axisLabelUseCanvas: true,
+                            mode: "time",
+                            timezone: "HKT",
+                            minTickSize: [1, "day"],
+                            axisLabelPadding: 15,
+                            min: GetMinDate(),
+                            max: GetMaxDate(),
+                            //timeformat: "%a"
+                        }
+                        //zoom: {
+                        //    interactive: true
+                        //},
+                        //pan: {
+                        //    interactive: true
+                        //}
+
+                    };
+
+                    var volumeChartOptions = {
+                        series: {
+                            bars: {
+                                show: true,
+                                //fill: 1,
+                                //color: "#e6f5ff"
+                            }
+                        },
+                        crosshair: {
+                            mode: "x",
+                            stay: true,
+                            lineWidth: 1
+                        },
+                        bars: {
+                            //align: "center",
+                            //barWidth: 900000,
+                            //color: "#e6f5ff"
+                        },
+                        grid: {
+                            hoverable: true,
+                            backgroundColor: "white", //{ colors: ["#D1D1D1", "#7A7A7A"] }
+                            borderWidth: { top: 1, right: 1, bottom: 1, left: 1 },
+                            borderColor: { top: "#e6f5ff", left: "#e6f5ff", right: "#e6f5ff", bottom: "#e6f5ff" },
+                            //margin: 10
+                        },
+                        xaxis: {
+                            axisLabelUseCanvas: true,
+                            color: "#e6f5ff",
+                            axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.trading_time)',
+                            axisLabelFontSizePixels: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            mode: "time",
+                            timezone: "HKT",
+                            minTickSize: [1, "day"],
+                            axisLabelPadding: 15,
+                            min: GetMinDate(),
+                            max: GetMaxDate(),
+                            //timeformat: "%a"
+                        },
+                        yaxis: {
+                            position: "left",
+                            axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.volume)',
+                            color: "#e6f5ff",
+                            axisLabelUseCanvas: true,
+                            axisLabelFontSizePixels: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            axisLabelPadding: 15,
+                            minTickSize: 1,
+                            tickDecimals: 0
+                        }
+
+                    };
+
+                    function GetMaxDate() {
+                        var date = new Date(), y = date.getFullYear(), m = date.getMonth(), d = date.getDate() + 1;
+                        return (new Date(y, m, d)).getTime();
+                    }
+
+                    function GetMinDate() {
+                        $today = new Date();
+                        $startday = new Date($today);
+                        $startday.setDate($today.getDate() - 4); //setDate also supports negative values, which cause the month to rollover.
+                        var y = $startday.getFullYear(), m = $startday.getMonth(), d = $startday.getDate();
+                        return (new Date(y, m, d)).getTime();
+
+                    }
+
+
+                    //$.plot($("#chartDiv"), [chartData], chartOptions);
+                    //$.plot("#volumeChartDiv", [volumeData], volumeChartOptions)
+                    var tradeplot = $.plot($("#chartDiv"), [chartData], chartOptions);
+                    var volumeplot = $.plot("#volumeChartDiv", [volumeData], volumeChartOptions);
+
+                    function showTooltip(x, y, contents) {
+                        $('<div id="tooltip">' + contents + '</div>').css({
+                            position: 'absolute',
+                            display: 'none',
+                            top: y + 5,
+                            left: x + 5,
+                            padding: '5px',
+                            'background-color': ''
+                        }).appendTo("body").fadeIn(200);
+                    }
+
+                    function addZero(x, n) {
+                        while (x.toString().length < n) {
+                            x = "0" + x;
+                        }
+                        return x;
+                    }
+
+                    var previousPoint = null;
+                    $("#chartDiv").bind("plothover", function (event, pos, item) {
+                        tradeplot.setCrosshair({ x: pos.x });
+                        volumeplot.setCrosshair({ x: pos.x });
+                        if (item) {
+                            if (previousPoint != item.dataIndex) {
+                                previousPoint = item.dataIndex;
+                                var date = new Date(item.datapoint[0]);
+                                var tipData = getObjects(toolTipData, "Date", item.datapoint[0])
+                                var mm = date.getMonth() + 1;
+                                var dd = date.getDate();
+                                var yy = new String(date.getFullYear()).substring(2);
+                                var open = tipData[0].Open,
+                                close = tipData[0].Close,
+                                low = tipData[0].Low,
+                                high = tipData[0].High,
+                                volume = tipData[0].Volume;
+                                //var h = addZero(date.getHours(), 2);
+                                //var m = addZero(date.getMinutes(), 2);
+                                //var s = addZero(date.getSeconds(), 2);
+                                //var z = h + ":" + m + ":" + s;
+                                if (mm < 10) mm = "0" + mm;
+                                if (dd < 10) dd = "0" + dd;
+                                var d = dd + "-" + mm + "-" + yy;
+                                $("#tooltip").remove();
+                                //var x = d,
+                                //    y = item.datapoint[1].toFixed(3);
+                                showTooltip(item.pageX, item.pageY, "Date:" + "(" + d + ")" + "," + "<br/>" + "Open:" + "(" + open + ")" + "," + "<br/>" + "Close:" + "(" + close + ")" + "," + "<br/>" + "Low:" + "(" + low + ")" + "," + "<br/>" + "High:" + "(" + high + ")" + "," + "<br/>" + "Volume:" + "(" + volume + ")" + "," + "<br/>");
+                            }
+                        }
+                        else {
+                            $("#tooltip").remove();
+                            previousPoint = null;
+                        }
+                    });
+
+                    $("#volumeChartDiv").bind("plothover", function (event, pos, item) {
+                        tradeplot.setCrosshair({ x: pos.x });
+                        volumeplot.setCrosshair({ x: pos.x });
+                    });
+                    //$.plot($("#chartDiv"), [chartData], {
+                    //    yaxis: {
+                    //    },
+                    //    xaxis: {
+                    //        mode: "time",
+                    //        minTickSize: [1, "hour"],
+                    //        //min: (new Date(1999, 11, 31)).getTime(),
+                    //        //max: (new Date(2000, 0, 1)).getTime(),
+                    //        twelveHourClock: true
+                    //    },
+                    //    "lines": { "show": "true" },
+                    //    "points": { "show": "true" },
+                    //    clickable: true, hoverable: true
+                    //});
+
+                },
+                error: function (e) {
+                    $("#loader").css("display", "none");
+                    alert("Oops! Something went wrong while executing the request.");
+                }
+
+            });
+        })
+
+        $("#OneMonth").click(function () {
+            type = "IM";
+            var stockId = $("#Stock option:selected").val();
+            $.ajax({
+                type: 'Get',
+                datatype: 'json',
+                url: '/Trading/CreateOneMonthGraph/' + '?stockId=' + stockId + "&duration=" + 30,
+                success: function (data) {
+                    var chartData = JSON.parse(data.data1);
+                    var volumeData = JSON.parse(data.data2);
+                    var toolTipData = JSON.parse(data.data3);
+
+                    var chartOptions = {
+                        series: {
+                            lines: { show: true, lineWidth: 1, fill: true, fillColor: "#b3daff" },
+                            //points: { show: true, symbol: "circle" },
+                            shadowSize: 0
+                        },
+                        crosshair: {
+                            mode: "x",
+                            stay: true,
+                            lineWidth: 1
+                        },
+                        colors: ["#006699"],
+                        grid: {
+                            hoverable: true,
+                            //labelMargin: 20,
+                            backgroundColor: "white", //{ colors: ["#D1D1D1", "#7A7A7A"] }
+                            borderWidth: { top: 1, right: 1, bottom: 1, left: 1 },
+                            borderColor: { top: "#e6f5ff", left: "#e6f5ff", right: "#e6f5ff", bottom: "#e6f5ff" },
+                            //margin: 10
+                        },
+                        yaxis: {
+                            position: "left",
+                            color: "#e6f5ff",
+                            axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.price)',
+                            axisLabelUseCanvas: true,
+                            axisLabelFontSizePixels: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            //axisLabelPadding: 15,
+                            minTickSize: 1,
+                            tickDecimals: 2,
+                            max: 100
+                        },
+                        xaxis: {
+                            color: "#e6f5ff",
+                            //axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.trading_time)',
+                            axisLabelFontSizePixels: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            axisLabelUseCanvas: true,
+                            mode: "time",
+                            timezone: "HKT",
+                            minTickSize: [1, "day"],
+                            axisLabelPadding: 15,
+                            min: GetMinDate(),
+                            max: GetMaxDate(),
+                            //timeformat: "%b%m"
+                        }
+                        //zoom: {
+                        //    interactive: true
+                        //},
+                        //pan: {
+                        //    interactive: true
+                        //}
+
+                    };
+
+                    var volumeChartOptions = {
+                        series: {
+                            bars: {
+                                show: true,
+                                //fill: 1,
+                                //color: "#e6f5ff"
+                            }
+                        },
+                        crosshair: {
+                            mode: "x",
+                            stay: true,
+                            lineWidth: 1
+                        },
+                        bars: {
+                            //align: "center",
+                            //barWidth: 900000,
+                            //color: "#e6f5ff"
+                        },
+                        grid: {
+                            hoverable: true,
+                            //labelMargin: 20,
+                            backgroundColor: "white", //{ colors: ["#D1D1D1", "#7A7A7A"] }
+                            borderWidth: { top: 1, right: 1, bottom: 1, left: 1 },
+                            borderColor: { top: "#e6f5ff", left: "#e6f5ff", right: "#e6f5ff", bottom: "#e6f5ff" },
+                            //margin: 10
+                        },
+                        xaxis: {
+                            axisLabelUseCanvas: true,
+                            color: "#e6f5ff",
+                            axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.trading_time)',
+                            axisLabelFontSizePixels: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            mode: "time",
+                            timezone: "HKT",
+                            minTickSize: [1, "day"],
+                            axisLabelPadding: 15,
+                            min: GetMinDate(),
+                            max: GetMaxDate(),
+                            //timeformat: "%b%m"
+                        },
+                        yaxis: {
+                            position: "left",
+                            axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.volume)',
+                            color: "#e6f5ff",
+                            axisLabelUseCanvas: true,
+                            axisLabelFontSizePixels: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            axisLabelPadding: 15,
+                            minTickSize: 1,
+                            tickDecimals: 0
+                        }
+
+                    };
+
+                    function GetMaxDate() {
+                        var date = new Date(), y = date.getFullYear(), m = date.getMonth(), d = date.getDate() + 1;
+                        return (new Date(y, m, d)).getTime();
+                    }
+
+                    function GetMinDate() {
+                        $today = new Date();
+                        $startday = new Date($today);
+                        $startday.setDate($today.getDate() - 29); //setDate also supports negative values, which cause the month to rollover.
+                        var y = $startday.getFullYear(), m = $startday.getMonth(), d = $startday.getDate();
+                        return (new Date(y, m, d)).getTime();
+                    }
+
+
+                    //$.plot($("#chartDiv"), [chartData], chartOptions);
+                    //$.plot("#volumeChartDiv", [volumeData], volumeChartOptions)
+                    var tradeplot = $.plot($("#chartDiv"), [chartData], chartOptions);
+                    var volumeplot = $.plot("#volumeChartDiv", [volumeData], volumeChartOptions);
+
+                    function showTooltip(x, y, contents) {
+                        $('<div id="tooltip">' + contents + '</div>').css({
+                            position: 'absolute',
+                            display: 'none',
+                            top: y + 5,
+                            left: x + 5,
+                            padding: '5px',
+                            'background-color': ''
+                        }).appendTo("body").fadeIn(200);
+                    }
+
+                    function addZero(x, n) {
+                        while (x.toString().length < n) {
+                            x = "0" + x;
+                        }
+                        return x;
+                    }
+
+                    var previousPoint = null;
+                    $("#chartDiv").bind("plothover", function (event, pos, item) {
+                        tradeplot.setCrosshair({ x: pos.x });
+                        volumeplot.setCrosshair({ x: pos.x });
+                        if (item) {
+                            if (previousPoint != item.dataIndex) {
+                                previousPoint = item.dataIndex;
+                                var date = new Date(item.datapoint[0]);
+                                var tipData = getObjects(toolTipData, "Date", item.datapoint[0])
+                                var mm = date.getMonth() + 1;
+                                var dd = date.getDate();
+                                var yy = new String(date.getFullYear()).substring(2);
+                                var open = tipData[0].Open,
+                                close = tipData[0].Close,
+                                low = tipData[0].Low,
+                                high = tipData[0].High,
+                                volume = tipData[0].Volume;
+                                //var h = addZero(date.getHours(), 2);
+                                //var m = addZero(date.getMinutes(), 2);
+                                //var s = addZero(date.getSeconds(), 2);
+                                //var z = h + ":" + m + ":" + s;
+                                if (mm < 10) mm = "0" + mm;
+                                if (dd < 10) dd = "0" + dd;
+                                var d = dd + "-" + mm + "-" + yy;
+                                $("#tooltip").remove();
+                                //var x = d,
+                                //    y = item.datapoint[1].toFixed(3);
+                                showTooltip(item.pageX, item.pageY, "Date:" + "(" + d + ")" + "," + "<br/>" + "Open:" + "(" + open + ")" + "," + "<br/>" + "Close:" + "(" + close + ")" + "," + "<br/>" + "Low:" + "(" + low + ")" + "," + "<br/>" + "High:" + "(" + high + ")" + "," + "<br/>" + "Volume:" + "(" + volume + ")" + "," + "<br/>");
+                            }
+                        }
+                        else {
+                            $("#tooltip").remove();
+                            previousPoint = null;
+                        }
+                    });
+
+                    $("#volumeChartDiv").bind("plothover", function (event, pos, item) {
+                        tradeplot.setCrosshair({ x: pos.x });
+                        volumeplot.setCrosshair({ x: pos.x });
+                    });
+                    //$.plot($("#chartDiv"), [chartData], {
+                    //    yaxis: {
+                    //    },
+                    //    xaxis: {
+                    //        mode: "time",
+                    //        minTickSize: [1, "hour"],
+                    //        //min: (new Date(1999, 11, 31)).getTime(),
+                    //        //max: (new Date(2000, 0, 1)).getTime(),
+                    //        twelveHourClock: true
+                    //    },
+                    //    "lines": { "show": "true" },
+                    //    "points": { "show": "true" },
+                    //    clickable: true, hoverable: true
+                    //});
+
+                },
+                error: function (e) {
+                    $("#loader").css("display", "none");
+                    alert("Oops! Something went wrong while executing the request.");
+                }
+
+            });
+        })
+
+        $("#SixMonth").click(function () {
+            type = "6M";
+            var stockId = $("#Stock option:selected").val();
+            $.ajax({
+                type: 'Get',
+                datatype: 'json',
+                url: '/Trading/CreateSixMonthGraph/' + '?stockId=' + stockId + "&duration=" + 180,
+                success: function (data) {
+                    var chartData = JSON.parse(data.data1);
+                    var volumeData = JSON.parse(data.data2);
+                    var toolTipData = JSON.parse(data.data3);
+                    var chartOptions = {
+                        series: {
+                            lines: { show: true, lineWidth: 1, fill: true, fillColor: "#b3daff" },
+                            //points: { show: true, symbol: "circle" },
+                            shadowSize: 0
+                        },
+                        crosshair: {
+                            mode: "x",
+                            stay: true,
+                            lineWidth: 1
+                        },
+                        colors: ["#006699"],
+                        grid: {
+                            hoverable: true,
+                            backgroundColor: "white", //{ colors: ["#D1D1D1", "#7A7A7A"] }
+                            borderWidth: { top: 1, right: 1, bottom: 1, left: 1 },
+                            borderColor: { top: "#e6f5ff", left: "#e6f5ff", right: "#e6f5ff", bottom: "#e6f5ff" },
+                            //margin: 10
+                        },
+                        yaxis: {
+                            position: "left",
+                            color: "#e6f5ff",
+                            axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.price)',
+                            axisLabelUseCanvas: true,
+                            axisLabelFontSizePixels: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            //axisLabelPadding: 15,
+                            minTickSize: 1,
+                            tickDecimals: 2,
+                            max: 100
+                        },
+                        xaxis: {
+                            color: "#e6f5ff",
+                            //axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.trading_time)',
+                            axisLabelFontSizePixels: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            axisLabelUseCanvas: true,
+                            mode: "time",
+                            timezone: "HKT",
+                            minTickSize: [1, "day"],
+                            axisLabelPadding: 15,
+                            min: GetMinDate(),
+                            max: GetMaxDate(),
+                            //timeformat: "%b%m"
+                        }
+                        //zoom: {
+                        //    interactive: true
+                        //},
+                        //pan: {
+                        //    interactive: true
+                        //}
+
+                    };
+
+                    var volumeChartOptions = {
+                        series: {
+                            bars: {
+                                show: true,
+                                //fill: 1,
+                                //color: "#e6f5ff"
+                            }
+                        },
+                        crosshair: {
+                            mode: "x",
+                            stay: true,
+                            lineWidth: 1
+                        },
+                        bars: {
+                            //align: "center",
+                            //barWidth: 900000,
+                            //color: "#e6f5ff"
+                        },
+                        grid: {
+                            hoverable: true,
+                            backgroundColor: "white", //{ colors: ["#D1D1D1", "#7A7A7A"] }
+                            borderWidth: { top: 1, right: 1, bottom: 1, left: 1 },
+                            borderColor: { top: "#e6f5ff", left: "#e6f5ff", right: "#e6f5ff", bottom: "#e6f5ff" },
+                            //margin: 10
+                        },
+                        xaxis: {
+                            axisLabelUseCanvas: true,
+                            //min: (new Date(1999, 11, 31)).getTime(),
+                            //max: (new Date(2000, 0, 1)).getTime(),
+                            ////color: "#e6f5ff",
+                            ////axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.trading_time)',
+                            ////axisLabelFontSizePixels: 20,
+                            ////axisLabelFontFamily: 'Verdana, Arial',
+                            ////axisLabelPadding: 20,
+                            ////mode: "time",
+                            ////minTickSize: [1, "hour"],
+                            ////twelveHourClock: true,
+                            color: "#e6f5ff",
+                            axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.trading_time)',
+                            axisLabelFontSizePixels: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            mode: "time",
+                            timezone: "HKT",
+                            minTickSize: [1, "day"],
+                            axisLabelPadding: 15,
+                            min: GetMinDate(),
+                            max: GetMaxDate(),
+                            //timeformat: "%b%m"
+                        },
+                        yaxis: {
+                            position: "left",
+                            axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.volume)',
+                            color: "#e6f5ff",
+                            axisLabelUseCanvas: true,
+                            axisLabelFontSizePixels: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            axisLabelPadding: 15,
+                            minTickSize: 1,
+                            tickDecimals: 0
+                        }
+
+                    };
+
+                    function GetMaxDate() {
+                        var date = new Date(), y = date.getFullYear(), m = date.getMonth(), d = date.getDate() + 1;
+                        return (new Date(y, m, d)).getTime();
+                    }
+
+                    function GetMinDate() {
+                        $today = new Date();
+                        $startday = new Date($today);
+                        $startday.setDate($today.getDate() - 180); //setDate also supports negative values, which cause the month to rollover.
+                        var y = $startday.getFullYear(), m = $startday.getMonth(), d = $startday.getDate();
+                        return (new Date(y, m, d)).getTime();
+                    }
+
+
+                    //$.plot($("#chartDiv"), [chartData], chartOptions);
+                    //$.plot("#volumeChartDiv", [volumeData], volumeChartOptions)
+                    var tradeplot = $.plot($("#chartDiv"), [chartData], chartOptions);
+                    var volumeplot = $.plot("#volumeChartDiv", [volumeData], volumeChartOptions);
+
+                    function showTooltip(x, y, contents) {
+                        $('<div id="tooltip">' + contents + '</div>').css({
+                            position: 'absolute',
+                            display: 'none',
+                            top: y + 5,
+                            left: x + 5,
+                            padding: '5px',
+                            'background-color': ''
+                        }).appendTo("body").fadeIn(200);
+                    }
+
+                    function addZero(x, n) {
+                        while (x.toString().length < n) {
+                            x = "0" + x;
+                        }
+                        return x;
+                    }
+
+                    var previousPoint = null;
+                    $("#chartDiv").bind("plothover", function (event, pos, item) {
+                        tradeplot.setCrosshair({ x: pos.x });
+                        volumeplot.setCrosshair({ x: pos.x });
+                        if (item) {
+                            if (previousPoint != item.dataIndex) {
+                                previousPoint = item.dataIndex;
+                                var date = new Date(item.datapoint[0]);
+                                var tipData = getObjects(toolTipData, "Date", item.datapoint[0])
+                                var mm = date.getMonth() + 1;
+                                var dd = date.getDate();
+                                var yy = new String(date.getFullYear()).substring(2);
+                                var open = tipData[0].Open,
+                                close = tipData[0].Close,
+                                low = tipData[0].Low,
+                                high = tipData[0].High,
+                                volume = tipData[0].Volume;
+                                //var h = addZero(date.getHours(), 2);
+                                //var m = addZero(date.getMinutes(), 2);
+                                //var s = addZero(date.getSeconds(), 2);
+                                //var z = h + ":" + m + ":" + s;
+                                if (mm < 10) mm = "0" + mm;
+                                if (dd < 10) dd = "0" + dd;
+                                var d = dd + "-" + mm + "-" + yy;
+                                $("#tooltip").remove();
+                                //var x = d,
+                                //    y = item.datapoint[1].toFixed(3);
+                                showTooltip(item.pageX, item.pageY, "Date:" + "(" + d + ")" + "," + "<br/>" + "Open:" + "(" + open + ")" + "," + "<br/>" + "Close:" + "(" + close + ")" + "," + "<br/>" + "Low:" + "(" + low + ")" + "," + "<br/>" + "High:" + "(" + high + ")" + "," + "<br/>" + "Volume:" + "(" + volume + ")" + "," + "<br/>");
+                            }
+                        }
+                        else {
+                            $("#tooltip").remove();
+                            previousPoint = null;
+                        }
+                    });
+
+                    $("#volumeChartDiv").bind("plothover", function (event, pos, item) {
+                        tradeplot.setCrosshair({ x: pos.x });
+                        volumeplot.setCrosshair({ x: pos.x });
+                    });
+                    //$.plot($("#chartDiv"), [chartData], {
+                    //    yaxis: {
+                    //    },
+                    //    xaxis: {
+                    //        mode: "time",
+                    //        minTickSize: [1, "hour"],
+                    //        //min: (new Date(1999, 11, 31)).getTime(),
+                    //        //max: (new Date(2000, 0, 1)).getTime(),
+                    //        twelveHourClock: true
+                    //    },
+                    //    "lines": { "show": "true" },
+                    //    "points": { "show": "true" },
+                    //    clickable: true, hoverable: true
+                    //});
+
+                },
+                error: function (e) {
+                    $("#loader").css("display", "none");
+                    alert("Oops! Something went wrong while executing the request.");
+                }
+
+            });
+        })
+
+        $("#OneYear").click(function () {
+            type = "IY";
+            var stockId = $("#Stock option:selected").val();
+            $.ajax({
+                type: 'Get',
+                datatype: 'json',
+                url: '/Trading/CreateOneYearGraph/' + '?stockId=' + stockId + "&duration=" + 365,
+                success: function (data) {
+                    var chartData = JSON.parse(data.data1);
+                    var volumeData = JSON.parse(data.data2);
+                    var toolTipData = JSON.parse(data.data3);
+                    var chartOptions = {
+                        series: {
+                            lines: { show: true, lineWidth: 1, fill: true, fillColor: "#b3daff" },
+                            //points: { show: true, symbol: "circle" },
+                            shadowSize: 0
+                        },
+                        crosshair: {
+                            mode: "x",
+                            stay: true,
+                            lineWidth: 1
+                        },
+                        colors: ["#006699"],
+                        grid: {
+                            hoverable: true,
+                            backgroundColor: "white", //{ colors: ["#D1D1D1", "#7A7A7A"] }
+                            borderWidth: { top: 1, right: 1, bottom: 1, left: 1 },
+                            borderColor: { top: "#e6f5ff", left: "#e6f5ff", right: "#e6f5ff", bottom: "#e6f5ff" },
+                            //margin: 10
+                        },
+                        yaxis: {
+                            position: "left",
+                            color: "#e6f5ff",
+                            axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.price)',
+                            axisLabelUseCanvas: true,
+                            axisLabelFontSizePixels: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            //axisLabelPadding: 15,
+                            minTickSize: 1,
+                            tickDecimals: 2,
+                            max: 100
+                        },
+                        xaxis: {
+                            color: "#e6f5ff",
+                            //axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.trading_time)',
+                            axisLabelFontSizePixels: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            axisLabelUseCanvas: true,
+                            mode: "time",
+                            timezone: "HKT",
+                            minTickSize: [1, "day"],
+                            axisLabelPadding: 15,
+                            min: GetMinDate(),
+                            max: GetMaxDate(),
+                            //timeformat: "%b%m"
+                        }
+                        //zoom: {
+                        //    interactive: true
+                        //},
+                        //pan: {
+                        //    interactive: true
+                        //}
+
+                    };
+
+                    var volumeChartOptions = {
+                        series: {
+                            bars: {
+                                show: true,
+                                //fill: 1,
+                                //color: "#e6f5ff"
+                            }
+                        },
+                        crosshair: {
+                            mode: "x",
+                            stay: true,
+                            lineWidth: 1
+                        },
+                        bars: {
+                            //align: "center",
+                            //barWidth: 900000,
+                            //color: "#e6f5ff"
+                        },
+                        grid: {
+                            hoverable: true,
+                            backgroundColor: "white", //{ colors: ["#D1D1D1", "#7A7A7A"] }
+                            borderWidth: { top: 1, right: 1, bottom: 1, left: 1 },
+                            borderColor: { top: "#e6f5ff", left: "#e6f5ff", right: "#e6f5ff", bottom: "#e6f5ff" },
+                            //margin: 10
+                        },
+                        xaxis: {
+                            axisLabelUseCanvas: true,
+                            //min: (new Date(1999, 11, 31)).getTime(),
+                            //max: (new Date(2000, 0, 1)).getTime(),
+                            ////color: "#e6f5ff",
+                            ////axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.trading_time)',
+                            ////axisLabelFontSizePixels: 20,
+                            ////axisLabelFontFamily: 'Verdana, Arial',
+                            ////axisLabelPadding: 20,
+                            ////mode: "time",
+                            ////minTickSize: [1, "hour"],
+                            ////twelveHourClock: true,
+                            color: "#e6f5ff",
+                            axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.trading_time)',
+                            axisLabelFontSizePixels: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            mode: "time",
+                            timezone: "HKT",
+                            minTickSize: [1, "day"],
+                            axisLabelPadding: 15,
+                            min: GetMinDate(),
+                            max: GetMaxDate(),
+                            //timeformat: "%b%m"
+                        },
+                        yaxis: {
+                            position: "left",
+                            axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.volume)',
+                            color: "#e6f5ff",
+                            axisLabelUseCanvas: true,
+                            axisLabelFontSizePixels: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            axisLabelPadding: 15,
+                            minTickSize: 1,
+                            tickDecimals: 0
+                        }
+
+                    };
+
+                    function GetMaxDate() {
+                        var date = new Date(), y = date.getFullYear(), m = date.getMonth(), d = date.getDate() + 1;
+                        return (new Date(y, m, d)).getTime();
+                    }
+
+                    function GetMinDate() {
+                        $today = new Date();
+                        $startday = new Date($today);
+                        $startday.setDate($today.getDate() - 365); //setDate also supports negative values, which cause the month to rollover.
+                        var y = $startday.getFullYear(), m = $startday.getMonth(), d = $startday.getDate();
+                        return (new Date(y, m, d)).getTime();
+                    }
+
+
+                    //$.plot($("#chartDiv"), [chartData], chartOptions);
+                    //$.plot("#volumeChartDiv", [volumeData], volumeChartOptions)
+                    var tradeplot = $.plot($("#chartDiv"), [chartData], chartOptions);
+                    var volumeplot = $.plot("#volumeChartDiv", [volumeData], volumeChartOptions);
+
+                    function showTooltip(x, y, contents) {
+                        $('<div id="tooltip">' + contents + '</div>').css({
+                            position: 'absolute',
+                            display: 'none',
+                            top: y + 5,
+                            left: x + 5,
+                            padding: '5px',
+                            'background-color': ''
+                        }).appendTo("body").fadeIn(200);
+                    }
+
+                    function addZero(x, n) {
+                        while (x.toString().length < n) {
+                            x = "0" + x;
+                        }
+                        return x;
+                    }
+
+                    var previousPoint = null;
+                    $("#chartDiv").bind("plothover", function (event, pos, item) {
+                        tradeplot.setCrosshair({ x: pos.x });
+                        volumeplot.setCrosshair({ x: pos.x });
+                        if (item) {
+                            if (previousPoint != item.dataIndex) {
+                                previousPoint = item.dataIndex;
+                                var date = new Date(item.datapoint[0]);
+                                var tipData = getObjects(toolTipData, "Date", item.datapoint[0])
+                                var mm = date.getMonth() + 1;
+                                var dd = date.getDate();
+                                var yy = new String(date.getFullYear()).substring(2);
+                                var open = tipData[0].Open,
+                                close = tipData[0].Close,
+                                low = tipData[0].Low,
+                                high = tipData[0].High,
+                                volume = tipData[0].Volume;
+                                //var h = addZero(date.getHours(), 2);
+                                //var m = addZero(date.getMinutes(), 2);
+                                //var s = addZero(date.getSeconds(), 2);
+                                //var z = h + ":" + m + ":" + s;
+                                if (mm < 10) mm = "0" + mm;
+                                if (dd < 10) dd = "0" + dd;
+                                var d = dd + "-" + mm + "-" + yy;
+                                $("#tooltip").remove();
+                                //var x = d,
+                                //    y = item.datapoint[1].toFixed(3);
+                                showTooltip(item.pageX, item.pageY, "Date:" + "(" + d + ")" + "," + "<br/>" + "Open:" + "(" + open + ")" + "," + "<br/>" + "Close:" + "(" + close + ")" + "," + "<br/>" + "Low:" + "(" + low + ")" + "," + "<br/>" + "High:" + "(" + high + ")" + "," + "<br/>" + "Volume:" + "(" + volume + ")" + "," + "<br/>");
+                            }
+                        }
+                        else {
+                            $("#tooltip").remove();
+                            previousPoint = null;
+                        }
+                    });
+
+                    $("#volumeChartDiv").bind("plothover", function (event, pos, item) {
+                        tradeplot.setCrosshair({ x: pos.x });
+                        volumeplot.setCrosshair({ x: pos.x });
+                    });
+                    //$.plot($("#chartDiv"), [chartData], {
+                    //    yaxis: {
+                    //    },
+                    //    xaxis: {
+                    //        mode: "time",
+                    //        minTickSize: [1, "hour"],
+                    //        //min: (new Date(1999, 11, 31)).getTime(),
+                    //        //max: (new Date(2000, 0, 1)).getTime(),
+                    //        twelveHourClock: true
+                    //    },
+                    //    "lines": { "show": "true" },
+                    //    "points": { "show": "true" },
+                    //    clickable: true, hoverable: true
+                    //});
+
+                },
+                error: function (e) {
+                    $("#loader").css("display", "none");
+                    alert("Oops! Something went wrong while executing the request.");
+                }
+
+            });
+        })
+
+        $("#FiveYear").click(function () {
+            type = "5Y";
+            var stockId = $("#Stock option:selected").val();
+            var total = parseInt((365 * 5) + 1);
+            $.ajax({
+                type: 'Get',
+                datatype: 'json',
+                url: '/Trading/CreateFiveYearGraph/' + '?stockId=' + stockId + "&duration=" + total,
+                success: function (data) {
+                    var chartData = JSON.parse(data.data1);
+                    var volumeData = JSON.parse(data.data2);
+                    var toolTipData = JSON.parse(data.data3);
+                    var chartOptions = {
+                        series: {
+                            lines: { show: true, lineWidth: 1, fill: true, fillColor: "#b3daff" },
+                            //points: { show: true, symbol: "circle" },
+                            shadowSize: 0
+                        },
+                        crosshair: {
+                            mode: "x",
+                            stay: true,
+                            lineWidth: 1
+                        },
+                        colors: ["#006699"],
+                        grid: {
+                            hoverable: true,
+                            backgroundColor: "white", //{ colors: ["#D1D1D1", "#7A7A7A"] }
+                            borderWidth: { top: 1, right: 1, bottom: 1, left: 1 },
+                            borderColor: { top: "#e6f5ff", left: "#e6f5ff", right: "#e6f5ff", bottom: "#e6f5ff" },
+                            //margin: 10
+                        },
+                        yaxis: {
+                            position: "left",
+                            color: "#e6f5ff",
+                            axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.price)',
+                            axisLabelUseCanvas: true,
+                            axisLabelFontSizePixels: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            //axisLabelPadding: 15,
+                            minTickSize: 1,
+                            tickDecimals: 2,
+                            max: 100
+                        },
+                        xaxis: {
+                            color: "#e6f5ff",
+                            //axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.trading_time)',
+                            axisLabelFontSizePixels: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            axisLabelUseCanvas: true,
+                            mode: "time",
+                            timezone: "HKT",
+                            minTickSize: [1, "day"],
+                            axisLabelPadding: 15,
+                            min: GetMinDate(),
+                            max: GetMaxDate(),
+                            //timeformat: "%b%m"
+                        }
+                        //zoom: {
+                        //    interactive: true
+                        //},
+                        //pan: {
+                        //    interactive: true
+                        //}
+
+                    };
+
+                    var volumeChartOptions = {
+                        series: {
+                            bars: {
+                                show: true,
+                                //fill: 1,
+                                //color: "#e6f5ff"
+                            }
+                        },
+                        crosshair: {
+                            mode: "x",
+                            stay: true,
+                            lineWidth: 1
+                        },
+                        bars: {
+                            //align: "center",
+                            //barWidth: 900000,
+                            //color: "#e6f5ff"
+                        },
+                        grid: {
+                            hoverable: true,
+                            backgroundColor: "white", //{ colors: ["#D1D1D1", "#7A7A7A"] }
+                            borderWidth: { top: 1, right: 1, bottom: 1, left: 1 },
+                            borderColor: { top: "#e6f5ff", left: "#e6f5ff", right: "#e6f5ff", bottom: "#e6f5ff" },
+                            //margin: 10
+                        },
+                        xaxis: {
+                            axisLabelUseCanvas: true,
+                            //min: (new Date(1999, 11, 31)).getTime(),
+                            //max: (new Date(2000, 0, 1)).getTime(),
+                            ////color: "#e6f5ff",
+                            ////axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.trading_time)',
+                            ////axisLabelFontSizePixels: 20,
+                            ////axisLabelFontFamily: 'Verdana, Arial',
+                            ////axisLabelPadding: 20,
+                            ////mode: "time",
+                            ////minTickSize: [1, "hour"],
+                            ////twelveHourClock: true,
+                            color: "#e6f5ff",
+                            axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.trading_time)',
+                            axisLabelFontSizePixels: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            mode: "time",
+                            timezone: "HKT",
+                            minTickSize: [1, "day"],
+                            axisLabelPadding: 15,
+                            min: GetMinDate(),
+                            max: GetMaxDate(),
+                            //timeformat: "%b%m"
+                        },
+                        yaxis: {
+                            position: "left",
+                            axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.volume)',
+                            color: "#e6f5ff",
+                            axisLabelUseCanvas: true,
+                            axisLabelFontSizePixels: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            axisLabelPadding: 15,
+                            minTickSize: 1,
+                            tickDecimals: 0
+                        }
+
+                    };
+
+                    function GetMaxDate() {
+                        var date = new Date(), y = date.getFullYear(), m = date.getMonth(), d = date.getDate() + 1;
+                        return (new Date(y, m, d)).getTime();
+                    }
+
+                    function GetMinDate() {
+                        $today = new Date();
+                        $startday = new Date($today);
+                        $startday.setDate($today.getDate() - total); //setDate also supports negative values, which cause the month to rollover.
+                        var y = $startday.getFullYear(), m = $startday.getMonth(), d = $startday.getDate();
+                        return (new Date(y, m, d)).getTime();
+                    }
+
+
+                    //$.plot($("#chartDiv"), [chartData], chartOptions);
+                    //$.plot("#volumeChartDiv", [volumeData], volumeChartOptions)
+                    var tradeplot = $.plot($("#chartDiv"), [chartData], chartOptions);
+                    var volumeplot = $.plot("#volumeChartDiv", [volumeData], volumeChartOptions);
+
+                    function showTooltip(x, y, contents) {
+                        $('<div id="tooltip">' + contents + '</div>').css({
+                            position: 'absolute',
+                            display: 'none',
+                            top: y + 5,
+                            left: x + 5,
+                            padding: '5px',
+                            'background-color': ''
+                        }).appendTo("body").fadeIn(200);
+                    }
+
+                    function addZero(x, n) {
+                        while (x.toString().length < n) {
+                            x = "0" + x;
+                        }
+                        return x;
+                    }
+
+                    var previousPoint = null;
+                    $("#chartDiv").bind("plothover", function (event, pos, item) {
+                        tradeplot.setCrosshair({ x: pos.x });
+                        volumeplot.setCrosshair({ x: pos.x });
+                        if (item) {
+                            if (previousPoint != item.dataIndex) {
+                                previousPoint = item.dataIndex;
+                                var date = new Date(item.datapoint[0]);
+                                var tipData = getObjects(toolTipData, "Date", item.datapoint[0])
+                                var mm = date.getMonth() + 1;
+                                var dd = date.getDate();
+                                var yy = new String(date.getFullYear()).substring(2);
+                                var open = tipData[0].Open,
+                                close = tipData[0].Close,
+                                low = tipData[0].Low,
+                                high = tipData[0].High,
+                                volume = tipData[0].Volume;
+                                //var h = addZero(date.getHours(), 2);
+                                //var m = addZero(date.getMinutes(), 2);
+                                //var s = addZero(date.getSeconds(), 2);
+                                //var z = h + ":" + m + ":" + s;
+                                if (mm < 10) mm = "0" + mm;
+                                if (dd < 10) dd = "0" + dd;
+                                var d = dd + "-" + mm + "-" + yy;
+                                $("#tooltip").remove();
+                                //var x = d,
+                                //    y = item.datapoint[1].toFixed(3);
+                                showTooltip(item.pageX, item.pageY, "Date:" + "(" + d + ")" + "," + "<br/>" + "Open:" + "(" + open + ")" + "," + "<br/>" + "Close:" + "(" + close + ")" + "," + "<br/>" + "Low:" + "(" + low + ")" + "," + "<br/>" + "High:" + "(" + high + ")" + "," + "<br/>" + "Volume:" + "(" + volume + ")" + "," + "<br/>");
+                            }
+                        }
+                        else {
+                            $("#tooltip").remove();
+                            previousPoint = null;
+                        }
+                    });
+
+                    $("#volumeChartDiv").bind("plothover", function (event, pos, item) {
+                        tradeplot.setCrosshair({ x: pos.x });
+                        volumeplot.setCrosshair({ x: pos.x });
+                    });
+                    //$.plot($("#chartDiv"), [chartData], {
+                    //    yaxis: {
+                    //    },
+                    //    xaxis: {
+                    //        mode: "time",
+                    //        minTickSize: [1, "hour"],
+                    //        //min: (new Date(1999, 11, 31)).getTime(),
+                    //        //max: (new Date(2000, 0, 1)).getTime(),
+                    //        twelveHourClock: true
+                    //    },
+                    //    "lines": { "show": "true" },
+                    //    "points": { "show": "true" },
+                    //    clickable: true, hoverable: true
+                    //});
+
+                },
+                error: function (e) {
+                    $("#loader").css("display", "none");
+                    alert("Oops! Something went wrong while executing the request.");
+                }
+
+            });
+        })
+
+        $("#Total").click(function () {
+            type = "Total";
+            var stockId = $("#Stock option:selected").val();
+            $.ajax({
+                type: 'Get',
+                datatype: 'json',
+                url: '/Trading/CreateFullGraph/' + '?stockId=' + stockId + "&duration=" + 0,
+                success: function (data) {
+                    var chartData = JSON.parse(data.data1);
+                    var volumeData = JSON.parse(data.data2);
+                    var toolTipData = JSON.parse(data.data3);
+                    var chartOptions = {
+                        series: {
+                            lines: { show: true, lineWidth: 1, fill: true, fillColor: "#b3daff" },
+                            //points: { show: true, symbol: "circle" },
+                            shadowSize: 0
+                        },
+                        crosshair: {
+                            mode: "x",
+                            stay: true,
+                            lineWidth: 1
+                        },
+                        colors: ["#006699"],
+                        grid: {
+                            hoverable: true,
+                            backgroundColor: "white", //{ colors: ["#D1D1D1", "#7A7A7A"] }
+                            borderWidth: { top: 1, right: 1, bottom: 1, left: 1 },
+                            borderColor: { top: "#e6f5ff", left: "#e6f5ff", right: "#e6f5ff", bottom: "#e6f5ff" },
+                            //margin: 10
+                        },
+                        yaxis: {
+                            position: "left",
+                            color: "#e6f5ff",
+                            axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.price)',
+                            axisLabelUseCanvas: true,
+                            axisLabelFontSizePixels: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            //axisLabelPadding: 15,
+                            minTickSize: 1,
+                            tickDecimals: 2,
+                            max: 100
+                        },
+                        xaxis: {
+                            color: "#e6f5ff",
+                            axisLabelUseCanvas: true,
+                            //axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.trading_time)',
+                            axisLabelFontSizePixels: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            axisLabelUseCanvas: true,
+                            mode: "time",
+                            timezone: "HKT",
+                            minTickSize: [1, "day"],
+                            axisLabelPadding: 15,
+                            //min: GetMinDate(),
+                            //max: GetMaxDate(),
+                            //timeformat: "%b%m"
+                        }
+                        //zoom: {
+                        //    interactive: true
+                        //},
+                        //pan: {
+                        //    interactive: true
+                        //}
+
+                    };
+
+                    var volumeChartOptions = {
+                        series: {
+                            bars: {
+                                show: true,
+                                //fill: 1,
+                                //color: "#e6f5ff"
+                            }
+                        },
+                        crosshair: {
+                            mode: "x",
+                            stay: true,
+                            lineWidth: 1
+                        },
+                        bars: {
+                            //align: "center",
+                            //barWidth: 900000,
+                            //color: "#e6f5ff"
+                        },
+                        grid: {
+                            hoverable: true,
+                            backgroundColor: "white", //{ colors: ["#D1D1D1", "#7A7A7A"] }
+                            borderWidth: { top: 1, right: 1, bottom: 1, left: 1 },
+                            borderColor: { top: "#e6f5ff", left: "#e6f5ff", right: "#e6f5ff", bottom: "#e6f5ff" }
+                        },
+                        xaxis: {
+                            axisLabelUseCanvas: true,
+                            color: "#e6f5ff",
+                            axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.trading_time)',
+                            axisLabelFontSizePixels: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            mode: "time",
+                            timezone: "HKT",
+                            minTickSize: [1, "day"],
+                            axisLabelPadding: 15,
+                        },
+                        yaxis: {
+                            position: "left",
+                            axisLabel: '@Html.DisplayNameFor(model => model.QueueTradingViewModel.volume)',
+                            color: "#e6f5ff",
+                            axisLabelUseCanvas: true,
+                            axisLabelFontSizePixels: 15,
+                            axisLabelFontFamily: 'Verdana, Arial',
+                            axisLabelPadding: 15,
+                            minTickSize: 1,
+                            tickDecimals: 0
+                        }
+
+                    };
+
+                    //function GetMaxDate() {
+                    //    var date = new Date(), y = date.getFullYear(), m = date.getMonth(), d = date.getDate();
+                    //    return (new Date(y, m, d)).getTime();
+                    //}
+
+                    //function GetMinDate() {
+                    //    $today = new Date();
+                    //    $startday = new Date($today);
+                    //    $startday.setDate($today.getDate() - total); //setDate also supports negative values, which cause the month to rollover.
+                    //    var y = $startday.getFullYear(), m = $startday.getMonth(), d = $startday.getDate();
+                    //    return (new Date(y, m, d)).getTime();
+                    //}
+
+
+                    //$.plot($("#chartDiv"), [chartData], chartOptions);
+                    //$.plot("#volumeChartDiv", [volumeData], volumeChartOptions)
+                    var tradeplot = $.plot($("#chartDiv"), [chartData], chartOptions);
+                    var volumeplot = $.plot("#volumeChartDiv", [volumeData], volumeChartOptions);
+
+                    function showTooltip(x, y, contents) {
+                        $('<div id="tooltip">' + contents + '</div>').css({
+                            position: 'absolute',
+                            display: 'none',
+                            top: y + 5,
+                            left: x + 5,
+                            padding: '5px',
+                            'background-color': ''
+                        }).appendTo("body").fadeIn(200);
+                    }
+
+                    function addZero(x, n) {
+                        while (x.toString().length < n) {
+                            x = "0" + x;
+                        }
+                        return x;
+                    }
+
+                    var previousPoint = null;
+                    $("#chartDiv").bind("plothover", function (event, pos, item) {
+                        tradeplot.setCrosshair({ x: pos.x });
+                        volumeplot.setCrosshair({ x: pos.x });
+                        if (item) {
+                            if (previousPoint != item.dataIndex) {
+                                previousPoint = item.dataIndex;
+                                var date = new Date(item.datapoint[0]);
+                                var tipData = getObjects(toolTipData, "Date", item.datapoint[0])
+                                var mm = date.getMonth() + 1;
+                                var dd = date.getDate();
+                                var yy = new String(date.getFullYear()).substring(2);
+                                var open = tipData[0].Open,
+                                close = tipData[0].Close,
+                                low = tipData[0].Low,
+                                high = tipData[0].High,
+                                volume = tipData[0].Volume;
+                                //var h = addZero(date.getHours(), 2);
+                                //var m = addZero(date.getMinutes(), 2);
+                                //var s = addZero(date.getSeconds(), 2);
+                                //var z = h + ":" + m + ":" + s;
+                                if (mm < 10) mm = "0" + mm;
+                                if (dd < 10) dd = "0" + dd;
+                                var d = dd + "-" + mm + "-" + yy;
+                                $("#tooltip").remove();
+                                //var x = d,
+                                //    y = item.datapoint[1].toFixed(3);
+                                showTooltip(item.pageX, item.pageY, "Date:" + "(" + d + ")" + "," + "<br/>" + "Open:" + "(" + open + ")" + "," + "<br/>" + "Close:" + "(" + close + ")" + "," + "<br/>" + "Low:" + "(" + low + ")" + "," + "<br/>" + "High:" + "(" + high + ")" + "," + "<br/>" + "Volume:" + "(" + volume + ")" + "," + "<br/>");
+                            }
+                        }
+                        else {
+                            $("#tooltip").remove();
+                            previousPoint = null;
+                        }
+                    });
+
+                    $("#volumeChartDiv").bind("plothover", function (event, pos, item) {
+                        tradeplot.setCrosshair({ x: pos.x });
+                        volumeplot.setCrosshair({ x: pos.x });
+                    });
+                    //$.plot($("#chartDiv"), [chartData], {
+                    //    yaxis: {
+                    //    },
+                    //    xaxis: {
+                    //        mode: "time",
+                    //        minTickSize: [1, "hour"],
+                    //        //min: (new Date(1999, 11, 31)).getTime(),
+                    //        //max: (new Date(2000, 0, 1)).getTime(),
+                    //        twelveHourClock: true
+                    //    },
+                    //    "lines": { "show": "true" },
+                    //    "points": { "show": "true" },
+                    //    clickable: true, hoverable: true
+                    //});
+
+                },
+                error: function (e) {
+                    $("#loader").css("display", "none");
+                    alert("Oops! Something went wrong while executing the request.");
+                }
+
+            });
+        })
+
+
+        $(".bidDiv").click(function () {
+            $("#bidamount").val("");
+            $("#bidprice").val("");
+            $("#lblpriceperlotbuy").text("");
+            $("#lbllotbuytotal").text("");
+
+            $("#addBidModal").modal("show");
+        })
+        $(".askDiv").click(function () {
+            $("#askamount").val("");
+            $("#askprice").val("");
+            $("#lblpriceperlotsell").text("");
+            $("#lbllotselltotal").text("");
+            $("#addAskModal").modal("show");
+        })
+
+        $("#buyBtn").click(function () {
+            var stockCode = $("#Stock option:selected").val();
+            var bidAmount = $("#bidamount").val();
+            var bidPrice = parseFloat($("#bidprice").val());
+            if (stockCode == "") {
+                if (language == "en-GB") {
+                    alert("Please select stock");
+                }
+                else {
+                    alert("Please select stock");
+                }
+            }
+            else if (bidAmount == "") {
+                if (language == "en-GB") {
+                    alert("Please enter bid amount");
+                }
+                else {
+                    alert('@Html.DisplayNameFor(model=>model.PleaseEnterBidAmount)');
+                }
+
+            }
+            else if (bidPrice == "") {
+                if (language == "en-GB") {
+                    alert("Please enter bid price");
+                }
+                else {
+                    alert("Please enter bid price");
+                }
+
+            }
+            else if (bidPrice < 0.1) {
+                if (language == "en-GB") {
+                    alert("The Price should not be less than 0.1$");
+                }
+                else {
+                    alert("The Price should not be less than 0.1$");
+                }
+
+            }
+            else {
+                $("#buyBtn").prop('disabled', true);
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("AddBidAsk", "Trading")?point=' + bidAmount + '&price=' + bidPrice + '&stock_code_id=' + stockCode + '&task=' + "bid",
+                    content: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        if (data == 1) {
+                            $.ajax({
+                                type: "POST",
+                                url: '@Url.Action("MatchQueue", "Queue")?stockId=' + stockCode + '&userId=' + '@UserId',
+                                content: "application/json; charset=utf-8",
+                                dataType: "json",
+                                success: function (result) {
+                                    if (result[0] == 1) {
+                                        // SignalR Code Start
+                                        var userId = '@UserId';
+                                        var data = { stockCode: stockCode, bidAmount: bidAmount, bidPrice: bidPrice, task: 'bid' };
+                                        queueHub.send("GetQueueData", stockCode, JSON.stringify(data), userId);
+                                        queueHub.send("bid", stockCode, JSON.stringify(data), userId);
+                                        queueHub.send("ask", stockCode, JSON.stringify(data), userId);
+                                        queueHub.send("completed", stockCode, JSON.stringify(data), userId);
+                                        // SignalR Code End
+                                        alert('@Html.DisplayNameFor(model=>model.YourBidHasBeenPlacedSuccessfully)');
+                                        var stockId = $("#Stock option:selected").val();
+                                        window.location.href = '@Url.Action("Trading", "Trading")?stockId=' + stockId;
+                                    }
+                                    else {
+                                        if (language == "en-GB") {
+                                            alert("Bid Failed")
+                                        }
+                                        else {
+                                            alert("Bid Failed")
+                                        }
+                                        
+                                    }
+                                },
+                                error: function (xhr, textStatus, errorThrown) {
+                                    if (language == "en-GB") {
+                                        alert("Bid Failed")
+                                    }
+                                    else {
+                                        alert("Bid Failed")
+                                    }
+                                    
+                                }
+                            })
+                        }
+                        else if (data == 2) {
+                            $("#buyBtn").prop('disabled', false);
+                            if (language == "en-GB") {
+                                alert("Sorry!! You do not have enough amount in your wallet for this bid.")
+                            }
+                            else {
+                                alert('@Html.DisplayNameFor(model=>model.NotEnoughAmountForBid)');
+                            }
+                            
+                        }
+                        else if (data == 3) {
+                            $("#buyBtn").prop('disabled', false);
+                            var minimumRate = '@Model.QueueTradingViewModel.unit_master.minimum_rate';
+                            if (language == "en-GB") {
+                                alert("Please make a bid with rate greater than " + minimumRate);
+                            }
+                            else {
+                                alert("Please make a bid with rate greater than " + minimumRate);
+                            }
+                            
+                        }
+                        else if (data == 4) {
+                            $("#buyBtn").prop('disabled', false);
+                            var minimumLot = '@Model.QueueTradingViewModel.unit_master.minimum_lot';
+                            if (language == "en-GB") {
+                                alert("Please make a bid with lot greater than " + minimumLot);
+                            }
+                            else {
+                                alert("Please make a bid with lot greater than " + minimumLot);
+                            }
+                            
+                        }
+                        else {
+                            $("#buyBtn").prop('disabled', false);
+                            if (language == "en-GB") {
+                                alert("Something went wrong!!! Please try again later");
+                            }
+                            else {
+                                alert('@Html.DisplayNameFor(model=>model.SomethingWentWrong)');
+                            }
+                            
+                        }
+
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        $("#buyBtn").prop('disabled', false);
+                        if (language == "en-GB") {
+                            alert("Amount/Price you entered is invalid.")
+                        }
+                        else {
+                            alert('@Html.DisplayNameFor(model=>model.AmountPriceYouEnteredIsInvalid)');
+                        }
+                        
+                    }
+                })
+            }
+
+        });
+
+        $("#sellBtn").click(function () {
+            var stockCode = $("#Stock option:selected").val();
+            var askAmount = $("#askamount").val();
+            var askPrice = parseFloat($("#askprice").val());
+            if (stockCode == "") {
+                if (language == "en-GB") {
+                    alert("Please select stock");
+                }
+                else {
+                    alert("Please select stock");
+                }
+                
+            }
+            else if (askAmount == "") {
+                if (language == "en-GB") {
+                    alert("Please enter ask amount");
+                }
+                else {
+                    alert('@Html.DisplayNameFor(model=>model.PleaseEnterAskAmount)');
+                }
+                
+            }
+            else if (askPrice == "") {
+                if (language == "en-GB") {
+                    alert("Please enter ask price");
+                }
+                else {
+                    alert("Please enter ask price");
+                }
+                
+            }
+            else if (askPrice < 0.1) {
+                if (language == "en-GB") {
+                    alert("The Price should not be less than 0.1$");
+                }
+                else {
+                    alert("The Price should not be less than 0.1$");
+                }
+                
+            }
+            else {
+                $("#sellBtn").prop('disabled', true);
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("AddBidAsk", "Trading")?point=' + askAmount + '&price=' + askPrice + '&stock_code_id=' + stockCode + '&task=ask',
+                    content: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        if (data == 1) {
+                            $.ajax({
+                                type: "POST",
+                                url: '@Url.Action("MatchQueue", "Queue")?stockId=' + stockCode + '&userId=' + '@UserId',
+                                content: "application/json; charset=utf-8",
+                                dataType: "json",
+                                success: function (result) {
+                                    if (result[0] == 1) {
+                                        // SignalR Code Start
+                                        var userId = '@UserId';
+                                        var data = { stockCode: stockCode, askAmount: askAmount, askPrice: askPrice, task: 'ask' };
+                                        queueHub.send("GetQueueData", stockCode, JSON.stringify(data), userId);
+                                        queueHub.send("bid", stockCode, JSON.stringify(data), userId);
+                                        queueHub.send("ask", stockCode, JSON.stringify(data), userId);
+                                        queueHub.send("completed", stockCode, JSON.stringify(data), userId);
+                                        // SignalR Code End
+                                        alert('@Html.DisplayNameFor(model=>model.YourAskHasBeenPlacedSuccessfully)');
+                                        
+                                        var stockId = $("#Stock option:selected").val();
+                                        window.location.href = '@Url.Action("Trading", "Trading")?stockId=' + stockId;
+                                    }
+                                    else {
+                                        if (language == "en-GB") {
+                                            alert("Ask Failed")
+                                        }
+                                        else {
+                                            alert("Ask Failed")
+                                        }
+                                        
+                                    }
+                                },
+                                error: function (xhr, textStatus, errorThrown) {
+                                    if (language == "en-GB") {
+                                        alert("Ask Failed")
+                                    }
+                                    else {
+                                        alert("Ask Failed")
+                                    }
+                                    
+                                }
+                            })
+                        }
+                        else if (data == 2) {
+                            $("#sellBtn").prop('disabled', false)
+                            if (language == "en-GB") {
+                                alert("Sorry!! You do not have enough stock to sell.")
+                            }
+                            else {
+                                alert("Sorry!! You do not have enough stock to sell.")
+                            }
+                            
+                        }
+                        else if (data == 3) {
+                            $("#sellBtn").prop('disabled', false)
+                            var minimumRate = '@Model.QueueTradingViewModel.unit_master.minimum_rate';
+                            if (language == "en-GB") {
+                                alert("Please make an ask with rate greater than " + minimumRate);
+                            }
+                            else {
+                                alert("Please make an ask with rate greater than " + minimumRate);
+                            }
+                            
+                        }
+                        else if (data == 4) {
+                            $("#sellBtn").prop('disabled', false)
+                            var minimumLot = '@Model.QueueTradingViewModel.unit_master.minimum_lot';
+                            if (language == "en-GB") {
+                                alert("Please make an ask with lot greater than " + minimumLot);
+                            }
+                            else {
+                                alert("Please make an ask with lot greater than " + minimumLot);
+                            }
+                            
+                        }
+                        else {
+                            $("#sellBtn").prop('disabled', false)
+                            if (language == "en-GB") {
+                                alert("Something went wrong!!! Please try again later");
+                            }
+                            else {
+                                alert('@Html.DisplayNameFor(model=>model.SomethingWentWrong)');
+                            }
+                            
+                        }
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        $("#sellBtn").prop('disabled', false)
+                        if (language == "en-GB") {
+                            alert("Amount/Price you entered is invalid.")
+                        }
+                        else {
+                            alert('@Html.DisplayNameFor(model=>model.AmountPriceYouEnteredIsInvalid)')
+                        }
+                        
+                    }
+                })
+            }
+        });
+
+        //code made by umang on 20-07-16 //
+        $("#bidamount,#askamount,#bidprice,#askprice").keydown(function (e) {
+            // Allow: backspace, delete, tab, escape, enter
+            if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110]) !== -1 ||
+                // Allow: Ctrl+A, Command+A
+                (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+                // Allow: home, end, left, right, down, up
+                (e.keyCode >= 35 && e.keyCode <= 40)) {
+                // let it happen, don't do anything
+                return;
+            }
+            // Ensure that it is a number and stop the keypress
+            if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                e.preventDefault();
+            }
+        });
+        //code update by umang on 06-08-16 //
+        $("#divbuyminus").click(function () {
+
+            var v = $("#bidamount").val();
+            if (v != '' && v >= 1) {
+                v = parseInt(v) - 1;
+                $("#bidamount").val(v);
+            }
+
+        });
+
+        $("#divbuyplus").click(function () {
+            var v = $("#bidamount").val();
+            if (v != '' && v >= 1) {
+                v = parseInt(v) + 1;
+                $("#bidamount").val(v);
+            }
+        });
+
+        $("#divsellminus").click(function () {
+            var v = $("#askamount").val();
+            if (v != '' && v >= 1) {
+                v = parseInt(v) - 1;
+                $("#askamount").val(v);
+            }
+        });
+
+        $("#divsellplus").click(function () {
+            var v = $("#askamount").val();
+            if (v != '' && v >= 1) {
+                v = parseInt(v) + 1;
+                $("#askamount").val(v);
+            }
+        });
+
+
+        //Code End here //
+        // code made by umang 25/07/16 //
+        $("#bidamount").keyup(function () {
+            {
+                var point = parseInt('@Model.QueueTradingViewModel.unit_master.points_equivalent');
+                //$("#lbllotbuy").text($("#bidamount").val());
+                var bid = parseInt($("#bidamount").val());
+                var total = parseInt(point * bid);
+                if (bid > 0) {
+                    $("#lbllotbuytotal").text(total);
+                }
+                else {
+                    $("#lbllotbuytotal").text('');
+                }
+            }
+        });
+
+
+        $("#askamount").keyup(function () {
+            {
+                var point = parseInt('@Model.QueueTradingViewModel.unit_master.points_equivalent');
+                //$("#lbllotsell").text($("#askamount").val());
+                var ask = parseInt($("#askamount").val());
+                var total = parseInt(point * ask);
+                if (ask > 0) {
+                    $("#lbllotselltotal").text(total);
+                }
+                else {
+                    $("#lbllotselltotal").text('');
+                }
+            }
+        });
+
+        // code for price per lot
+        $("#bidprice").keyup(function () {
+            {
+                var point = parseInt('@Model.QueueTradingViewModel.unit_master.points_equivalent');
+                var bid = parseInt($("#bidamount").val());
+                var amount = $("#bidprice").val();
+                //var total = parseInt(point * bid) / amount;
+                var total = amount / parseInt(point * bid);
+                if (amount > 0) {
+                    $("#lblpriceperlotbuy").text(total.toFixed(2));
+                }
+                else {
+                    $("#lblpriceperlotbuy").text('');
+                }
+            }
+        });
+        // price per lot //
+        $("#askprice").keyup(function () {
+            {
+                var point = parseInt('@Model.QueueTradingViewModel.unit_master.points_equivalent');
+                var ask = parseInt($("#askamount").val());
+                var amount = $("#askprice").val();
+                //var total = parseFloat(point * ask) / amount;
+                var total = amount / parseFloat(point * ask);
+                if (amount > 0) {
+                    $("#lblpriceperlotsell").text(total.toFixed(2));
+                }
+                else {
+                    $("#lblpriceperlotsell").text('');
+                }
+            }
+        });
+        //Code End here //
+
+        $(".edit").click(function () {
+            if ($(this).attr("data-queue-action") == "bid") {
+                $("#updatebidamount").val($(this).attr("data-amount"));
+                $("#updatebidprice").val($(this).attr("data-price"));
+                $("#BidStock").val($(this).attr("data-stockid"));
+                $(".UpdateBid").attr("id", $(this).attr("data-id"));
+                $("#bidModal").modal("show");
+            }
+            else {
+                $("#updateaskamount").val($(this).attr("data-amount"));
+                $("#updateaskprice").val($(this).attr("data-price"));
+                $("#AskStock").val($(this).attr("data-stockid"));
+                $(".UpdateAsk").attr("id", $(this).attr("data-id"));
+                $("#askModal").modal("show");
+            }
+        });
+
+        $(".UpdateBid").click(function () {
+            var id = parseInt($(this).attr("id"));
+            var stockCode = $("#BidStock").val();
+            var bidAmount = $("#updatebidamount").val();
+            var bidPrice = parseFloat($("#updatebidprice").val());
+            if (bidAmount == "") {
+                if (language == "en-GB") {
+                    alert("Please enter ask amount");
+                }
+                else {
+                    alert('@Html.DisplayNameFor(model=>model.PleaseEnterAskAmount)');
+                }
+                
+            }
+            else if (bidPrice == "") {
+                if (language == "en-GB") {
+                    alert("Please enter ask price");
+                }
+                else {
+                    alert("Please enter ask price");
+                }
+                
+            }
+            else if (bidPrice < 0.1) {
+                if (language == "en-GB") {
+                    alert("The Price should not be less than 0.1$");
+                }
+                else {
+                    alert("The Price should not be less than 0.1$");
+                }
+                
+            }
+            else {
+                $(".UpdateBid").prop('disabled', true);
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("UpdateTransaction", "Trading")?id=' + id + '&point=' + bidAmount + '&price=' + bidPrice,
+                    content: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        if (data == 1) {
+                            $.ajax({
+                                type: "POST",
+                                url: '@Url.Action("MatchQueue", "Queue")?stockId=' + stockCode + '&userId=' + '@UserId',
+                                content: "application/json; charset=utf-8",
+                                dataType: "json",
+                                success: function (result) {
+                                    debugger;
+                                    if (result[0] == 1) {
+                                        // SignalR Code Start
+                                        var userId = '@UserId';
+                                        var data = { stockCode: stockCode, bidAmount: bidAmount, bidPrice: bidPrice, task: 'bid' };
+                                        queueHub.send("GetQueueData", stockCode, JSON.stringify(data), userId);
+                                        queueHub.send("bid", stockCode, JSON.stringify(data), userId);
+                                        queueHub.send("ask", stockCode, JSON.stringify(data), userId);
+                                        queueHub.send("completed", stockCode, JSON.stringify(data), userId);
+                                        // SignalR Code End
+                                        alert('@Html.DisplayNameFor(model=>model.YourBidHasBeenUpdatedSuccessfully)');
+                                        var stockId = $("#Stock option:selected").val();
+                                        window.location.href = '@Url.Action("Trading", "Trading")?stockId=' + stockId;
+                                    }
+                                    else {
+                                        alert('@Html.DisplayNameFor(model=>model.SomethingWentWrong)');
+                                        
+                                    }
+                                },
+                                error: function (xhr, textStatus, errorThrown) {
+                                    alert('@Html.DisplayNameFor(model=>model.AmountPriceYouEnteredIsInvalid)')
+                                    
+                                }
+                            })
+                        }
+                        else if (data == 2) {
+                            $(".UpdateBid").prop('disabled', false);
+                            if (language == "en-GB") {
+                                alert("Sorry!! You do not have enough amount in your wallet for this bid.")
+                            }
+                            else {
+                                alert('@Html.DisplayNameFor(model=>model.NotEnoughAmountForBid)')
+                            }
+                            
+                        }
+                        else if (data == 3) {
+                            $(".UpdateBid").prop('disabled', false);
+                            var minimumRate = '@Model.QueueTradingViewModel.unit_master.minimum_rate';
+                            if (language == "en-GB") {
+                                alert("Please make a bid with rate greater than " + minimumRate);
+                            }
+                            else {
+                                alert("Please make a bid with rate greater than " + minimumRate);
+                            }
+                            
+                        }
+                        else if (data == 4) {
+                            $(".UpdateBid").prop('disabled', false);
+                            var minimumLot = '@Model.QueueTradingViewModel.unit_master.minimum_lot';
+                            alert("Please make a bid with lot greater than " + minimumLot);
+                            
+                        }
+                        else if (data == 5) {
+                            alert('@Html.DisplayNameFor(model=>model.NotEnoughAmountForBid)');
+                            
+                        }
+                        else {
+                            $(".UpdateBid").prop('disabled', false);
+                            alert('@Html.DisplayNameFor(model=>model.SomethingWentWrong)');
+                        }
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        $(".UpdateBid").prop('disabled', false);
+                        alert('@Html.DisplayNameFor(model=>model.AmountPriceYouEnteredIsInvalid)')
+                    }
+                })
+            }
+        });
+
+        $(".UpdateAsk").click(function () {
+            var id = parseInt($(this).attr("id"));
+            var stockCode = $("#AskStock").val();
+            var askAmount = $("#updateaskamount").val();
+            var askPrice = parseFloat($("#updateaskprice").val());
+            if (askAmount == "") {
+                alert('@Html.DisplayNameFor(model=>model.PleaseEnterBidAmount)');
+            }
+            else if (askPrice == "") {
+                alert("Please enter bid price");
+            }
+            else if (askPrice < 0.1) {
+                alert("The Price should not be less than 0.1$");
+            }
+            else {
+                $(".UpdateAsk").prop('disabled', true);
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("UpdateTransaction", "Trading")?id=' + id + '&point=' + askAmount + '&price=' + askPrice,
+                    content: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        if (data == 1) {
+                            $.ajax({
+                                type: "POST",
+                                url: '@Url.Action("MatchQueue", "Queue")?stockId=' + stockCode + '&userId=' + '@UserId',
+                                content: "application/json; charset=utf-8",
+                                dataType: "json",
+                                success: function (result) {
+                                    if (result[0] == 1) {
+                                        // SignalR Code Start
+                                        var userId = '@UserId';
+                                        var data = { stockCode: stockCode, askAmount: askAmount, askPrice: askPrice, task: 'ask' };
+                                        queueHub.send("GetQueueData", stockCode, JSON.stringify(data), userId);
+                                        queueHub.send("bid", stockCode, JSON.stringify(data), userId);
+                                        queueHub.send("ask", stockCode, JSON.stringify(data), userId);
+                                        queueHub.send("completed", stockCode, JSON.stringify(data), userId);
+                                        // SignalR Code End
+                                        alert('@Html.DisplayNameFor(model=>model.YourAskHasBeenUpdatedSuccessfully)');
+                                        alert('')
+                                        var stockId = $("#Stock option:selected").val();
+                                        window.location.href = '@Url.Action("Trading", "Trading")?stockId=' + stockId;
+                                    }
+                                    else {
+                                        alert('@Html.DisplayNameFor(model=>model.SomethingWentWrong)');
+                                    }
+                                },
+                                error: function (xhr, textStatus, errorThrown) {
+                                    alert('@Html.DisplayNameFor(model=>model.SomethingWentWrong)');
+                                }
+                            })
+                        }
+                        else if (data == 2) {
+                            $(".UpdateAsk").prop('disabled', false);
+                            alert("Sorry!! You do not have enough stock to sell.")
+                        }
+                        else if (data == 3) {
+                            $(".UpdateAsk").prop('disabled', false);
+                            var minimumRate = '@Model.QueueTradingViewModel.unit_master.minimum_rate';
+                            alert("Please make an ask with rate greater than " + minimumRate);
+                        }
+                        else if (data == 4) {
+                            $(".UpdateAsk").prop('disabled', false);
+                            var minimumLot = '@Model.QueueTradingViewModel.unit_master.minimum_lot';
+                            alert("Please make an ask with lot greater than " + minimumLot);
+                        }
+                        else if (data == 6) {
+                            alert("Sorry!! You do not have enough stock to sell.");
+                        }
+                        else {
+                            $(".UpdateAsk").prop('disabled', false);
+                            alert('@Html.DisplayNameFor(model=>model.SomethingWentWrong)');
+                        }
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        $(".UpdateAsk").prop('disabled', false);
+                        alert('@Html.DisplayNameFor(model=>model.AmountPriceYouEnteredIsInvalid)')
+                    }
+                })
+            }
+        });
+
+        function CancelTransaction(e) {
+            var stockCode = parseInt($(e).attr("data-stockid"));
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("CancelTransaction", "Trading")?transactionid=' + e.id,
+                content: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    if (data == 1) {
+                        var userId = '@UserId';
+                        $.ajax({
+                            type: "POST",
+                            url: '@Url.Action("Index", "Trading")',
+                            content: "application/json; charset=utf-8",
+                            dataType: "json",
+                            success: function (data) {
+                                var data = { task: 'cancel' };
+                                queueHub.send("bid", stockCode, JSON.stringify(data), userId);
+                                queueHub.send("ask", stockCode, JSON.stringify(data), userId);
+                                alert("Transaction cancelled successfully.");
+                            },
+                            error: function (xhr, textStatus, errorThrown) {
+                                var data = { task: 'cancel' };
+                                queueHub.send("bid", stockCode, JSON.stringify(data), userId);
+                                queueHub.send("ask", stockCode, JSON.stringify(data), userId);
+                                alert("Transaction cancelled successfully.");
+                                window.location.reload();
+                            }
+                        });
+                    }
+                    else {
+                        alert('@Html.DisplayNameFor(model=>model.SomethingWentWrong)');
+                    }
+
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    alert("Bid Failed")
+                }
+            })
+        }
+
+        function GetAllQueueTradingDataByStock() {
+            var stockId = parseInt($("#Stock option:selected").val());
+            window.location.href = '@Url.Action("Trading", "Trading")?stockId=' + stockId;
+        }
+    </script>
+}

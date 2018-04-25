@@ -1,0 +1,159 @@
+﻿@model Wollo.Web.Models.Dashboard
+@{
+    ViewBag.Title = @Html.DisplayNameFor(model => model.DashboardViewModel.welcome);
+}
+
+<style>
+    .notifidiv {
+        padding: 22px;
+        font-size: 19px;
+        color: #fff;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+
+
+    .pre-scrollable {
+        max-height: 7.4em;
+        overflow-y: scroll;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+        border: solid 1px #337ab7;
+    }
+</style>
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    @Html.LabelFor(model => model.DashboardViewModel.welcome) <small>@ViewBag.UserName</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i> @Html.LabelFor(model => model.DashboardViewModel.dashboard)
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="panel panel-yellow">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-usd fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                @{string cash = Model.DashboardViewModel.cash.ToString("0.00");}
+                                <div class="huge">$@Html.Raw(cash)</div>
+                                @*<div class="huge">$@Html.DisplayFor(model => model.cash)</div>*@
+                                <div>@Html.LabelFor(model => model.DashboardViewModel.cash)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/Trading/PortfolioDetails">
+                        <div class="panel-footer">
+                            <span class="pull-left">@Html.LabelFor(model => model.DashboardViewModel.view_details)</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-briefcase fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">@Html.DisplayFor(model => model.DashboardViewModel.reward_points)</div>
+                                @{string stockfullname = Model.DashboardViewModel.rpe_stockcode + "-" + Model.DashboardViewModel.rpe_stockname;}
+                                <div>@stockfullname</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/Trading/PortfolioDetails">
+                        <div class="panel-footer">
+                            <span class="pull-left">@Html.LabelFor(model => model.DashboardViewModel.view_details)</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="panel panel-green">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-spinner fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">@Html.DisplayFor(model => model.DashboardViewModel.issue_points)</div>
+                                @{string sfullname = Model.DashboardViewModel.test_stockcode + "-" + Model.DashboardViewModel.test_stockname;}
+                                <div>@sfullname</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/Trading/PortfolioDetails">
+                        <div class="panel-footer">
+                            <span class="pull-left">@Html.LabelFor(model => model.DashboardViewModel.view_details)</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!--Coed made by umang 20/07/1016-->
+
+        <div class="row">
+            <div class="col-md-12" style="Color: dimgray">
+                <div class="col-sm-12 notifidiv ubid bid-loud blue">
+                    <i class="fa fa-bell"></i> @Html.LabelFor(model => model.DashboardViewModel.notification)
+                </div>
+                <div class="pre-scrollable col-sm-12">
+
+                    <ul class="wrpe-special" data-offcanvass="yes" style="line-height:2;">
+                        @foreach (var item in Model.DashboardViewModel.HolidayData.lstHolidayMaster)
+                        {
+                            string holiday_date = item.holiday_date.ToString("dd/MM/yyyy");
+                            <li class="glyphicon glyphicon-ok-sign">
+                                <b> @holiday_date - @Html.DisplayFor(model => item.description)</b>
+
+                            </li>
+                            <br />
+                        }
+                        @*<li class="glyphicon glyphicon-ok-sign">
+                                <b>  </b>
+                            </li>
+                            <br />
+                            <li class="glyphicon glyphicon-ok-sign">
+                                <b> Only For Example</b>
+                            </li>*@
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div><br /><br />
+    <!-- /.container-fluid -->
+</div>
+@section scripts{
+    <script src="~/js/jquery.js"></script>
+    @*<script src="~/Scripts/bootstrap.js"></script>*@
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $('#myGroup ul li a').click(function () {
+            $('#myGroup ul li ul.collapse ').removeClass('in');
+            $('#myGroup ul li').removeClass('active');
+        });
+    </script>
+}

@@ -1,0 +1,65 @@
+C:\Users\Sunarc\Desktop\WollNitin\Updated\Wollo.Entities\bin\Debug\Wollo.Entities.dll
+C:\Users\Sunarc\Desktop\WollNitin\Updated\Wollo.Entities\bin\Debug\Wollo.Entities.pdb
+C:\Users\Sunarc\Desktop\WollNitin\Updated\Wollo.Entities\bin\Debug\Wollo.Base.dll
+C:\Users\Sunarc\Desktop\WollNitin\Updated\Wollo.Entities\bin\Debug\System.Web.Http.dll
+C:\Users\Sunarc\Desktop\WollNitin\Updated\Wollo.Entities\bin\Debug\EntityFramework.dll
+C:\Users\Sunarc\Desktop\WollNitin\Updated\Wollo.Entities\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Sunarc\Desktop\WollNitin\Updated\Wollo.Entities\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Sunarc\Desktop\WollNitin\Updated\Wollo.Entities\bin\Debug\Wollo.Base.pdb
+C:\Users\Sunarc\Desktop\WollNitin\Updated\Wollo.Entities\bin\Debug\System.Web.Http.xml
+C:\Users\Sunarc\Desktop\WollNitin\Updated\Wollo.Entities\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Sunarc\Desktop\WollNitin\Updated\Wollo.Entities\obj\Debug\Wollo.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Sunarc\Desktop\WollNitin\Updated\Wollo.Entities\obj\Debug\Wollo.Entities.dll
+C:\Users\Sunarc\Desktop\WollNitin\Updated\Wollo.Entities\obj\Debug\Wollo.Entities.pdb
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\Updated\Wollo.Entities\bin\Debug\Wollo.Entities.dll
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\Updated\Wollo.Entities\bin\Debug\Wollo.Entities.pdb
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\Updated\Wollo.Entities\bin\Debug\Wollo.Base.dll
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\Updated\Wollo.Entities\bin\Debug\System.Web.Http.dll
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\Updated\Wollo.Entities\bin\Debug\EntityFramework.dll
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\Updated\Wollo.Entities\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\Updated\Wollo.Entities\bin\Debug\Wollo.Base.pdb
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\Updated\Wollo.Entities\bin\Debug\System.Web.Http.xml
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\Updated\Wollo.Entities\bin\Debug\EntityFramework.xml
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\Updated\Wollo.Entities\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\Updated\Wollo.Entities\obj\Debug\Wollo.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\Updated\Wollo.Entities\obj\Debug\Wollo.Entities.dll
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\Updated\Wollo.Entities\obj\Debug\Wollo.Entities.pdb
+E:\Minakshi\RPE\Updated\Wollo.Entities\bin\Debug\Wollo.Entities.dll
+E:\Minakshi\RPE\Updated\Wollo.Entities\bin\Debug\Wollo.Entities.pdb
+E:\Minakshi\RPE\Updated\Wollo.Entities\bin\Debug\Wollo.Base.dll
+E:\Minakshi\RPE\Updated\Wollo.Entities\bin\Debug\EntityFramework.dll
+E:\Minakshi\RPE\Updated\Wollo.Entities\bin\Debug\Newtonsoft.Json.dll
+E:\Minakshi\RPE\Updated\Wollo.Entities\bin\Debug\Wollo.Base.pdb
+E:\Minakshi\RPE\Updated\Wollo.Entities\obj\Debug\Wollo.Entities.csprojResolveAssemblyReference.cache
+E:\Minakshi\RPE\Updated\Wollo.Entities\obj\Debug\Wollo.Entities.dll
+E:\Minakshi\RPE\Updated\Wollo.Entities\obj\Debug\Wollo.Entities.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Entities\bin\Debug\Wollo.Entities.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Entities\bin\Debug\Wollo.Entities.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Entities\bin\Debug\Wollo.Base.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Entities\bin\Debug\System.Web.Http.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Entities\bin\Debug\EntityFramework.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Entities\bin\Debug\System.Net.Http.Formatting.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Entities\bin\Debug\Newtonsoft.Json.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Entities\bin\Debug\Wollo.Base.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Entities\bin\Debug\System.Web.Http.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Entities\bin\Debug\System.Net.Http.Formatting.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Entities\obj\Debug\Wollo.Entities.csprojResolveAssemblyReference.cache
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Entities\obj\Debug\Wollo.Entities.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Entities\obj\Debug\Wollo.Entities.pdb
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Entities\bin\Debug\LocalResource\Resource.resx
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Entities\bin\Debug\LocalResource\Resource.zh-CHS.resx
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Entities\bin\Debug\LocalResource\Resource.zh-CHT.resx
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Entities\bin\Debug\LocalResource\Resource.en-GB.resx
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Entities\bin\Debug\LocalResource\Resource.Designer.cs
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Entities\bin\Debug\Wollo.Entities.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Entities\bin\Debug\Wollo.Entities.pdb
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Entities\bin\Debug\Wollo.Base.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Entities\bin\Debug\EntityFramework.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Entities\bin\Debug\Newtonsoft.Json.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Entities\bin\Debug\Wollo.Base.pdb
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Entities\bin\Debug\en-GB\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Entities\bin\Debug\zh-CHS\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Entities\bin\Debug\zh-CHT\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Entities\obj\Debug\Wollo.Entities.csprojResolveAssemblyReference.cache
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Entities\obj\Debug\Wollo.Entities.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Entities\obj\Debug\Wollo.Entities.pdb

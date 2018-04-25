@@ -1,0 +1,14 @@
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\HomeCinema.Entities\bin\Debug\HomeCinema.Entities.dll
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\HomeCinema.Entities\bin\Debug\HomeCinema.Entities.pdb
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\HomeCinema.Entities\bin\Debug\Base.dll
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\HomeCinema.Entities\bin\Debug\System.Web.Http.dll
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\HomeCinema.Entities\bin\Debug\EntityFramework.dll
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\HomeCinema.Entities\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\HomeCinema.Entities\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\HomeCinema.Entities\bin\Debug\Base.pdb
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\HomeCinema.Entities\bin\Debug\System.Web.Http.xml
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\HomeCinema.Entities\bin\Debug\EntityFramework.xml
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\HomeCinema.Entities\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\HomeCinema.Entities\obj\Debug\HomeCinema.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\HomeCinema.Entities\obj\Debug\HomeCinema.Entities.dll
+C:\Users\Sunarc\Desktop\WollNitin\spa-webapi-angularjs-master\HomeCinema.Entities\obj\Debug\HomeCinema.Entities.pdb

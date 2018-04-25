@@ -1,0 +1,739 @@
+﻿@model  Wollo.Web.Models.FundTopup
+@{
+    ViewBag.Title = @Html.DisplayNameFor(model => model.TopUpDetails.topup);
+}
+@section header{
+    <link href="~/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/responsive.bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/bootstrap-datepicker.css" rel="stylesheet">
+    <style>
+        .options a {
+            cursor: pointer;
+        }
+
+        .modal-open {
+            overflow: scroll;
+        }
+
+        .btn .btn-success {
+            margin-left: -4px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+    </style>
+}
+<body class="modal-open">
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <!-- Page Heading -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">
+                        @Html.LabelFor(model => model.TopUpDetails.fund_topup)
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li class="active">
+                            <i class="fa fa-dashboard"></i> @Html.LabelFor(model => model.TopUpDetails.dashboard_fundtopup)
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="">
+                @if (User.IsInRole("Member"))
+                {
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <button type="button" class="btn btn-primary" id="Open-Topup-Modal">@Html.LabelFor(model => model.TopUpDetails.topup) <i class="fa fa-plus-square" aria-hidden="true"></i></button>
+                        </div>
+                    </div><br />
+                }
+                <div class="row">
+                    <div class="col-sm-3">
+                        <span class="input-group-addon" style="display: block;text-align: center; padding: 5px; background: transparent; border: none;position: absolute;top: 5px;right: 30px;">
+                            <span class="fa fa-calendar"></span>
+                        </span>
+                        <input id="from" name="from" type="text" class="form-control" placeholder=@Html.DisplayNameFor(model => model.TopUpDetails.CommonWordsViewModel.from) />
+                    </div>
+                    <div class="col-sm-3">
+                        <span class="input-group-addon" style="display: block;text-align: center; padding: 5px; background: transparent; border: none;position: absolute;top: 5px;right: 30px;">
+                            <span class="fa fa-calendar"></span>
+                        </span>
+                        <input id="to" name="to" type="text" class="form-control" placeholder=@Html.DisplayNameFor(model => model.TopUpDetails.CommonWordsViewModel.to) />
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="button" value=@Html.DisplayNameFor(model => model.TopUpDetails.CommonWordsViewModel.filter) onclick="rangefilter()" class="btn btn-primary" id="filter" />
+                        <a class="btn btn-primary" href="/Cash/FundTopup">@Html.DisplayNameFor(model => model.TopUpDetails.CommonWordsViewModel.refresh)</a>
+                    </div>
+                </div>
+                <br />
+                @if (TempData["Success"] != null)
+                {
+                    <div class="alert alert-success" id="successMessage">@TempData["Success"]</div>
+                }
+                <!-- /.container-fluid -->
+            </div>
+            <div class="container-fluid">
+                @if (!User.IsInRole("Super Admin 1") && !User.IsInRole("Super Admin 2"))
+                {
+                    <div class="row">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <i class="fa fa-usd fa-2x" aria-hidden="true"></i> <strong>@Html.LabelFor(model => model.TopUpDetails.cash_e_wallet)</strong> : $@Model.TopUpDetails.Cash
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                }
+                <div class="row">
+                    <div id="upper-birth">
+                        <div class="table-responsive">
+                            <table id="topup_history" class="table table-bordered table-hover table-striped dt-responsive nowrap">
+                                <thead>
+                                    @*@if (!User.IsInRole("Super Admin 1") && !User.IsInRole("Super Admin 2"))
+                            {
+                                <tr>
+                                    <th class="no-b-th tex-left"><div><button type="button" class="btn btn-primary" id="Open-Topup-Modal">Topup <i class="fa fa-plus-square" aria-hidden="true"></i></button></div></th>
+                                    <th class="empty-th"> </th>
+                                    <th class="empty-th"> </th>
+
+                                    <th class="empty-th"> </th>
+                                    <th class="no-b-th text-right"></th>
+                                </tr>
+                            }*@
+                                    @*<tr>
+                                <th class="no-b-th tex-left"><div>Topup History</div></th>
+                                <th class="empty-th"> </th>
+                                <th class="empty-th"> </th>
+                                @if (!User.IsInRole("Super Admin 1") && !User.IsInRole("Super Admin 2"))
+                                    {
+                                    <th class="empty-th"> </th>
+                                    <th class="no-b-th text-right"></th>
+                                    }
+                                    else
+                                    {
+                                    <th class="empty-th"> </th>
+                                    <th class="empty-th"> </th>
+                                    <th class="empty-th"> </th>
+                                    }
+
+                            </tr>*@
+
+                                    <tr>
+                                        <th>@Html.LabelFor(model => model.TopUpDetails.date_time)</th>
+                                        @if (User.IsInRole("Super Admin 1") || User.IsInRole("Super Admin 2"))
+                                        {
+                                            <th>@Html.LabelFor(model => model.TopUpDetails.username)</th>
+                                        }
+                                        <th>@Html.LabelFor(model => model.TopUpDetails.status)</th>
+                                        <th>@Html.LabelFor(model => model.TopUpDetails.amount)</th>
+                                        <th>@Html.LabelFor(model => model.TopUpDetails.details)</th>
+                                        @*<th>Actions</th>*@
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.TopUpDetails.Topups)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.HiddenFor(x => item.payment_method)
+                                                @Html.DisplayFor(x => item.created_date)
+                                            </td>
+                                            @if (User.IsInRole("Super Admin 1") || User.IsInRole("Super Admin 2"))
+                                            {
+                                                <td>@Html.DisplayFor(x => item.AspnetUsers.username)</td>
+                                            }
+                                            <td>@Html.DisplayFor(x => item.TopupStatusMaster.status)</td>
+                                            <td>@Html.DisplayFor(x => item.amount)</td>
+                                            @{string method = item.payment_method;}
+                                            @if (method == "1")
+                                            {
+                                                <td>Paypal</td>
+                                            }
+                                            else if (method == "4")
+                                            {
+                                                <td>AES</td>
+                                            }
+                                            else
+                                            {
+                                                <td>@Html.DisplayFor(x => item.payment_method)</td>
+                                            }
+                                            @*<td class="options">
+                                        @if (!User.IsInRole("Super Admin 1") && !User.IsInRole("Super Admin 2"))
+                                        {
+                                            if (item.TopupStatusMaster.status != "Cancelled" && item.TopupStatusMaster.status != "Completed")
+                                            {
+                                                <a href="javascript:void(0)" data-id="@item.id" data-payment-method="@item.payment_method" data-amount="@item.amount" class="edit">Modify</a>
+                                                <span> | </span><a href="javascript:void(0)" data-id="@item.id" class="cancel">Cancel</a>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            if (item.TopupStatusMaster.status != "Cancelled" && item.TopupStatusMaster.status != "Completed")
+                                            {
+                                                <a href="javascript:void(0)" data-id="@item.id" data-status="@item.topup_status_id" class="statusChange">Change Status</a>
+                                            }
+                                        }
+                                    </td>*@
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+
+
+
+                            @*<nav class="text-center">
+                        <ul class="pagination">
+                            <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>*@
+                            <!-- Button trigger modal -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-wrapper -->
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">@Html.LabelFor(model => model.TopUpDetails.add_topup)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="dropdown col-sm-4" style="margin-bottom:10px;">
+                                @Html.Hidden("Mode", "Add")
+                                @Html.Hidden("TopupId")
+                                @*@Html.DropDownList("PaymentMethod", new SelectList(ViewBag.PaymentMethodsList, "Value", "Text"), "Select Payement Method", new { @class = "form-control" })*@
+                                @Html.DropDownList("PaymentMethod", new SelectList(ViewBag.PaymentMethodsList, "id", "method"), "Select Payment Method", new { @class = "form-control" })
+                            </div>
+                            <div class="form-group col-sm-4">
+                                @Html.Label("Amount", "Amount (in dollars)", new { @class = "sr-only" })
+                                <div class="input-group">
+                                    <div class="input-group-addon">$</div>
+                                    @Html.TextBox("Amount", null, new { @class = "form-control", @placeholder = "Amount", @maxlength = "8" })
+                                    <div class="input-group-addon">.00</div>
+                                </div>
+                                <small>@Html.LabelFor(model => model.TopUpDetails.minimum_10_topup)</small>
+                            </div>
+                            <div class="form-group col-sm-4">
+                                @Html.Label("Credit", "Credit", new { @class = "sr-only" })
+                                <div class="input-group">
+                                    @*<div class="input-group-addon">$</div>*@
+                                    @Html.TextBox("CreditAmount", null, new { @class = "form-control", @placeholder = "Credits", @readonly = "readonly" })
+                                    @*<div class="input-group-addon">.00</div>*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">@Html.LabelFor(model => model.TopUpDetails.cancel)</button>
+                        <button type="button" onclick="this.disabled=true" class="btn btn-primary" id="Add-Topup">@Html.LabelFor(model => model.TopUpDetails.confirm)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="Status" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        @{
+                            Wollo.Entities.ViewModels.TopUpDetails details = new Wollo.Entities.ViewModels.TopUpDetails();
+                        }
+                        <h4 class="modal-title" id="myModalLabel">@Html.LabelFor(model => details.change_status)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="dropdown col-sm-6">
+                                @Html.Hidden("StatusTopupId")
+
+                                @Html.DropDownList("Statusdd", new SelectList(Model.TopUpDetails.TopupStatusMaster, "id", "status"), "All", new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">@Html.LabelFor(model => model.TopUpDetails.cancel)</button>
+                        <button type="button" onclick="this.disabled=true" class="btn btn-primary" id="change-status">@Html.LabelFor(model => model.TopUpDetails.confirm)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- /#wrapper -->
+@section scripts{
+    <script src="~/js/jquery.js"></script>
+    @*<script src="~/Scripts/bootstrap.js"></script>*@
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.dataTables.min.js"></script>
+    <script src="~/js/dataTables.bootstrap.min.js"></script>
+    <script src="~/js/dataTables.responsive.min.js"></script>
+    <script src="~/js/responsive.bootstrap.min.js"></script>
+    <script src="~/js/bootstrap-datepicker.js"></script>
+    <script>
+        var english = {
+            "sLengthMenu": "Show _MENU_ entries",
+            "sZeroRecords": "No data available in table",
+            "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+            "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+            "sInfoFiltered": "(filtered from _MAX_ total entries)"
+        };
+        //var chinese = {
+        //    "sProcessing": "Procesando...",
+        //    "sLengthMenu": "展 _MENU_ 项",
+        //    "sZeroRecords": "无表可用数据",
+        //    "sInfo": "显示 _START_ 至 _END_ 的 _TOTAL_ 记录",
+        //    "sInfoEmpty": " 显示0至0 0项",
+        //    "sInfoFiltered": "(filtrado de un total de _MAX_ líneas)",
+        //    "sInfoPostFix": "",
+        //    "sSearch": "搜索:",
+        //    "sUrl": ""
+        //};
+        var chinese = {
+            "sProcessing": "处理中...",
+            "sLengthMenu": "显示 _MENU_ 项结果",
+            "sZeroRecords": "没有匹配结果",
+            "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+            "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+            "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+            "sInfoPostFix": "",
+            "sSearch": "搜索:",
+            "sUrl": "",
+            "sEmptyTable": "表中数据为空",
+            "sLoadingRecords": "载入中...",
+            "sInfoThousands": ",",
+            "oPaginate": {
+                "sFirst": "首页",
+                "sPrevious": "上页",
+                "sNext": "下页",
+                "sLast": "末页"
+            },
+            "oAria": {
+                "sSortAscending": ": 以升序排列此列",
+                "sSortDescending": ": 以降序排列此列"
+            }
+        }
+
+        $(document).ready(function () {
+            var currentLang = english;
+            if ('@Session["Language"]' != null || '@Session["Language"]' != "") {
+                if ('@Session["Language"]' == "chinese") {
+                    currentLang = chinese;
+                }
+            }
+            $('#myGroup ul li a').click(function () {
+                $('#myGroup ul li ul.collapse ').removeClass('in');
+                $('#myGroup ul li').removeClass('active');
+            });
+
+            $('#topup_history').dataTable({
+                columnDefs: [
+                   { type: 'date-euro', targets: 0 }
+                ],
+                order: [[0, "desc"]],
+                "oLanguage": currentLang
+            });
+        });
+
+        if ('@TempData["StartDate"]' != '' && '@TempData["EndDate"]' != '') {
+            var startDate = ('@TempData["StartDate"]').split("/");
+            var endDate = ('@TempData["EndDate"]').split("/");
+            var startYear = startDate[2].split(" ");
+            var endYear = endDate[2].split(" ");
+            var start = new Date(startYear[0], parseInt(startDate[1])-1, startDate[0]);
+            var end = new Date(endYear[0], parseInt(endDate[1]) - 1, endDate[0])
+            $('#from').datepicker({ format: 'dd/mm/yyyy' }); // format to show
+            $('#to').datepicker({ format: 'dd/mm/yyyy' });
+            $('#from').datepicker('setDate', start);
+            $('#to').datepicker('setDate', end);
+        }
+
+
+        //*********************** Plugin to sort date of format DD/MM/YYYY hh:mm:ss**************************//
+        jQuery.extend(jQuery.fn.dataTableExt.oSort, {
+            "date-euro-pre": function (a) {
+                var x;
+
+                if ($.trim(a) !== '') {
+                    var frDatea = $.trim(a).split(' ');
+                    var frTimea = (undefined != frDatea[1]) ? frDatea[1].split(':') : [00, 00, 00];
+                    var frDatea2 = frDatea[0].split('/');
+                    x = (frDatea2[2] + frDatea2[1] + frDatea2[0] + frTimea[0] + frTimea[1] + frTimea[2]) * 1;
+                }
+                else {
+                    x = Infinity;
+                }
+
+                return x;
+            },
+
+            "date-euro-asc": function (a, b) {
+                return a - b;
+            },
+
+            "date-euro-desc": function (a, b) {
+                return b - a;
+            }
+        });
+        //*********************** Plugin to sort date of format DD/MM/YYYY hh:mm:ss**************************//
+
+        $("#nav-cash").addClass("active");
+        $("#Open-Topup-Modal").click(function () {
+            $("#PaymentMethod").val("");
+            $("#Amount").val("");
+            $("#CreditAmount").val("");
+            $("#myModalLabel").html("Add Topup");
+            $("#Mode").val("Add");
+            $("#myModal").modal("show");
+
+        });
+
+        //Start and end date validation start
+        var FromEndDate = new Date();
+        var ToEndDate = new Date();
+        ToEndDate.setDate(ToEndDate.getDate() + 365);
+        $('#to')
+            .datepicker({
+                format: 'dd/mm/yyyy',
+                weekStart: 1,
+                //startDate: startDate,
+                endDate: ToEndDate,
+                startView: 'decade',
+                autoclose: true,
+                todayHighlight: true
+            })
+            .on('changeDate', function (selected) {
+                FromEndDate = new Date(selected.date.valueOf());
+                FromEndDate.setDate(FromEndDate.getDate(new Date(selected.date.valueOf())));
+                $('#from').datepicker('setEndDate', FromEndDate);
+            });
+        $('#from').datepicker({
+            format: 'dd/mm/yyyy',
+            weekStart: 1,
+            //startDate: '01/01/2012',
+            endDate: FromEndDate,
+            startView: 'decade',
+            autoclose: true,
+            todayHighlight: true
+        })
+        .on('changeDate', function (selected) {
+            startDate = new Date(selected.date.valueOf());
+            startDate.setDate(startDate.getDate(new Date(selected.date.valueOf())));
+            $('#to').datepicker('setStartDate', startDate);
+        });
+
+        $('.datepicker').datepicker({
+            startView: 'decade',
+            autoclose: true,
+            todayHighlight: true
+        });
+        //Start and end date validation end
+
+        //for filtering according to date range
+        function rangefilter() {
+            if ($('#from').val() == "" && $('#to').val() == "") {
+                alert('@Html.DisplayNameFor(model=>model.PleaseSelectTheDateRange)');
+            }
+            else if ($('#from').val() == "") {
+                alert('Please select start date.');
+            }
+            else if ($('#to').val() == "") {
+                alert('@Html.DisplayNameFor(model=>model.PleaseSelectEndDate)');
+            }
+            else {
+                var startDate = $('#from').val();
+                var endDate = $('#to').val();
+                var updatedStartDate = startDate.split("/");
+                updatedStartDate = updatedStartDate[1] + "/" + updatedStartDate[0] + "/" + updatedStartDate[2];
+                var updatedEndDate = endDate.split("/");
+                updatedEndDate = updatedEndDate[1] + "/" + updatedEndDate[0] + "/" + updatedEndDate[2];
+                window.location.href = "@Url.Action("RangeFilter2", "Cash")" + "?start_date=" + updatedStartDate + "&end_date=" + updatedEndDate
+            }
+        }
+        //code ends here
+
+        $("#Amount").keydown(function (e) {
+            // Allow: backspace, delete, tab, escape, enter
+            if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110]) !== -1 ||
+                // Allow: Ctrl+A, Command+A
+                (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+                // Allow: home, end, left, right, down, up
+                (e.keyCode >= 35 && e.keyCode <= 40)) {
+                // let it happen, don't do anything
+                return;
+            }
+            // Ensure that it is a number and stop the keypress
+            if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                e.preventDefault();
+            }
+        });
+
+        $("#Amount").blur(function () {
+            if ($(this).val().length > 0) {
+                var credit = $("#Amount").val();
+                $("#CreditAmount").val(parseInt(credit));
+                //$("#CreditAmount").text(parseInt(credit));
+                //if ($("#RuleType").val() == "Fixed") {
+                //    var amount = parseInt($("#Amount").val());
+                //    var fee = parseInt($("#Fee").val());
+                //    $("#total").text(amount - fee);
+                //}
+                //else {
+                //    var amount = parseInt($("#Amount").val());
+                //    var fee = parseInt($("#Fee").val());
+                //    $("#total").text(parseInt(amount - (parseFloat(fee / 100) * amount)));
+                //}
+            }
+        });
+
+        $("#Add-Topup").click(function () {
+            if ($("#PaymentMethod").val().length > 0 && $("#Amount").val().length > 0) {
+                if ($("#Amount").val() < 10) {
+                    alert("Please enter minimum $10 amount.");
+                }
+                else {
+                    if ($("#Mode").val() == "Add") {
+                        var product = { "name": '@Model.TopUpDetails.AddTopupModel.name', "quantity": 1, "price": parseFloat($("#Amount").val()).toFixed(2) };
+                        var product_array = { "0": product };
+                        if ($("#PaymentMethod").val() == 1) {
+                            var url = " http://54.179.179.224/dmc/payment/public/index.php/paymentdetails?name=" + '@Model.TopUpDetails.AddTopupModel.name' + "&appid=" + '@Model.TopUpDetails.AddTopupModel.appid' + "&pid=" +@Model.TopUpDetails.AddTopupModel.aes_id +"&user_email=" + '@Model.TopUpDetails.AddTopupModel.user_email' + "&product_name=" + '@Model.TopUpDetails.AddTopupModel.product_name' + "&product_description=" + '@Model.TopUpDetails.AddTopupModel.product_description' + "&quantity=" + $("#Amount").val() + "&price=" + parseFloat($("#Amount").val()).toFixed(2) + "&Currency=" + '@Model.TopUpDetails.AddTopupModel.currency' + "&cancel_url=" + '@Model.TopUpDetails.AddTopupModel.cancel_url' + "&return_url=" + '@Model.TopUpDetails.AddTopupModel.return_url' + "&store_id=" + '@Model.TopUpDetails.AddTopupModel.store_id' + "&productarray=" + JSON.stringify(product_array);
+                            window.location.href = url;
+                        }
+                        else {
+                            var url = " http://54.179.179.224/dmc/payment/public/index.php/paymentdetails?name=" + '@Model.TopUpDetails.AddTopupModel.name' + "&appid=" + '@Model.TopUpDetails.AddTopupModel.appid' + "&pid=" +@Model.TopUpDetails.AddTopupModel.paypal_id +"&user_email=" + '@Model.TopUpDetails.AddTopupModel.user_email' + "&product_name=" + '@Model.TopUpDetails.AddTopupModel.product_name' + "&product_description=" + '@Model.TopUpDetails.AddTopupModel.product_description' + "&quantity=" + $("#Amount").val() + "&price=" + parseFloat($("#Amount").val()).toFixed(2) + "&Currency=" + '@Model.TopUpDetails.AddTopupModel.currency' + "&first_name=" + '@Model.TopUpDetails.AddTopupModel.name' + "&last_name=" + '@Model.TopUpDetails.AddTopupModel.name' + "&dob=" + '1992-10-20' + "&address=" + '@Model.TopUpDetails.AddTopupModel.address' + "&phone=" + '@Model.TopUpDetails.AddTopupModel.phone' + "&postcode=" + '@Model.TopUpDetails.AddTopupModel.postcode' + "&cancel_url=" + '@Model.TopUpDetails.AddTopupModel.cancel_url' + "&return_url=" + '@Model.TopUpDetails.AddTopupModel.return_url' + "&store_id=" +@Model.TopUpDetails.AddTopupModel.store_id +"&country=" + '@Model.TopUpDetails.AddTopupModel.country' + "&city=" + '@Model.TopUpDetails.AddTopupModel.city' + "&state=" + '@Model.TopUpDetails.AddTopupModel.state' + "&productarray=" + JSON.stringify(product_array);
+                            window.location.href = url;
+                        }
+                        @*$.ajax({
+                            url: "@Url.Action("AddTopup","Cash")" + "?PaymentMethod=" + $("#PaymentMethod").val() + "&Amount=" + $("#Amount").val(),
+                            method: 'POST',
+                            success: function (result) {
+                                if (result == 1) {
+                                    alert("Topup added successfully.");
+                                    location.reload();
+                                }
+                                else {
+                                    alert("Something went wrong!");
+                                }
+                            },
+                            error: function (e) {
+                                alert("Something went wrong!");
+                            }
+                        });*@
+                    }
+                    else {
+                        $.ajax({
+                            url: "@Url.Action("EditTopup","Cash")",
+                            data: "{ 'payment_method': '" + $("#PaymentMethod").val() + "', 'amount': '" + $("#Amount").val() + "', 'id': '" + $("#TopupId").val() + "' }",
+                            contentType: 'application/json',
+                            method: 'POST',
+                            success: function (result) {
+                                if (result == 1) {
+                                    alert('@Html.DisplayNameFor(model=>model.TopupAddedSuccessfully)');
+                                    location.reload();
+                                }
+                                else {
+                                    alert("Please enter a valid amount!");
+                                }
+                            },
+                            error: function (e) {
+                                alert("Please enter a valid amount!");
+                            }
+                        });
+                    }
+                }
+            }
+            else {
+                alert('@Html.DisplayNameFor(model=>model.MakeSureYouHaveSelectedPaymentMethodAndProvidedAmount)');
+            }
+        });
+
+        @*$("#Add-Topup").click(function () {
+            debugger;
+            if ($("#PaymentMethod").val().length > 0 && $("#Amount").val().length > 0) {
+                if ($("#Amount").val() < 10) {
+                    alert("Please enter minimum $10 amount.");
+                }
+                else {
+                    if ($("#Mode").val() == "Add") {
+                        if ($("#PaymentMethod").val() == 1) {
+                            var url = "http://117.240.126.238:8090/paymentdetails?name=" + '@Model.AddTopupModel.name' + "&appid=" + '@Model.AddTopupModel.appid' + "&pid=" +@Model.AddTopupModel.aes_id +"&user_email=" + '@Model.AddTopupModel.user_email' + "&product_name=" + '@Model.AddTopupModel.product_name' + "&product_description=" + '@Model.AddTopupModel.product_description' + "&quantity=" + $("#Amount").val() + "&price=" + $("#Amount").val() + "&Currency=" + '@Model.AddTopupModel.currency' + "&cancel_url=" + '@Model.AddTopupModel.cancel_url' + "&return_url=" + '@Model.AddTopupModel.return_url' + "&store_id=" +@Model.AddTopupModel.store_id
+                            $.ajax({
+                                url: url,
+                                method: 'GET',
+                                success: function (result) {
+                                    $.ajax({
+                                        url: "@Url.Action("AddTopup","Cash")" + "?PaymentMethod=" + $("#PaymentMethod").text() + "&Amount=" + $("#Amount").val(),
+                                        method: 'GET',
+                                        success: function (result) {
+                                            if (result == 1) {
+                                                alert("Topup added successfully.");
+                                                location.reload();
+                                            }
+                                            else {
+                                                alert("Something went wrong!");
+                                            }
+                                        },
+                                        error: function (e) {
+                                            alert("Something went wrong!");
+                                        }
+                                    });
+                                },
+                                error: function (e) {
+                                    alert("Something went wrong!");
+                                }
+                            });
+                        }
+                        else {
+                            var url = "//10.10.10.26/one.php/paymentdetails?name=" + '@Model.AddTopupModel.name' + "&appid=" + '@Model.AddTopupModel.appid' + "&pid=" +@Model.AddTopupModel.paypal_id +"&user_email=" + '@Model.AddTopupModel.user_email' + "&product_name=" + '@Model.AddTopupModel.product_name' + "&product_description=" + '@Model.AddTopupModel.product_description' + "&quantity=" + $("#Amount").val() + "&price=" + $("#Amount").val() + "&Currency=" + '@Model.AddTopupModel.currency' + "&first_name=" + '@Model.AddTopupModel.name' + "&last_name=" + '@Model.AddTopupModel.name' + "&dob=" + '1992-10-20' + "&address=" + '' + "&phone=" + '' + "&postcode=" + '' + "&cancel_url=" + '@Model.AddTopupModel.cancel_url' + "&return_url=" + '@Model.AddTopupModel.return_url' + "&store_id=" +@Model.AddTopupModel.store_id +"&country=" + '';
+                            $.ajax({
+                                url: url,
+                                method: 'POST',
+                                success: function (result) {
+                                    $.ajax({
+                                        url: "@Url.Action("AddTopup","Cash")" + "?PaymentMethod=" + $("#PaymentMethod").text() + "&Amount=" + $("#Amount").val(),
+                                        method: 'GET',
+                                        success: function (result) {
+                                            if (result == 1) {
+                                                alert("Topup added successfully.");
+                                                location.reload();
+                                            }
+                                            else {
+                                                alert("Something went wrong!");
+                                            }
+                                        },
+                                        error: function (e) {
+                                            alert("Something went wrong!");
+                                        }
+                                    });
+                                },
+                                error: function (e) {
+                                    alert("Something went wrong!");
+                                }
+                            });
+                        }
+                    }
+                    else {
+                        $.ajax({
+                            url: "@Url.Action("EditTopup","Cash")",
+                            data: "{ 'payment_method': '" + $("#PaymentMethod").val() + "', 'amount': '" + $("#Amount").val() + "', 'id': '" + $("#TopupId").val() + "' }",
+                            contentType: 'application/json',
+                            method: 'POST',
+                            success: function (result) {
+                                if (result == 1) {
+                                    alert("Topup updated successfully.");
+                                    location.reload();
+                                }
+                                else {
+                                    alert("Something went wrong!");
+                                }
+                            },
+                            error: function (e) {
+                                alert("Something went wrong!");
+                            }
+                        });
+                    }
+                }
+            }
+            else {
+                alert("Make sure you have selected payment method and provided amount.");
+            }
+        });*@
+
+        $(".edit").click(function () {
+            $("#PaymentMethod").val($(this).attr("data-payment-method"));
+            $("#Amount").val($(this).attr("data-amount"));
+            $("#CreditAmount").val($(this).attr("data-amount"));
+            $("#myModalLabel").html("Modify Topup");
+            $("#Mode").val("Edit");
+            $("#TopupId").val($(this).attr("data-id"));
+            $("#myModal").modal("show");
+        });
+
+        $("#topup_history tbody").on('click', '.statusChange', function () {
+            $("#StatusTopupId").val($(this).attr("data-id"));
+            $("#Statusdd").val($(this).attr("data-status"));
+            $("#Status").modal("show");
+        });
+
+        $(".cancel").click(function () {
+            $.ajax({
+                url: "@Url.Action("CancelTopup", "Cash")" + "?id=" + $(this).attr("data-id"),
+                method: 'POST',
+                success: function (result) {
+                    if (result == 1) {
+                        alert("Topup cancelled successfully.");
+                        location.reload();
+                    }
+                    else if (result == 2) {
+                        alert("Topup cannot be cancelled.");
+                    }
+                    else if (result == 3) {
+                        alert("User not authorized.");
+                    }
+                    else {
+                        alert('@Html.DisplayNameFor(model=>model.SomethingWentWrong)');
+                    }
+                },
+                error: function (e) {
+                    alert('@Html.DisplayNameFor(model=>model.SomethingWentWrong)');
+                }
+            });
+        });
+
+        $("#change-status").click(function () {
+            $.ajax({
+                url: "@Url.Action("ChangeTopupStatus", "Cash")" + "?id=" + $("#StatusTopupId").val() + "&status=" + $("#Statusdd").val(),
+                method: 'POST',
+                success: function (result) {
+                    if (result == 1) {
+                        alert('@Html.DisplayNameFor(model=>model.StatusUpdatedSuccessfully)');
+                        location.reload();
+                    }
+                    else if (result == 2) {
+                        alert("User not authorized.");
+                    }
+                    else {
+                        alert('@Html.DisplayNameFor(model=>model.SomethingWentWrong)');
+                    }
+                },
+                error: function (e) {
+                    alert('@Html.DisplayNameFor(model=>model.SomethingWentWrong)');
+                }
+            });
+        });
+    </script>
+}

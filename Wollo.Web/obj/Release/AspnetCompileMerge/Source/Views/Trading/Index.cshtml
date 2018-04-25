@@ -1,0 +1,908 @@
+﻿@*@model List<Wollo.Entities.ViewModels.Transaction_History>*@
+@model Wollo.Entities.ViewModels.TradingViewModel
+@{
+    ViewBag.Title = "Trading";
+}
+<style>
+    .ubid {
+        font-size: 18px;
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin: 0;
+    }
+
+    .uask {
+        font-size: 18px;
+    }
+</style>
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Trading
+                </h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i> Dashboard / Trading
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <!--code made by umang 19-07-2016-->
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="col-sm-12 page-header">
+                        <h3>Buy or Sell</h3>
+                    </div>
+                </div>
+                <div class="col-sm-10">
+
+                    <div class="col-sm-6">
+                        <div class="col-sm-6 ubid bid-loud blue">
+                            <i class="fa fa-signal"></i> Bid
+                        </div>
+                        <div class="col-sm-6 ubid bid-loud orange">
+                            <i class="fa fa-usd"></i> <span id="maxBidRate">@Model.queue_data.highestBidRate</span>
+                        </div>
+                    </div>
+                    <div id="uask" class="col-sm-6 ">
+                        <div class="col-sm-6 uask bid-loud blue">
+                            <i class="fa fa-signal"></i><span>Ask</span>
+                        </div>
+                        <div class="col-sm-6 uask bid-loud orange">
+                            <i class="fa fa-usd"></i> <span id="minAskRate">@Model.queue_data.LowestAskRate</span>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <!--Code END here-->
+            <div class="dropdown">
+                @Html.DropDownList("Stock", new SelectList(ViewBag.StockCode, "id", "full_name", ViewBag.StockId), "Select Stock", new { @onchange = "GetLatestBidAskByStock()" })
+            </div><br />
+
+            <!--Code Made By Umang 19-7-16-->
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <form class="form-inline">
+                                    <strong>I want to buy</strong>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="bidamount">Amount (in dollars)</label>
+                                        <div class="input-group">
+                                            <div id="divbuyminus" class="input-group-addon">-</div>
+                                            <input type="number" class="form-control" id="bidamount" placeholder="Quantity(Lot)">
+                                            <div id="divbuyplus" class="input-group-addon">+</div>
+                                        </div>
+                                    </div><br /><br />
+                                    <strong>For a total of</strong>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="bidprice">Amount (in dollars)</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">$</div>
+                                            <input type="number" class="form-control" id="bidprice" placeholder="Amount">
+                                            <div class="input-group-addon">.00</div>
+                                        </div>
+                                    </div>
+                                    <input type="button" class="btn btn-primary" value="Buy" id="buyBtn" />
+                                </form><br />
+                                <small> Price per Lot : $<label id="lblpriceperlotbuy"> </label>  &nbsp; &nbsp; &nbsp; <b>Total Quantity * Lot( <label id="lbllotbuy">1</label> lot = @Html.DisplayFor(x => x.unit_master.points_equivalent) Points)<label id="lbllotbuytotal"></label></b></small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <form class="form-inline">
+                                    <strong>I want to sell</strong>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="askamount">Quantity(Lot)</label>
+                                        <div class="input-group">
+                                            <div id="divsellminus" class="input-group-addon">-</div>
+                                            <input type="number" class="form-control" id="askamount" placeholder="Quantity(Lot)">
+                                            <div id="divsellplus" class="input-group-addon">+</div>
+                                        </div>
+                                    </div><br /><br />
+                                    <strong>For a total of</strong>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="askprice">Amount (in dollars)</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">$</div>
+                                            <input type="number" class="form-control" id="askprice" placeholder="Amount">
+                                            <div class="input-group-addon">.00</div>
+                                        </div>
+                                    </div>
+
+                                    <input type="button" class="btn btn-primary" value="Sell" id="sellBtn" />
+                                    <input type="button" class="btn btn-primary UpdateAsk" value="Modify" style="display:none;" />
+                                </form>
+                                <br />
+                                <small>Price per Lot : $ <label id="lblpriceperlotsell"> </label>  &nbsp; &nbsp; &nbsp; <b>Total Quantity * Lot(<label id="lbllotsell">1</label> lot = @Html.DisplayFor(x => x.unit_master.points_equivalent) Points)<label id="lbllotselltotal"></label></b></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5" style="background-color: azure;height: 24em;text-align: center;">
+                    <h1>Check Market Rate</h1>
+                    <div id="chartDiv" style="background-color: azure;height: 19em;width:27em;"></div>
+                </div>
+            </div>
+            <!--Code End Here-->
+            @*<div class="panel panel-default">
+                    <div class="panel-body">
+                        <form class="form-inline">
+                            <strong>I want to buy</strong>
+                            <div class="form-group">
+                                <label class="sr-only" for="bidamount">Amount (in dollars)</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">-</div>
+                                    <input type="text" class="form-control" id="bidamount" placeholder="Quantity(Lot)">
+                                    <div class="input-group-addon">+</div>
+                                </div>
+                            </div>
+                            <strong>For a total of</strong>
+                            <div class="form-group">
+                                <label class="sr-only" for="bidprice">Amount (in dollars)</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">$</div>
+                                    <input type="text" class="form-control" id="bidprice" placeholder="Amount">
+                                    <div class="input-group-addon">.00</div>
+                                </div>
+                            </div>
+                            <input type="button" class="btn btn-primary" value="Buy" id="buyBtn" />
+                        </form><br />
+                        <small>Administartion fee ( 0 ) :  Price per Lot : $ </small>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form class="form-inline">
+                            <strong>I want to sell</strong>
+                            <div class="form-group">
+                                <label class="sr-only" for="askamount">Quantity(Lot)</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">-</div>
+                                    <input type="text" class="form-control" id="askamount" placeholder="Quantity(Lot)">
+                                    <div class="input-group-addon">+</div>
+                                </div>
+                            </div>
+                            <strong>For a total of</strong>
+                            <div class="form-group">
+                                <label class="sr-only" for="askprice">Amount (in dollars)</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">$</div>
+                                    <input type="text" class="form-control" id="askprice" placeholder="Amount">
+                                    <div class="input-group-addon">.00</div>
+                                </div>
+                            </div>
+
+                            <input type="button" class="btn btn-primary" value="Sell" id="sellBtn" />
+                            <input type="button" class="btn btn-primary UpdateAsk" value="Modify" style="display:none;" />
+                        </form>
+                        <br />
+                        <small>Administartion fee ( 0 ) :  Price per Lot : $ </small>
+                    </div>
+                </div>*@
+            @{string UserId = ViewBag.user_id;}
+            <div class="col-lg-12">
+                <div id="upper-birth">
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th class="no-b-th"> <div class="text-left">My Orders</div></th>
+                                    <th class="empty-th"> </th>
+                                    <th class="empty-th"> </th>
+                                    <th class="empty-th"> </th>
+                                    <th class="empty-th"> </th>
+                                    <th class="empty-th"> </th>
+                                    <th class="empty-th"> </th>
+                                    <th class="empty-th"> </th>
+                                    <th class="empty-th"> </th>
+                                    <th class="empty-th"> </th>
+                                </tr>
+                                <tr>
+                                    <th>Stock Code</th>
+                                    <th>Date & Time</th>
+                                    <th>Order ID</th>
+                                    <th>Stock Name</th>
+                                    <th>Status</th>
+                                    <th>Bid/Ask</th>
+                                    <th>Order QTY</th>
+                                    <th>Remaining Order QTY</th>
+                                    <th>Order Price</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Transaction_History)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(model => item.StockCode.stock_code)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => item.created_date)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => item.id)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => item.StockCode.stock_name)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => item.QueueStatusMaster.name)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => item.queue_action)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => item.original_order_quantity)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => item.reward_points)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => item.price)
+                                        </td>
+                                        @if (item.QueueStatusMaster.name.ToLower() == "queued")
+                                        {
+                                            <td>
+                                                <a id='@item.id' data-stockid="@item.stock_code_id" onclick="CancelTransaction(this)">Cancel</a> |
+                                                <a href="javascript:void(0)" data-id="@item.id" data-queue-action="@item.queue_action" data-price="@item.price" data-amount="@item.reward_points" data-stockid="@item.stock_code_id" class="edit">Edit</a>
+                                            </td>
+                                        }
+                                        else
+                                        {
+                                            <td></td>
+                                        }
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+
+                        @*<nav class="text-center">
+                                <ul class="pagination">
+                                    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li>
+                                        <a href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>*@
+                    </div>
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+</div>
+<div class="modal fade" id="bidModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document" style="width:60%;">
+        <div class="modal-content" style="text-align:center;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Update Bid</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <form class="form-inline">
+                        <strong>I want to buy</strong>
+                        <div class="form-group">
+                            <input type="hidden" id="BidStock" />
+                            <label class="sr-only" for="bidamount">Amount (in dollars)</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">$</div>
+                                <input type="text" class="form-control" id="updatebidamount" placeholder="Amount">
+                                <div class="input-group-addon">.00</div>
+                            </div>
+                        </div>
+                        <strong>For a total of</strong>
+                        <div class="form-group">
+                            <label class="sr-only" for="bidprice">Amount (in dollars)</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">$</div>
+                                <input type="text" class="form-control" id="updatebidprice" placeholder="Price">
+                                <div class="input-group-addon">.00</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <input type="button" class="btn btn-primary UpdateBid" value="Modify" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="askModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document" style="width:60%;">
+        <div class="modal-content" style="text-align:center;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Update Ask</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <form class="form-inline">
+                        <strong>I want to sell</strong>
+                        <div class="form-group">
+                            <label class="sr-only" for="bidamount">Amount (in dollars)</label>
+                            <div class="input-group">
+                                <input type="hidden" id="AskStock" />
+                                <div class="input-group-addon">$</div>
+                                <input type="text" class="form-control" id="updateaskamount" placeholder="Amount">
+                                <div class="input-group-addon">.00</div>
+                            </div>
+                        </div>
+                        <strong>For a total of</strong>
+                        <div class="form-group">
+                            <label class="sr-only" for="bidprice">Amount (in dollars)</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">$</div>
+                                <input type="text" class="form-control" id="updateaskprice" placeholder="Price">
+                                <div class="input-group-addon">.00</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <input type="button" class="btn btn-primary UpdateAsk" value="Modify" />
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <!--Reference the SignalR library. -->
+    <script src="/Scripts/jquery.signalR-2.2.0.min.js"></script>
+    <!--Reference the autogenerated SignalR hub script. -->
+    <script src="/signalr/hubs"></script>
+    <script src="/Scripts/signalR/queueHub.server.js"></script>
+    <script src="~/Scripts/jquery-1.7.1.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/jquery.flot.js"></script>
+    <script src="~/Scripts/jquery.flot.time.js"></script>
+    <script src="~/Scripts/jquery.flot.axislabels.js"></script>
+    <script src="~/Scripts/jquery.flot.navigate.min.js"></script>
+    <script src="~/Scripts/jquery.flot.selection.js"></script>
+    <script src="~/Scripts/jquery.flot.image.js"></script>
+    <script src="~/Scripts/jquery.flot.pie.js"></script>
+    <script src="~/Scripts/jquery.flot.resize.js"></script>
+    <script src="~/Scripts/jquery.flot.stack.js"></script>
+    <script src="~/Scripts/jquery.flot.symbol.js"></script>
+    <script src="~/Scripts/jquery.flot.crosshair.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            GetChartByStock();
+        })
+
+        function GetChartByStock() {
+            var stockId = $("#Stock option:selected").val();
+            $.ajax({
+                type: 'Get',
+                datatype: 'json',
+                url: '/Trading/CreateMarketRateGraph/' + '?stockId=' + stockId,
+                success: function (data) {
+                    var chartData = JSON.parse(data.data);
+                    $.plot($("#chartDiv"), [chartData], {
+                        yaxis: {
+                        },
+                        xaxis: {
+                            mode: "time",
+                            minTickSize: [1, "hour"],
+                            //min: (new Date(1999, 11, 31)).getTime(),
+                            //max: (new Date(2000, 0, 1)).getTime(),
+                            twelveHourClock: true
+                        },
+                        "lines": { "show": "true" },
+                        "points": { "show": "true" },
+                        clickable: true, hoverable: true
+                    });
+
+                },
+                error: function (e) {
+                    $("#loader").css("display", "none");
+                    alert("Oops! Something went wrong while executing the request.");
+                }
+
+            });
+        }
+
+
+        function GetLatestBidAskByStock() {
+            var stockId = $("#Stock option:selected").val();
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("GetLatestBidAskByStock", "Trading")?StockId=' + stockId,
+                content: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    $("#maxBidRate").html('');
+                    $("#minAskRate").html('');
+                    $("#maxBidRate").html(data.highestBidRate);
+                    $("#minAskRate").html(data.LowestAskRate);
+                    GetChartByStock();
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    alert("Something went wrong!! Please try again later.")
+                }
+            })
+        }
+
+        $(".edit").click(function () {
+            if ($(this).attr("data-queue-action") == "bid") {
+                $("#updatebidamount").val($(this).attr("data-amount"));
+                $("#updatebidprice").val($(this).attr("data-price"));
+                $("#BidStock").val($(this).attr("data-stockid"));
+                $(".UpdateBid").attr("id", $(this).attr("data-id"));
+                $("#bidModal").modal("show");
+            }
+            else {
+                $("#updateaskamount").val($(this).attr("data-amount"));
+                $("#updateaskprice").val($(this).attr("data-price"));
+                $("#AskStock").val($(this).attr("data-stockid"));
+                $(".UpdateAsk").attr("id", $(this).attr("data-id"));
+                $("#askModal").modal("show");
+            }
+        });
+
+        $(".UpdateBid").click(function () {
+            debugger;
+            var id = parseInt($(this).attr("id"));
+            var stockCode = $("#BidStock").val();
+            var bidAmount = $("#updatebidamount").val();
+            var bidPrice = parseFloat($("#updatebidprice").val());
+            if (bidAmount == "") {
+                alert("Please enter ask amount");
+            }
+            else if (bidPrice == "") {
+                alert("Please enter ask price");
+            }
+            else if (bidPrice < 0.1) {
+                alert("The Price should not be less than 0.1$");
+            }
+            else {
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("UpdateTransaction", "Trading")?id=' + id + '&point=' + bidAmount + '&price=' + bidPrice,
+                    content: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        if (data == 1) {
+                            $.ajax({
+                                type: "POST",
+                                url: '@Url.Action("MatchQueue", "Queue")?stockId=' + stockCode + '&userId=' + '@UserId',
+                                content: "application/json; charset=utf-8",
+                                dataType: "json",
+                                success: function (result) {
+                                    if (result == 1) {
+                                        // SignalR Code Start
+                                        var data = { stockCode: stockCode, bidAmount: bidAmount, bidPrice: bidPrice, task: 'bid' };
+                                        queueHub.send("GetQueueData", stockCode, JSON.stringify(data));
+                                        queueHub.send("bid", stockCode, JSON.stringify(data));
+                                        queueHub.send("ask", stockCode, JSON.stringify(data));
+                                        queueHub.send("completed", stockCode, JSON.stringify(data));
+                                        // SignalR Code End
+                                        alert("Your bid has been updated successfully.");
+                                        var stockId = $("#Stock option:selected").val();
+                                        window.location.href = '@Url.Action("Index", "Trading")?StockId=' + stockId;
+                                    }
+                                    else {
+                                        alert("Something went wrong!!! Please try again later");
+                                    }
+                                },
+                                error: function (xhr, textStatus, errorThrown) {
+                                    alert("Amount/Price you entered is invalid.")
+                                }
+                            })
+                        }
+                        else if (data == 2) {
+                            alert("Sorry!! You do not have enough amount in your wallet for this bid.")
+                        }
+                        else if (data == 3) {
+                            var minimumRate = '@Model.unit_master.minimum_rate';
+                            alert("Please make a bid with rate greater than " + minimumRate);
+                        }
+                        else if (data == 4) {
+                            var minimumLot = '@Model.unit_master.minimum_lot';
+                            alert("Please make a bid with lot greater than " + minimumLot);
+                        }
+                        else {
+                            alert("Something went wrong!!! Please try again later");
+                        }
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert("Amount/Price you entered is invalid.")
+                    }
+                })
+            }
+        });
+
+        $(".UpdateAsk").click(function () {
+            var id = parseInt($(this).attr("id"));
+            var stockCode = $("#AskStock").val();
+            var askAmount = $("#updateaskamount").val();
+            var askPrice = parseFloat($("#updateaskprice").val());
+            if (askAmount == "") {
+                alert("Please enter bid amount");
+            }
+            else if (askPrice == "") {
+                alert("Please enter bid price");
+            }
+            else if (askPrice < 0.1) {
+                alert("The Price should not be less than 0.1$");
+            }
+            else {
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("UpdateTransaction", "Trading")?id=' + id + '&point=' + askAmount + '&price=' + askPrice,
+                    content: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        if (data == 1) {
+                            $.ajax({
+                                type: "POST",
+                                url: '@Url.Action("MatchQueue", "Queue")?stockId=' + stockCode + '&userId=' + '@UserId',
+                                content: "application/json; charset=utf-8",
+                                dataType: "json",
+                                success: function (result) {
+                                    if (result == 1) {
+                                        // SignalR Code Start
+                                        var data = { stockCode: stockCode, askAmount: askAmount, askPrice: askPrice, task: 'ask' };
+                                        queueHub.send("GetQueueData", stockCode, JSON.stringify(data));
+                                        queueHub.send("bid", stockCode, JSON.stringify(data));
+                                        queueHub.send("ask", stockCode, JSON.stringify(data));
+                                        queueHub.send("completed", stockCode, JSON.stringify(data));
+                                        // SignalR Code End
+                                        alert("Your ask has been updated successfully.");
+                                        var stockId = $("#Stock option:selected").val();
+                                        window.location.href = '@Url.Action("Index", "Trading")?StockId=' + stockId;
+                                    }
+                                    else {
+                                        alert("Something went wrong!!! Please try again later");
+                                    }
+                                },
+                                error: function (xhr, textStatus, errorThrown) {
+                                    alert("Something went wrong!!! Please try again later");
+                                }
+                            })
+                        }
+                        else if (data == 2) {
+                            alert("Sorry!! You do not have enough stock to sell.")
+                        }
+                        else if (data == 3) {
+                            var minimumRate = '@Model.unit_master.minimum_rate';
+                            alert("Please make an ask with rate greater than " + minimumRate);
+                        }
+                        else if (data == 4) {
+                            var minimumLot = '@Model.unit_master.minimum_lot';
+                            alert("Please make an ask with lot greater than " + minimumLot);
+                        }
+                        else {
+                            alert("Something went wrong!!! Please try again later");
+                        }
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert("Amount/Price you entered is invalid.")
+                    }
+                })
+            }
+        });
+
+        function CancelTransaction(e) {
+            var stockCode = parseInt($(e).attr("data-stockid"));
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("CancelTransaction", "Trading")?transactionid=' + e.id,
+                content: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    if (data == 1) {
+                        $.ajax({
+                            type: "POST",
+                            url: '@Url.Action("Index", "Trading")',
+                            content: "application/json; charset=utf-8",
+                            dataType: "json",
+                            success: function (data) {
+                                var data = { task: 'cancel' };
+                                queueHub.send("bid", stockCode, JSON.stringify(data));
+                                queueHub.send("ask", stockCode, JSON.stringify(data));
+                                alert("Transaction cancelled successfully.");
+                            },
+                            error: function (xhr, textStatus, errorThrown) {
+                                var data = { task: 'cancel' };
+                                queueHub.send("bid", stockCode, JSON.stringify(data));
+                                queueHub.send("ask", stockCode, JSON.stringify(data));
+                                alert("Transaction cancelled successfully.");
+                                window.location.reload();
+                            }
+                        });
+                    }
+                    else {
+                        alert("Something went wrong!!! Please try again later");
+                    }
+
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    alert("Bid Failed")
+                }
+            })
+        }
+
+        $("#buyBtn").click(function () {
+            var stockCode = $("#Stock option:selected").val();
+            var bidAmount = $("#bidamount").val();
+            var bidPrice = parseFloat($("#bidprice").val());
+            if (stockCode == "") {
+                alert("Please select stock");
+            }
+            else if (bidAmount == "") {
+                alert("Please enter bid amount");
+            }
+            else if (bidPrice == "") {
+                alert("Please enter bid price");
+            }
+            else if (bidPrice < 0.1) {
+                alert("The Price should not be less than 0.1$");
+            }
+            else {
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("AddBidAsk", "Trading")?point=' + bidAmount + '&price=' + bidPrice + '&stock_code_id=' + stockCode + '&task=' + "bid",
+                    content: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        if (data == 1) {
+                            $.ajax({
+                                type: "POST",
+                                url: '@Url.Action("MatchQueue", "Queue")?stockId=' + stockCode + '&userId=' + '@UserId',
+                                content: "application/json; charset=utf-8",
+                                dataType: "json",
+                                success: function (result) {
+                                    if (result == 1) {
+                                        // SignalR Code Start
+                                        var data = { stockCode: stockCode, bidAmount: bidAmount, bidPrice: bidPrice, task: 'bid' };
+                                        queueHub.send("GetQueueData", stockCode, JSON.stringify(data));
+                                        queueHub.send("bid", stockCode, JSON.stringify(data));
+                                        queueHub.send("ask", stockCode, JSON.stringify(data));
+                                        queueHub.send("completed", stockCode, JSON.stringify(data));
+                                        // SignalR Code End
+                                        alert("Your bid has been placed successfully.");
+                                        var stockId = $("#Stock option:selected").val();
+                                        window.location.href = '@Url.Action("Index", "Trading")?StockId=' + stockId;
+                                    }
+                                    else {
+                                        alert("Bid Failed")
+                                    }
+                                },
+                                error: function (xhr, textStatus, errorThrown) {
+                                    alert("Bid Failed")
+                                }
+                            })
+                        }
+                        else if (data == 2) {
+                            alert("Sorry!! You do not have enough amount in your wallet for this bid.")
+                        }
+                        else if (data == 3) {
+                            var minimumRate = '@Model.unit_master.minimum_rate';
+                            alert("Please make a bid with rate greater than " + minimumRate);
+                        }
+                        else if (data == 4) {
+                            var minimumLot = '@Model.unit_master.minimum_lot';
+                            alert("Please make a bid with lot greater than " + minimumLot);
+                        }
+                        else {
+                            alert("Something went wrong!!! Please try again later");
+                        }
+
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert("Amount/Price you entered is invalid.")
+                    }
+                })
+            }
+
+        });
+
+        $("#sellBtn").click(function () {
+            var stockCode = $("#Stock option:selected").val();
+            var askAmount = $("#askamount").val();
+            var askPrice = parseFloat($("#askprice").val());
+            if (stockCode == "") {
+                alert("Please select stock");
+            }
+            else if (askAmount == "") {
+                alert("Please enter ask amount");
+            }
+            else if (askPrice == "") {
+                alert("Please enter ask price");
+            }
+            else if (askPrice < 0.1) {
+                alert("The Price should not be less than 0.1$");
+            }
+            else {
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("AddBidAsk", "Trading")?point=' + askAmount + '&price=' + askPrice + '&stock_code_id=' + stockCode + '&task=ask',
+                    content: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        if (data == 1) {
+                            $.ajax({
+                                type: "POST",
+                                url: '@Url.Action("MatchQueue", "Queue")?stockId=' + stockCode + '&userId=' + '@UserId',
+                                content: "application/json; charset=utf-8",
+                                dataType: "json",
+                                success: function (result) {
+                                    if (result == 1) {
+                                        // SignalR Code Start
+                                        var data = { stockCode: stockCode, askAmount: askAmount, askPrice: askPrice, task: 'ask' };
+                                        queueHub.send("GetQueueData", stockCode, JSON.stringify(data));
+                                        queueHub.send("bid", stockCode, JSON.stringify(data));
+                                        queueHub.send("ask", stockCode, JSON.stringify(data));
+                                        queueHub.send("completed", stockCode, JSON.stringify(data));
+                                        // SignalR Code End
+                                        alert("Your Ask has been placed successfully.");
+                                        var stockId = $("#Stock option:selected").val();
+                                        window.location.href = '@Url.Action("Index", "Trading")?StockId=' + stockId;
+                                    }
+                                    else {
+                                        alert("Ask Failed")
+                                    }
+                                },
+                                error: function (xhr, textStatus, errorThrown) {
+                                    alert("Ask Failed")
+                                }
+                            })
+                        }
+                        else if (data == 2) {
+                            alert("Sorry!! You do not have enough stock to sell.")
+                        }
+                        else if (data == 3) {
+                            var minimumRate = '@Model.unit_master.minimum_rate';
+                            alert("Please make an ask with rate greater than " + minimumRate);
+                        }
+                        else if (data == 4) {
+                            var minimumLot = '@Model.unit_master.minimum_lot';
+                            alert("Please make an ask with lot greater than " + minimumLot);
+                        }
+                        else {
+                            alert("Something went wrong!!! Please try again later");
+                        }
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert("Amount/Price you entered is invalid.")
+                    }
+                })
+            }
+        });
+
+        //code made by umang on 20-07-16 //
+        $("#divbuyminus").click(function () {
+
+            var v = $("#bidamount").val();
+            if (v != '' && v >= 1) {
+                v = parseInt(v) - 1;
+                $("#bidamount").val(v);
+            }
+
+        });
+
+        $("#divbuyplus").click(function () {
+            var v = $("#bidamount").val();
+            if (v != '' && v >= 1) {
+                v = parseInt(v) + 1;
+                $("#bidamount").val(v);
+            }
+        });
+
+        $("#divsellminus").click(function () {
+            var v = $("#askamount").val();
+            if (v != '' && v >= 1) {
+                v = parseInt(v) - 1;
+                $("#askamount").val(v);
+            }
+        });
+
+        $("#divsellplus").click(function () {
+            var v = $("#askamount").val();
+            if (v != '' && v >= 1) {
+                v = parseInt(v) + 1;
+                $("#askamount").val(v);
+            }
+        });
+
+
+        //Code End here //
+        // code made by umang 25/07/16 //
+        $("#bidamount").keyup(function () {
+            {
+                var point = parseInt('@Model.unit_master.points_equivalent');
+                $("#lbllotbuy").text($("#bidamount").val());
+                var bid = parseInt($("#bidamount").val());
+                var total = parseInt(point * bid);
+                if (bid > 0) {
+                    $("#lbllotbuytotal").text(total);
+                }
+                else {
+                    $("#lbllotbuytotal").text('');
+                }
+            }
+        });
+
+
+        $("#askamount").keyup(function () {
+            {
+                var point = parseInt('@Model.unit_master.points_equivalent');
+                $("#lbllotsell").text($("#askamount").val());
+                var ask = parseInt($("#askamount").val());
+                var total = parseInt(point * ask);
+                if (ask > 0) {
+                    $("#lbllotselltotal").text(total);
+                }
+                else {
+                    $("#lbllotselltotal").text('');
+                }
+            }
+        });
+
+        // code for price per lot
+        $("#bidprice").keyup(function () {
+            {
+                var point = parseInt('@Model.unit_master.points_equivalent');
+                var bid = parseInt($("#bidamount").val());
+                var amount = $("#bidprice").val();
+                //var total = parseInt(point * bid) / amount;
+                var total = amount / parseInt(point * bid);
+                if (amount > 0) {
+                    $("#lblpriceperlotbuy").text(total.toFixed(3));
+                }
+                else {
+                    $("#lblpriceperlotbuy").text('');
+                }
+            }
+        });
+        // price per lot //
+        $("#askprice").keyup(function () {
+            {
+                var point = parseInt('@Model.unit_master.points_equivalent');
+                var ask = parseInt($("#askamount").val());
+                var amount = $("#askprice").val();
+                //var total = parseFloat(point * ask) / amount;
+                var total = amount / parseFloat(point * ask);
+                if (amount > 0) {
+                    $("#lblpriceperlotsell").text(total.toFixed(3));
+                }
+                else {
+                    $("#lblpriceperlotsell").text('');
+                }
+            }
+        });
+        //Code End here //
+    </script>
+}

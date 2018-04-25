@@ -1,0 +1,301 @@
+﻿@model Wollo.Entities.ViewModels.HolidayData
+@{
+    ViewBag.Title = "Holiday/Closing Date";
+}
+@section header{
+    <link href="~/css/bootstrap-datepicker.css" rel="stylesheet">
+}
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Holiday/Closing Date
+                </h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i> Dashboard / Holiday/Closing Date
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="col-lg-12">
+                <div id="upper-birth">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th class="no-b-th"> <div class="text-left">Holiday/Closing Date</div></th>
+                                    <th class="empty-th"> </th>
+                                    <th class="empty-th"> </th>
+                                    <th class="empty-th"> </th>
+                                    <th class="no-b-th text-right">
+                                        <button type="button" class="btn btn-primary" id="add">Add New Holiday/Closing Date <i class="fa fa-plus-square" aria-hidden="true"></i></button>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Description</th>
+                                    <th>Status</th>
+                                    <th>Notify Before</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.lstHolidayMaster)
+                                {
+                                    <tr>
+                                        <td>
+                                            @{
+                                    string date = item.holiday_date.ToString("dd-MM-yyyy");
+                                            }
+                                            @Html.DisplayFor(x => date)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(x => item.description)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(x => item.HolidayStatusMaster.status)
+                                        </td>
+                                        <td>@Html.DisplayFor(x => item.notify_before)</td>
+                                        <td>
+                                            @if (item.HolidayStatusMaster.status != "Expire")
+                                            {
+                                                <a href="javascript:void(0)" data-id="@item.id" data-description="@item.description" data-date="@item.holiday_date" data-notify="@item.notify_before" class="edit">Modify</a>
+                                                <span> | </span><a href="javascript:void(0)" data-id="@item.id" data-status="@item.holiday_statusid" class="change-status">Change Status</a>
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        @*<nav class="text-center">
+                                <ul class="pagination">
+                                    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li>
+                                        <a href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>*@
+                        <!-- Button trigger modal -->
+                    </div>
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">New Holiday/Closing Date</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            @Html.Hidden("Mode", "Add")
+                            @Html.Hidden("HolidayId")
+                            <div class="dropdown col-sm-3">
+                                <p class="text-left"> Date: </p>
+                            </div>
+                            <div class="dropdown col-sm-6">
+                                @Html.TextBox("Date", null, new { @class = "form-control", @placeholder = "Date", id = "datepicker" })
+                                <span class="input-group-addon" style="display: block;text-align: center; padding: 5px; background: transparent; border: none;position: absolute;top: 5px;right: 30px;">
+                                    <span class="fa fa-calendar"></span>
+                                </span>
+                            </div>
+                            <div class="clearfix"></div>
+                            <br />
+                            <div class="clearfix"></div>
+                            <div class="dropdown col-sm-3">
+                                <p class="text-left"> Notify Before: </p>
+                            </div>
+                            <div class="dropdown col-sm-6">
+                                @Html.TextBox("Notify", null, new { @class = "form-control", @placeholder = "Notify Before" })
+                            </div>
+                            <div class="clearfix"></div>
+                            <br />
+                            <div class="clearfix"></div>
+                            <div class="dropdown col-sm-3">
+                                <p class="text-left"> Description: </p>
+                            </div>
+                            <div class="dropdown col-sm-6">
+                                @Html.TextArea("Description", null, new { @class = "form-control", @placeholder = "Description" })
+                            </div>
+                            <div class="clearfix"></div>
+                            <br />
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" id="holiday">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="StatusModal" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Change Status</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="dropdown col-sm-6">
+                            @Html.Hidden("StatusHolidayId")
+                            @Html.DropDownList("Statusdd", new SelectList(Model.lstHolidayStatusMaster, "id", "status"), "All", new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="change-status">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script>
+        $("#nav-holiday").addClass("active");
+        $('#datepicker').datepicker({
+            format: 'dd-mm-yyyy',
+            endDate: '+1y',
+            autoclose: true,
+            todayHighlight: true
+        });
+
+        $("#add").click(function () {
+            $("#datepicker").val("");
+            $("#Description").val("");
+            $("#Notify").val("");
+            $("#myModalLabel").html("New Holiday/Closing Date");
+            $("#Mode").val("Add");
+            $("#myModal").modal("show");
+        });
+
+        $(".edit").click(function () {
+            debugger;
+            var from = $(this).attr("data-date").split(" ");
+            //var year = from[2].split(" ");
+            //var formattedDate = from[0] + "-" + from[1] + "-" + year[0];
+            //$("#datepicker").datepicker("update", formattedDate);
+            $("#datepicker").datepicker("update", from[0]);
+            $("#Description").val($(this).attr("data-description"));
+            $("#Notify").val($(this).attr("data-notify"));
+            $("#HolidayId").val($(this).attr("data-id"));
+            $("#myModalLabel").html("Modify Holiday/Closing Date");
+            $("#Mode").val("Edit");
+            $("#myModal").modal("show");
+        });
+
+        $("#Notify").keydown(function (e) {
+            // Allow: backspace, delete, tab, escape, enter
+            if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110]) !== -1 ||
+                // Allow: Ctrl+A, Command+A
+                (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+                // Allow: home, end, left, right, down, up
+                (e.keyCode >= 35 && e.keyCode <= 40)) {
+                // let it happen, don't do anything
+                return;
+            }
+            // Ensure that it is a number and stop the keypress
+            if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                e.preventDefault();
+            }
+        });
+
+        $("#holiday").click(function () {
+            if ($("#datepicker").val().length > 0 && $("#Notify").val().length > 0 && $("#Description").val().length > 0) {
+                if ($("#Mode").val() == "Add") {
+                    $.ajax({
+                        url: "@Url.Action("AddHoliday", "Holiday")",
+                        data: "{'holidayDate':'" + $("#datepicker").val() + "','description':'" + $("#Description").val() + "','notify':'" + $("#Notify").val() + "'}",
+                        contentType: 'application/json',
+                        method: 'POST',
+                        success: function (result) {
+                            if (result == 1) {
+                                $("#myModal").modal("hide");
+                                alert("Holiday added successfully.");
+                                location.reload();
+                            }
+                            else {
+                                alert("Something went wrong!");
+                            }
+                        },
+                        error: function (e) {
+                            alert("Something went wrong!");
+                        }
+                    });
+                }
+                else {
+                    $.ajax({
+                        url: "@Url.Action("EditHoliday", "Holiday")",
+                        data: "{'id':'" + $("#HolidayId").val() + "','holidayDate':'" + $("#datepicker").val() + "','description':'" + $("#Description").val() + "','notify':'" + $("#Notify").val() + "'}",
+                        contentType: 'application/json',
+                        method: 'POST',
+                        success: function (result) {
+                            if (result == 1) {
+                                $("#myModal").modal("hide");
+                                alert("Holiday updated successfully.");
+                                location.reload();
+                            }
+                            else {
+                                alert("Something went wrong!");
+                            }
+                        },
+                        error: function (e) {
+                            alert("Something went wrong!");
+                        }
+                    });
+                }
+            }
+            else {
+                alert("Make sure you have provided all valid data.");
+            }
+        });
+
+        $(".change-status").click(function () {
+            $("#StatusHolidayId").val($(this).attr("data-id"));
+            $("#Statusdd").val($(this).attr("data-status"));
+            $("#StatusModal").modal("show");
+        });
+
+        $("#change-status").click(function () {
+            $.ajax({
+                url: "@Url.Action("ChangeHolidayStatus", "Holiday")" + "?id=" + $("#StatusHolidayId").val() + "&status=" + $("#Statusdd").val(),
+                method: 'POST',
+                contentType: 'application/json',
+                success: function (result) {
+                    if (result == 1) {
+                        alert("Status updated successfully.");
+                        $("#StatusModal").modal("hide");
+                        location.reload();
+                    }
+                    else if (result == 2) {
+                        alert("User not authorized.");
+                    }
+                    else {
+                        alert("Something went wrong!");
+                    }
+                },
+                error: function (e) {
+                    alert("Something went wrong!");
+                }
+            });
+        });
+    </script>
+}

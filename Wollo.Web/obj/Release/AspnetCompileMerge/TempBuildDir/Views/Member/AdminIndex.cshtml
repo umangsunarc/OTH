@@ -1,0 +1,235 @@
+﻿@model Wollo.Entities.ViewModels.DashboardViewModel
+
+@{
+    ViewBag.Title = "Admin Home";
+}
+<style>
+    .notifidiv {
+        padding: 4px;
+        font-size: 25px;
+        border-radius: 5px;
+    }
+</style>
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <!-- Page Heading -->
+                <div class="row">
+
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Welcome <small>@ViewBag.UserName</small>
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li class="active">
+                                <i class="fa fa-dashboard"></i> Dashboard
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="panel panel-yellow">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-usd fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">@Html.DisplayFor(model=>model.cash)</div>
+                                        <div>Cash!</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left">View Details</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-briefcase fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">@Html.DisplayFor(model => model.reward_points)</div>
+                                        <div>Reward Points!</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left">View Details</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    @*<div class="col-lg-4 col-md-6">
+                        <div class="panel panel-green">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-spinner fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">@Html.DisplayFor(model => model.issue_points)</div>
+                                        <div>Issue Points!</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left">View Details</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>*@
+
+                </div>
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Cash</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td>Cash In-Circulation</td>
+                                            <td>$@Html.DisplayFor(model => model.total_cash_in_circulation)</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Total Topup By Members</td>
+                                            <td>$@Html.DisplayFor(model => model.total_topup_by_members)</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Total Withdraw Out By Members </td>
+                                            <td>$@Html.DisplayFor(model => model.total_withdrawal_by_member)</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Total Cash Issues into System</td>
+                                            <td>$@Html.DisplayFor(model => model.total_cash_issued_to_system)</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Cash Issued To Members</td>
+                                            <td>$@Html.DisplayFor(model => model.total_cash_issued_to_member)</td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="text-right">
+                                <a href="cash-trans.html">View All Cash History <i class="fa fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Reward Points</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td>Reward Points In-Circulation</td>
+                                            <td>@Html.DisplayFor(model => model.total_reward_points_in_circulation)</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Reward Points Transferred In By Members</td>
+                                            <td>@Html.DisplayFor(model => model.total_reward_points_transferred_in_by_members)</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Reward Points Transferred Out By Members </td>
+                                            <td>@Html.DisplayFor(model => model.total_reward_points_transferred_out_by_member)</td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="text-right">
+                                <a href="reward-point-transfer.html">View All Trading <i class="fa fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @*<div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Issued Points Details</h3>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-bordered table-hover table-striped">
+                                <tbody>
+                                    <tr>
+                                        <td>Issue Points In-Circulation</td>
+                                        <td>@Html.DisplayFor(model => model.total_issue_points_in_circulation)</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>Issue Points Issued into System</td>
+                                        <td>@Html.DisplayFor(model => model.total_issue_points_issued_to_system)</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>Issue Points Issued To Members</td>
+                                        <td>@Html.DisplayFor(model => model.total_issue_points_issued_to_member)</td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="text-right">
+                            <a href="issue-point-history.html">View All Trading <i class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>*@
+                <div class="row">
+                    <div class="col-md-12" style="background-color: TRANSPARENT; BORDER: 2PX SOLID WHITE; BORDER-RADIUS: 10PX; Color:dimgray; box-shadow: 1PX 1PX 6PX gray; ">
+                        <div class="col-sm-12 notifidiv ubid bid-loud blue">
+                            <i class="fa fa-bell"></i> Notices and Maintainance
+                        </div>
+                        <div class="col-sm-12">
+
+                            <ul class="wrpe-special" data-offcanvass="yes" style="text-transform:capitalize; line-height:2;">
+                                @foreach (var item in Model.HolidayData.lstHolidayMaster)
+                                {
+                                    string holiday_date = item.holiday_date.ToString("MM/dd/yyyy");
+                                    <li class="glyphicon glyphicon-ok-sign">
+                                        <b> @Html.DisplayFor(model => item.description) on @holiday_date</b>
+                                        <br />
+                                    </li>
+                                }
+                                @*<li class="glyphicon glyphicon-ok-sign">
+                            <b>  </b>
+                        </li>
+                        <br />
+                        <li class="glyphicon glyphicon-ok-sign">
+                            <b> Only For Example</b>
+                        </li>*@
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>

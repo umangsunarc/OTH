@@ -1,0 +1,91 @@
+﻿@model IEnumerable<Microsoft.AspNet.Identity.EntityFramework.IdentityRole>
+
+@{
+    ViewBag.Title = "Roles";
+}
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Roles
+                </h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i> Roles
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="container-fluid">
+
+            <div class="col-lg-12 space">
+
+                @*<p>
+                    @Html.ActionLink("Create New", "Create")
+                </p>*@
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th class="no-b-th"> <div class="text-left">Roles</div></th>
+                        <th class="no-b-th text-right">
+                            <a href="Role/Create" class="btn btn-primary" id="add">Add New Role <i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(x => x.LastOrDefault().Name)</th>
+                        <th>Options</th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(x => item.Name)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { item.Id }) |
+                                @Html.ActionLink("Details", "Details", new { item.Id })
+                                @*<a href="#" class="RoleDelete" data-id="@item.Id ">Delete</a>*@
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+
+            </div>
+        </div>
+
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+</div>
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".RoleDelete").click(function () {
+                var result = confirm("Are you sure you want to delete this Role?")
+                if (result) {
+                    var idToDelete = $(this).attr("data-id");
+                    $.ajax({
+                        url: '@Url.Action("Delete", "Role")?Id=' + idToDelete,
+                        type: 'POST',
+                        success: function (data) {
+                            if (data == "Success") {
+                                window.location.reload();
+                            }
+                            else {
+                                alert(data);
+                            }
+                        },
+                        error: function () { alert("Something went wrong while processing.");}
+                    });
+                }
+            });
+        });
+    </script>
+}
+
+
+
+

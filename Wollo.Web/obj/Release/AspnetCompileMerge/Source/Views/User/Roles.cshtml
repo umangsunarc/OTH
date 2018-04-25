@@ -1,0 +1,66 @@
+﻿@model Wollo.Web.Models.UserViewModel
+
+@{
+    ViewBag.Title = "Assign Role";
+}
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Assign Role
+                </h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i> Assign Role
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="container-fluid">
+
+            <div class="col-lg-12 space">
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+                        <hr />
+                        @Html.ValidationSummary(true)
+                        @Html.HiddenFor(x => x.Id)
+                        <div class="form-group">
+                            @Html.Label("Role", new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @*@foreach(var modelitem in ViewBag.Roles)
+                                {
+                                    @Html.RadioButtonFor(model => model.Name, new { id=modelitem.I})
+                                }*@
+                                @Html.DropDownListFor(model => model.Role, (IEnumerable<SelectListItem>)ViewBag.Roles, "-- Select Role --", new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Update" class="btn btn-default" />
+                                <input type="reset" value="Reset" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </div>
+                }
+                <div>
+                    @Html.ActionLink("Back to Users", "Index")
+                </div>
+
+            </div>
+        </div>
+
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+

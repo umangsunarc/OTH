@@ -1,0 +1,336 @@
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.exe
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\bin\Release\Common.Logging.Core.dll
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\bin\Release\Common.Logging.dll
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\bin\Release\NLog.dll
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\bin\Release\NLog.Extended.dll
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\bin\Release\Quartz.dll
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.exe.config
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.pdb
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\bin\Release\EntityFramework.dll
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\bin\Release\Wollo.Base.dll
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\bin\Release\Wollo.Data.dll
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\bin\Release\Wollo.Entities.dll
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\bin\Release\Wollo.Base.pdb
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\bin\Release\Wollo.Data.pdb
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\bin\Release\Wollo.Entities.pdb
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\bin\Release\Common.Logging.pdb
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\bin\Release\Common.Logging.xml
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\bin\Release\Common.Logging.Core.pdb
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\bin\Release\Common.Logging.Core.xml
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\bin\Release\EntityFramework.xml
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\bin\Release\NLog.xml
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\bin\Release\NLog.Extended.xml
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\bin\Release\Quartz.pdb
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\bin\Release\Quartz.xml
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.csprojResolveAssemblyReference.cache
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.exe
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.pdb
+E:\Minakshi\RPE\Updated\Wollo.Scheduler\bin\Release\MySql.Data.Entity.EF6.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.exe.config
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.exe
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\EntityFramework.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\MySql.Data.Entity.EF6.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\NLog.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\NLog.Extended.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\Quartz.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\Wollo.Base.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\Wollo.Data.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\Wollo.Entities.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\System.Web.Http.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\Common.Logging.Core.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\Common.Logging.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\System.Net.Http.Formatting.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\Wollo.Base.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\Wollo.Data.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\Wollo.Entities.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\EntityFramework.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\NLog.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\NLog.Extended.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\Quartz.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\Quartz.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\System.Web.Http.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\Common.Logging.Core.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\Common.Logging.Core.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\Common.Logging.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\Common.Logging.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Release\System.Net.Http.Formatting.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.csprojResolveAssemblyReference.cache
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.exe
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.resx
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.zh-CHS.resx
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.zh-CHT.resx
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.en-GB.resx
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.zh-CHS.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.zh-CHT.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.en-GB.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.exe.config
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.exe.manifest
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.application
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.exe
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\EntityFramework.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\MySql.Data.Entity.EF6.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\NLog.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\NLog.Extended.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\Quartz.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\System.Configuration.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\System.Configuration.Install.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\System.Data.DataSetExtensions.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\System.Data.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\System.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\System.ServiceProcess.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\System.Xml.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\System.Xml.Linq.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\Wollo.Base.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\Wollo.Data.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\Wollo.Entities.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\System.Web.Http.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\System.Net.Http.Formatting.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\Wollo.Base.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\Wollo.Data.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\Wollo.Entities.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\EntityFramework.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\NLog.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\NLog.Extended.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\Quartz.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\Quartz.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\System.Web.Http.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\System.Net.Http.Formatting.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\en-GB\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\zh-CHS\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\bin\Release\zh-CHT\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.csprojResolveAssemblyReference.cache
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.exe.manifest
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.application
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.exe
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.pdb
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.resx
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.zh-CHS.resx
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.zh-CHT.resx
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.en-GB.resx
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.zh-CHS.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.zh-CHT.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.en-GB.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.exe.config
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.exe.manifest
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.application
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.exe
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.pdb
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\EntityFramework.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\MySql.Data.Entity.EF6.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\NLog.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\NLog.Extended.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\Quartz.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\System.Configuration.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\System.Configuration.Install.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\System.Data.DataSetExtensions.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\System.Data.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\System.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\System.ServiceProcess.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\System.Xml.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\System.Xml.Linq.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\Wollo.Base.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\Wollo.Data.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\Wollo.Entities.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\System.Web.Http.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\System.Net.Http.Formatting.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\Wollo.Base.pdb
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\Wollo.Data.pdb
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\Wollo.Entities.pdb
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\EntityFramework.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\NLog.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\NLog.Extended.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\Quartz.pdb
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\Quartz.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\System.Web.Http.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\System.Net.Http.Formatting.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\en-GB\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\zh-CHS\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\bin\Release\zh-CHT\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.csprojResolveAssemblyReference.cache
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.exe.manifest
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.application
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.exe
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.pdb
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.resx
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.zh-CHS.resx
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.zh-CHT.resx
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.en-GB.resx
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.Designer.cs
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.zh-CHS.Designer.cs
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.zh-CHT.Designer.cs
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.en-GB.Designer.cs
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.exe.config
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.exe.manifest
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.application
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.exe
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.pdb
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\EntityFramework.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\MySql.Data.Entity.EF6.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\NLog.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\NLog.Extended.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\Quartz.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\System.Configuration.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\System.Configuration.Install.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\System.Data.DataSetExtensions.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\System.Data.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\System.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\System.ServiceProcess.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\System.Xml.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\System.Xml.Linq.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\Wollo.Base.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\Wollo.Data.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\Wollo.Entities.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\Wollo.Base.pdb
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\Wollo.Data.pdb
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\Wollo.Entities.pdb
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\EntityFramework.xml
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\NLog.xml
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\NLog.Extended.xml
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\Quartz.pdb
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\Quartz.xml
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\en-GB\Wollo.Base.resources.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\zh-CHS\Wollo.Base.resources.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\bin\Release\zh-CHT\Wollo.Base.resources.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.csprojResolveAssemblyReference.cache
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.exe.manifest
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.application
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.exe
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.resx
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.zh-CHS.resx
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.zh-CHT.resx
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.en-GB.resx
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.zh-CHS.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.zh-CHT.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.en-GB.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.exe.config
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.exe.manifest
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.application
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.exe
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\EntityFramework.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\MySql.Data.Entity.EF6.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\NLog.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\NLog.Extended.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\Quartz.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\System.Configuration.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\System.Configuration.Install.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\System.Data.DataSetExtensions.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\System.Data.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\System.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\System.ServiceProcess.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\System.Xml.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\System.Xml.Linq.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\Wollo.Base.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\Wollo.Data.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\Wollo.Entities.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\System.Web.Http.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\System.Net.Http.Formatting.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\Wollo.Base.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\Wollo.Data.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\Wollo.Entities.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\EntityFramework.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\NLog.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\NLog.Extended.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\Quartz.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\Quartz.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\System.Web.Http.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\System.Net.Http.Formatting.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\en-GB\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\zh-CHS\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\bin\Release\zh-CHT\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.csprojResolveAssemblyReference.cache
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.exe.manifest
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.application
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.exe
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.pdb
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.resx
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.zh-CHS.resx
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.zh-CHT.resx
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.en-GB.resx
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\LocalResource\Resource.Designer.cs
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.exe.config
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.exe.manifest
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.application
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.exe
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\Wollo.Scheduler.pdb
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\EntityFramework.dll
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\MySql.Data.Entity.EF6.dll
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\NLog.dll
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\NLog.Extended.dll
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\Quartz.dll
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\System.Configuration.dll
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\System.Configuration.Install.dll
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\System.Data.DataSetExtensions.dll
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\System.Data.dll
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\System.dll
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\System.ServiceProcess.dll
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\System.Xml.dll
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\System.Xml.Linq.dll
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\Wollo.Base.dll
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\Wollo.Data.dll
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\Wollo.Entities.dll
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\Wollo.Base.pdb
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\Wollo.Data.pdb
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\Wollo.Entities.pdb
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\EntityFramework.xml
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\NLog.xml
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\NLog.Extended.xml
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\Quartz.pdb
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\Quartz.xml
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\en-GB\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\zh-CHS\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\bin\Release\zh-CHT\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.csprojResolveAssemblyReference.cache
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.exe.manifest
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.application
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.exe
+E:\Umang\updated_wollo\Updated\Wollo.Scheduler\obj\Release\Wollo.Scheduler.pdb
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\LocalResource\Resource.resx
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\LocalResource\Resource.zh-CHS.resx
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\LocalResource\Resource.zh-CHT.resx
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\LocalResource\Resource.en-GB.resx
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\LocalResource\Resource.Designer.cs
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\Wollo.Scheduler.exe.config
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\Wollo.Scheduler.exe.manifest
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\Wollo.Scheduler.application
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\Wollo.Scheduler.exe
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\Wollo.Scheduler.pdb
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\EntityFramework.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\MySql.Data.Entity.EF6.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\NLog.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\NLog.Extended.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\Quartz.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\System.Configuration.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\System.Configuration.Install.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\System.Data.DataSetExtensions.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\System.Data.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\System.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\System.ServiceProcess.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\System.Xml.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\System.Xml.Linq.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\Wollo.Base.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\Wollo.Data.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\Wollo.Entities.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\Wollo.Base.pdb
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\Wollo.Data.pdb
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\Wollo.Entities.pdb
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\EntityFramework.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\NLog.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\NLog.Extended.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\Quartz.pdb
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\Quartz.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\en-GB\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\zh-CHS\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\bin\Release\zh-CHT\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\obj\Release\Wollo.Scheduler.csprojResolveAssemblyReference.cache
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\obj\Release\Wollo.Scheduler.exe.manifest
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\obj\Release\Wollo.Scheduler.application
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\obj\Release\Wollo.Scheduler.exe
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Scheduler\obj\Release\Wollo.Scheduler.pdb

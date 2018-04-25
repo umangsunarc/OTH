@@ -1,0 +1,206 @@
+﻿@model Wollo.Web.Models.UserModel
+@{
+    ViewBag.Title = @Html.DisplayNameFor(model => model.manage_users);
+}
+<head>
+    <meta charset='UTF-8'>
+    <title>Responsive Table</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/responsive.bootstrap.min.css" rel="stylesheet" />
+    <!--[if !IE]><!-->
+</head>
+<body style="margin-top: 100px; background-color:white;">
+
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <!-- Page Heading -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header" style="margin-top:-15px; font-weight:700;">
+                        <b>@Html.LabelFor(model => model.manage_users)</b>
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li class="active">
+                            <i class="fa fa-dashboard"></i><b>@Html.LabelFor(model => model.dashboard_manage_users)</b>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="">
+                        <a href="User/CreateUser" class="btn btn-primary" id="add" style="">@Html.LabelFor(model => model.add_new_user) <i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        @*<a href="User/ExportToCSV" class="btn btn-primary" id="add" style="">@Html.LabelFor(model => model.export_to_csv) <i class="fa fa-plus-square" aria-hidden="true"></i></a>*@
+                    </div>
+                </div><br />
+                <div class="row space">
+                    @if (TempData["Success"] != null)
+                    {
+                        <p class="alert alert-success" id="successMessage">@TempData["Success"]</p>
+                    }
+                    @if (TempData["message"] != null)
+                    {
+                        <p class="alert alert-success" id="successMessage">@TempData["message"]</p>
+                    }
+                    <div class="table-responsive">
+                        <table id="tbl_user" class="table table-bordered table-hover table-striped dt-responsive nowrap">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.LabelFor(x => x.User.FirstOrDefault().user_name)
+                                    </th>
+                                    <th>
+                                        @Html.LabelFor(x => x.User.FirstOrDefault().first_name)
+                                    </th>
+                                    <th>
+                                        @Html.LabelFor(x => x.User.FirstOrDefault().last_name)
+                                    </th>
+                                    <th>
+                                        @Html.LabelFor(x => x.User.FirstOrDefault().email_address)
+                                    </th>
+                                    @*<th style="display:none;">
+                                            @Html.DisplayName("Status")
+                                        </th>*@
+                                    <th>Options</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.User)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(x => item.user_name)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(x => item.first_name)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(x => item.last_name)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(x => item.email_address)
+                                        </td>
+                                        @*<td style="display:none;">
+                                                @Html.DisplayFor(x => item.MemberStatusMaster.status)
+                                            </td>*@
+                                        <td>
+                                            @{
+                                                 string edit_label = @Html.DisplayNameFor(model => model.edit).ToString();
+                                                 string activate_label = @Html.DisplayNameFor(model => model.deactivate_user).ToString();
+                                                 string deactivate_label = @Html.DisplayNameFor(model => model.deactivate_user).ToString();
+                                                 string change_password_label = @Html.DisplayNameFor(model => model.change_password).ToString();
+                                                 string manage_role_label = @Html.DisplayNameFor(model => model.user_role).ToString();
+                                                 string user_role_label = @Html.DisplayNameFor(model => model.user_role).ToString();
+                                            }
+                                            @Html.ActionLink(edit_label, "Edit", new { id = item.user_id }) |
+                                            @if (User.Identity.Name == "superadmin")
+                                            {
+                                                if (item.user_name != "superadmin")
+                                                {
+                                                    if (item.is_deleted == true)
+                                                    {
+                                                        @Html.ActionLink("Activate User", "DeleteUser", new { id = item.user_id }) @Html.Raw("|")
+
+                                                    }
+                                                    if (item.is_deleted == false)
+                                                    {
+                                                        @Html.ActionLink(deactivate_label, "DeleteUser", new { id = item.user_id }) @Html.Raw("|")
+                                                    }
+                                                }
+                                            }
+                                            else
+                                            {
+                                                if (item.user_name != "admin")
+                                                {
+                                                    if (item.is_deleted == true)
+                                                    {
+                                                        @Html.ActionLink("Activate User", "DeleteUser", new { id = item.user_id }) @Html.Raw("|")
+
+                                                    }
+                                                    if (item.is_deleted == false)
+                                                    {
+                                                        @Html.ActionLink(deactivate_label, "DeleteUser", new { id = item.user_id }) @Html.Raw("|")
+                                                    }
+                                                }
+                                            }
+                                            @Html.ActionLink(change_password_label, "ResetPasswordByAdmin", "Account", new { id = item.user_id }, new { @class = "changepassword" }) |
+                                            @Html.ActionLink(user_role_label, "Details", new { id = item.user_id }) |
+                                            @Html.ActionLink("Manage Roles", "Roles", new { id = item.user_id })
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+
+</body>
+@section Scripts {
+    <script src="~/js/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.dataTables.min.js"></script>
+    @*<script src="~/js/dataTables.bootstrap.min.js"></script>*@
+    @*<script src="~/Scripts/bootstrap.js"></script>*@
+    @*<script src="~/js/jquery.dataTables.min.js"></script>*@
+    <script src="~/js/dataTables.bootstrap.min.js"></script>
+    <script src="~/js/dataTables.responsive.min.js"></script>
+    <script src="~/js/responsive.bootstrap.min.js"></script>
+    @*@Scripts.Render("~/bundles/jqueryval")*@
+    <script>
+        var english = {
+            "sLengthMenu": "Show _MENU_ entries",
+            "sZeroRecords": "No data available in table",
+            "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+            "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+            "sInfoFiltered": "(filtered from _MAX_ total entries)"
+        };
+        var chinese = {
+            "sProcessing": "处理中...",
+            "sLengthMenu": "显示 _MENU_ 项结果",
+            "sZeroRecords": "没有匹配结果",
+            "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+            "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+            "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+            "sInfoPostFix": "",
+            "sSearch": "搜索:",
+            "sUrl": "",
+            "sEmptyTable": "表中数据为空",
+            "sLoadingRecords": "载入中...",
+            "sInfoThousands": ",",
+            "oPaginate": {
+                "sFirst": "首页",
+                "sPrevious": "上页",
+                "sNext": "下页",
+                "sLast": "末页"
+            },
+            "oAria": {
+                "sSortAscending": ": 以升序排列此列",
+                "sSortDescending": ": 以降序排列此列"
+            }
+        }
+        $(document).ready(function () {
+            var currentLang = english;
+            if ('@Session["Language"]' != null || '@Session["Language"]' != "") {
+                if ('@Session["Language"]' == "chinese") {
+                    currentLang = chinese;
+                }
+            }
+            $("#tbl_user").DataTable({
+                "oLanguage": currentLang
+            });
+            $('#myGroup ul li a').click(function () {
+                $('#myGroup ul li ul.collapse ').removeClass('in');
+                $('#myGroup ul li').removeClass('active');
+            });
+        })
+
+    </script>
+}

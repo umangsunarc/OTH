@@ -1,0 +1,783 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutUs" xml:space="preserve">
+    <value>關於我們</value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>行動</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="AddNewHolidayClosingDate" xml:space="preserve">
+    <value>新增假日/截止日期</value>
+  </data>
+  <data name="AddNewWithdrawals" xml:space="preserve">
+    <value>添加新的提款</value>
+  </data>
+  <data name="AddTopup" xml:space="preserve">
+    <value>添加充值</value>
+  </data>
+  <data name="AdministrationfeePriceperLot" xml:space="preserve">
+    <value>手续费（0）：$：每手收费</value>
+  </data>
+  <data name="Administrationfeesonbuyer" xml:space="preserve">
+    <value>買方的管理費：</value>
+  </data>
+  <data name="AdminSettings" xml:space="preserve">
+    <value>管理員設置</value>
+  </data>
+  <data name="AllTradingHistory" xml:space="preserve">
+    <value>所有的交易歷史</value>
+  </data>
+  <data name="AM" xml:space="preserve">
+    <value>上午</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>量</value>
+  </data>
+  <data name="Ask" xml:space="preserve">
+    <value>問</value>
+  </data>
+  <data name="AskPrice" xml:space="preserve">
+    <value>賣價</value>
+  </data>
+  <data name="BankTransfer" xml:space="preserve">
+    <value>銀行轉帳</value>
+  </data>
+  <data name="Bid" xml:space="preserve">
+    <value>出價</value>
+  </data>
+  <data name="BidAsk" xml:space="preserve">
+    <value>投標要求</value>
+  </data>
+  <data name="Buy" xml:space="preserve">
+    <value>購買</value>
+  </data>
+  <data name="BuyerFee" xml:space="preserve">
+    <value>買家費</value>
+  </data>
+  <data name="BuyorSell" xml:space="preserve">
+    <value>買或賣</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Cash" xml:space="preserve">
+    <value>現金</value>
+  </data>
+  <data name="CashAdmin" xml:space="preserve">
+    <value>現金（管理員）</value>
+  </data>
+  <data name="CashEWallet" xml:space="preserve">
+    <value>現金電子錢包</value>
+  </data>
+  <data name="CashInCirculation" xml:space="preserve">
+    <value>現金循環</value>
+  </data>
+  <data name="CashIssuedToMembers" xml:space="preserve">
+    <value>現金發給隊員</value>
+  </data>
+  <data name="CashTransactionHistory" xml:space="preserve">
+    <value>現金交易記錄</value>
+  </data>
+  <data name="CashWithdrawal" xml:space="preserve">
+    <value>取現金</value>
+  </data>
+  <data name="ChangeStatus" xml:space="preserve">
+    <value>更改狀態</value>
+  </data>
+  <data name="Cheque" xml:space="preserve">
+    <value>支票</value>
+  </data>
+  <data name="ClosingBalance" xml:space="preserve">
+    <value>期末餘額</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>确认</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>聯繫我們</value>
+  </data>
+  <data name="Currency" xml:space="preserve">
+    <value>貨幣</value>
+  </data>
+  <data name="CutOffTime" xml:space="preserve">
+    <value>截止時間：</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>儀表板</value>
+  </data>
+  <data name="DashboardAdmin" xml:space="preserve">
+    <value>儀表板（管理）</value>
+  </data>
+  <data name="DashboardCashTransactionHistory" xml:space="preserve">
+    <value>主页/現金交易記錄</value>
+  </data>
+  <data name="DashboardCashWithdrawal" xml:space="preserve">
+    <value>儀表板/取款</value>
+  </data>
+  <data name="DashboardHolidayClosingDate" xml:space="preserve">
+    <value>儀表板/度假/截止日期</value>
+  </data>
+  <data name="DashboardIssuePoints" xml:space="preserve">
+    <value>儀表板/問題點</value>
+  </data>
+  <data name="DashboardQueue" xml:space="preserve">
+    <value>儀表板/隊列</value>
+  </data>
+  <data name="DashboardTrading" xml:space="preserve">
+    <value>儀表板/貿易</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>交易时间</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>細節</value>
+  </data>
+  <data name="Fee" xml:space="preserve">
+    <value>費用</value>
+  </data>
+  <data name="Fixed" xml:space="preserve">
+    <value>固定</value>
+  </data>
+  <data name="ForaTotalOf" xml:space="preserve">
+    <value>總共</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>星期五</value>
+  </data>
+  <data name="FundTopup" xml:space="preserve">
+    <value>基金/充值</value>
+  </data>
+  <data name="FundTopupMember" xml:space="preserve">
+    <value>基金/充值（會員）</value>
+  </data>
+  <data name="HolidayClosingDate" xml:space="preserve">
+    <value>假日/截止日期</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>主页</value>
+  </data>
+  <data name="Inbox" xml:space="preserve">
+    <value>收件箱</value>
+  </data>
+  <data name="InQueuing" xml:space="preserve">
+    <value>在排隊</value>
+  </data>
+  <data name="IssuedPointsDetails" xml:space="preserve">
+    <value>出具詳細點</value>
+  </data>
+  <data name="IssuePoints" xml:space="preserve">
+    <value>問題點</value>
+  </data>
+  <data name="IssuePointsInCirculation" xml:space="preserve">
+    <value>問題點循環</value>
+  </data>
+  <data name="IssuePointsIssuedintoSystem" xml:space="preserve">
+    <value>問題點數發放到系統</value>
+  </data>
+  <data name="IssuePointsIssuedToMembers" xml:space="preserve">
+    <value>發給隊員的問題點</value>
+  </data>
+  <data name="Iwanttobuy" xml:space="preserve">
+    <value>我想買</value>
+  </data>
+  <data name="Iwanttosell" xml:space="preserve">
+    <value>我想賣</value>
+  </data>
+  <data name="LandingPage" xml:space="preserve">
+    <value>登陸頁面</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>登錄</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>登出</value>
+  </data>
+  <data name="Manual" xml:space="preserve">
+    <value>手冊</value>
+  </data>
+  <data name="Minimum10topup" xml:space="preserve">
+    <value>最低$10起</value>
+  </data>
+  <data name="Modify" xml:space="preserve">
+    <value>修改</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>星期一</value>
+  </data>
+  <data name="MyWithdrawals" xml:space="preserve">
+    <value>我的提款</value>
+  </data>
+  <data name="NewHolidayClosingDate" xml:space="preserve">
+    <value>新假日/截止日期</value>
+  </data>
+  <data name="NewWithdrawal" xml:space="preserve">
+    <value>新的提款</value>
+  </data>
+  <data name="NoticesAndMaintainance" xml:space="preserve">
+    <value>布告栏</value>
+  </data>
+  <data name="NotifyBefore" xml:space="preserve">
+    <value>前通知</value>
+  </data>
+  <data name="NumberofUsers" xml:space="preserve">
+    <value>用戶數</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>好</value>
+  </data>
+  <data name="OpeningCashBalance" xml:space="preserve">
+    <value>開幕現金結餘</value>
+  </data>
+  <data name="OrderID" xml:space="preserve">
+    <value>訂單ID</value>
+  </data>
+  <data name="OrderPrice" xml:space="preserve">
+    <value>訂單價格</value>
+  </data>
+  <data name="OrderQTY" xml:space="preserve">
+    <value>訂購數量</value>
+  </data>
+  <data name="Percent" xml:space="preserve">
+    <value>百分</value>
+  </data>
+  <data name="PM" xml:space="preserve">
+    <value>下午</value>
+  </data>
+  <data name="PoweredByDigimaticSolutionscopyrightAllRightReserved" xml:space="preserve">
+    <value>Powered By Digimatic Solutions © copyright 2016. All Right Reserved.</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>價錢</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>輪廓</value>
+  </data>
+  <data name="QTY" xml:space="preserve">
+    <value>數量</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>數量</value>
+  </data>
+  <data name="Queue" xml:space="preserve">
+    <value>隊列</value>
+  </data>
+  <data name="QueueAdmin" xml:space="preserve">
+    <value>隊列（管理員）</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>注册</value>
+  </data>
+  <data name="RemainingOrderQTY" xml:space="preserve">
+    <value>剩餘訂購數量</value>
+  </data>
+  <data name="RewardPoints" xml:space="preserve">
+    <value>獎勵分數</value>
+  </data>
+  <data name="RewardPointsExchange" xml:space="preserve">
+    <value>奖励积分交易平台</value>
+  </data>
+  <data name="RewardPointsInCirculation" xml:space="preserve">
+    <value>獎勵積分在循環</value>
+  </data>
+  <data name="RewardPointsTransferredInByMembers" xml:space="preserve">
+    <value>轉移在通過會員獎勵積分</value>
+  </data>
+  <data name="RewardPointsTransferredOutByMembers" xml:space="preserve">
+    <value>獎勵積分轉出到會員</value>
+  </data>
+  <data name="Rules" xml:space="preserve">
+    <value>規則</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>星期六</value>
+  </data>
+  <data name="SelectPaymentMethod" xml:space="preserve">
+    <value>請選擇支付方式</value>
+  </data>
+  <data name="SelectRule" xml:space="preserve">
+    <value>選擇規則</value>
+  </data>
+  <data name="SelectStock" xml:space="preserve">
+    <value>選擇股票</value>
+  </data>
+  <data name="SelectStockCode" xml:space="preserve">
+    <value>選擇股票代碼</value>
+  </data>
+  <data name="sell" xml:space="preserve">
+    <value>賣</value>
+  </data>
+  <data name="SellerFee" xml:space="preserve">
+    <value>賣家收費</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>設置</value>
+  </data>
+  <data name="SIGNUPFORFREE" xml:space="preserve">
+    <value>免費註冊</value>
+  </data>
+  <data name="StartingTime" xml:space="preserve">
+    <value>開始時間：</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>狀態</value>
+  </data>
+  <data name="StockCode" xml:space="preserve">
+    <value>股票代碼</value>
+  </data>
+  <data name="StockName" xml:space="preserve">
+    <value>股票名稱</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>星期日</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>星期四</value>
+  </data>
+  <data name="Timestamp" xml:space="preserve">
+    <value>時間戳</value>
+  </data>
+  <data name="Topup" xml:space="preserve">
+    <value>充值</value>
+  </data>
+  <data name="TopupAction" xml:space="preserve">
+    <value>充值記錄</value>
+  </data>
+  <data name="TopupHistory" xml:space="preserve">
+    <value>充值記錄</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>總：</value>
+  </data>
+  <data name="TotalCashIssuesintoSystem" xml:space="preserve">
+    <value>總現金問題納入系統</value>
+  </data>
+  <data name="TotalTopupByMembers" xml:space="preserve">
+    <value>充值總額按成員</value>
+  </data>
+  <data name="TotalWithdrawOutByMembers" xml:space="preserve">
+    <value>總撤櫃Out通過會員</value>
+  </data>
+  <data name="Traded" xml:space="preserve">
+    <value>交易</value>
+  </data>
+  <data name="TradedBidPrice" xml:space="preserve">
+    <value>交易/買入價</value>
+  </data>
+  <data name="Trading" xml:space="preserve">
+    <value>貿易</value>
+  </data>
+  <data name="TradingAdmin" xml:space="preserve">
+    <value>貿易（管理員）</value>
+  </data>
+  <data name="TradingDay" xml:space="preserve">
+    <value>交易日：</value>
+  </data>
+  <data name="TradingHistory" xml:space="preserve">
+    <value>交易歷史</value>
+  </data>
+  <data name="TradingTime" xml:space="preserve">
+    <value>交易時間</value>
+  </data>
+  <data name="TransactionAmount" xml:space="preserve">
+    <value>交易金額</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>星期二</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="UserId" xml:space="preserve">
+    <value>用戶名</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>用戶名</value>
+  </data>
+  <data name="ViewAllCashHistory" xml:space="preserve">
+    <value>查看全部現金史</value>
+  </data>
+  <data name="ViewAllTrading" xml:space="preserve">
+    <value>查看所有交易</value>
+  </data>
+  <data name="ViewDetails" xml:space="preserve">
+    <value>查看詳情</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>星期三</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>歡迎</value>
+  </data>
+  <data name="WelcomeUserName" xml:space="preserve">
+    <value>歡迎用戶名</value>
+  </data>
+  <data name="Withdrawal" xml:space="preserve">
+    <value>退出</value>
+  </data>
+  <data name="CashRequest" xml:space="preserve">
+    <value>Cash Request</value>
+  </data>
+  <data name="CashRequestHistory" xml:space="preserve">
+    <value>Cash Request History</value>
+  </data>
+  <data name="DashboardAllTradingHistory" xml:space="preserve">
+    <value>Dashboard/All Trading History</value>
+  </data>
+  <data name="DashboardCashMemberCash" xml:space="preserve">
+    <value>Dashboard/Cash/MemberCash</value>
+  </data>
+  <data name="DashboardCashRequest" xml:space="preserve">
+    <value>Dashboard/Cash Request</value>
+  </data>
+  <data name="IssueCash" xml:space="preserve">
+    <value>Issue Cash</value>
+  </data>
+  <data name="IssuedCashHistory" xml:space="preserve">
+    <value>Issued Cash History</value>
+  </data>
+  <data name="MemberCashHistory" xml:space="preserve">
+    <value>Member Cash History</value>
+  </data>
+  <data name="Method" xml:space="preserve">
+    <value>Method</value>
+  </data>
+  <data name="WithdrawelFee" xml:space="preserve">
+    <value>Withdrawal Fee</value>
+  </data>
+  <data name="PaymentMethod" xml:space="preserve">
+    <value>PaymentMethod</value>
+  </data>
+  <data name="AdminName" xml:space="preserve">
+    <value>Admin Name</value>
+  </data>
+  <data name="CashIssuedHistory" xml:space="preserve">
+    <value>Cash Issued History</value>
+  </data>
+  <data name="CashIssueRequest" xml:space="preserve">
+    <value>Cash Issue Request</value>
+  </data>
+  <data name="DashboardCashIssueRequest" xml:space="preserve">
+    <value>Dashboard/Cash Issue Request</value>
+  </data>
+  <data name="DashboardPortfolio" xml:space="preserve">
+    <value>Dashboard/Portfolio</value>
+  </data>
+  <data name="Portfolio" xml:space="preserve">
+    <value>Portfolio</value>
+  </data>
+  <data name="PointsIssued" xml:space="preserve">
+    <value>Points</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="AddNewRole" xml:space="preserve">
+    <value>Add New Role</value>
+  </data>
+  <data name="AdministrationFees" xml:space="preserve">
+    <value>Administration Fees</value>
+  </data>
+  <data name="AdministrationFeesOnSeller" xml:space="preserve">
+    <value>Administration Fees On Seller</value>
+  </data>
+  <data name="Buyer" xml:space="preserve">
+    <value>Buyer</value>
+  </data>
+  <data name="Createddate" xml:space="preserve">
+    <value>Created date</value>
+  </data>
+  <data name="CreateUser" xml:space="preserve">
+    <value>Create User</value>
+  </data>
+  <data name="CurrentAdministrationFeesRule" xml:space="preserve">
+    <value>Current Administration Fees Rule</value>
+  </data>
+  <data name="CurrentTradingRule" xml:space="preserve">
+    <value>Current Trading Rule</value>
+  </data>
+  <data name="DashboardFundTopup" xml:space="preserve">
+    <value>Dashboard/Fund/Topup</value>
+  </data>
+  <data name="DashboardNotification" xml:space="preserve">
+    <value>Dashboard/Notification</value>
+  </data>
+  <data name="DayHigh" xml:space="preserve">
+    <value>Day High</value>
+  </data>
+  <data name="DayLow" xml:space="preserve">
+    <value>Day Low</value>
+  </data>
+  <data name="EditPermission" xml:space="preserve">
+    <value>Edit Permission</value>
+  </data>
+  <data name="EmailAddress" xml:space="preserve">
+    <value>Email Address</value>
+  </data>
+  <data name="entries" xml:space="preserve">
+    <value>entries</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="Forapriceof" xml:space="preserve">
+    <value>For a price of</value>
+  </data>
+  <data name="InitialMarketRate" xml:space="preserve">
+    <value>Initial Market Rate</value>
+  </data>
+  <data name="IpAddress" xml:space="preserve">
+    <value>Ip Address</value>
+  </data>
+  <data name="IssueNewRewardPoints" xml:space="preserve">
+    <value>Issue New Reward Points</value>
+  </data>
+  <data name="IssuerUserName" xml:space="preserve">
+    <value>Issuer User Name</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="LastTraded" xml:space="preserve">
+    <value>Last Traded</value>
+  </data>
+  <data name="LogDetails" xml:space="preserve">
+    <value>Log Details</value>
+  </data>
+  <data name="Lot" xml:space="preserve">
+    <value>Lot</value>
+  </data>
+  <data name="LotSize" xml:space="preserve">
+    <value>Lot Size</value>
+  </data>
+  <data name="ManageUsers" xml:space="preserve">
+    <value>Manage Users</value>
+  </data>
+  <data name="MarketRate" xml:space="preserve">
+    <value>Market Rate</value>
+  </data>
+  <data name="MinimumBidRate" xml:space="preserve">
+    <value>Minimum Bid Rate</value>
+  </data>
+  <data name="MinimumLotToBid" xml:space="preserve">
+    <value>Minimum Lot To Bid</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>名字</value>
+  </data>
+  <data name="NoOfTraded" xml:space="preserve">
+    <value>No Of Traded</value>
+  </data>
+  <data name="Notifications" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>密码</value>
+  </data>
+  <data name="PrevClose" xml:space="preserve">
+    <value>Prev. Close</value>
+  </data>
+  <data name="PriceperLot" xml:space="preserve">
+    <value>Price per Lot</value>
+  </data>
+  <data name="ReceiverUsername" xml:space="preserve">
+    <value>Receiver User name</value>
+  </data>
+  <data name="RequestCash" xml:space="preserve">
+    <value>Request Cash</value>
+  </data>
+  <data name="RoleName" xml:space="preserve">
+    <value>Role Name</value>
+  </data>
+  <data name="RolePermissions" xml:space="preserve">
+    <value>Role Permissions</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+  <data name="Rule" xml:space="preserve">
+    <value>Rule</value>
+  </data>
+  <data name="Ruleon" xml:space="preserve">
+    <value>Rule on</value>
+  </data>
+  <data name="SelectMethod" xml:space="preserve">
+    <value>Select Method</value>
+  </data>
+  <data name="Seller" xml:space="preserve">
+    <value>Seller</value>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="Stock" xml:space="preserve">
+    <value>Stock</value>
+  </data>
+  <data name="TotalPoints" xml:space="preserve">
+    <value>Total Points</value>
+  </data>
+  <data name="TotalVolume" xml:space="preserve">
+    <value>Total Volume</value>
+  </data>
+  <data name="TradingRules" xml:space="preserve">
+    <value>Trading Rules</value>
+  </data>
+  <data name="TransferPoints" xml:space="preserve">
+    <value>Transfer Points</value>
+  </data>
+  <data name="UpdatedOn" xml:space="preserve">
+    <value>Updated On</value>
+  </data>
+  <data name="URL" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>用户</value>
+  </data>
+  <data name="Weeks" xml:space="preserve">
+    <value>52 Weeks</value>
+  </data>
+  <data name="WithdrawalFees" xml:space="preserve">
+    <value>Withdrawal Fees</value>
+  </data>
+  <data name="ValueTraded" xml:space="preserve">
+    <value>Value Traded</value>
+  </data>
+  <data name="SystemCash" xml:space="preserve">
+    <value>System Cash</value>
+  </data>
+  <data name="Uname" xml:space="preserve">
+    <value>用戶名</value>
+  </data>
+</root>

@@ -1,0 +1,219 @@
+﻿@model Wollo.Web.Models.TopupHistoryViewModel
+
+@{
+    ViewBag.Title = @Html.DisplayNameFor(model => model.TopupHistory.FirstOrDefault().topup_by_members_history);
+}
+<link href="~/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="~/css/responsive.bootstrap.min.css" rel="stylesheet" />
+<link href="~/css/bootstrap-datepicker.css" rel="stylesheet">
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    @Html.LabelFor(model => model.TopupHistory.FirstOrDefault().topup_by_members_history)
+                </h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i>@Html.LabelFor(model => model.TopupHistory.FirstOrDefault().dashboard_topup_by_members_history)
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <span class="input-group-addon" style="display: block;text-align: center; padding: 5px; background: transparent; border: none;position: absolute;top: 5px;right: 30px;">
+                    <span class="fa fa-calendar"></span>
+                </span>
+                <input id="from" name="from" type="text" class="form-control" placeholder=@Html.DisplayNameFor(model => model.TopupHistory.FirstOrDefault().CommonWordsViewModel.from) />
+            </div>
+            <div class="col-sm-3">
+                <span class="input-group-addon" style="display: block;text-align: center; padding: 5px; background: transparent; border: none;position: absolute;top: 5px;right: 30px;">
+                    <span class="fa fa-calendar"></span>
+                </span>
+                <input id="to" name="to" type="text" class="form-control" placeholder=@Html.DisplayNameFor(model => model.TopupHistory.FirstOrDefault().CommonWordsViewModel.to) />
+            </div>
+            <div class="col-sm-3">
+                <input type="button" value=@Html.DisplayNameFor(model => model.TopupHistory.FirstOrDefault().CommonWordsViewModel.filter) onclick="rangefilter()" class="btn btn-primary" id="filter" />
+                <a class="btn btn-primary" href="/Member/TopupByMembersHistory">@Html.DisplayNameFor(model => model.TopupHistory.FirstOrDefault().CommonWordsViewModel.refresh)</a>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="upper-birth">
+                    <div class="table-responsive">
+                        <table id="tbl_topup_member_history" class="table table-bordered table-hover table-striped dt-responsive nowrap" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+
+                                    <th>@Html.LabelFor(model => model.TopupHistory.FirstOrDefault().date_time)</th>
+                                    <th>@Html.LabelFor(model => model.TopupHistory.FirstOrDefault().username)</th>
+                                    <th>@Html.LabelFor(model => model.TopupHistory.FirstOrDefault().amount)</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.TopupHistory)
+                                {
+                                    <tr>
+
+                                        <td>@Html.DisplayFor(x => item.updated_date)</td>
+                                        <td>@Html.DisplayFor(x => item.AspnetUsers.username)</td>
+                                        <td>@Html.DisplayFor(x => item.amount)</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+</div>
+<!-- /#wrapper -->
+@section scripts{
+    <script src="~/js/jquery.js"></script>
+    @*<script src="~/Scripts/bootstrap.js"></script>*@
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.dataTables.min.js"></script>
+    <script src="~/js/dataTables.bootstrap.min.js"></script>
+    <script src="~/js/dataTables.responsive.min.js"></script>
+    <script src="~/js/responsive.bootstrap.min.js"></script>
+    <script src="~/js/bootstrap-datepicker.js"></script>
+    <script>
+        var english = {
+            "sLengthMenu": "Show _MENU_ entries",
+            "sZeroRecords": "No data available in table",
+            "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+            "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+            "sInfoFiltered": "(filtered from _MAX_ total entries)"
+        };
+
+        var chinese = {
+            "sProcessing": "处理中...",
+            "sLengthMenu": "显示 _MENU_ 项结果",
+            "sZeroRecords": "没有匹配结果",
+            "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+            "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+            "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+            "sInfoPostFix": "",
+            "sSearch": "搜索:",
+            "sUrl": "",
+            "sEmptyTable": "表中数据为空",
+            "sLoadingRecords": "载入中...",
+            "sInfoThousands": ",",
+            "oPaginate": {
+                "sFirst": "首页",
+                "sPrevious": "上页",
+                "sNext": "下页",
+                "sLast": "末页"
+            },
+            "oAria": {
+                "sSortAscending": ": 以升序排列此列",
+                "sSortDescending": ": 以降序排列此列"
+            }
+        }
+
+        $(document).ready(function () {
+            debugger;
+            var currentLang = english;
+            if ('@Session["Language"]' != null || '@Session["Language"]' != "") {
+                if ('@Session["Language"]' == "chinese") {
+                    currentLang = chinese;
+                }
+            }
+
+            $('#myGroup ul li a').click(function () {
+                $('#myGroup ul li ul.collapse ').removeClass('in');
+                $('#myGroup ul li').removeClass('active');
+            });
+
+
+            $("#tbl_topup_member_history").DataTable({
+                "order": [[0, "desc"]],
+                "oLanguage": currentLang
+            });
+        });
+
+        $("#nav-cash").addClass("active");
+
+        var FromEndDate = new Date();
+        var ToEndDate = new Date();
+        ToEndDate.setDate(ToEndDate.getDate() + 365);
+        $('#to')
+            .datepicker({
+                format: 'dd/mm/yyyy',
+                weekStart: 1,
+                //startDate: startDate,
+                endDate: ToEndDate,
+                startView: 'decade',
+                autoclose: true,
+                todayHighlight: true
+            })
+            .on('changeDate', function (selected) {
+                FromEndDate = new Date(selected.date.valueOf());
+                FromEndDate.setDate(FromEndDate.getDate(new Date(selected.date.valueOf())));
+                $('#from').datepicker('setEndDate', FromEndDate);
+            });
+        $('#from').datepicker({
+            format: 'dd/mm/yyyy',
+            weekStart: 1,
+            //startDate: '01/01/2012',
+            endDate: FromEndDate,
+            startView: 'decade',
+            autoclose: true,
+            todayHighlight: true
+        })
+    .on('changeDate', function (selected) {
+        startDate = new Date(selected.date.valueOf());
+        startDate.setDate(startDate.getDate(new Date(selected.date.valueOf())));
+        $('#to').datepicker('setStartDate', startDate);
+    });
+
+        $('.datepicker').datepicker({
+            startView: 'decade',
+            autoclose: true,
+            todayHighlight: true
+        });
+        //Start and end date validation end
+
+        //for filtering according to date range
+        function rangefilter() {
+            if ($('#from').val() == "" && $('#to').val() == "") {
+                alert('@Html.DisplayNameFor(model=>model.PleaseSelectTheDateRange)');
+            }
+            else if ($('#from').val() == "") {
+                alert('Please select start date.');
+            }
+            else if ($('#to').val() == "") {
+                alert('@Html.DisplayNameFor(model=>model.PleaseSelectEndDate)');
+            }
+            else {
+                var startDate = $('#from').val();
+                var endDate = $('#to').val();
+                var updatedStartDate = startDate.split("/");
+                updatedStartDate = updatedStartDate[1] + "/" + updatedStartDate[0] + "/" + updatedStartDate[2];
+                var updatedEndDate = endDate.split("/");
+                updatedEndDate = updatedEndDate[1] + "/" + updatedEndDate[0] + "/" + updatedEndDate[2];
+                window.location.href = "@Url.Action("RangeFilterTopupByMembersHistory", "Member")" + "?start_date=" + updatedStartDate + "&end_date=" + updatedEndDate
+            }
+        }
+        if ('@TempData["StartDate"]' != '' && '@TempData["EndDate"]' != '') {
+            var startDate = ('@TempData["StartDate"]').split("/");
+            var endDate = ('@TempData["EndDate"]').split("/");
+            var startYear = startDate[2].split(" ");
+            var endYear = endDate[2].split(" ");
+            var start = new Date(startYear[0], parseInt(startDate[1]) - 1, startDate[0]);
+            var end = new Date(endYear[0], parseInt(endDate[1]) - 1, endDate[0])
+            $('#from').datepicker({ format: 'dd/mm/yyyy' }); // format to show
+            $('#to').datepicker({ format: 'dd/mm/yyyy' });
+            $('#from').datepicker('setDate', start);
+            $('#to').datepicker('setDate', end);
+        }
+        //code ends here
+    </script>
+}

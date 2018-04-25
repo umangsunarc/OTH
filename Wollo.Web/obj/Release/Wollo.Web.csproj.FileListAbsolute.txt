@@ -1,0 +1,249 @@
+E:\Minakshi\RPE\Updated\Wollo.Web\bin\Wollo.Web.dll.config
+E:\Minakshi\RPE\Updated\Wollo.Web\bin\Wollo.Web.dll
+E:\Minakshi\RPE\Updated\Wollo.Web\bin\Wollo.Web.pdb
+E:\Minakshi\RPE\Updated\Wollo.Web\bin\Microsoft.Web.Infrastructure.dll
+E:\Minakshi\RPE\Updated\Wollo.Web\bin\MySql.Data.dll
+E:\Minakshi\RPE\Updated\Wollo.Web\bin\MySql.Data.Entity.EF6.dll
+E:\Minakshi\RPE\Updated\Wollo.Web\bin\Newtonsoft.Json.dll
+E:\Minakshi\RPE\Updated\Wollo.Web\bin\System.Net.Http.Formatting.dll
+E:\Minakshi\RPE\Updated\Wollo.Web\bin\System.Web.Http.dll
+E:\Minakshi\RPE\Updated\Wollo.Web\bin\System.Web.Http.WebHost.dll
+E:\Minakshi\RPE\Updated\Wollo.Web\bin\System.Web.Mvc.dll
+E:\Minakshi\RPE\Updated\Wollo.Web\bin\Wollo.Base.dll
+E:\Minakshi\RPE\Updated\Wollo.Web\bin\Wollo.Data.dll
+E:\Minakshi\RPE\Updated\Wollo.Web\bin\Wollo.Entities.dll
+E:\Minakshi\RPE\Updated\Wollo.Web\bin\Wollo.Base.pdb
+E:\Minakshi\RPE\Updated\Wollo.Web\bin\Wollo.Data.pdb
+E:\Minakshi\RPE\Updated\Wollo.Web\bin\Wollo.Entities.pdb
+E:\Minakshi\RPE\Updated\Wollo.Web\bin\Newtonsoft.Json.xml
+E:\Minakshi\RPE\Updated\Wollo.Web\bin\System.Net.Http.Formatting.xml
+E:\Minakshi\RPE\Updated\Wollo.Web\bin\System.Web.Http.xml
+E:\Minakshi\RPE\Updated\Wollo.Web\bin\System.Web.Http.WebHost.xml
+E:\Minakshi\RPE\Updated\Wollo.Web\bin\System.Web.Mvc.xml
+E:\Minakshi\RPE\Updated\Wollo.Web\bin\Microsoft.Web.Infrastructure.xml
+E:\Minakshi\RPE\Updated\Wollo.Web\obj\Release\Wollo.Web.csprojResolveAssemblyReference.cache
+E:\Minakshi\RPE\Updated\Wollo.Web\obj\Release\Wollo.Web.dll
+E:\Minakshi\RPE\Updated\Wollo.Web\obj\Release\Wollo.Web.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Web\bin\Wollo.Web.dll.config
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Web\bin\Wollo.Web.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Web\bin\Wollo.Web.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Web\bin\Microsoft.Web.Infrastructure.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Web\bin\MySql.Data.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Web\bin\MySql.Data.Entity.EF6.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Web\bin\Newtonsoft.Json.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Web\bin\System.Net.Http.Formatting.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Web\bin\System.Web.Http.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Web\bin\System.Web.Http.WebHost.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Web\bin\System.Web.Mvc.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Web\bin\Wollo.Base.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Web\bin\Wollo.Data.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Web\bin\Wollo.Entities.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Web\bin\Wollo.Base.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Web\bin\Wollo.Data.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Web\bin\Wollo.Entities.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Web\bin\Newtonsoft.Json.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Web\bin\System.Net.Http.Formatting.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Web\bin\System.Web.Http.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Web\bin\System.Web.Http.WebHost.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Web\bin\System.Web.Mvc.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Web\bin\Microsoft.Web.Infrastructure.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Web\obj\Release\Wollo.Web.csprojResolveAssemblyReference.cache
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Web\obj\Release\Wollo.Web.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Web\obj\Release\Wollo.Web.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\LocalResource\Resource.resx
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\LocalResource\Resource.zh-CHS.resx
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\LocalResource\Resource.zh-CHT.resx
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\LocalResource\Resource.en-GB.resx
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\LocalResource\Resource.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\LocalResource\Resource.zh-CHS.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\LocalResource\Resource.zh-CHT.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\LocalResource\Resource.en-GB.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\Wollo.Web.dll.config
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\Wollo.Web.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\Wollo.Web.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\Excel.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\Microsoft.Web.Infrastructure.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\MySql.Data.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\MySql.Data.Entity.EF6.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\Newtonsoft.Json.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\NPOI.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\NPOI.OOXML.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\NPOI.OpenXml4Net.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\NPOI.OpenXmlFormats.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\System.Net.Http.Formatting.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\System.Web.Http.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\System.Web.Http.WebHost.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\System.Web.Mvc.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\Wollo.Base.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\Wollo.Data.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\Wollo.Entities.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\ICSharpCode.SharpZipLib.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\Wollo.Base.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\Wollo.Data.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\Wollo.Entities.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\Newtonsoft.Json.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\System.Net.Http.Formatting.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\System.Web.Http.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\System.Web.Http.WebHost.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\System.Web.Mvc.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\Microsoft.Web.Infrastructure.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\en-GB\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\zh-CHS\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\bin\zh-CHT\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\obj\Release\Wollo.Web.csprojResolveAssemblyReference.cache
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\obj\Release\Wollo.Web.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Web\obj\Release\Wollo.Web.pdb
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\LocalResource\Resource.resx
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\LocalResource\Resource.zh-CHS.resx
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\LocalResource\Resource.zh-CHT.resx
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\LocalResource\Resource.en-GB.resx
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\LocalResource\Resource.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\LocalResource\Resource.zh-CHS.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\LocalResource\Resource.zh-CHT.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\LocalResource\Resource.en-GB.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\Wollo.Web.dll.config
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\Wollo.Web.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\Wollo.Web.pdb
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\Excel.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\Microsoft.Web.Infrastructure.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\MySql.Data.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\MySql.Data.Entity.EF6.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\Newtonsoft.Json.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\NPOI.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\NPOI.OOXML.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\NPOI.OpenXml4Net.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\NPOI.OpenXmlFormats.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\System.Net.Http.Formatting.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\System.Web.Http.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\System.Web.Http.WebHost.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\System.Web.Mvc.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\Wollo.Base.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\Wollo.Data.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\Wollo.Entities.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\ICSharpCode.SharpZipLib.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\Wollo.Base.pdb
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\Wollo.Data.pdb
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\Wollo.Entities.pdb
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\Newtonsoft.Json.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\System.Net.Http.Formatting.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\System.Web.Http.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\System.Web.Http.WebHost.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\System.Web.Mvc.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\Microsoft.Web.Infrastructure.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\en-GB\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\zh-CHS\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\bin\zh-CHT\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\obj\Release\Wollo.Web.csprojResolveAssemblyReference.cache
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\obj\Release\Wollo.Web.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Web\obj\Release\Wollo.Web.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\LocalResource\Resource.resx
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\LocalResource\Resource.zh-CHS.resx
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\LocalResource\Resource.zh-CHT.resx
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\LocalResource\Resource.en-GB.resx
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\LocalResource\Resource.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\LocalResource\Resource.zh-CHS.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\LocalResource\Resource.zh-CHT.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\LocalResource\Resource.en-GB.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\Wollo.Web.dll.config
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\Wollo.Web.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\Wollo.Web.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\Excel.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\Microsoft.Web.Infrastructure.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\MySql.Data.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\MySql.Data.Entity.EF6.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\Newtonsoft.Json.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\NPOI.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\NPOI.OOXML.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\NPOI.OpenXml4Net.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\NPOI.OpenXmlFormats.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\System.Net.Http.Formatting.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\System.Web.Http.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\System.Web.Http.WebHost.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\System.Web.Mvc.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\Wollo.Base.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\Wollo.Data.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\Wollo.Entities.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\ICSharpCode.SharpZipLib.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\Wollo.Base.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\Wollo.Data.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\Wollo.Entities.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\Newtonsoft.Json.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\System.Net.Http.Formatting.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\System.Web.Http.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\System.Web.Http.WebHost.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\System.Web.Mvc.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\Microsoft.Web.Infrastructure.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\en-GB\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\zh-CHS\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\bin\zh-CHT\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\obj\Release\Wollo.Web.csprojResolveAssemblyReference.cache
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\obj\Release\Wollo.Web.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Web\obj\Release\Wollo.Web.pdb
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\LocalResource\Resource.resx
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\LocalResource\Resource.zh-CHS.resx
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\LocalResource\Resource.zh-CHT.resx
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\LocalResource\Resource.en-GB.resx
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\LocalResource\Resource.Designer.cs
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\Wollo.Web.dll.config
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\Wollo.Web.dll
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\Wollo.Web.pdb
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\Microsoft.Web.Infrastructure.dll
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\MySql.Data.dll
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\MySql.Data.Entity.EF6.dll
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\Newtonsoft.Json.dll
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\System.Net.Http.Formatting.dll
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\System.Web.Http.dll
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\System.Web.Http.WebHost.dll
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\System.Web.Mvc.dll
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\Wollo.Base.dll
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\Wollo.Data.dll
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\Wollo.Entities.dll
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\Wollo.Base.pdb
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\Wollo.Data.pdb
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\Wollo.Entities.pdb
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\Newtonsoft.Json.xml
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\System.Net.Http.Formatting.xml
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\System.Web.Http.xml
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\System.Web.Http.WebHost.xml
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\System.Web.Mvc.xml
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\Microsoft.Web.Infrastructure.xml
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\en-GB\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\zh-CHS\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.Web\bin\zh-CHT\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.Web\obj\Release\Wollo.Web.csprojResolveAssemblyReference.cache
+E:\Umang\updated_wollo\Updated\Wollo.Web\obj\Release\Wollo.Web.dll
+E:\Umang\updated_wollo\Updated\Wollo.Web\obj\Release\Wollo.Web.pdb
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\LocalResource\Resource.resx
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\LocalResource\Resource.zh-CHS.resx
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\LocalResource\Resource.zh-CHT.resx
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\LocalResource\Resource.en-GB.resx
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\LocalResource\Resource.Designer.cs
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\Wollo.Web.dll.config
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\Wollo.Web.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\Wollo.Web.pdb
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\Microsoft.Web.Infrastructure.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\MySql.Data.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\MySql.Data.Entity.EF6.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\Newtonsoft.Json.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\System.Net.Http.Formatting.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\System.Web.Http.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\System.Web.Http.WebHost.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\System.Web.Mvc.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\Wollo.Base.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\Wollo.Data.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\Wollo.Entities.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\Wollo.Base.pdb
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\Wollo.Data.pdb
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\Wollo.Entities.pdb
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\Newtonsoft.Json.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\System.Net.Http.Formatting.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\System.Web.Http.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\System.Web.Http.WebHost.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\System.Web.Mvc.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\Microsoft.Web.Infrastructure.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\en-GB\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\zh-CHS\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\bin\zh-CHT\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\obj\Release\Wollo.Web.csprojResolveAssemblyReference.cache
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\obj\Release\Wollo.Web.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Web\obj\Release\Wollo.Web.pdb

@@ -1,0 +1,55 @@
+﻿@model Wollo.Entities.ViewModels.AdminRuleMasterData
+@{
+    ViewBag.Title = "Rules";
+}
+<style>
+    .table {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .circle {
+        position: relative;
+        border-radius: 50%;
+        width: 100%;
+        height: auto;
+        padding-top: 100%;
+        background-image: url(/images/test.png);
+        background-repeat: round;
+        text-align: center;
+    }
+
+    .lblRuleAndlink {
+        text-align: center;
+    }
+
+    .btn {
+        padding: 3px 60px;
+    }
+</style>
+<div>@ViewBag.Exception</div>
+<div>@ViewBag.message</div>
+<div>@ViewBag.source</div>
+@section scripts{
+    <script src="~/js/jquery.js"></script>
+    @*<script src="~/Scripts/bootstrap.js"></script>*@
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "@Url.Action("Test", "DummyViews")",
+                data: "{'method':'" + $("#WithdrawPaymentMethod").val() + "','fees':'" + $("#FeeWithdraw").val() + "','withdrawl_rule_id':'" + $("#FeeRuleWithdraw").val() + "'}",
+                contentType: "application/json",
+                method: "POST",
+                success: function (result) {
+                    alert(result);
+                },
+                error: function (e) {
+                    alert(e);
+                }
+            });
+        });
+        
+    </script>
+}

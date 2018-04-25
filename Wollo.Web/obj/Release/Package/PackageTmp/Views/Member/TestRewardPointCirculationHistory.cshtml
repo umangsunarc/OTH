@@ -1,0 +1,119 @@
+﻿@model Wollo.Web.Models.MemberStockDetailsViewModel
+
+@{
+    ViewBag.Title = @Html.DisplayNameFor(model => model.MemberStockDetails.FirstOrDefault().test_reward_points_in_circulation_history);
+}
+<link href="~/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="~/css/responsive.bootstrap.min.css" rel="stylesheet" />
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-headeTestr">
+                    @Html.LabelFor(model => model.MemberStockDetails.FirstOrDefault().test_reward_points_in_circulation_history)
+                </h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i>@Html.LabelFor(model => model.dashboard)/@Html.LabelFor(model => model.MemberStockDetails.FirstOrDefault().test_reward_points_in_circulation_history)
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="upper-birth">
+
+                    <div class="table-responsive">
+                        <table id="tbl_reward_circulation_history" class="table table-bordered table-hover table-striped dt-responsive nowrap" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>@Html.LabelFor(model => model.MemberStockDetails.FirstOrDefault().username)</th>
+                                    <th>@Html.LabelFor(model => model.MemberStockDetails.FirstOrDefault().reward_point)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.MemberStockDetails)
+                                {
+                                    <tr>
+
+                                        <td>@Html.DisplayFor(x => item.AspnetUsers.username)</td>
+                                        <td>@Html.DisplayFor(x => item.stock_amount)</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+</div>
+<!-- /#wrapper -->
+@section scripts{
+    <script src="~/js/jquery.js"></script>
+    @*<script src="~/Scripts/bootstrap.js"></script>*@
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.dataTables.min.js"></script>
+    <script src="~/js/dataTables.bootstrap.min.js"></script>
+    <script src="~/js/dataTables.responsive.min.js"></script>
+    <script src="~/js/responsive.bootstrap.min.js"></script>
+    <script>
+        var english = {
+            "sLengthMenu": "Show _MENU_ entries",
+            "sZeroRecords": "No data available in table",
+            "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+            "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+            "sInfoFiltered": "(filtered from _MAX_ total entries)"
+        };
+
+        var chinese = {
+            "sProcessing": "处理中...",
+            "sLengthMenu": "显示 _MENU_ 项结果",
+            "sZeroRecords": "没有匹配结果",
+            "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+            "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+            "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+            "sInfoPostFix": "",
+            "sSearch": "搜索:",
+            "sUrl": "",
+            "sEmptyTable": "表中数据为空",
+            "sLoadingRecords": "载入中...",
+            "sInfoThousands": ",",
+            "oPaginate": {
+                "sFirst": "首页",
+                "sPrevious": "上页",
+                "sNext": "下页",
+                "sLast": "末页"
+            },
+            "oAria": {
+                "sSortAscending": ": 以升序排列此列",
+                "sSortDescending": ": 以降序排列此列"
+            }
+        }
+
+        $(document).ready(function () {
+            debugger;
+            var currentLang = english;
+            if ('@Session["Language"]' != null || '@Session["Language"]' != "") {
+                if ('@Session["Language"]' == "chinese") {
+                    currentLang = chinese;
+                }
+            }
+
+            $('#myGroup ul li a').click(function () {
+                $('#myGroup ul li ul.collapse ').removeClass('in');
+                $('#myGroup ul li').removeClass('active');
+            });
+
+
+            $("#tbl_reward_circulation_history").DataTable({
+                "order": [[0, "desc"]],
+                "oLanguage": currentLang
+            });
+        });
+        $("#nav-cash").addClass("active");
+    </script>
+}

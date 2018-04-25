@@ -1,0 +1,217 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+@model Wollo.Web.Models.LoginViewModel
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@ViewBag.Title = "Reward Point Exchange - SIGN-IN"</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Monsterrat:400,700|Merriweather:400,300italic,700' rel='stylesheet' type='text/css'>
+
+    @*<!-- Animate.css -->
+        <link rel="stylesheet" href="~/css/animate.css">
+        <!-- Icomoon Icon Fonts-->
+        <link rel="stylesheet" href="~/css/icomoon.css">
+        <!-- Magnific Popup-->
+        <link rel="stylesheet" href="~/css/magnific-popup.css">
+        <!-- Owl Carousel -->
+        <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
+        <!-- Bootstrap  -->
+        <link rel="stylesheet" href="~/css/bootstrap.css">
+
+        <!-- Cards -->
+        <link rel="stylesheet" href="~/css/cards.css">
+
+        <!-- Modernizr JS -->
+        <script src="~/js/modernizr-2.6.2.min.js"></script>*@
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="login-page">
+
+    <div id="wrpe-page">
+        <nav class="wrpe-nav-style-1" role="navigation" data-offcanvass-position="wrpe-offcanvass-left">
+            <div class="container">
+                <div class="col-lg-6 col-md-5 col-sm-5 wrpe-link-wrap">
+                    <ul data-offcanvass="yes">
+                        @*<li><a href="index.html">Home</a></li>*@
+                        <li>@Html.ActionLink("Home", "Index", "Home", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+                        <li><a href="#">About us</a></li>
+                        @*<li><a href="#">Blog</a></li>*@
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wrpe-logo">
+                    <a href="#" class="js-wrpe-mobile-toggle wrpe-nav-toggle"><i></i></a>
+                    <a href="#"><img src="~/images/Points_Exchange_Logo.png" /></a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-4 text-right wrpe-link-wrap">
+                    <ul class="wrpe-special" data-offcanvass="yes">
+                        @*<li class="active"><a href="#">Login</a></li>*@
+                        <li>@Html.ActionLink("Login", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+                        @*<li><a href="sign-up.html" class="call-to-action">Signup</a></li>*@
+                        <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "call-to-action" })</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="wrpe-cover wrpe-cover-style-2 js-full-height" data-stellar-background-ratio="0.5" data-next="yes">
+            <div class="wrpe-overlay"></div>
+            <div class="wrpe-cover-text">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12  col-xs-12 full-height js-full-height">
+                            <div class="col-md-6 col-md-offset-3 form-gg">
+                                <div class="modal-title"><h2>Login</h2></div>
+                                <section id="loginForm">
+                                    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                                    {
+                                        @Html.AntiForgeryToken()
+                                        <hr />
+                                        @Html.ValidationSummary(true)
+                                        @*<fieldset class="form-group">
+                                                @Html.DropDownListFor(m => m.OrganizationId, (IEnumerable<SelectListItem>)ViewBag.lstOrganization, "-- Select Organization --", new { @class = "form-control" })
+                                                @Html.ValidationMessageFor(m => m.OrganizationId)
+                                            </fieldset>*@
+                                        <fieldset class="form-group">
+                                            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", placeholder = "User Name" })
+                                            @Html.ValidationMessageFor(m => m.UserName)
+                                        </fieldset>
+                                        @*<fieldset class="form-group">
+                                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "User Name" })
+                                            @Html.ValidationMessageFor(m => m.Email)
+                                        </fieldset>*@
+                                        <fieldset class="form-group">
+                                            @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+                                            @Html.ValidationMessageFor(m => m.Password)
+                                        </fieldset>
+                                        <fieldset class="form-group">
+                                            @Html.CheckBoxFor(m => m.RememberMe)
+                                            @Html.LabelFor(m => m.RememberMe)
+                                        </fieldset>
+                                        <fieldset class="form-group">
+                                            <div>
+                                                <input type="submit" value="Log in" class="btn btn-primary" />
+                                                <input type="reset" value="Reset" class="btn btn-default" />
+                                                @*<div><a href="#" class="btn btn-primary btn-outline btn-lg">Login</a></div>
+                                                    <div class="left"><p><a href="#">Forgot Password?</a></p></div>*@
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="form-group">
+                                            <div>
+                                                <p>
+                                                    @Html.ActionLink("Register", "Register") if you don't have an account.
+                                                </p>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="form-group">
+                                            <a href="#"><img src="~/images/wollo.png"></a>
+                                            <a href="#"><img src="~/images/w-chinese.png"></a>
+                                        </fieldset>
+                                    }
+                                </section>
+                                @*<div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                            <a href="#"><img src="~/images/wollo.png"></a>
+                                        </label>
+                                    </div>
+
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                            <a href="#"><img src="~/images/w-chinese.png"></a>
+                                        </label>
+                                    </div>*@
+                                @*<div><a href="#" class="btn btn-primary btn-outline btn-lg">Login</a></div>
+                                    <div class="left"><p><a href="#">Forgot Password?</a></p></div>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrpe-footer-style-3">
+        <div class="container">
+            <div class="row p-b kill-padding">
+                <div class="col-md-3 col-sm-6 wrpe-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
+                    <h3>GET TO KNOW POINTS </h3>
+                    <ul class="wrpe-links">
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-sm-6 wrpe-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
+                    <h3>OUR SERVICES & POLICIES</h3>
+                    <ul class="wrpe-links">
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix visible-sm-block"></div>
+                <div class="col-md-3 col-sm-6 wrpe-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s">
+                    <h3>Join us on</h3>
+                    <ul class="wrpe-links wrpe-social">
+                        <li><a href="#"><i class="icon icon-facebook2"></i> Facebook</a></li>
+                        <li><a href="#"><i class="icon icon-twitter"></i> Twitter</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix visible-sm-block"></div>
+                <div class="col-md-12 fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s">
+                    <div class="footer-p">Powered By Digimatic Solutions &copy  copyright 2016. All Right Reserved. </div>
+                </div>
+            </div>
+        </div>
+        <!-- END footer -->
+
+    </div>
+    <!-- END page-->
+    <!-- jQuery -->
+    <script src="~/js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="~/js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="~/js/jquery.waypoints.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="~/js/owl.carousel.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="~/js/jquery.magnific-popup.min.js"></script>
+    <!-- Stellar -->
+    <script src="~/js/jquery.stellar.min.js"></script>
+    <!-- countTo -->
+    <script src="~/js/jquery.countTo.js"></script>
+    <!-- WOW -->
+    <script src="~/js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <!-- Main -->
+    <script src="~/js/main.js"></script>
+
+</body>
+</html>

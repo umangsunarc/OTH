@@ -1,0 +1,497 @@
+﻿@model Wollo.Entities.ViewModels.WithdrawalData
+@{
+    ViewBag.Title = "Cash Withdrawal";
+}
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Cash Withdrawal
+                </h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i> Dashboard / Cash Withdrawal
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="col-lg-12">
+                <div id="upper-birth">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th class="no-b-th tex-left"><div> My Withdrawals</div></th>
+                                    <th class="empty-th"> </th>
+                                    <th class="empty-th"> </th>
+                                    @if (User.IsInRole("Super Admin 1") || User.IsInRole("Super Admin 2"))
+                                    {
+                                        <th class="empty-th"> </th>
+                                        <th class="empty-th"> </th>
+                                        <th class="empty-th"> </th>
+                                    }
+                                    else
+                                    {
+                                        <th class="empty-th"> </th>
+                                        <th class="no-b-th text-right"><button type="button" id="Open-New-Withdraw-Modal" class=" btn btn-primary">Add New Withdrawals <i class="fa fa-plus-square" aria-hidden="true"></i></button></th>
+                                    }
+                                    @*<th class="no-b-th col-md-2">
+                                            <div class="text-right">
+                                                <div class="dropdown">
+                                                    @Html.DropDownList("Status", new SelectList(Model.lstWithdrawalStatusMaster, "id", "status"), "All", new { @class = "form-control" })
+                                                </div>
+                                            </div>
+                                        </th>*@
+                                </tr>
+                                <tr>
+                                    <th>Date & Time</th>
+                                    <th>Status</th>
+                                    <th>Amount</th>
+                                    <th>Details</th>
+                                    @if (User.IsInRole("Super Admin 1") || User.IsInRole("Super Admin 2"))
+                                    {
+                                        <th>User Name</th>
+                                    }
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.lstWithdrawalHistoryDeatils)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(x=>item.WithdrawelHistoryMaster.created_date)
+                                            @*@{string date = item.WithdrawelHistoryMaster.created_date.HasValue ? item.WithdrawelHistoryMaster.created_date.Value.ToString("dd-MM-yyy") : item.WithdrawelHistoryMaster.created_date.ToString();}
+                                            @Html.DisplayFor(x => date)*@
+                                        </td>
+                                        <td>@Html.DisplayFor(x => item.WithdrawlStatusMaster.status)</td>
+                                        <td>@Html.DisplayFor(x => item.amount)</td>
+                                        <td><a href="javascript:;" data-id="@item.id" data-method="@item.payment_method" class="details">View Details</a></td>
+                                        @if (User.IsInRole("Super Admin 1") || User.IsInRole("Super Admin 2"))
+                                        {
+                                            <td>@Html.DisplayFor(x => item.AspnetUsers.username)</td>
+                                        }
+                                        <td>
+                                            @if (!User.IsInRole("Super Admin 1") && !User.IsInRole("Super Admin 2"))
+                                            {
+                                                if (item.WithdrawlStatusMaster.status != "Cancelled" && item.WithdrawlStatusMaster.status != "Completed")
+                                                {
+                                                    <a href="javascript:;" data-id="@item.id" class="cancel">Cancel</a><span> | </span>
+                                                    <a href="javascript:;" data-id="@item.id" data-method="@item.payment_method" data-amount="@item.amount" class="edit"> Modfiy</a>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                if (item.WithdrawlStatusMaster.status != "Cancelled" && item.WithdrawlStatusMaster.status != "Completed")
+                                                {
+                                                    <a href="javascript:void(0)" data-id="@item.id" data-status="@item.withdrawel_status_id" class="statusChange">Change Status</a>
+                                                }
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        @*<nav class="text-center">
+                                <ul class="pagination">
+                                    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li>
+                                        <a href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>*@
+                        <!-- Button trigger modal -->
+                    </div>
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">New Withdrawal</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            @Html.Hidden("Mode", "Add")
+                            @Html.Hidden("WithdrawId")
+                            @Html.Hidden("RuleType")
+                            <div class="dropdown col-sm-4">
+                                @Html.DropDownList("PaymentMethod", new SelectList(ViewBag.PaymentMethodsList, "Value", "Text"), "Select Payement Method", new { @class = "form-control" })
+                            </div>
+                            <div class="form-group col-sm-4">
+                                @Html.Label("Amount", "Amount (in dollars)", new { @class = "sr-only" })
+                                <div class="input-group">
+                                    <div class="input-group-addon">$</div>
+                                    @Html.TextBox("Amount", null, new { @class = "form-control", @placeholder = "Amount" })
+                                    <div class="input-group-addon">.00</div>
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-4">
+                                @Html.Label("Fee", "Fee (in dollars)", new { @class = "sr-only" })
+                                <div class="input-group">
+                                    <div class="input-group-addon" id="rule-type-symbol">$</div>
+                                    @Html.TextBox("Fee", null, new { @class = "form-control", @placeholder = "Fee" })
+                                    <div class="input-group-addon">.00</div>
+                                </div>
+                                <br />
+                                <strong class="text-right"> Total : <span id="total"></span></strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" id="withdraw">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--VIEW Details-->
+        <div class="modal fade" id="view-details" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">New Withdrawal</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                Method: <span id="method"></span>
+                            </div>
+
+                            <div class="form-group col-sm-4">
+                                Withdrawal Fee :<span id="fee"></span>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="StatusModal" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Change Status</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="dropdown col-sm-6">
+                            @Html.Hidden("StatusWithdrawId")
+                            @Html.DropDownList("Statusdd", new SelectList(Model.lstWithdrawalStatusMaster, "id", "status"), "All", new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="change-status">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $("#nav-cash").addClass("active");
+
+        $(".details").click(function () {
+            $.ajax({
+                url: "@Url.Action("GetWithDrawalFeeByMethod","Cash")" + "?WithdrawalMethod=" + $(this).attr("data-method"),
+                method: "GET",
+                contentType: "application/json",
+                success: function (result) {
+                    if (result.length > 0) {
+                        var data = JSON.parse(result);
+                        $("#view-details #method").html(data.method);
+                        if (data.RuleConfigMaster.rule_name == "Fixed") {
+                            $("#view-details #fee").html(data.fees);
+                        }
+                        else {
+                            $("#view-details #fee").html(data.fees + " %");
+                        }
+                        $("#view-details").modal("show");
+                    }
+                    else {
+                        alert("Something went wrong!");
+                    }
+                },
+                error: function (e) {
+                    alert("Something went wrong!");
+                }
+            });
+        });
+
+        $("#Open-New-Withdraw-Modal").click(function () {
+            $("#PaymentMethod").val("");
+            $("#Amount").val("");
+            $("#Fee").val("");
+            $("#total").text("");
+            $("#RuleType").val("");
+            $("#myModalLabel").html("New Withdrawal");
+            $("#Mode").val("Add");
+            $("#myModal").modal("show");
+        });
+
+        $(".edit").click(function () {
+            $("#PaymentMethod").val($(this).attr("data-method"));
+            $("#Amount").val($(this).attr("data-amount"));
+            $("#WithdrawId").val($(this).attr("data-id"));
+            $("#myModalLabel").html("Modify Withdrawal");
+            $("#Mode").val("Edit");
+            $.ajax({
+                url: "@Url.Action("GetWithDrawalFeeByMethod","Cash")" + "?WithdrawalMethod=" + $(this).attr("data-method"),
+                method: "GET",
+                contentType: "application/json",
+                success: function (result) {
+                    if (result.length > 0 && result != "null") {
+                        var data = JSON.parse(result);
+                        $("#RuleType").val(data.RuleConfigMaster.rule_name);
+                        $("#Fee").val(data.fees);
+                        if ($("#RuleType").val() == "Fixed") {
+                            var amount = parseInt($("#Amount").val());
+                            var fee = parseInt($("#Fee").val());
+                            $("#rule-type-symbol").html("$");
+                            $("#total").text(amount);
+                            $("#Amount").val(amount + fee);
+                        }
+                        else {
+                            $("#rule-type-symbol").html("%");
+                            var amount = parseInt($("#Amount").val());
+                            var fee = parseInt($("#Fee").val());
+                            $("#total").text(amount);
+                            $("#Amount").val(amount + (parseFloat(fee / 100) * amount));
+                        }
+                        $("#myModal").modal("show");
+                    }
+                    else {
+                        $("#RuleType").val("Fixed");
+                        $("#Fee").val(0);
+                        $("#rule-type-symbol").html("$");
+                        var amount = parseInt($("#Amount").val());
+                        var fee = parseInt($("#Fee").val());
+                        $("#total").text(amount);
+                        $("#Amount").val(amount + fee);
+                        $("#myModal").modal("show");
+                    }
+                },
+                error: function (e) {
+                    $("#RuleType").val("Fixed");
+                    $("#Fee").val(0);
+                    $("#rule-type-symbol").html("$");
+                    var amount = parseInt($("#Amount").val());
+                    var fee = parseInt($("#Fee").val());
+                    $("#total").text(amount);
+                    $("#Amount").val(amount + fee);
+                    $("#myModal").modal("show");
+                }
+            });
+        });
+
+        $("#PaymentMethod").change(function () {
+            $.ajax({
+                url: "@Url.Action("GetWithDrawalFeeByMethod","Cash")" + "?WithdrawalMethod=" + $(this).val(),
+                method: "GET",
+                contentType: "application/json",
+                success: function (result) {
+                    if (result.length > 0 && result != "null") {
+                        var data = JSON.parse(result);
+                        $("#RuleType").val(data.RuleConfigMaster.rule_name);
+                        if ($("#RuleType").val() == "Fixed") {
+                            $("#rule-type-symbol").html("$");
+                        }
+                        else
+                        {
+                            $("#rule-type-symbol").html("%");
+                        }
+                        $("#Fee").val(data.fees);
+                    }
+                    else {
+                        $("#RuleType").val("Fixed");
+                        $("#rule-type-symbol").html("$");
+                        $("#Fee").val(0);
+                        alert("No fees available for this method.");
+                    }
+                    if ($("#Amount").val().length > 0) {
+                        if ($("#RuleType").val() == "Fixed") {
+                            $("#rule-type-symbol").html("$");
+                            var amount = parseInt($("#Amount").val());
+                            var fee = parseInt($("#Fee").val());
+                            $("#total").text(amount - fee);
+                        }
+                        else {
+                            $("#rule-type-symbol").text("%");
+                            var amount = parseInt($("#Amount").val());
+                            var fee = parseInt($("#Fee").val());
+                            $("#total").text(parseInt(amount - (parseFloat(fee / 100) * amount)));
+                        }
+                    }
+                },
+                error: function (e) {
+                    alert("Something went wrong!");
+                }
+            });
+        });
+
+        $("#Amount").keydown(function (e) {
+            // Allow: backspace, delete, tab, escape, enter
+            if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110]) !== -1 ||
+                // Allow: Ctrl+A, Command+A
+                (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+                // Allow: home, end, left, right, down, up
+                (e.keyCode >= 35 && e.keyCode <= 40)) {
+                // let it happen, don't do anything
+                return;
+            }
+            // Ensure that it is a number and stop the keypress
+            if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                e.preventDefault();
+            }
+        });
+
+        $("#Amount").blur(function () {
+            if ($(this).val().length > 0) {
+                if ($("#RuleType").val() == "Fixed") {
+                    var amount = parseInt($("#Amount").val());
+                    var fee = parseInt($("#Fee").val());
+                    $("#total").text(amount - fee);
+                }
+                else {
+                    var amount = parseInt($("#Amount").val());
+                    var fee = parseInt($("#Fee").val());
+                    $("#total").text(parseInt(amount - (parseFloat(fee / 100) * amount)));
+                }
+            }
+        });
+
+        $("#withdraw").click(function () {
+            if ($("#PaymentMethod").val().length > 0 && $("#Amount").val().length > 0) {
+                if ($("#Mode").val() == "Add") {
+                    $.ajax({
+                        url: "@Url.Action("AddWithdrawal","Cash")",
+                        data: "{'payment_method':'" + $("#PaymentMethod").val() + "','amount':'" + $("#total").text() + "'}",
+                        contentType: 'application/json',
+                        method: 'POST',
+                        success: function (result) {
+                            var array = result.split(',');
+                            if (array[0] == 1) {
+                                alert("Withdrawal added successfully.");
+                                location.reload();
+                            }
+                            else if (array[0] == 2) {
+                                alert("You do not have sufficient (" + array[1] + ") balance in your wallet.");
+                            }
+                            else {
+                                alert("Something went wrong!");
+                            }
+                        },
+                        error: function (e) {
+                            alert("Something went wrong!");
+                        }
+                    });
+                }
+                else {
+                    $.ajax({
+                        url: "@Url.Action("EditWithdrawal", "Cash")",
+                        data: "{ 'payment_method': '" + $("#PaymentMethod").val() + "', 'amount': '" + $("#total").text() + "', 'id': '" + $("#WithdrawId").val() + "' }",
+                        contentType: 'application/json',
+                        method: 'POST',
+                        success: function (result) {
+                            if (result == 1) {
+                                alert("Withdrawal updated successfully.");
+                                location.reload();
+                            }
+                            else {
+                                alert("Something went wrong!");
+                            }
+                        },
+                        error: function (e) {
+                            alert("Something went wrong!");
+                        }
+                    });
+                }
+            }
+            else {
+                alert("Make sure you have selected payment method and provided amount.");
+            }
+        });
+
+        $(".cancel").click(function () {
+            $.ajax({
+                url: "@Url.Action("CancelWithdrawal", "Cash")" + "?id=" + $(this).attr("data-id"),
+                method: 'POST',
+                success: function (result) {
+                    if (result == 1) {
+                        alert("Withdrawal cancelled successfully.");
+                        location.reload();
+                    }
+                    else if (result == 2) {
+                        alert("Withdrawal cannot be cancelled.");
+                    }
+                    else if (result == 3) {
+                        alert("User not authorized.");
+                    }
+                    else {
+                        alert("Something went wrong!");
+                    }
+                },
+                error: function (e) {
+                    alert("Something went wrong!");
+                }
+            });
+        });
+
+        $(".statusChange").click(function () {
+            $("#StatusWithdrawId").val($(this).attr("data-id"));
+            $("#Statusdd").val($(this).attr("data-status"));
+            $("#StatusModal").modal("show");
+        });
+
+        $("#change-status").click(function () {
+            $.ajax({
+                url: "@Url.Action("ChangeWithdrawStatus", "Cash")" + "?id=" + $("#StatusWithdrawId").val() + "&status=" + $("#Statusdd").val(),
+                method: 'POST',
+                contentType: 'application/json',
+                success: function (result) {
+                    var array = result.split(',');
+                    if (array[0] == 1) {
+                        alert("Status updated successfully.");
+                        location.reload();
+                    }
+                    else if (array[0] == 2) {
+                        alert("User not authorized.");
+                    }
+                    else if (array[0] == 4) {
+                        alert("You do not have sufficient ("+result[1]+") balance in your wallet.");
+                    }
+                    else {
+                        alert("Something went wrong!");
+                    }
+                },
+                error: function (e) {
+                    alert("Something went wrong!");
+                }
+            });
+        });
+    </script>
+}

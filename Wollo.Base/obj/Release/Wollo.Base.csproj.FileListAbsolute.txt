@@ -1,0 +1,177 @@
+E:\Minakshi\RPE\Updated\Wollo.Base\bin\Release\Wollo.Base.dll.config
+E:\Minakshi\RPE\Updated\Wollo.Base\bin\Release\Wollo.Base.dll
+E:\Minakshi\RPE\Updated\Wollo.Base\bin\Release\Wollo.Base.pdb
+E:\Minakshi\RPE\Updated\Wollo.Base\bin\Release\Newtonsoft.Json.dll
+E:\Minakshi\RPE\Updated\Wollo.Base\obj\Release\Wollo.Base.dll
+E:\Minakshi\RPE\Updated\Wollo.Base\obj\Release\Wollo.Base.pdb
+E:\Minakshi\RPE\Updated\Wollo.Base\obj\Release\Wollo.Base.csprojResolveAssemblyReference.cache
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Base\bin\Release\Wollo.Base.dll.config
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Base\bin\Release\Wollo.Base.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Base\bin\Release\Wollo.Base.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Base\bin\Release\System.Net.Http.Formatting.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Base\bin\Release\System.Web.Http.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Base\bin\Release\Newtonsoft.Json.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Base\bin\Release\System.Net.Http.Formatting.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Base\bin\Release\System.Web.Http.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Base\obj\Release\Wollo.Base.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Base\obj\Release\Wollo.Base.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\bin\Release\LocalResource\Resource.resx
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\bin\Release\LocalResource\Resource.zh-CHS.resx
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\bin\Release\LocalResource\Resource.zh-CHT.resx
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\bin\Release\LocalResource\Resource.en-GB.resx
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\bin\Release\LocalResource\Resource.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\bin\Release\LocalResource\Resource.zh-CHS.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\bin\Release\LocalResource\Resource.zh-CHT.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\bin\Release\LocalResource\Resource.en-GB.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\bin\Release\Wollo.Base.dll.config
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\bin\Release\Wollo.Base.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\bin\Release\Wollo.Base.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\bin\Release\zh-CHS\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\bin\Release\zh-CHT\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\bin\Release\en-GB\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\bin\Release\System.Net.Http.Formatting.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\bin\Release\System.Web.Http.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\bin\Release\Newtonsoft.Json.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\bin\Release\System.Net.Http.Formatting.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\bin\Release\System.Web.Http.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\obj\Release\Wollo.Base.LocalResource.Resource.resources
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\obj\Release\Wollo.Base.LocalResource.Resource.zh-CHS.resources
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\obj\Release\Wollo.Base.LocalResource.Resource.zh-CHT.resources
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\obj\Release\Wollo.Base.LocalResource.Resource.en-GB.resources
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\obj\Release\Wollo.Base.csproj.GenerateResource.Cache
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\obj\Release\zh-CHS\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\obj\Release\zh-CHT\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\obj\Release\en-GB\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\obj\Release\Wollo.Base.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\obj\Release\Wollo.Base.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.Base\obj\Release\Wollo.Base.csprojResolveAssemblyReference.cache
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\bin\Release\LocalResource\Resource.resx
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\bin\Release\LocalResource\Resource.zh-CHS.resx
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\bin\Release\LocalResource\Resource.zh-CHT.resx
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\bin\Release\LocalResource\Resource.en-GB.resx
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\bin\Release\LocalResource\Resource.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\bin\Release\LocalResource\Resource.zh-CHS.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\bin\Release\LocalResource\Resource.zh-CHT.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\bin\Release\LocalResource\Resource.en-GB.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\bin\Release\Wollo.Base.dll.config
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\bin\Release\Wollo.Base.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\bin\Release\Wollo.Base.pdb
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\bin\Release\zh-CHS\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\bin\Release\zh-CHT\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\bin\Release\en-GB\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\bin\Release\System.Net.Http.Formatting.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\bin\Release\System.Web.Http.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\bin\Release\Newtonsoft.Json.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\bin\Release\System.Net.Http.Formatting.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\bin\Release\System.Web.Http.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\obj\Release\Wollo.Base.LocalResource.Resource.resources
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\obj\Release\Wollo.Base.LocalResource.Resource.zh-CHS.resources
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\obj\Release\Wollo.Base.LocalResource.Resource.zh-CHT.resources
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\obj\Release\Wollo.Base.LocalResource.Resource.en-GB.resources
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\obj\Release\Wollo.Base.csproj.GenerateResource.Cache
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\obj\Release\zh-CHS\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\obj\Release\zh-CHT\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\obj\Release\en-GB\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\obj\Release\Wollo.Base.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\obj\Release\Wollo.Base.pdb
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.Base\obj\Release\Wollo.Base.csprojResolveAssemblyReference.cache
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Base\bin\Release\LocalResource\Resource.resx
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Base\bin\Release\LocalResource\Resource.zh-CHS.resx
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Base\bin\Release\LocalResource\Resource.zh-CHT.resx
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Base\bin\Release\LocalResource\Resource.en-GB.resx
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Base\bin\Release\LocalResource\Resource.Designer.cs
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Base\bin\Release\LocalResource\Resource.zh-CHS.Designer.cs
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Base\bin\Release\LocalResource\Resource.zh-CHT.Designer.cs
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Base\bin\Release\LocalResource\Resource.en-GB.Designer.cs
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Base\bin\Release\Wollo.Base.dll.config
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Base\bin\Release\Wollo.Base.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Base\bin\Release\Wollo.Base.pdb
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Base\bin\Release\zh-CHS\Wollo.Base.resources.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Base\bin\Release\zh-CHT\Wollo.Base.resources.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Base\bin\Release\en-GB\Wollo.Base.resources.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Base\bin\Release\Newtonsoft.Json.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Base\obj\Release\Wollo.Base.csprojResolveAssemblyReference.cache
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Base\obj\Release\Wollo.Base.LocalResource.Resource.resources
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Base\obj\Release\Wollo.Base.LocalResource.Resource.zh-CHS.resources
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Base\obj\Release\Wollo.Base.LocalResource.Resource.zh-CHT.resources
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Base\obj\Release\Wollo.Base.LocalResource.Resource.en-GB.resources
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Base\obj\Release\Wollo.Base.csproj.GenerateResource.Cache
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Base\obj\Release\zh-CHS\Wollo.Base.resources.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Base\obj\Release\zh-CHT\Wollo.Base.resources.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Base\obj\Release\en-GB\Wollo.Base.resources.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Base\obj\Release\Wollo.Base.dll
+C:\Users\administrator.SUNARC\Pictures\13_10 Updated\Updated\Wollo.Base\obj\Release\Wollo.Base.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\bin\Release\LocalResource\Resource.resx
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\bin\Release\LocalResource\Resource.zh-CHS.resx
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\bin\Release\LocalResource\Resource.zh-CHT.resx
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\bin\Release\LocalResource\Resource.en-GB.resx
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\bin\Release\LocalResource\Resource.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\bin\Release\LocalResource\Resource.zh-CHS.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\bin\Release\LocalResource\Resource.zh-CHT.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\bin\Release\LocalResource\Resource.en-GB.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\bin\Release\Wollo.Base.dll.config
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\bin\Release\Wollo.Base.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\bin\Release\Wollo.Base.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\bin\Release\zh-CHS\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\bin\Release\zh-CHT\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\bin\Release\en-GB\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\bin\Release\System.Net.Http.Formatting.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\bin\Release\System.Web.Http.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\bin\Release\Newtonsoft.Json.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\bin\Release\System.Net.Http.Formatting.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\bin\Release\System.Web.Http.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\obj\Release\Wollo.Base.csprojResolveAssemblyReference.cache
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\obj\Release\Wollo.Base.LocalResource.Resource.resources
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\obj\Release\Wollo.Base.LocalResource.Resource.zh-CHS.resources
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\obj\Release\Wollo.Base.LocalResource.Resource.zh-CHT.resources
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\obj\Release\Wollo.Base.LocalResource.Resource.en-GB.resources
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\obj\Release\Wollo.Base.csproj.GenerateResource.Cache
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\obj\Release\zh-CHS\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\obj\Release\zh-CHT\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\obj\Release\en-GB\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\obj\Release\Wollo.Base.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.Base\obj\Release\Wollo.Base.pdb
+E:\Umang\updated_wollo\Updated\Wollo.Base\bin\Release\LocalResource\Resource.resx
+E:\Umang\updated_wollo\Updated\Wollo.Base\bin\Release\LocalResource\Resource.zh-CHS.resx
+E:\Umang\updated_wollo\Updated\Wollo.Base\bin\Release\LocalResource\Resource.zh-CHT.resx
+E:\Umang\updated_wollo\Updated\Wollo.Base\bin\Release\LocalResource\Resource.en-GB.resx
+E:\Umang\updated_wollo\Updated\Wollo.Base\bin\Release\LocalResource\Resource.Designer.cs
+E:\Umang\updated_wollo\Updated\Wollo.Base\bin\Release\Wollo.Base.dll.config
+E:\Umang\updated_wollo\Updated\Wollo.Base\bin\Release\Wollo.Base.dll
+E:\Umang\updated_wollo\Updated\Wollo.Base\bin\Release\Wollo.Base.pdb
+E:\Umang\updated_wollo\Updated\Wollo.Base\bin\Release\zh-CHS\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.Base\bin\Release\zh-CHT\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.Base\bin\Release\en-GB\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.Base\obj\Release\Wollo.Base.LocalResource.Resource.resources
+E:\Umang\updated_wollo\Updated\Wollo.Base\obj\Release\Wollo.Base.LocalResource.Resource.zh-CHS.resources
+E:\Umang\updated_wollo\Updated\Wollo.Base\obj\Release\Wollo.Base.LocalResource.Resource.zh-CHT.resources
+E:\Umang\updated_wollo\Updated\Wollo.Base\obj\Release\Wollo.Base.LocalResource.Resource.en-GB.resources
+E:\Umang\updated_wollo\Updated\Wollo.Base\obj\Release\Wollo.Base.csproj.GenerateResource.Cache
+E:\Umang\updated_wollo\Updated\Wollo.Base\obj\Release\zh-CHS\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.Base\obj\Release\zh-CHT\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.Base\obj\Release\en-GB\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.Base\obj\Release\Wollo.Base.dll
+E:\Umang\updated_wollo\Updated\Wollo.Base\obj\Release\Wollo.Base.pdb
+E:\Umang\updated_wollo\Updated\Wollo.Base\obj\Release\Wollo.Base.csprojResolveAssemblyReference.cache
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Base\bin\Release\LocalResource\Resource.resx
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Base\bin\Release\LocalResource\Resource.zh-CHS.resx
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Base\bin\Release\LocalResource\Resource.zh-CHT.resx
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Base\bin\Release\LocalResource\Resource.en-GB.resx
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Base\bin\Release\LocalResource\Resource.Designer.cs
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Base\bin\Release\Wollo.Base.dll.config
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Base\bin\Release\Wollo.Base.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Base\bin\Release\Wollo.Base.pdb
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Base\bin\Release\zh-CHS\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Base\bin\Release\zh-CHT\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Base\bin\Release\en-GB\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Base\obj\Release\Wollo.Base.LocalResource.Resource.resources
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Base\obj\Release\Wollo.Base.LocalResource.Resource.zh-CHS.resources
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Base\obj\Release\Wollo.Base.LocalResource.Resource.zh-CHT.resources
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Base\obj\Release\Wollo.Base.LocalResource.Resource.en-GB.resources
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Base\obj\Release\Wollo.Base.csproj.GenerateResource.Cache
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Base\obj\Release\zh-CHS\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Base\obj\Release\zh-CHT\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Base\obj\Release\en-GB\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Base\obj\Release\Wollo.Base.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Base\obj\Release\Wollo.Base.pdb
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.Base\obj\Release\Wollo.Base.csprojResolveAssemblyReference.cache

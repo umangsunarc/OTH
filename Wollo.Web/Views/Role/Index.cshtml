@@ -1,0 +1,148 @@
+﻿@*@model IEnumerable<Microsoft.AspNet.Identity.EntityFramework.IdentityRole>*@
+@model Wollo.Web.Models.RoleModel
+@{
+    ViewBag.Title = @Html.DisplayNameFor(model => model.roles);
+}
+<link href="~/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    <b>@Html.LabelFor(model => model.roles)</b>
+                </h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i> <b>@Html.LabelFor(model => model.dashboard_roles)</b>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="container-fluid">
+
+            <div class="col-lg-12 space">
+
+                @*<p>
+                        @Html.ActionLink("Create New", "Create")
+                    </p>*@
+                <table id="tbl_role" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th class="no-b-th"> <div class="text-left">@Html.DisplayNameFor(model => model.roles)</div></th>
+                            <th class="no-b-th text-right">
+                                @*<a href="Role/Create" class="btn btn-primary" id="add">@Html.LabelFor(model => model.add_new_role) <i class="fa fa-plus-square" aria-hidden="true"></i></a>*@
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>@Html.DisplayNameFor(x => x.name)</th>
+                            <th>@Html.DisplayNameFor(x => x.options)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            string edit_label = @Html.DisplayNameFor(model => model.edit).ToString();
+                            string details_label = @Html.DisplayNameFor(model => model.details).ToString();
+                        }
+                        @foreach (var item in Model.IdentityRole)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(x => item.Name)
+                                </td>
+                                <td>
+                                    @Html.ActionLink(edit_label, "Edit", new { item.Id }) |
+                                    @Html.ActionLink(details_label, "Details", new { item.Id })
+                                    @*<a href="#" class="RoleDelete" data-id="@item.Id ">Delete</a>*@
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+</div>
+@section scripts{
+    <script src="~/js/jquery.js"></script>
+    @*<script src="~/Scripts/bootstrap.js"></script>*@
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.dataTables.min.js"></script>
+    <script src="~/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript">
+        var english = {
+            "sLengthMenu": "Show _MENU_ entries",
+            "sZeroRecords": "No data available in table",
+            "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+            "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+            "sInfoFiltered": "(filtered from _MAX_ total entries)"
+        };
+        var chinese = {
+            "sProcessing": "处理中...",
+            "sLengthMenu": "显示 _MENU_ 项结果",
+            "sZeroRecords": "没有匹配结果",
+            "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+            "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+            "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+            "sInfoPostFix": "",
+            "sSearch": "搜索:",
+            "sUrl": "",
+            "sEmptyTable": "表中数据为空",
+            "sLoadingRecords": "载入中...",
+            "sInfoThousands": ",",
+            "oPaginate": {
+                "sFirst": "首页",
+                "sPrevious": "上页",
+                "sNext": "下页",
+                "sLast": "末页"
+            },
+            "oAria": {
+                "sSortAscending": ": 以升序排列此列",
+                "sSortDescending": ": 以降序排列此列"
+            }
+        }
+
+        $(document).ready(function () {
+            var currentLang = english;
+            if ('@Session["Language"]' != null || '@Session["Language"]' != "") {
+                if ('@Session["Language"]' == "chinese") {
+                    currentLang = chinese;
+                }
+            }
+            $('#myGroup ul li a').click(function () {
+                $('#myGroup ul li ul.collapse ').removeClass('in');
+                $('#myGroup ul li').removeClass('active');
+            });
+            $("#tbl_role").DataTable({
+                "oLanguage": currentLang
+            });
+            $(".RoleDelete").click(function () {
+                var result = confirm("Are you sure you want to delete this Role?")
+                if (result) {
+                    var idToDelete = $(this).attr("data-id");
+                    $.ajax({
+                        url: '@Url.Action("Delete", "Role")?Id=' + idToDelete,
+                        type: 'POST',
+                        success: function (data) {
+                            if (data == "Success") {
+                                window.location.reload();
+                            }
+                            else {
+                                alert(data);
+                            }
+                        },
+                        error: function () { alert("Something went wrong while processing."); }
+                    });
+                }
+            });
+        });
+    </script>
+}
+
+
+
+

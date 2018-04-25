@@ -1,0 +1,415 @@
+﻿@model Wollo.Web.Models.IssueCashTransferMasterModel
+@{
+    ViewBag.Title = @Html.DisplayNameFor(model => model.IssueCashTransferMaster.FirstOrDefault().request_for_cash);
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Code Made By Umang 27/07/2016-->
+<link href="~/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="~/css/responsive.bootstrap.min.css" rel="stylesheet" />
+<link href="~/css/bootstrap-datepicker.css" rel="stylesheet">
+<style>
+    .btn .btn-success {
+        margin-left: -4px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+</style>
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    @*@Html.LabelFor(model => model.FirstOrDefault().cash_request)*@
+                    <strong>@Html.LabelFor(model => model.IssueCashTransferMaster.FirstOrDefault().request_for_cash)</strong>
+                </h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i> @Html.LabelFor(model => model.IssueCashTransferMaster.FirstOrDefault().dashboard_cash_request)
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="">
+                <div class="col-sm-2">
+                    <button type="button" class="btn btn-primary" id="Open-Topup-Modal">@Html.LabelFor(model => model.IssueCashTransferMaster.FirstOrDefault().request_cash)<i class="fa fa-plus-square" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-3">
+                <span class="input-group-addon" style="display: block;text-align: center; padding: 5px; background: transparent; border: none;position: absolute;top: 5px;right: 30px;">
+                    <span class="fa fa-calendar"></span>
+                </span>
+                <input id="from" name="from" type="text" class="form-control" placeholder=@Html.DisplayNameFor(model => model.IssueCashTransferMaster.FirstOrDefault().CommonWordsViewModel.from) />
+            </div>
+            <div class="col-sm-3">
+                <span class="input-group-addon" style="display: block;text-align: center; padding: 5px; background: transparent; border: none;position: absolute;top: 5px;right: 30px;">
+                    <span class="fa fa-calendar"></span>
+                </span>
+                <input id="to" name="to" type="text" class="form-control" placeholder=@Html.DisplayNameFor(model => model.IssueCashTransferMaster.FirstOrDefault().CommonWordsViewModel.to) />
+            </div>
+            <div class="col-sm-3">
+                <input type="button" value=@Html.DisplayNameFor(model => model.IssueCashTransferMaster.FirstOrDefault().CommonWordsViewModel.filter) onclick="rangefilter()" class="btn btn-primary" id="filter" />
+                <a class="btn btn-primary" href="/Cash/CashRequestAdmin">@Html.DisplayNameFor(model => model.IssueCashTransferMaster.FirstOrDefault().CommonWordsViewModel.refresh)</a>
+            </div>
+        </div>
+        <br />
+        <div class="">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="upper-birth">
+                        <div class="table-responsive">
+                            @*<div class="col-sm-2"></div>
+                                <div class="col-sm-3">
+                                    <span class="input-group-addon" style="display: block;text-align: center; padding: 5px; background: transparent; border: none;position: absolute;top: 5px;right: 30px;">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                    <input id="from" name="from" type="text" class="form-control" placeholder="From" />
+                                </div>
+                                <div class="col-sm-3">
+                                    <span class="input-group-addon" style="display: block;text-align: center; padding: 5px; background: transparent; border: none;position: absolute;top: 5px;right: 30px;">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                    <input id="to" name="to" type="text" class="form-control" placeholder="To" />
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="button" value="Filter" onclick="rangefilter()" class="btn btn-primary" id="filter" />
+                                    <a class="btn btn-primary" href="/Cash/CashRequestAdmin">Refresh</a>
+                                </div>*@
+                            <table id="tbl_cash_request" class="table table-bordered table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>@Html.LabelFor(model => model.IssueCashTransferMaster.FirstOrDefault().created_date)</th>
+                                        <th>@Html.LabelFor(model => model.IssueCashTransferMaster.FirstOrDefault().IssueWithdrawelPermissionMaster.permission)</th>
+                                        <th>@Html.LabelFor(model => model.IssueCashTransferMaster.FirstOrDefault().amount)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @foreach (var item in Model.IssueCashTransferMaster)
+                                    {
+                                        <tr>
+                                            <td> @Html.DisplayFor(x => item.created_date)</td>
+                                            <td>@Html.DisplayFor(x => item.IssueWithdrawelPermissionMaster.permission)</td>
+                                            <td>@Html.DisplayFor(x => item.cash_issued)</td>
+
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+    </div>
+    <!-- /#page-wrapper -->
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">@Html.LabelFor(model => model.IssueCashTransferMaster.FirstOrDefault().request_cash)</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="dropdown col-sm-3">
+
+                        </div>
+                        <div class="form-group col-sm-6">
+                            @Html.Label("Amount", "Amount (in dollars)", new { @class = "sr-only" })
+                            <div class="input-group">
+                                <div class="input-group-addon">$</div>
+                                @Html.TextBox("Amount", null, new { @class = "form-control", @placeholder = @Html.DisplayNameFor(model=> model.Amount) })
+                                <div class="input-group-addon">.00</div>
+                            </div>
+
+                        </div>
+                        <div class="dropdown col-sm-3">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">@Html.LabelFor(model => model.IssueCashTransferMaster.FirstOrDefault().cancel)</button>
+                    <button type="button" onclick="this.disabled=true" class="btn btn-primary" id="Add-Topup">@Html.LabelFor(model => model.IssueCashTransferMaster.FirstOrDefault().confirm)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Code Made By Umang 27/07/2016-->
+<!--Functionality Code Of Java Script made By Umang On 27/07/16-->
+@section scripts{
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.dataTables.min.js"></script>
+    <script src="~/js/dataTables.bootstrap.min.js"></script>
+    <script src="~/js/dataTables.responsive.min.js"></script>
+    <script src="~/js/responsive.bootstrap.min.js"></script>
+    <script src="~/js/bootstrap-datepicker.js"></script>
+    <script>
+        //$("#tbl_cash_request").DataTable({
+        //    "order": [[0, "desc"]]
+        //});
+        var english = {
+            "sLengthMenu": "Show _MENU_ entries",
+            "sZeroRecords": "No data available in table",
+            "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+            "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+            "sInfoFiltered": "(filtered from _MAX_ total entries)"
+        };
+        //var chinese = {
+        //    "sProcessing": "Procesando...",
+        //    "sLengthMenu": "展 _MENU_ 项",
+        //    "sZeroRecords": "无表可用数据",
+        //    "sInfo": "显示 _START_ 至 _END_ 的 _TOTAL_ 记录",
+        //    "sInfoEmpty": " 显示0至0 0项",
+        //    "sInfoFiltered": "(filtrado de un total de _MAX_ líneas)",
+        //    "sInfoPostFix": "",
+        //    "sSearch": "搜索:",
+        //    "sUrl": ""
+        //};
+        var chinese = {
+            "sProcessing": "处理中...",
+            "sLengthMenu": "显示 _MENU_ 项结果",
+            "sZeroRecords": "没有匹配结果",
+            "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+            "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+            "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+            "sInfoPostFix": "",
+            "sSearch": "搜索:",
+            "sUrl": "",
+            "sEmptyTable": "表中数据为空",
+            "sLoadingRecords": "载入中...",
+            "sInfoThousands": ",",
+            "oPaginate": {
+                "sFirst": "首页",
+                "sPrevious": "上页",
+                "sNext": "下页",
+                "sLast": "末页"
+            },
+            "oAria": {
+                "sSortAscending": ": 以升序排列此列",
+                "sSortDescending": ": 以降序排列此列"
+            }
+        }
+        $(document).ready(function () {
+            var currentLang = english;
+            if ('@Session["Language"]' != null || '@Session["Language"]' != "") {
+                if ('@Session["Language"]' == "chinese") {
+                    currentLang = chinese;
+                }
+            }
+            $('#myGroup ul li a').click(function () {
+                $('#myGroup ul li ul.collapse ').removeClass('in');
+                $('#myGroup ul li').removeClass('active');
+            });
+
+            $('#tbl_cash_request').dataTable({
+                columnDefs: [
+                   { type: 'date-euro', targets: 0 }
+                ],
+                order: [[0, "desc"]],
+                "oLanguage": currentLang
+            });
+        })
+
+        if ('@TempData["StartDate"]' != '' && '@TempData["EndDate"]' != '') {
+            var startDate = ('@TempData["StartDate"]').split("/");
+            var endDate = ('@TempData["EndDate"]').split("/");
+            var startYear = startDate[2].split(" ");
+            var endYear = endDate[2].split(" ");
+            var start = new Date(startYear[0], parseInt(startDate[1]) - 1, startDate[0]);
+            var end = new Date(endYear[0], parseInt(endDate[1]) - 1, endDate[0])
+            $('#from').datepicker({ format: 'dd/mm/yyyy' }); // format to show
+            $('#to').datepicker({ format: 'dd/mm/yyyy' });
+            $('#from').datepicker('setDate', start);
+            $('#to').datepicker('setDate', end);
+        }
+
+        //*********************** Plugin to sort date of format DD/MM/YYYY hh:mm:ss**************************//
+        jQuery.extend(jQuery.fn.dataTableExt.oSort, {
+            "date-euro-pre": function (a) {
+                var x;
+
+                if ($.trim(a) !== '') {
+                    var frDatea = $.trim(a).split(' ');
+                    var frTimea = (undefined != frDatea[1]) ? frDatea[1].split(':') : [00, 00, 00];
+                    var frDatea2 = frDatea[0].split('/');
+                    x = (frDatea2[2] + frDatea2[1] + frDatea2[0] + frTimea[0] + frTimea[1] + frTimea[2]) * 1;
+                }
+                else {
+                    x = Infinity;
+                }
+
+                return x;
+            },
+
+            "date-euro-asc": function (a, b) {
+                return a - b;
+            },
+
+            "date-euro-desc": function (a, b) {
+                return b - a;
+            }
+        });
+        //*********************** Plugin to sort date of format DD/MM/YYYY hh:mm:ss**************************//
+
+        $("#nav-cash").addClass("active");
+        $("#Open-Topup-Modal").click(function () {
+            $("#Amount").val("");
+            $("#myModal").modal("show");
+        });
+
+        //Start and end date validation start
+        var FromEndDate = new Date();
+        var ToEndDate = new Date();
+        ToEndDate.setDate(ToEndDate.getDate() + 365);
+        $('#to')
+            .datepicker({
+                dateFormat: 'dd/mm/yyyy',
+                format: 'dd/mm/yyyy',
+                weekStart: 1,
+                //startDate: startDate,
+                endDate: ToEndDate,
+                startView: 'decade',
+                autoclose: true,
+                todayHighlight: true
+            })
+            .on('changeDate', function (selected) {
+                FromEndDate = new Date(selected.date.valueOf());
+                FromEndDate.setDate(FromEndDate.getDate(new Date(selected.date.valueOf())));
+                $('#from').datepicker('setEndDate', FromEndDate);
+            });
+        $('#from').datepicker({
+            dateFormat: 'dd/mm/yyyy',
+            format: 'dd/mm/yyyy',
+            weekStart: 1,
+            //startDate: '01/01/2012',
+            endDate: FromEndDate,
+            startView: 'decade',
+            autoclose: true,
+            todayHighlight: true
+        })
+        .on('changeDate', function (selected) {
+            startDate = new Date(selected.date.valueOf());
+            startDate.setDate(startDate.getDate(new Date(selected.date.valueOf())));
+            $('#to').datepicker('setStartDate', startDate);
+        });
+
+        $('.datepicker').datepicker({
+            startView: 'decade',
+            autoclose: true,
+            todayHighlight: true
+        });
+        //Start and end date validation end
+
+        //for filtering according to date range
+        function rangefilter() {
+            if ($('#from').val() == "" && $('#to').val() == "") {
+                alert('@Html.DisplayNameFor(model=>model.PleaseSelectTheDateRange)');
+            }
+            else if ($('#from').val() == "") {
+                alert('Please select start date.');
+            }
+            else if ($('#to').val() == "") {
+                alert('@Html.DisplayNameFor(model=>model.PleaseSelectEndDate)');
+            }
+            else {
+                var startDate = $('#from').val();
+                var endDate = $('#to').val();
+                var updatedStartDate = startDate.split("/");
+                updatedStartDate = updatedStartDate[1] + "/" + updatedStartDate[0] + "/" + updatedStartDate[2];
+                var updatedEndDate = endDate.split("/");
+                updatedEndDate = updatedEndDate[1] + "/" + updatedEndDate[0] + "/" + updatedEndDate[2];
+                window.location.href = "@Url.Action("RangeFilter3", "Cash")" + "?start_date=" + updatedStartDate + "&end_date=" + updatedEndDate
+            }
+        }
+        //code ends here
+
+        $("#Amount").keydown(function (e) {
+            // Allow: backspace, delete, tab, escape, enter
+            if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110]) !== -1 ||
+                // Allow: Ctrl+A, Command+A
+                (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+                // Allow: home, end, left, right, down, up
+                (e.keyCode >= 35 && e.keyCode <= 40)) {
+                // let it happen, don't do anything
+                return;
+            }
+            // Ensure that it is a number and stop the keypress
+            if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                e.preventDefault();
+            }
+        });
+
+        $("#Add-Topup").click(function () {
+            debugger;
+            if ($("#Amount").val().length > 0) {
+                if ($("#Amount").val() < 10) {
+                    alert("Please enter minimum $10 amount.");
+                }
+                else {
+
+                    $.ajax({
+                        url: "@Url.Action("CashAdmin", "Cash")" + "?Amount=" + $("#Amount").val(),
+                        method: 'POST',
+                        success: function (result) {
+                            if (result == 1) {
+                                alert("Cash request has been made successfully.");
+                                location.reload();
+                            }
+                            else if (result = 2) {
+                                alert("Your request has been sent to Super Admin for approval");
+                                location.reload();
+                            }
+                            else {
+                                alert("Kindly enter a valid amount.");
+                            }
+                        },
+                        error: function (e) {
+                            alert("Kindly enter a valid amount.");
+                        }
+                    });
+
+                }
+            }
+            else {
+                alert("Please provide amount.");
+            }
+        });
+
+    </script>
+}
+

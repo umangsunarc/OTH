@@ -1,0 +1,32 @@
+﻿@model Wollo.Web.Models.Organization
+
+@{
+    ViewBag.Title = "Organization Details";
+}
+
+<h2>Organization Details</h2>
+
+<div>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to Organization", "Index")
+</p>

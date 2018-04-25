@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Wollo.Entities.Models.Audit_Log_Master>
+
+@{
+    ViewBag.Title = "Log Details";
+}
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Log Details
+                </h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i> Log Details
+                    </li>
+                </ol>
+            </div>
+        </div><div id="upper-birth">
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover table-striped">
+                    <tr>
+                        <th>
+                            URL
+                        </th>
+                        <th>
+                            IP Address
+                        </th>
+                        <th>
+                            User Id
+                        </th>
+                        <th>
+                            User Name
+                        </th>
+                        <th>
+                            Created Date
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.url)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ip_address)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.user_id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AspnetUsers.username)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.created_date)
+                        </td>
+                    </tr>
+                    }
+
+                </table>
+            </div>
+        </div>     <!-- /#page-wrapper -->
+    </div>
+</div>

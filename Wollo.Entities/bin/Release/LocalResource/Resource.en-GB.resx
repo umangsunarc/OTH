@@ -1,0 +1,1501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutUs" xml:space="preserve">
+    <value>About Us</value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="AddNewHolidayClosingDate" xml:space="preserve">
+    <value>Add New Holiday/Closing Date</value>
+  </data>
+  <data name="AddNewWithdrawals" xml:space="preserve">
+    <value>Add New Withdrawals</value>
+  </data>
+  <data name="AdministrationfeePriceperLot" xml:space="preserve">
+    <value>Administration fee Price per Lot:</value>
+  </data>
+  <data name="AdministrationFeeOnBuyer" xml:space="preserve">
+    <value>Administration Fee on Buyer:</value>
+  </data>
+  <data name="AdminSettings" xml:space="preserve">
+    <value>Admin Settings</value>
+  </data>
+  <data name="AllTradingHistory" xml:space="preserve">
+    <value>All Trading History</value>
+  </data>
+  <data name="AM" xml:space="preserve">
+    <value>AM</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="Ask" xml:space="preserve">
+    <value>Ask</value>
+  </data>
+  <data name="AskPrice" xml:space="preserve">
+    <value>Ask Price</value>
+  </data>
+  <data name="BankTransfer" xml:space="preserve">
+    <value>Bank Transfer</value>
+  </data>
+  <data name="Bid" xml:space="preserve">
+    <value>Bid</value>
+  </data>
+  <data name="BidAsk" xml:space="preserve">
+    <value>Bid/Ask</value>
+  </data>
+  <data name="BuyerFee" xml:space="preserve">
+    <value>Buyer Fee</value>
+  </data>
+  <data name="BuyorSell" xml:space="preserve">
+    <value>Buy or Sell</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Cash" xml:space="preserve">
+    <value>Cash</value>
+  </data>
+  <data name="CashAdmin" xml:space="preserve">
+    <value>Cash Admin</value>
+  </data>
+  <data name="CashEWallet" xml:space="preserve">
+    <value>Cash E-Wallet</value>
+  </data>
+  <data name="CashInCirculation" xml:space="preserve">
+    <value>Cash In-Circulation</value>
+  </data>
+  <data name="CashIssuedToMembers" xml:space="preserve">
+    <value>Cash Issued To Members</value>
+  </data>
+  <data name="CashTransactionHistory" xml:space="preserve">
+    <value>Cash Transaction History</value>
+  </data>
+  <data name="ChangeStatus" xml:space="preserve">
+    <value>Change Status</value>
+  </data>
+  <data name="Cheque" xml:space="preserve">
+    <value>Cheque</value>
+  </data>
+  <data name="ClosingBalance" xml:space="preserve">
+    <value>Closing Balance</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="Currency" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="CutOffTime" xml:space="preserve">
+    <value>Cut-Off Time</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="DashboardAdmin" xml:space="preserve">
+    <value>Dashboard/Admin</value>
+  </data>
+  <data name="DashboardCashWithdrawal" xml:space="preserve">
+    <value>Dashboard/Cash Withdrawal</value>
+  </data>
+  <data name="DashboardFundTopup" xml:space="preserve">
+    <value>Dashboard/Fund/Topup</value>
+  </data>
+  <data name="DashboardHolidayClosingDate" xml:space="preserve">
+    <value>Dashboard/Holiday/Closing Date</value>
+  </data>
+  <data name="DashboardIssuePoints" xml:space="preserve">
+    <value>Dashboard/Issue Points</value>
+  </data>
+  <data name="DashboardQueue" xml:space="preserve">
+    <value>Dashboard/Queue</value>
+  </data>
+  <data name="DashboardTrading" xml:space="preserve">
+    <value>Dashboard/Trading</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>Date &amp; Time</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Fixed" xml:space="preserve">
+    <value>Fixed</value>
+  </data>
+  <data name="ForaTotalOf" xml:space="preserve">
+    <value>For a total of</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>Friday</value>
+  </data>
+  <data name="FundTopup" xml:space="preserve">
+    <value>Fund/Topup</value>
+  </data>
+  <data name="HolidayClosingDate" xml:space="preserve">
+    <value>Holiday/Closing Date</value>
+  </data>
+  <data name="Home1" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="i" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Inbox" xml:space="preserve">
+    <value>Inbox</value>
+  </data>
+  <data name="InQueuing" xml:space="preserve">
+    <value>In-Queuing</value>
+  </data>
+  <data name="IssuedPointsDetails" xml:space="preserve">
+    <value>RPE02 Points Details</value>
+  </data>
+  <data name="IssuePoints" xml:space="preserve">
+    <value>Issue Points</value>
+  </data>
+  <data name="IssuePointsInCirculation" xml:space="preserve">
+    <value>RPE02 Points In-Circulation</value>
+  </data>
+  <data name="IssuePointsIssuedintoSystem" xml:space="preserve">
+    <value>RPE02 Points Issued into System</value>
+  </data>
+  <data name="IssuePointsIssuedToMembers" xml:space="preserve">
+    <value>RPE02 Points Issued To Members</value>
+  </data>
+  <data name="Iwanttobuy" xml:space="preserve">
+    <value>I want to buy</value>
+  </data>
+  <data name="l" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>LogOut</value>
+  </data>
+  <data name="Manual" xml:space="preserve">
+    <value>Manual</value>
+  </data>
+  <data name="Modify" xml:space="preserve">
+    <value>Modify</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>Monday</value>
+  </data>
+  <data name="MyWithdrawals" xml:space="preserve">
+    <value>MyWithdrawals</value>
+  </data>
+  <data name="NewHolidayClosingDate" xml:space="preserve">
+    <value>New Holiday/Closing Date</value>
+  </data>
+  <data name="NewWithdrawal" xml:space="preserve">
+    <value>New Withdrawal</value>
+  </data>
+  <data name="NoticesAndMaintenance" xml:space="preserve">
+    <value>Notices and Maintenance</value>
+  </data>
+  <data name="NotifyBefore" xml:space="preserve">
+    <value>Notify Before</value>
+  </data>
+  <data name="NumberofUsers" xml:space="preserve">
+    <value>Number of Users</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="OpeningCashBalance" xml:space="preserve">
+    <value>Opening Cash Balance</value>
+  </data>
+  <data name="OrderID" xml:space="preserve">
+    <value>Order ID</value>
+  </data>
+  <data name="OrderPrice" xml:space="preserve">
+    <value>Order Price</value>
+  </data>
+  <data name="OrderQTY" xml:space="preserve">
+    <value>Order QTY</value>
+  </data>
+  <data name="p" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Percent" xml:space="preserve">
+    <value>Percent</value>
+  </data>
+  <data name="PM" xml:space="preserve">
+    <value>PM</value>
+  </data>
+  <data name="PoweredBy" xml:space="preserve">
+    <value>Powered By</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="q" xml:space="preserve">
+    <value />
+  </data>
+  <data name="QTY" xml:space="preserve">
+    <value>QTY</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="Queue" xml:space="preserve">
+    <value>Queue</value>
+  </data>
+  <data name="QueueAdmin" xml:space="preserve">
+    <value>QueueAdmin</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="RemainingOrderQTY" xml:space="preserve">
+    <value> Remaining Order  QTY</value>
+  </data>
+  <data name="RewardPoints" xml:space="preserve">
+    <value>Wollo Points</value>
+  </data>
+  <data name="RewardPointsExchange" xml:space="preserve">
+    <value>Reward Points Exchange</value>
+  </data>
+  <data name="RewardPointsInCircualtion" xml:space="preserve">
+    <value>Wollo Points In-Circulation</value>
+  </data>
+  <data name="RewardPointsTransferredInByMembers" xml:space="preserve">
+    <value>Wollo Points Transferred In By Members</value>
+  </data>
+  <data name="RewardPointsTransferredOutByMembers" xml:space="preserve">
+    <value>Wollo Points Transferred Out By Members</value>
+  </data>
+  <data name="Rules" xml:space="preserve">
+    <value>Rules</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
+  <data name="SelectPaymentMethod" xml:space="preserve">
+    <value>Select Payment Method</value>
+  </data>
+  <data name="SelectRule" xml:space="preserve">
+    <value>Select Rule</value>
+  </data>
+  <data name="SelectStock" xml:space="preserve">
+    <value>Select Stock</value>
+  </data>
+  <data name="SelectStockCode" xml:space="preserve">
+    <value>Select Stock Code</value>
+  </data>
+  <data name="sell" xml:space="preserve">
+    <value>sell</value>
+  </data>
+  <data name="SellerFee" xml:space="preserve">
+    <value>Seller Fee</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="SIGNUPFORFREE" xml:space="preserve">
+    <value>SIGN UP FOR FREE</value>
+  </data>
+  <data name="StartingTime" xml:space="preserve">
+    <value>Starting Time</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="StockCode" xml:space="preserve">
+    <value>Stock Code</value>
+  </data>
+  <data name="StockName" xml:space="preserve">
+    <value>Stock Name</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>Sunday</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>Thursday</value>
+  </data>
+  <data name="Timestamp" xml:space="preserve">
+    <value>Timestamp</value>
+  </data>
+  <data name="Topup" xml:space="preserve">
+    <value>Topup</value>
+  </data>
+  <data name="TopupAction" xml:space="preserve">
+    <value>Topup Action</value>
+  </data>
+  <data name="TopupHistory" xml:space="preserve">
+    <value>TopupHistory</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="TotalCashIssuesIntoSystem" xml:space="preserve">
+    <value>Total  Cash Issues Into system</value>
+  </data>
+  <data name="TotalTopupByMembers" xml:space="preserve">
+    <value>Total Topup By Members</value>
+  </data>
+  <data name="TotalWithdrawOutByMembers" xml:space="preserve">
+    <value>Total Withdraw Out By Members</value>
+  </data>
+  <data name="Traded" xml:space="preserve">
+    <value>Traded</value>
+  </data>
+  <data name="TradedBidPrice" xml:space="preserve">
+    <value>Traded/Bid Price</value>
+  </data>
+  <data name="Trading" xml:space="preserve">
+    <value>Trading</value>
+  </data>
+  <data name="TradingAdmin" xml:space="preserve">
+    <value>Trading Admin</value>
+  </data>
+  <data name="TradingDay" xml:space="preserve">
+    <value>Trading Day</value>
+  </data>
+  <data name="TradingHistory" xml:space="preserve">
+    <value>Trading History</value>
+  </data>
+  <data name="TradingTime" xml:space="preserve">
+    <value>Trading Time</value>
+  </data>
+  <data name="TransactionAmount" xml:space="preserve">
+    <value>Transaction Amount</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>Tuesday</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="UserId" xml:space="preserve">
+    <value>User Id</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="ViewAllCashHistory" xml:space="preserve">
+    <value>View All Cash History</value>
+  </data>
+  <data name="ViewAllTrading" xml:space="preserve">
+    <value>View All Trading</value>
+  </data>
+  <data name="ViewDetails" xml:space="preserve">
+    <value>View Details</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>Wednesday</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="WelcomeUserName" xml:space="preserve">
+    <value>Welcome User Name</value>
+  </data>
+  <data name="Withdrawal" xml:space="preserve">
+    <value>Withdrawal</value>
+  </data>
+  <data name="DashboardAllTradingHistory" xml:space="preserve">
+    <value>Dashboard/All Trading History</value>
+  </data>
+  <data name="Method" xml:space="preserve">
+    <value>Method</value>
+  </data>
+  <data name="WithdrawelFee" xml:space="preserve">
+    <value>Withdrawel Fee</value>
+  </data>
+  <data name="CashWithdrawal" xml:space="preserve">
+    <value>Cash Withdrawal</value>
+  </data>
+  <data name="CashRequest" xml:space="preserve">
+    <value>Cash Request</value>
+  </data>
+  <data name="DashboardCashRequest" xml:space="preserve">
+    <value>Dashboard/Cash Request</value>
+  </data>
+  <data name="DashboardCashTransactionHistory" xml:space="preserve">
+    <value>Dashboard/Cash Transaction History</value>
+  </data>
+  <data name="RequestCash" xml:space="preserve">
+    <value>Request Cash</value>
+  </data>
+  <data name="DashboardCashMemberCash" xml:space="preserve">
+    <value>Dashboard/Cash/MemberCash</value>
+  </data>
+  <data name="IssueCash" xml:space="preserve">
+    <value>Issue Cash</value>
+  </data>
+  <data name="IssuedCashHistory" xml:space="preserve">
+    <value>Issued Cash History</value>
+  </data>
+  <data name="MemberCashHistory" xml:space="preserve">
+    <value>Member Cash History</value>
+  </data>
+  <data name="AdminName" xml:space="preserve">
+    <value>Admin Name</value>
+  </data>
+  <data name="CashIssuedHistory" xml:space="preserve">
+    <value>Cash Issued History</value>
+  </data>
+  <data name="CashIssueRequest" xml:space="preserve">
+    <value>Cash Issue Request</value>
+  </data>
+  <data name="DashboardCashIssueRequest" xml:space="preserve">
+    <value>Dashboard/Cash Issue Request</value>
+  </data>
+  <data name="PaymentMethod" xml:space="preserve">
+    <value>Payment Method</value>
+  </data>
+  <data name="DashboardPortfolio" xml:space="preserve">
+    <value>Dashboard/Portfolio</value>
+  </data>
+  <data name="RewardPointsIssuedToMember" xml:space="preserve">
+    <value>Wollo Points Issued To Members</value>
+  </data>
+  <data name="RewardPointsIssuedToSystem" xml:space="preserve">
+    <value>Wollo Points Issued To System</value>
+  </data>
+  <data name="TestPointsTransferredInByMembers" xml:space="preserve">
+    <value>RPE02 Points Transferred In By Members</value>
+  </data>
+  <data name="TestPointsTransferredOutByMembers" xml:space="preserve">
+    <value>RPE02 PointsTransferred Out By Members</value>
+  </data>
+  <data name="Portfolio" xml:space="preserve">
+    <value>Portfolio</value>
+  </data>
+  <data name="RPE02PointDetails" xml:space="preserve">
+    <value>RPE02 Point Details</value>
+  </data>
+  <data name="RPE02PointInCirculation" xml:space="preserve">
+    <value>RPE02 Points In Circulation</value>
+  </data>
+  <data name="RPE02PointIssuedInsystem" xml:space="preserve">
+    <value>RPE02 Points Issued Into system</value>
+  </data>
+  <data name="RPE02PointIssuedToMember" xml:space="preserve">
+    <value>RPE02 Points Issued To Member</value>
+  </data>
+  <data name="WolloPointDetails" xml:space="preserve">
+    <value>Wollo Point Details</value>
+  </data>
+  <data name="WolloPointInCirculation" xml:space="preserve">
+    <value>Wollo Points In Circulation</value>
+  </data>
+  <data name="WolloPointTransferredInByMember" xml:space="preserve">
+    <value>Wollo Points Transferred In By Member</value>
+  </data>
+  <data name="WolloPointsTransferredOutByMember" xml:space="preserve">
+    <value>Wollo Point Transferred Out By Member</value>
+  </data>
+  <data name="PointsIssued" xml:space="preserve">
+    <value>Points</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="AddNewRole" xml:space="preserve">
+    <value>Add New Role</value>
+  </data>
+  <data name="AdministrationFees" xml:space="preserve">
+    <value>Administration Fees</value>
+  </data>
+  <data name="AdministrationFeesOnSeller" xml:space="preserve">
+    <value>Administration Fees On Seller</value>
+  </data>
+  <data name="Buyer" xml:space="preserve">
+    <value>Buyer</value>
+  </data>
+  <data name="Createddate" xml:space="preserve">
+    <value>Created date</value>
+  </data>
+  <data name="CreateUser" xml:space="preserve">
+    <value>Create User</value>
+  </data>
+  <data name="CurrentAdministrationFeesRule" xml:space="preserve">
+    <value>Current Administration Fees Rule</value>
+  </data>
+  <data name="CurrentTradingRule" xml:space="preserve">
+    <value>Current Trading Rule</value>
+  </data>
+  <data name="DashboardNotification" xml:space="preserve">
+    <value>Dashboard/Notification</value>
+  </data>
+  <data name="DayHigh" xml:space="preserve">
+    <value>Day High</value>
+  </data>
+  <data name="DayLow" xml:space="preserve">
+    <value>Day Low</value>
+  </data>
+  <data name="EditPermission" xml:space="preserve">
+    <value>Edit Permission</value>
+  </data>
+  <data name="EmailAddress" xml:space="preserve">
+    <value>Email Address</value>
+  </data>
+  <data name="entries" xml:space="preserve">
+    <value>entries</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="Forapriceof" xml:space="preserve">
+    <value>For a price of</value>
+  </data>
+  <data name="InitialMarketRate" xml:space="preserve">
+    <value>Initial Market Rate</value>
+  </data>
+  <data name="IpAddress" xml:space="preserve">
+    <value>Ip Address</value>
+  </data>
+  <data name="IssueNewRewardPoints" xml:space="preserve">
+    <value>Issue New Reward Points</value>
+  </data>
+  <data name="IssuerUserName" xml:space="preserve">
+    <value>Issuer User Name</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="LastTraded" xml:space="preserve">
+    <value>Last Traded</value>
+  </data>
+  <data name="LogDetails" xml:space="preserve">
+    <value>Log Details</value>
+  </data>
+  <data name="Lot" xml:space="preserve">
+    <value>Lot</value>
+  </data>
+  <data name="LotSize" xml:space="preserve">
+    <value>Lot Size</value>
+  </data>
+  <data name="ManageUsers" xml:space="preserve">
+    <value>Manage Users</value>
+  </data>
+  <data name="MarketRate" xml:space="preserve">
+    <value>Market Rate</value>
+  </data>
+  <data name="MinimumBidRate" xml:space="preserve">
+    <value>Minimum Bid Rate</value>
+  </data>
+  <data name="MinimumLotToBid" xml:space="preserve">
+    <value>Minimum Lot To Bid</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NoOfTraded" xml:space="preserve">
+    <value>No Of Traded</value>
+  </data>
+  <data name="Notifications" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PrevClose" xml:space="preserve">
+    <value>Prev. Close</value>
+  </data>
+  <data name="PriceperLot" xml:space="preserve">
+    <value>Price per Lot</value>
+  </data>
+  <data name="ReceiverUsername" xml:space="preserve">
+    <value>Receiver User name</value>
+  </data>
+  <data name="RoleName" xml:space="preserve">
+    <value>Role Name</value>
+  </data>
+  <data name="RolePermissions" xml:space="preserve">
+    <value>Role Permissions</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+  <data name="Rule" xml:space="preserve">
+    <value>Rule</value>
+  </data>
+  <data name="RuleOn" xml:space="preserve">
+    <value>Rule on</value>
+  </data>
+  <data name="SelectMethod" xml:space="preserve">
+    <value>Select Method</value>
+  </data>
+  <data name="Seller" xml:space="preserve">
+    <value>Seller</value>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="Stock" xml:space="preserve">
+    <value>Stock</value>
+  </data>
+  <data name="TotalPoints" xml:space="preserve">
+    <value>Total Points</value>
+  </data>
+  <data name="TotalVolume" xml:space="preserve">
+    <value>Total Volume</value>
+  </data>
+  <data name="TradingRules" xml:space="preserve">
+    <value>Trading Rules</value>
+  </data>
+  <data name="TransferPoints" xml:space="preserve">
+    <value>Transfer Points</value>
+  </data>
+  <data name="UpdatedOn" xml:space="preserve">
+    <value>Updated On</value>
+  </data>
+  <data name="URL" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="Weeks" xml:space="preserve">
+    <value>52 Weeks</value>
+  </data>
+  <data name="WithdrawalFees" xml:space="preserve">
+    <value>Withdrawal Fees</value>
+  </data>
+  <data name="ValueTraded" xml:space="preserve">
+    <value>Value Traded</value>
+  </data>
+  <data name="SystemCash" xml:space="preserve">
+    <value>System Cash</value>
+  </data>
+  <data name="Uname" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="AccountSettings" xml:space="preserve">
+    <value>Account Settings</value>
+  </data>
+  <data name="AddNewNotification" xml:space="preserve">
+    <value>Add New Notification</value>
+  </data>
+  <data name="AddNewUser" xml:space="preserve">
+    <value>Add New User</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="AdministrationFee" xml:space="preserve">
+    <value>Administration Fee</value>
+  </data>
+  <data name="AlternateAddress" xml:space="preserve">
+    <value>Alternate Address</value>
+  </data>
+  <data name="Bidprice" xml:space="preserve">
+    <value>Bid price</value>
+  </data>
+  <data name="BuyableSellableQuantity" xml:space="preserve">
+    <value>Buyable/Sellable Quantity</value>
+  </data>
+  <data name="ByclickingthebuttontoSignUpIagreetotheUserAgreement" xml:space="preserve">
+    <value>By clicking the button to Sign Up, I agree to the User Agreement.</value>
+  </data>
+  <data name="CashIssueHistory" xml:space="preserve">
+    <value>Cash Issue History</value>
+  </data>
+  <data name="CashRequestApproval" xml:space="preserve">
+    <value>Cash Request Approval</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="CompanyAdmin" xml:space="preserve">
+    <value>CompanyAdmin</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="CurrentStockAmount" xml:space="preserve">
+    <value>Current Stock Amount</value>
+  </data>
+  <data name="DashboardLogDetails" xml:space="preserve">
+    <value>Dashboard/Log Details</value>
+  </data>
+  <data name="DashboardManageUsers" xml:space="preserve">
+    <value>Dashboard/Manage Users</value>
+  </data>
+  <data name="DashboardPointsIssued" xml:space="preserve">
+    <value>Dashboard/Points Issued</value>
+  </data>
+  <data name="DashboardPointsIssuedSelf" xml:space="preserve">
+    <value>Dashboard/Points Issued/Self</value>
+  </data>
+  <data name="DashboardRolePermissions" xml:space="preserve">
+    <value>Dashboard/Role Permissions</value>
+  </data>
+  <data name="DashboardRoles" xml:space="preserve">
+    <value>Dashboard/Roles</value>
+  </data>
+  <data name="DashboardRules" xml:space="preserve">
+    <value>Dashboard/Rules</value>
+  </data>
+  <data name="DashboardTradingTime" xml:space="preserve">
+    <value>Dashboard/Trading Time</value>
+  </data>
+  <data name="DashboardTransferRewardPoints" xml:space="preserve">
+    <value>Dashboard/Transfer Reward Points</value>
+  </data>
+  <data name="DashboradMarketRate" xml:space="preserve">
+    <value>Dashborad/Market Rate</value>
+  </data>
+  <data name="Developer" xml:space="preserve">
+    <value>Developer</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="EditPermissions" xml:space="preserve">
+    <value>Edit Permissions</value>
+  </data>
+  <data name="ExporttoCSV" xml:space="preserve">
+    <value>Export to CSV</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>Forgot Password?</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Guest" xml:space="preserve">
+    <value>Guest</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="Holdings" xml:space="preserve">
+    <value>Holdings</value>
+  </data>
+  <data name="LastTransactedPrice" xml:space="preserve">
+    <value>Last Transacted Price</value>
+  </data>
+  <data name="LatestMarketValue" xml:space="preserve">
+    <value>Latest Market Value</value>
+  </data>
+  <data name="Member" xml:space="preserve">
+    <value>Member</value>
+  </data>
+  <data name="MobileNumber" xml:space="preserve">
+    <value>Mobile Number</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="Nodataavailableintable" xml:space="preserve">
+    <value>No data available in table</value>
+  </data>
+  <data name="OrganizationAdmin" xml:space="preserve">
+    <value>Organization Admin</value>
+  </data>
+  <data name="PersonalInfo" xml:space="preserve">
+    <value>Personal Info</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="Pointissuerequest" xml:space="preserve">
+    <value>Point issue request</value>
+  </data>
+  <data name="Points" xml:space="preserve">
+    <value>Points</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="Registerifyoudonthaveanaccount" xml:space="preserve">
+    <value>Register if you don't have an account.</value>
+  </data>
+  <data name="Rememberme" xml:space="preserve">
+    <value>Remember me?</value>
+  </data>
+  <data name="RequestForCash" xml:space="preserve">
+    <value>RequestForCash</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="RESETPASSWORD" xml:space="preserve">
+    <value>RESET PASSWORD</value>
+  </data>
+  <data name="RewardPointsTransfer" xml:space="preserve">
+    <value>Reward Points Transfer</value>
+  </data>
+  <data name="Rewardpointstransferhistory" xml:space="preserve">
+    <value>Reward points transfer history</value>
+  </data>
+  <data name="Roleadmin" xml:space="preserve">
+    <value>Role admin</value>
+  </data>
+  <data name="RPE02TestRewardPoints" xml:space="preserve">
+    <value>RPE02-Test Reward Points</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="SelectEstore" xml:space="preserve">
+    <value>Select E-store</value>
+  </data>
+  <data name="Self" xml:space="preserve">
+    <value>Self</value>
+  </data>
+  <data name="Showentries" xml:space="preserve">
+    <value>Show entries</value>
+  </data>
+  <data name="Showing0to0of0entries" xml:space="preserve">
+    <value>Showing 0 to 0 of 0 entries</value>
+  </data>
+  <data name="Signup" xml:space="preserve">
+    <value>Sign up</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="SuperAdmin1" xml:space="preserve">
+    <value>Super Admin 1</value>
+  </data>
+  <data name="SuperAdmin2" xml:space="preserve">
+    <value>Super Admin 2</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Trade" xml:space="preserve">
+    <value>Trade</value>
+  </data>
+  <data name="Transfer" xml:space="preserve">
+    <value>Transfer</value>
+  </data>
+  <data name="TransferAmount" xml:space="preserve">
+    <value>Transfer Amount</value>
+  </data>
+  <data name="TransferredAmount" xml:space="preserve">
+    <value>Transferred Amount</value>
+  </data>
+  <data name="TransferredFrom" xml:space="preserve">
+    <value>Transferred From</value>
+  </data>
+  <data name="TransferredPoints" xml:space="preserve">
+    <value>Transferred Points</value>
+  </data>
+  <data name="TransferRewardPoints" xml:space="preserve">
+    <value>Transfer Reward Points</value>
+  </data>
+  <data name="UserandRoleManagement" xml:space="preserve">
+    <value>User and Role Management</value>
+  </data>
+  <data name="ViewAllHistory" xml:space="preserve">
+    <value>View All History</value>
+  </data>
+  <data name="Volume" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="webdeveloper" xml:space="preserve">
+    <value>web developer</value>
+  </data>
+  <data name="WolloRewardpoints" xml:space="preserve">
+    <value>Wollo-Reward points</value>
+  </data>
+  <data name="Zip" xml:space="preserve">
+    <value>Zip</value>
+  </data>
+  <data name="AlternativeAssetExchangePlatform" xml:space="preserve">
+    <value>Alternative Asset Exchange Platform</value>
+  </data>
+  <data name="ApprovedBy" xml:space="preserve">
+    <value>Approved By</value>
+  </data>
+  <data name="BacktoList" xml:space="preserve">
+    <value>Back to List</value>
+  </data>
+  <data name="BacktoRolePermissions" xml:space="preserve">
+    <value>Back to Role Permissions</value>
+  </data>
+  <data name="BacktoRoles" xml:space="preserve">
+    <value>Back to Roles</value>
+  </data>
+  <data name="BacktoUsers" xml:space="preserve">
+    <value>Back to Users</value>
+  </data>
+  <data name="CancelledIssuedPoints" xml:space="preserve">
+    <value>Cancelled issued points</value>
+  </data>
+  <data name="CashHistory" xml:space="preserve">
+    <value>Cash History</value>
+  </data>
+  <data name="CashInCirculationHistory" xml:space="preserve">
+    <value>Cash In Circulation History</value>
+  </data>
+  <data name="CashIssue" xml:space="preserve">
+    <value>Cash Issue</value>
+  </data>
+  <data name="CashIssued" xml:space="preserve">
+    <value>Cash Issued</value>
+  </data>
+  <data name="CashIssuedIntoSystemHistory" xml:space="preserve">
+    <value>Cash Issued Into System History</value>
+  </data>
+  <data name="CashIssuedToMembersHistory" xml:space="preserve">
+    <value>Cash Issued To Members History</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="ClosingCash" xml:space="preserve">
+    <value>Closing Cash</value>
+  </data>
+  <data name="ClosingPoints" xml:space="preserve">
+    <value>ClosingPoints</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="CreateRole" xml:space="preserve">
+    <value>Create Role</value>
+  </data>
+  <data name="CurrentIssuedPoints" xml:space="preserve">
+    <value>Current issued points</value>
+  </data>
+  <data name="CurrentWithdrawalFeeRule" xml:space="preserve">
+    <value>Current Withdrawal Fee Rule</value>
+  </data>
+  <data name="DashboardCashInCirculationHistory" xml:space="preserve">
+    <value>Dashboard/Cash In Circulation History</value>
+  </data>
+  <data name="DashboardCashIssuedIntoSystemHistory" xml:space="preserve">
+    <value>Dashboard/Cash Issued Into System History</value>
+  </data>
+  <data name="DashboardCashIssuedToMembersHistory" xml:space="preserve">
+    <value>Dashboard/Cash Issued To Members History</value>
+  </data>
+  <data name="DashboardChangePassword" xml:space="preserve">
+    <value>Dashboard/Change Password</value>
+  </data>
+  <data name="DashboardCreateRole" xml:space="preserve">
+    <value>Dashboard/Create Role</value>
+  </data>
+  <data name="DashboardCreateUser" xml:space="preserve">
+    <value>Dashboard/Create User</value>
+  </data>
+  <data name="DashboardEditRole" xml:space="preserve">
+    <value>Dashboard/Edit Role</value>
+  </data>
+  <data name="DashboardEditUser" xml:space="preserve">
+    <value>Dashboard/Edit User</value>
+  </data>
+  <data name="DashboardMarketRate" xml:space="preserve">
+    <value>Dashboard/Market Rate</value>
+  </data>
+  <data name="DashboardPointIssueRequest" xml:space="preserve">
+    <value>Dashboard/Point Issue Request</value>
+  </data>
+  <data name="DashboardRewardPointsTransferHistory" xml:space="preserve">
+    <value>Dashboard/Reward Points Transfer History</value>
+  </data>
+  <data name="DashboardRoleDetails" xml:space="preserve">
+    <value>Dashboard/Role Details</value>
+  </data>
+  <data name="DashboardRolePermissionDetails" xml:space="preserve">
+    <value>Dashboard/Role Permission Details</value>
+  </data>
+  <data name="DashboardTopupByMembersHistory" xml:space="preserve">
+    <value>Dashboard/Topup By Members History</value>
+  </data>
+  <data name="DashboardUpdateRolePermission" xml:space="preserve">
+    <value>Dashboard/Update Role Permission</value>
+  </data>
+  <data name="DashboardUserDetails" xml:space="preserve">
+    <value>Dashboard/User Details</value>
+  </data>
+  <data name="DashboardWithdrawOutByMembersHistory" xml:space="preserve">
+    <value>Dashboard/Withdraw Out By Members History</value>
+  </data>
+  <data name="DashboardWolloRewardPointIssuedIntoSystemHistory" xml:space="preserve">
+    <value>Dashboard/Wollo Reward Point Issued Into System History</value>
+  </data>
+  <data name="DashboardWolloRewardPointIssuedToMemberHistory" xml:space="preserve">
+    <value>Dashboard/Wollo Reward Point Issued To Member History</value>
+  </data>
+  <data name="DeactivateUser" xml:space="preserve">
+    <value>Deactivate User</value>
+  </data>
+  <data name="e" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EditRole" xml:space="preserve">
+    <value>Edit Role</value>
+  </data>
+  <data name="FeaturesBenefit" xml:space="preserve">
+    <value>Features &amp; Benefits</value>
+  </data>
+  <data name="FeaturesBenefits" xml:space="preserve">
+    <value>Features &amp; Benefits</value>
+  </data>
+  <data name="GETTOKNOWPOINTS" xml:space="preserve">
+    <value>GET TO KNOW POINTS</value>
+  </data>
+  <data name="Issuedpointbalance" xml:space="preserve">
+    <value>Issued point balance</value>
+  </data>
+  <data name="IssuedPointsValue" xml:space="preserve">
+    <value>Issued Points Value</value>
+  </data>
+  <data name="Issuer" xml:space="preserve">
+    <value>Issuer</value>
+  </data>
+  <data name="IssueRewardPoints" xml:space="preserve">
+    <value>Issue Reward Points</value>
+  </data>
+  <data name="MinimumLot" xml:space="preserve">
+    <value>Minimum Lot</value>
+  </data>
+  <data name="MinimumRate" xml:space="preserve">
+    <value>Minimum Rate</value>
+  </data>
+  <data name="Module" xml:space="preserve">
+    <value>Module</value>
+  </data>
+  <data name="MyOrders" xml:space="preserve">
+    <value>My Orders</value>
+  </data>
+  <data name="OpeningCash" xml:space="preserve">
+    <value>Opening Cash</value>
+  </data>
+  <data name="OpeningPoints" xml:space="preserve">
+    <value>Opening Points</value>
+  </data>
+  <data name="OURSERVICESPOLICIES" xml:space="preserve">
+    <value>OUR SERVICES &amp; POLICIES</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Permissions</value>
+  </data>
+  <data name="PermissionsAdmin" xml:space="preserve">
+    <value>Permissions-Admin</value>
+  </data>
+  <data name="Receiver" xml:space="preserve">
+    <value>Receiver</value>
+  </data>
+  <data name="RewardPoint" xml:space="preserve">
+    <value>Reward Point</value>
+  </data>
+  <data name="RewardPointHistory" xml:space="preserve">
+    <value>Reward Point History</value>
+  </data>
+  <data name="RoleDetails" xml:space="preserve">
+    <value>Role Details</value>
+  </data>
+  <data name="RolePermissionDetails" xml:space="preserve">
+    <value>Role Permission Details</value>
+  </data>
+  <data name="RPE02PointsInCirculation" xml:space="preserve">
+    <value>RPE02 Points In Circulation</value>
+  </data>
+  <data name="RPE02PointsIssuedIntosystem" xml:space="preserve">
+    <value>RPE02 Points Issued Into system</value>
+  </data>
+  <data name="RPE02PointsIssuedToMember" xml:space="preserve">
+    <value>RPE02 Points Issued To Member</value>
+  </data>
+  <data name="RPE02PointsTransferredInByMembers" xml:space="preserve">
+    <value>RPE02 Points Transferred In By Members</value>
+  </data>
+  <data name="RPE02PointsTransferredOutByMembers" xml:space="preserve">
+    <value>RPE02 Points Transferred Out By Members</value>
+  </data>
+  <data name="SystemCashDetails" xml:space="preserve">
+    <value>System Cash Details</value>
+  </data>
+  <data name="TestRewardPointsInCirculationHistory" xml:space="preserve">
+    <value>Test Reward Points In Circulation History</value>
+  </data>
+  <data name="TopupByMembersHistory" xml:space="preserve">
+    <value>Topup By Members History</value>
+  </data>
+  <data name="UpdateRolePermission" xml:space="preserve">
+    <value>Update Role Permission</value>
+  </data>
+  <data name="UserRole" xml:space="preserve">
+    <value>User Role</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="WithdrawOutByMembersHistory" xml:space="preserve">
+    <value>Withdraw Out By Members History</value>
+  </data>
+  <data name="WolloPointsInCirculation" xml:space="preserve">
+    <value>Wollo Points In Circulation</value>
+  </data>
+  <data name="WolloPointsIssuedToMembers" xml:space="preserve">
+    <value>Wollo Points Issued To Members</value>
+  </data>
+  <data name="WolloPointsIssuedToSystem" xml:space="preserve">
+    <value>Wollo Points Issued To System</value>
+  </data>
+  <data name="WolloPointsTransferredInByMember" xml:space="preserve">
+    <value>Wollo Points Transferred In By Member</value>
+  </data>
+  <data name="WolloRewardPointIssuedIntoSystemHistory" xml:space="preserve">
+    <value>Wollo Reward Point Issued Into System History</value>
+  </data>
+  <data name="WolloRewardPointIssuedToMemberHistory" xml:space="preserve">
+    <value>Wollo Reward Point Issued To Member History</value>
+  </data>
+  <data name="WolloRewardPointsInCirculationHistory" xml:space="preserve">
+    <value>Wollo Reward Points In CirculationHistory</value>
+  </data>
+  <data name="WithdrawalFee" xml:space="preserve">
+    <value>Withdrawal Fee</value>
+  </data>
+  <data name="DashboardTestRewardPointsInCirculationHistory" xml:space="preserve">
+    <value>Dashboard/Test Reward Points In Circulation History</value>
+  </data>
+  <data name="TotalCashIssuedIntoSystem" xml:space="preserve">
+    <value>Total Cash Issued Into System</value>
+  </data>
+  <data name="AddTopup" xml:space="preserve">
+    <value>Add Topup</value>
+  </data>
+  <data name="Minimum10topup" xml:space="preserve">
+    <value>Minimum $10 topup</value>
+  </data>
+  <data name="MenuTrade" xml:space="preserve">
+    <value>Trade</value>
+  </data>
+  <data name="Password_Required" xml:space="preserve">
+    <value>The Password field is required.</value>
+  </data>
+  <data name="UserName_Required" xml:space="preserve">
+    <value>The User Name field is required.</value>
+  </data>
+  <data name="Address_Required" xml:space="preserve">
+    <value>Address is required.</value>
+  </data>
+  <data name="AmountPriceYouEnteredIsInvalid" xml:space="preserve">
+    <value>Amount/Price you entered is invalid</value>
+  </data>
+  <data name="ANewUserHasBeenCreated" xml:space="preserve">
+    <value>A new user has been created.</value>
+  </data>
+  <data name="CashIssuedSuccessfully" xml:space="preserve">
+    <value>Cash issued successfully</value>
+  </data>
+  <data name="City_Required" xml:space="preserve">
+    <value>City is required.</value>
+  </data>
+  <data name="ConfirmPasswordAndPasswordDoNotMatch" xml:space="preserve">
+    <value>Confirm password' and 'Password' do not match.</value>
+  </data>
+  <data name="Email_Required" xml:space="preserve">
+    <value>The Email Address field is required.</value>
+  </data>
+  <data name="FirstName_Required" xml:space="preserve">
+    <value>First name is required.</value>
+  </data>
+  <data name="IfYouDontHaveAnAccount" xml:space="preserve">
+    <value>if you don't have an account.</value>
+  </data>
+  <data name="InvalidUsernameOrPassword" xml:space="preserve">
+    <value>Invalid username or password</value>
+  </data>
+  <data name="IssuedPointsCannotBeCancelled" xml:space="preserve">
+    <value>Issued points cannot be cancelled</value>
+  </data>
+  <data name="IssuedPointsCannotBeModified" xml:space="preserve">
+    <value>Issued points cannot be modified</value>
+  </data>
+  <data name="LastName_Required" xml:space="preserve">
+    <value>Last name is required.</value>
+  </data>
+  <data name="MakeSureYouHaveProvidedDataForAllFields" xml:space="preserve">
+    <value>Make sure you have provided data for all fields</value>
+  </data>
+  <data name="MakeSureYouHaveSelectedPaymentMethodAndProvidedAmount" xml:space="preserve">
+    <value>Make sure you have selected payment method and provided amount</value>
+  </data>
+  <data name="MakesureyouprovidedCorrectDetails" xml:space="preserve">
+    <value>Make sure you provided Correct Details.</value>
+  </data>
+  <data name="NoFeesAvailableForThisMethod" xml:space="preserve">
+    <value>No fees available for this method</value>
+  </data>
+  <data name="NotEnoughAmountForBid" xml:space="preserve">
+    <value>Sorry!! you do not have enough amount in your wallet for this bid.</value>
+  </data>
+  <data name="NotificationAddedSuccessfully" xml:space="preserve">
+    <value>Notification added successfully</value>
+  </data>
+  <data name="NotificationUpdatedSuccessfully" xml:space="preserve">
+    <value>Notification updated successfully</value>
+  </data>
+  <data name="PasswordUpdatedSuccessfully" xml:space="preserve">
+    <value>Password updated successfully</value>
+  </data>
+  <data name="PersonalInformationHasBeenUpdatedSuccessfully" xml:space="preserve">
+    <value>Personal information has been updated successfully!</value>
+  </data>
+  <data name="PhoneNumberIsRequired" xml:space="preserve">
+    <value>Phone number is required.</value>
+  </data>
+  <data name="PleaseEnterAskAmount" xml:space="preserve">
+    <value>Please enter ask amount</value>
+  </data>
+  <data name="PleaseEnterBidAmount" xml:space="preserve">
+    <value>Please enter bid amount</value>
+  </data>
+  <data name="PleaseMakeABidWithLotGreaterThanZero" xml:space="preserve">
+    <value>Please make a bid with lot greater than 0.</value>
+  </data>
+  <data name="PleaseMakeAnAskWithLotGreaterThanZero" xml:space="preserve">
+    <value>Please make an ask with lot greater than 0.</value>
+  </data>
+  <data name="PleaseSelectEndDate" xml:space="preserve">
+    <value>Please select end date</value>
+  </data>
+  <data name="PleaseSelectTheDateRange" xml:space="preserve">
+    <value>Please select the date range.</value>
+  </data>
+  <data name="PleaseSelectToDate" xml:space="preserve">
+    <value>Please select to date</value>
+  </data>
+  <data name="PointsIssuedSuccessfully" xml:space="preserve">
+    <value>Points issued successfully</value>
+  </data>
+  <data name="PointsIssuedToMembers" xml:space="preserve">
+    <value>Points issued to members</value>
+  </data>
+  <data name="ResetLinkSent" xml:space="preserve">
+    <value>A reset password link has been sent to your email address. Please check
+ your email for further assistance.</value>
+  </data>
+  <data name="RuleCreatedSuccessfully" xml:space="preserve">
+    <value>Rule created successfully.</value>
+  </data>
+  <data name="SelfRequestForCash" xml:space="preserve">
+    <value>Self- Request for cash</value>
+  </data>
+  <data name="SelfRequestForPoints" xml:space="preserve">
+    <value>Self- Request for Points</value>
+  </data>
+  <data name="SomethingWentWrong" xml:space="preserve">
+    <value>Something went wrong</value>
+  </data>
+  <data name="StatusUpdatedSuccessfully" xml:space="preserve">
+    <value>Status updated successfully</value>
+  </data>
+  <data name="SuperAdminRoleIsAlreadyAssigned" xml:space="preserve">
+    <value>Super Admin role is already assigned.</value>
+  </data>
+  <data name="ThePasswordMustBeAtLeastSixCharactersLong" xml:space="preserve">
+    <value>The Password must be at least 6 characters long.</value>
+  </data>
+  <data name="TheTransferAmountShouldBeGreaterThanZero" xml:space="preserve">
+    <value>The transfer amount should be greater than 0</value>
+  </data>
+  <data name="ThisUserHasBeenDeactivatedByAdmin" xml:space="preserve">
+    <value>This user has been deactivated by admin</value>
+  </data>
+  <data name="TopupAddedSuccessfully" xml:space="preserve">
+    <value>Topup added successfully</value>
+  </data>
+  <data name="TransactionCancelledSuccessfully" xml:space="preserve">
+    <value>Transaction Cancelled successfully</value>
+  </data>
+  <data name="UName_Required" xml:space="preserve">
+    <value>User name is required.</value>
+  </data>
+  <data name="UserAgreementLabel" xml:space="preserve">
+    <value>By clicking the button to Sign Up, I agree to the User Agreement.</value>
+  </data>
+  <data name="UserHasBeenActivatedSuccessfully" xml:space="preserve">
+    <value>User has been activated successfully.</value>
+  </data>
+  <data name="UserHasBeenDeactivatedSuccessfully" xml:space="preserve">
+    <value>User has been deactivated successfully.</value>
+  </data>
+  <data name="UserWithThisEmailAddressDoesNotExist" xml:space="preserve">
+    <value>User with this email address does not exist.</value>
+  </data>
+  <data name="WithdrawalAddedSuccessfully" xml:space="preserve">
+    <value>Withdrawal added successfully</value>
+  </data>
+  <data name="WithdrawalUpdatedSuccessfully" xml:space="preserve">
+    <value>Withdrawal updated successfully</value>
+  </data>
+  <data name="YouDoNotHaveSufficientStockAmountToPerformThisAction" xml:space="preserve">
+    <value>You do not have sufficient stock amount to perform this action</value>
+  </data>
+  <data name="YouDontHaveEnoughBalanceToIssueCash" xml:space="preserve">
+    <value>you don't have enough balance to issue cash</value>
+  </data>
+  <data name="YourAskHasBeenPlacedSuccessfully" xml:space="preserve">
+    <value>Your ask has been placed successfully</value>
+  </data>
+  <data name="YourAskHasBeenUpdatedSuccessfully" xml:space="preserve">
+    <value>Your ask has been updated successfully</value>
+  </data>
+  <data name="YourBidHasBeenPlacedSuccessfully" xml:space="preserve">
+    <value />
+  </data>
+  <data name="YourBidHasBeenUpdatedSuccessfully" xml:space="preserve">
+    <value>Your bid has been updated successfully</value>
+  </data>
+  <data name="YourRequestHasBeenSentToSuperAdminForApproval" xml:space="preserve">
+    <value>Your request has been sent to Super Admin for approval</value>
+  </data>
+  <data name="Zip_Required" xml:space="preserve">
+    <value>Zip is required</value>
+  </data>
+</root>

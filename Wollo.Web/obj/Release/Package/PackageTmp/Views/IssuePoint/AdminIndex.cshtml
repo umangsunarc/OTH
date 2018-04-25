@@ -1,0 +1,236 @@
+﻿@model Wollo.Web.Models.StockCodeModel
+@{
+    ViewBag.Title = @Html.DisplayNameFor(x => x.StockCode.FirstOrDefault().points);
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="~/css/responsive.bootstrap.min.css" rel="stylesheet" />
+@*<link href="~/css/bootstrap-datepicker.css" rel="stylesheet">*@
+
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                   @Html.LabelFor(x => x.StockCode.FirstOrDefault().points)
+                </h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i> <b>@Html.LabelFor(x => x.StockCode.FirstOrDefault().dashboard_points_issued_self)</b>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="dropdown row">
+            <div class="col-md-2">
+                @{string select_stock_label = @Html.DisplayNameFor(model => model.StockCode.FirstOrDefault().select_stock).ToString();}
+                @Html.DropDownList("StockCode", new SelectList(Model.StockCode, "id", "full_name"), select_stock_label, new { @class = "form-control" })
+            </div>
+        </div><br />
+        <div id="history-container">
+        </div>
+        <!-- /.container-fluid -->
+        <!-- /#page-wrapper -->
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">@Html.LabelFor(x => x.StockCode.FirstOrDefault().issue_new_reward_points)</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    @Html.Hidden("Mode", "Add")
+                    @Html.Hidden("issuePointId")
+                    <div class="dropdown col-sm-5" style="margin-bottom:10px;">
+                        @Html.DropDownList("NewStockCode", new SelectList(Model.StockCode, "id", "full_name"), "Select Stock Code", new { @class = "form-control" })
+                    </div>
+                    <div class="form-group col-sm-7">
+                        <div class="input-group">
+                            @*<div class="input-group-addon">$</div>*@
+
+                            @Html.TextBox("Amount", null, new { @class = "form-control", @placeholder = @Html.DisplayNameFor(model=> model.layout_transfer_points) })
+                            @*<div class="input-group-addon">.00</div>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">@Html.LabelFor(model => model.StockCode.FirstOrDefault().cancel)</button>
+                <button type="button" class="btn btn-primary" id="addPoints">@Html.LabelFor(model => model.StockCode.FirstOrDefault().confirm)</button>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/js/jquery.js"></script>
+    @*<script src="~/Scripts/bootstrap.js"></script>*@
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.dataTables.min.js"></script>
+    <script src="~/js/dataTables.bootstrap.min.js"></script>
+    <script>
+        var english = {
+            "sLengthMenu": "Show _MENU_ entries",
+            "sZeroRecords": "No data available in table",
+            "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+            "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+            "sInfoFiltered": "(filtered from _MAX_ total entries)"
+        };
+        var chinese = {
+            "sProcessing": "处理中...",
+            "sLengthMenu": "显示 _MENU_ 项结果",
+            "sZeroRecords": "没有匹配结果",
+            "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+            "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+            "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+            "sInfoPostFix": "",
+            "sSearch": "搜索:",
+            "sUrl": "",
+            "sEmptyTable": "表中数据为空",
+            "sLoadingRecords": "载入中...",
+            "sInfoThousands": ",",
+            "oPaginate": {
+                "sFirst": "首页",
+                "sPrevious": "上页",
+                "sNext": "下页",
+                "sLast": "末页"
+            },
+            "oAria": {
+                "sSortAscending": ": 以升序排列此列",
+                "sSortDescending": ": 以降序排列此列"
+            }
+        }
+        $(document).ready(function () {
+            var currentLang = english;
+            if ('@Session["Language"]' != null || '@Session["Language"]' != "") {
+                if ('@Session["Language"]' == "chinese") {
+                    currentLang = chinese;
+                }
+            }
+            $('#myGroup ul li a').click(function () {
+                $('#myGroup ul li ul.collapse ').removeClass('in');
+                $('#myGroup ul li').removeClass('active');
+            });
+
+            if ('@TempData["StartDate"]' != '' && '@TempData["EndDate"]' != '') {
+                var startDate = ('@TempData["StartDate"]').split("/");
+                var endDate = ('@TempData["EndDate"]').split("/");
+                var startYear = startDate[2].split(" ");
+                var endYear = endDate[2].split(" ");
+                var start = new Date(startYear[0], parseInt(startDate[1]) - 1, startDate[0]);
+                var end = new Date(endYear[0], parseInt(endDate[1]) - 1, endDate[0])
+                $('#from').datepicker({ format: 'dd/mm/yyyy' }); // format to show
+                $('#to').datepicker({ format: 'dd/mm/yyyy' });
+                $('#from').datepicker('setDate', start);
+                $('#to').datepicker('setDate', end);
+            }
+
+        })
+
+        $("#nav-issue-point").addClass("active");
+        $("#StockCode").change(function () {
+            if ($(this).val().length > 0) {
+                $("#history-container").load("@Url.Action("GetIssuePointsHistorySelf","IssuePoint")" + "?stockCodeId=" + $(this).val());
+            }
+            else {
+                $("#history-container").empty();
+            }
+        });
+
+        $("#Amount").keydown(function (e) {
+            // Allow: backspace, delete, tab, escape, enter
+            if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110]) !== -1 ||
+                // Allow: Ctrl+A, Command+A
+                (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+                // Allow: home, end, left, right, down, up
+                (e.keyCode >= 35 && e.keyCode <= 40)) {
+                // let it happen, don't do anything
+                return;
+            }
+            // Ensure that it is a number and stop the keypress
+            if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                e.preventDefault();
+            }
+        });
+
+        $("#addPoints").click(function () {
+            $("#addPoints").prop("disabled", true);
+            if ($("#NewStockCode").val().length > 0 && $("#Amount").val().length > 0) {
+                var selectedStock = $("#StockCode").val();
+                $("#NewStockCode").val(selectedStock)
+                if ($("#Mode").val() == "Add") {
+                   
+                    $.ajax({
+                        url: "@Url.Action("AddIssuePointSelf", "IssuePoint")" + "?stockCodeId=" + $("#NewStockCode").val() + "&pointsIssued=" + $("#Amount").val(),
+                       // data: '{objIssuePointsTransferMaster: ' + JSON.stringify(objIssuePointsTransferMaster) + '}',
+                        contentType: 'application/json',
+                        method: 'POST',
+                        success: function (result) {
+                            if (result == 1) {
+                                $("#addPoints").prop("disabled", false);
+                                alert('@Html.DisplayNameFor(model => model.PointsIssuedSuccessfully)'); 
+                                $("#history-container").load("@Url.Action("GetIssuePointsHistorySelf","IssuePoint")" + "?stockCodeId=" + $("#NewStockCode").val());
+                            }
+                            else if (result == 2) {
+                               
+                                alert('@Html.DisplayNameFor(model => model.YourRequestHasBeenSentToSuperAdminForApproval)');
+
+                                $("#history-container").load("@Url.Action("GetIssuePointsHistorySelf","IssuePoint")" + "?stockCodeId=" + $("#NewStockCode").val());
+                                $("#addPoints").prop("disabled", false);
+                            }
+                            else {
+                                $("#addPoints").prop("disabled", false);
+                                alert('@Html.DisplayNameFor(model => model.SomethingWentWrong)');
+                            }
+                            $("#StockCode").val($("#NewStockCode").val());
+                            $("#myModal").modal("hide");
+                        },
+                        error: function (e) {
+                            $("#addPoints").prop("disabled", false);
+                            alert('@Html.DisplayNameFor(model => model.SomethingWentWrong)');
+                            $("#StockCode").val($("#NewStockCode").val());
+                            $("#myModal").modal("hide");
+                        }
+                    });
+                }
+                else {
+                    $.ajax({
+                        url: "@Url.Action("EditIssuePoint", "IssuePoint")" + "?stockCodeId=" + $("#NewStockCode").val() + "&pointsIssued=" + $("#Amount").val(),
+                       // data: "{ 'stockCodeId': '" + $("#NewStockCode").val() + "', 'points_issued': '" + $("#Amount").val() + "','receiver_user_id':'" + $("#UserId").val() + "', 'id': '" + $("#issuePointId").val() + "' }",
+                        contentType: 'application/json',
+                        method: 'POST',
+                        success: function (result) {
+                            if (result == 1) {
+                                $("#addPoints").prop("disabled", false);
+                                alert("Issued Points updated successfully.");
+                                $("#history-container").load("@Url.Action("GetIssuePointsHistorySelf","IssuePoint")" + "?stockCodeId=" + $("#NewStockCode").val());
+                            }
+                            else {
+                                $("#addPoints").prop("disabled", false);
+                                alert('@Html.DisplayNameFor(model => model.SomethingWentWrong)');
+                            }
+                            $("#StockCode").val($("#NewStockCode").val());
+                            $("#myModal").modal("hide");
+                        },
+                        error: function (e) {
+                            $("#addPoints").prop("disabled", false);
+                            alert('@Html.DisplayNameFor(model => model.SomethingWentWrong)');
+                            $("#StockCode").val($("#NewStockCode").val());
+                            $("#myModal").modal("hide");
+                        }
+                    });
+                }
+            }
+            else {
+                alert("Make sure you have selected stock code and provided amount.");
+            }
+        });
+    </script>
+}
+
+

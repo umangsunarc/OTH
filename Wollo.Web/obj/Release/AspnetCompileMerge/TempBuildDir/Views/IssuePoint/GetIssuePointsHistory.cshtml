@@ -1,0 +1,172 @@
+﻿@model Wollo.Entities.ViewModels.IssuePointDetails
+@{
+    Layout = null;
+}
+@if (!User.IsInRole("Super Admin 1") && User.IsInRole("Super Admin 2"))
+{
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <strong>Current issued points:</strong>  @Model.TotalPoints<br /><br />
+            <strong>Cancelled issued points:</strong>  @Model.CancelledPoints<br /><br />
+            <strong>Issued point balance:</strong>  @Model.RemainingPoints<br /><br />
+        </div>
+    </div>
+}
+<div class="col-lg-12">
+    <div id="upper-birth">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th class="no-b-th"> <div class="text-left">Issued Points History</div></th>
+                        <th class="empty-th"> </th>
+                        <th class="empty-th"> </th>
+                        <th class="empty-th"> </th>
+                        <th class="empty-th"> </th>
+                        @if (User.IsInRole("Super Admin 1") || User.IsInRole("Super Admin 2"))
+                        {
+                            <th class="no-b-th text-right">
+                                <button type="button" class="btn btn-primary" id="add">Issue Reward Points <i class="fa fa-plus-square" aria-hidden="true"></i></button>
+                            </th>
+                        }
+                        else
+                        {
+                            <th class="empty-th"> </th>
+                        }
+                    </tr>
+                    <tr>
+                        <th>Stock</th>
+                        <th>Date & Time</th>
+                        <th>
+                            @if (User.IsInRole("Super Admin 1") || User.IsInRole("Super Admin 2"))
+                            {
+                                @Html.DisplayName("User Name")
+                            }
+                            else
+                            {
+                                @Html.DisplayName("Description")
+                            }
+                        </th>
+                        <th>Status</th>
+                        <th>
+                            @if (User.IsInRole("Super Admin 1") || User.IsInRole("Super Admin 2"))
+                            {
+                                @Html.DisplayName("Transfer Points")
+                            }
+                            else
+                            {
+                                @Html.DisplayName("Issued Points Value")
+                            }
+                        </th>
+                        <th>
+                            @if (User.IsInRole("Super Admin 1") || User.IsInRole("Super Admin 2"))
+                            {
+                                @Html.DisplayName("Actions")
+                            }
+                            else
+                            {
+                                @Html.DisplayName("Details")
+                            }
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                    @foreach (var item in Model.IssuePointsMaster)
+                    {
+                        <tr>
+                            <td>@(item.StockCode.stock_code+"-"+item.StockCode.stock_name)</td>
+                            <td>
+                                @*@{
+                        string date = item.issue_points_expiry_date.ToString("dd-MM-yyyy");
+                                }
+                                @Html.DisplayFor(x => date)*@
+                                @Html.DisplayFor(x => item.created_date)
+                            </td>
+                            <td>
+                                @if (User.IsInRole("Super Admin 1") || User.IsInRole("Super Admin 2"))
+                                {
+                                    @Html.DisplayFor(x => item.AspnetUsers.username)
+                                }
+                            </td>
+                            <td>@Html.DisplayFor(x => item.status)</td>
+                            <td>@Html.DisplayFor(x => item.IssuePointsTransferMaster.points_issued)</td>
+                            <td>
+                                @if (User.IsInRole("Super Admin 1") || User.IsInRole("Super Admin 2"))
+                                {
+                                    if (item.status != "Cancelled")
+                                    {
+                                        <a href="javascript:void(0)" data-id="@item.transfer_id" data-stock="@item.stock_code_id" data-userid="@item.user_id" data-amount="@item.IssuePointsTransferMaster.points_issued" class="edit">Modify</a>
+                                        <span> | </span><a href="javascript:void(0)" data-id="@item.id" class="cancel">Cancel</a>
+                                    }
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            @*<nav class="text-center">
+                <ul class="pagination">
+                    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>*@
+        </div>
+    </div>
+</div>
+<script>
+    $("#add").click(function () {
+        $("#NewStockCode").val("").removeAttr("disabled");
+        $("#UserId").val("").removeAttr("readonly");
+        $("#Amount").val("");
+        $("#myModalLabel").html("Issue New Reward Points");
+        $("#Mode").val("Add");
+        $("#myModal").modal("show");
+    });
+
+    $(".edit").click(function () {
+        $("#NewStockCode").val($(this).attr("data-stock")).prop("disabled", true);
+        $("#UserId").val($(this).attr("data-userid")).prop("readonly", true);
+        $("#Amount").val($(this).attr("data-amount"));
+        $("#myModalLabel").html("Update Issue Points");
+        $("#issuePointId").val($(this).attr("data-id"));
+        $("#Mode").val("Edit");
+        $("#myModal").modal("show");
+    });
+
+    $(".cancel").click(function () {
+        $.ajax({
+            url: "@Url.Action("CancelIssuePoint", "IssuePoint")" + "?id=" + $(this).attr("data-id"),
+            method: 'POST',
+            success: function (result) {
+                if (result == 1) {
+                    alert("Issued points cancelled successfully.");
+                    $("#history-container").load("@Url.Action("GetIssuePointsHistory","IssuePoint")" + "?stockCodeId=" + $("#StockCode").val());
+                }
+                else if (result == 2) {
+                    alert("Issue point cannot be cancelled.");
+                }
+                else if (result == 3) {
+                    alert("User not authorized.");
+                }
+                else {
+                    alert("Something went wrong!");
+                }
+                $("#myModal").modal("hide");
+            },
+            error: function (e) {
+                alert("Something went wrong!");
+                $("#myModal").modal("hide");
+            }
+        });
+    });
+</script>

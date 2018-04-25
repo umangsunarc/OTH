@@ -1,0 +1,125 @@
+﻿@*@model Wollo.Entities.ViewModels.Trading_Time_Details*@
+@model Wollo.Web.Models.TradingTimeDetailsViewModel
+@{
+    ViewBag.Title = @Html.DisplayNameFor(model => model.trading_time);
+}
+<style>
+    .chkdesign {
+        width: 30px;
+        height: 25px;
+    }
+</style>
+
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    @*@Html.LabelFor(x => x.admin_settings)*@<strong>@Html.LabelFor(model=>model.trading_time)</strong>
+                </h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i>@Html.LabelFor(model=>model.dashboard_trading_time)</b>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        @using (Html.BeginForm("Index", "AdminSetting", FormMethod.Post))
+        {
+            <div class="container-fluid row">
+                <div class="page-header">
+                    <h2>@Html.LabelFor(model => model.trading_time)</h2>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="form-inline">
+                            <div class="row">
+                                <div class="col-md-2"><strong>@Html.LabelFor(x => x.starting_time):  </strong></div>
+                                <div class="input-group col-md-4 bootstrap-timepicker timepicker">
+                                    @Html.TextBoxFor(model => model.start_time, new { @class = "form-control input-small datetimepicker" })
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default" style="height:65px;">
+                    <div class="panel-body">
+                        <div class="form-inline">
+                            <div class="row">
+                                <div class="col-md-2"><strong>@Html.LabelFor(x => x.cut_off_time):  </strong></div>
+                                <div class="input-group col-md-4 bootstrap-timepicker timepicker">
+                                    @Html.TextBoxFor(model => model.end_time, new { @class = "form-control input-small datetimepicker" })
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="form-inline">
+                            <div class="row">
+                                <div class="col-md-2"><strong>@Html.LabelFor(x => x.trading_day):  </strong></div>
+                                <div class="col-md-10" style="padding-left:0;">
+                                    @*@Html.ListBoxFor(m => m.selected_days, new MultiSelectList(Model.Days, "Id", "Name",Model.selected_days), new { @class = "form-control" })*@
+                                    @*@Html.CheckBox("selected_days", new MultiSelectList(Model.Days, "Id", "Name", Model.selected_days))*@
+                                    @*@foreach (var item in Model.Days)
+                                        {
+                                             @Html.HiddenFor(model=>item.Id)
+                                            @Html.CheckBoxFor(model => item.IsSelected, new { @name = "selected_days" , @class="form-control" })
+                                           @Html.DisplayFor(model => item.Name)
+
+                                        }*@
+
+                                    @for (int i = 0; i < Model.Days.Count; i++)
+                                    {
+                                        <div style="float:left; margin-left:5%">
+                                            <center> @Html.CheckBoxFor(m => m.Days[i].IsSelected, new { @class = "chkdesign" }) </center>
+                                            @Html.HiddenFor(m => m.Days[i].Id) <br />
+                                            @Html.LabelFor(m => m.Days[i].IsSelected,
+                                                             Model.Days[i].Name)
+                                        </div>
+                                    }
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default" style="height:65px;margin-top:-1px;">
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value=@Html.DisplayNameFor(model=>model.update) />
+                            @*<button type="submit" class="btn btn-primary">@Html.LabelFor(x => x.update)</button>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        }
+        <!-- /#page-wrapper -->
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/js/jquery.js"></script>
+    @*<script src="~/Scripts/bootstrap.js"></script>*@
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="~/js/bootstrap-timepicker.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#myGroup ul li a').click(function () {
+                $('#myGroup ul li ul.collapse ').removeClass('in');
+                $('#myGroup ul li').removeClass('active');
+            });
+        })
+        $('.datetimepicker').timepicker();
+    </script>
+
+}
+
+
+

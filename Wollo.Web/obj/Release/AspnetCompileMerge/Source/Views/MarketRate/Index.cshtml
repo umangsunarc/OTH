@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Check Market Rate";
+}
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Check Market Rate
+                </h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i> Dashboard / Check Market Rate
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <!-- Morris Charts -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-green">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Market Rate</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div id="morris-area-chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+</div>
+@section scripts{
+    <script>
+        $("#nav-market-rate").addClass("active");
+    </script>
+}

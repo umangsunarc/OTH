@@ -1,0 +1,385 @@
+﻿@model Wollo.Base.Entity.BaseAuditableViewModel
+@using System.Globalization
+@using Wollo.Web
+@using System.Threading;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>@ViewBag.Title</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="~/css/wrp-member.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="~/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    @*@*<style>
+            @@media (max-width: 767px) {
+                .navbar-collapse {
+                    max-height: auto;
+                    overflow-x: auto;
+                }
+            }
+        </style>*@
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    @*@Styles.Render("~/bundle/css")*@
+    @RenderSection("header", false)
+    <style>
+        @@media only screen and (min-device-width : 320px) and (max-device-width: 768px) {
+            .side-nav > li > ul > li > a {
+                padding: 0px 7px 5px 38px;
+            }
+
+            .navbar-nav > li > a {
+                padding-top: 0px;
+                padding-bottom: 5px;
+                line-height: 22px;
+            }
+        }
+
+        @@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+            .side-nav > li > ul > li > a {
+                padding: 10px 15px 0px 38px;
+            }
+
+            .navbar-nav > li > a {
+                padding-top: 15px;
+                padding-bottom: 10px;
+                line-height: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @if (User.IsInRole("Super Admin 1") || User.IsInRole("Super Admin 2"))
+                {
+                    <a href="#" class="navbar-brand" onclick="AdminHome()"><img src="/images/Final_Points_Exchange_Logo.png" style="height:60px;width:60px;" /></a>
+                }
+                else
+                {
+                    <a href="#" class="navbar-brand" onclick="UserHome()"><img src="/images/Final_Points_Exchange_Logo.png" style="height:60px;width:60px;" /></a>
+                }
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                @*<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
+                        <ul class="dropdown-menu message-dropdown">
+                            <li class="message-preview">
+                                <a href="#">
+                                    <div class="media">
+                                        <span class="pull-left">
+                                            <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                        </span>
+                                        <div class="media-body">
+                                            <h5 class="media-heading">
+                                                <strong>User Name</strong>
+                                            </h5>
+                                            <p class="small text-muted"><i class="fa fa-clock-o"></i>Yesterday at 4:32 PM</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="message-preview">
+                                <a href="#">
+                                    <div class="media">
+                                        <span class="pull-left">
+                                            <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                        </span>
+                                        <div class="media-body">
+                                            <h5 class="media-heading">
+                                                <strong>User Name</strong>
+                                            </h5>
+                                            <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="message-footer">
+                                <a href="#">Read All New Messages</a>
+                            </li>
+                        </ul>
+                    </li>*@
+                <li class="dropdown">
+                    @*<i class="fa fa-bell"></i>*@
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Language <b class="caret"></b></a>
+                    <ul class="dropdown-menu alert-dropdown">
+                        @{
+                            CultureInfo currentCulture = Thread.CurrentThread.CurrentCulture;
+                            <li><a id="english" href="/Home/ChangeCurrentCulture/0">English</a></li>
+                            @*<li><a href="/Home/ChangeCurrentCulture/1">Traditional Chinese</a></li>*@
+                            <li><a id="chinese" href="/Home/ChangeCurrentCulture/2">Simplified Chinese</a></li>
+                        }
+                    </ul>
+                </li>
+                @*<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
+                        <ul class="dropdown-menu alert-dropdown">
+                            <li>
+                                <a href="#">Alert Name <span class="label label-default"> Alert Badge</span></a>
+                            </li>
+                            <li>Notification if any</li>
+                            <li>
+                                <a href="#">View All</a>
+                            </li>
+                        </ul>
+                    </li>*@
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> @ViewBag.UserName <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        @*<li>
+                                <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                            </li>
+                            <li class="divider"></li>*@
+                        @if (Request.IsAuthenticated)
+                        {
+                            using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "col-md-12", @style = "padding-left: 20px;" }))
+                            {
+                                @Html.AntiForgeryToken()
+                                <li>
+                                    &nbsp;<a href="/Member/AccountSettings" style="line-height:2;color:black;font-size:13px;"><i class="glyphicon glyphicon-user"></i> @Html.DisplayNameFor(model => model.layout_account_settings)</a><br />
+                                </li>
+                                <li>
+                                    <a href="javascript:document.getElementById('logoutForm').submit()" style="color: black; font-size: 13px;"><i class="fa fa-fw fa-power-off"></i> @Html.DisplayNameFor(model => model.layout_logout)</a>
+                                </li>
+                            }
+                        }
+                    </ul>
+                </li>
+            </ul>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse" id="myGroup">
+                <ul class="nav navbar-nav side-nav">
+                    @if (User.IsInRole("Super Admin 1") || User.IsInRole("Super Admin 2"))
+                    {
+                        <li id="nav-trading">
+                            @*@Html.ActionLink("Dashboard", "AdminIndex", "Member", null, new { @class = "fa fa-dashboard" })*@
+                            <a href="/Member/AdminIndex"><i class="fa fa-dashboard"></i> @Html.DisplayNameFor(model => model.layout_dashboard)</a>
+                        </li>
+                    }
+                    @if (User.IsInRole("Member"))
+                    {
+                        <li id="nav-trading">
+                            @*@Html.ActionLink("Dashboard", "Index", "Member", null, new { @class = "fa fa-dashboard" })*@
+                            <a href="/Member/Index"><i class="fa fa-dashboard"></i> @Html.DisplayNameFor(model => model.layout_dashboard)</a>
+                        </li>
+                    }
+                    <li id="nav-market-rate" style="display:none;">
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-bar-chart-o"></i> @Html.DisplayNameFor(model => model.layout_market_rate) <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo" class="collapse">
+                            <li>
+                                @Html.ActionLink("Check Market Rate", "Index", "MarketRate")
+                            </li>
+                        </ul>
+                    </li>
+                    <li style="display:none;">
+                        <a href="#"><i class="fa fa-money"></i> Reward Points </a>
+                    </li>
+                    <li style="display:none;">
+                        <a href="javascript:;" data-toggle="collapse" data-target="#graph"><i class="fa fa-briefcase"></i> Statistics <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="graph" class="collapse">
+                            <li id="nav-trading">
+                                @Html.ActionLink("Bid", "BidGraph", "Graph")
+                            </li>
+                            <li id="nav-trading">
+                                @Html.ActionLink("Ask", "AskGraph", "Graph")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Volume", "VolumeGraph", "Graph")
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="nav-trade">
+                        <a href="javascript:;" data-toggle="collapse" data-target="#trading"><i class="fa fa-calendar"></i> @Html.DisplayNameFor(model => model.layout_trade) <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="trading" class="collapse">
+                            @if (User.IsInRole("Member"))
+                            {
+                                <li>
+                                    @{string portfolio_label = @Html.DisplayNameFor(model => model.layout_portfolio).ToString();}
+                                    @Html.ActionLink(portfolio_label, "PortfolioDetails", "Trading")
+                                </li>
+                            }
+                            <li>
+                                @{string trading_label = @Html.DisplayNameFor(model => model.layout_trading).ToString();}
+                                @Html.ActionLink(trading_label, "Trading", "Trading")
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="nav-pt-transfer">
+                        <a href="javascript:;" data-toggle="collapse" data-target="#transfer"><span class="glyphicon glyphicon-transfer"></span> @Html.DisplayNameFor(model => model.layout_reward_point_transfer) <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="transfer" class="collapse">
+                            @if (User.IsInRole("Super Admin 1") || User.IsInRole("Super Admin 2"))
+                            {
+                                <li>
+                                    @{string history_label = @Html.DisplayNameFor(model => model.layout_history).ToString();}
+                                    @Html.ActionLink(history_label, "AdminIndex", "TransferRewardPoints")
+                                </li>
+                            }
+                            @if (User.IsInRole("Member"))
+                            {
+                                <li>
+                                    @{string transfer_points_label = @Html.DisplayNameFor(model => model.layout_transfer_points).ToString();}
+                                    @Html.ActionLink(transfer_points_label, "Index", "TransferRewardPoints")
+                                </li>
+                            }
+                        </ul>
+                    </li>
+                    <li id="nav-cash">
+                        <a href="javascript:;" data-toggle="collapse" data-target="#topup"><i class="fa fa-cubes"></i> @Html.DisplayNameFor(model => model.layout_cash) <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="topup" class="collapse">
+                            @{string cash_issue_label = @Html.DisplayNameFor(model => model.layout_cash_issue).ToString();}
+                            @{string cash_request_approval_label = @Html.DisplayNameFor(model => model.layout_cash_request_approval).ToString();}
+                            @{string cash_transaction_history_label = @Html.DisplayNameFor(model => model.layout_cash_transaction_history).ToString();}
+                            @{string fund_topup_label = @Html.DisplayNameFor(model => model.layout_fund_topup).ToString();}
+                            @{string request_for_cash_label = @Html.DisplayNameFor(model => model.layout_request_for_cash).ToString();}
+                            @{string withdrawal_label = @Html.DisplayNameFor(model => model.layout_withdrawal).ToString();}
+                            @if (User.IsInRole("Super Admin 1"))
+                            {
+                                <li>
+                                    @Html.ActionLink(cash_issue_label, "IssueCash", "Cash")
+                                </li>
+                            }
+                            @if (User.IsInRole("Super Admin 2"))
+                            {
+                                <li>
+                                    @Html.ActionLink(cash_request_approval_label, "CashIssueRequest", "Cash")
+                                </li>
+                            }
+                            <li>
+                                @Html.ActionLink(cash_transaction_history_label, "CashTrans", "Cash")
+                            </li>
+                            <li>
+                                @Html.ActionLink(fund_topup_label, "FundTopUp", "Cash")
+                            </li>
+                            @if (User.IsInRole("Super Admin 1"))
+                            {
+                                <li>
+                                    @Html.ActionLink(request_for_cash_label, "CashRequestAdmin", "Cash")
+                                </li>
+                            }
+                            <li>
+                                @Html.ActionLink(withdrawal_label, "CashWithdr", "Cash")
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="nav-issue-point">
+                        <a href="javascript:;" data-toggle="collapse" data-target="#issue"><i class="fa fa-cubes"></i> @Html.DisplayNameFor(model => model.layout_points) <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="issue" class="collapse">
+                            @{string member_label = @Html.DisplayNameFor(model => model.layout_member).ToString();}
+                            @*@{string points_request_approval_label = @Html.DisplayNameFor(model => model.layout_points_request_approval).ToString();}*@
+                            @{string self_label = @Html.DisplayNameFor(model => model.layout_self).ToString();}
+                            @if (!User.IsInRole("Super Admin 2"))
+                            {
+                                <li>
+                                    @Html.ActionLink(member_label, "Index", "IssuePoint")
+                                </li>
+                            }
+                            @if (User.IsInRole("Super Admin 2"))
+                            {
+                                <li>
+                                    @Html.ActionLink("Points Request Approval", "AdminPointIssue", "IssuePoint")
+                                </li>
+                            }
+                            @if (User.IsInRole("Super Admin 1"))
+                            {
+                                <li>
+                                    @Html.ActionLink(self_label, "AdminIndex", "IssuePoint")
+                                </li>
+                            }
+                        </ul>
+                    </li>
+                    @if (User.IsInRole("Super Admin 1") || User.IsInRole("Super Admin 2"))
+                    {
+                        <li id="nav-rule">
+                            <a href="/Rule"><i class="fa fa-fw fa-bar-chart-o"></i>@Html.DisplayNameFor(model => model.layout_rules)</a>
+                        </li>
+                        <li id="nav-holiday">
+                            <a href="/Holiday"><i class="fa fa-calendar"></i> @Html.DisplayNameFor(model => model.layout_notifications)</a>
+                        </li>
+
+                        //Combined Tab
+                        <li id="nav-admin-setting">
+                            <a href="javascript:;" data-toggle="collapse" data-target="#admin"><i class="fa fa-cog fa-fw" aria-hidden="true"></i>&nbsp;@Html.DisplayNameFor(model => model.layout_admin_settings) <i class="fa fa-fw fa-caret-down"></i></a>
+                            <ul id="admin" class="collapse">
+                                @{string market_rate_label = @Html.DisplayNameFor(model => model.layout_market_rate).ToString();}
+                                @{string trading_time_label = @Html.DisplayNameFor(model => model.layout_trading_time).ToString();}
+                                @if (User.IsInRole("Super Admin 1") || User.IsInRole("Super Admin 2"))
+                                {
+                                    <li>
+                                        @Html.ActionLink(market_rate_label, "SetMarketRate", "AdminSetting")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink(trading_time_label, "Index", "AdminSetting")
+                                    </li>
+                                }
+                            </ul>
+                        </li>
+                        <li id="nav-cash">
+                            <a href="javascript:;" data-toggle="collapse" data-target="#usermodule"><i class="fa fa-cubes"></i> @Html.DisplayNameFor(model => model.layout_user_and_role_management) <i class="fa fa-fw fa-caret-down"></i></a>
+                            <ul id="usermodule" class="collapse">
+                                @{string manage_users_label = @Html.DisplayNameFor(model => model.layout_manage_users).ToString();}
+                                @{string roles_label = @Html.DisplayNameFor(model => model.layout_roles).ToString();}
+                                @{string role_permission_label = @Html.DisplayNameFor(model => model.layout_role_permission).ToString();}
+                                <li>@Html.ActionLink(manage_users_label, "Index", "User")</li>
+                                @if (User.IsInRole("Developer"))
+                                {
+                                    <li>@Html.ActionLink("Modules", "Index", "Module")</li>
+                                    <li>@Html.ActionLink("Permissions", "Index", "Permission")</li>
+                                }
+                                <li>@Html.ActionLink(roles_label, "Index", "Role")</li>
+                                <li>@Html.ActionLink(role_permission_label, "Index", "RolePermission")</li>
+                            </ul>
+                        </li>
+                        <li id="nav-logs">
+                            <a href="/Logs"><span class="glyphicon glyphicon-book" s></span> @Html.DisplayNameFor(model => model.layout_log_details)</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+        @RenderBody()
+    </div>
+    <script>
+        function AdminHome() {
+            window.location.href = '@Url.Action("AdminIndex","Member")';
+        }
+
+        function UserHome() {
+            window.location.href = '@Url.Action("Index","Member")';
+        }
+    </script>
+
+    @*@Scripts.Render("~/bundle/js")*@
+    @RenderSection("scripts", false)
+</body>
+</html>

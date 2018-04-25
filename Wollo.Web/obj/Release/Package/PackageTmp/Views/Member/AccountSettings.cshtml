@@ -1,0 +1,318 @@
+﻿@model Wollo.Web.Models.UpdateUserModel
+
+@{
+    ViewBag.Title = @Html.DisplayNameFor(model=>model.layout_account_settings);
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .btn-default {
+        color: #fff;
+        background-color: #337ab7;
+        border-color: #2e6da4;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 8px 18px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        margin-top: 13px;
+    }
+
+    button, input, select, textarea {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
+
+    input {
+        line-height: normal;
+    }
+
+    button, input, optgroup, select, textarea {
+        margin: 0;
+        font: inherit;
+        color: inherit;
+    }
+
+    .btn:hover {
+        color: #337ab7;
+    }
+</style>
+
+<div id="page-wrapper">
+
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    @Html.DisplayNameFor(model => model.layout_account_settings)
+                </h1>
+            </div>
+        </div>
+        @if (TempData["Success"] != null)
+        {
+            <p class="alert alert-success" id="successMessage">@TempData["Success"]</p>
+        }
+        <div class="row">
+
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-6">
+                @using (Html.BeginForm("AccountSettings", "Member", FormMethod.Post))
+                {
+                    <div class="form-horizontal">
+                        <center><h4 class="panel-heading">@Html.DisplayNameFor(model=>model.personal_info)</h4></center>
+                        
+                        @*<div class="panel panel-default">
+
+
+                             <div class="panel-heading">
+                                <h4 class="panel-title" style="color:#1c7fc7">
+                                    <b>PERSONAL INFO</b>
+                                </h4>
+                            </div>
+
+                            <div class="panel-body">*@
+
+                        @Html.ValidationSummary(true)
+
+                        @*<form class="form-horizontal">*@
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">
+                                @Html.LabelFor(x => x.UpdateUserViewModel.email_address)
+                            </label>
+                            <div class="col-md-8">
+                                @Html.HiddenFor(x => x.UpdateUserViewModel.user_id)
+                                @Html.HiddenFor(x => x.UpdateUserViewModel.user_name)
+                                @Html.TextBoxFor(x => x.UpdateUserViewModel.email_address, new { @class = "form-control", placeholder = "First Name", @readonly = "readonly" })
+                                @Html.ValidationMessageFor(x => x.UpdateUserViewModel.email_address)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">
+                                @Html.LabelFor(x => x.UpdateUserViewModel.first_name)
+                            </label>
+                            <div class="col-md-8">
+                                @Html.TextBoxFor(x => x.UpdateUserViewModel.first_name, new { @class = "form-control", placeholder = Html.DisplayNameFor(y => y.UpdateUserViewModel.first_name) })
+                                @Html.ValidationMessageFor(x => x.UpdateUserViewModel.first_name, "", new { @class = "text-danger" })
+                                @*@Html.ValidationMessageFor(model => model.StudentNumber_UWLID, "", new { @class = "text-danger" })*@
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">
+                                @Html.LabelFor(x => x.UpdateUserViewModel.last_name)
+                            </label>
+                            <div class="col-md-8">
+                                @Html.TextBoxFor(x => x.UpdateUserViewModel.last_name, new { @class = "form-control", placeholder = Html.DisplayNameFor(y => y.UpdateUserViewModel.last_name) })
+                                @Html.ValidationMessageFor(x => x.UpdateUserViewModel.last_name, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">
+                                @Html.LabelFor(x => x.UpdateUserViewModel.phone_number)
+                            </label>
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        @Html.DropDownList("CountryCode", new SelectList(Model.UpdateUserViewModel.CountryDetails, "id", "code", Model.UpdateUserViewModel.country_id), "Code", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(x => x.UpdateUserViewModel.country_code)
+                                    </div>
+
+                                    <div class="col-md-8">
+                                        @Html.TextBoxFor(x => x.UpdateUserViewModel.phone_number, new { @class = "form-control", placeholder = Html.DisplayNameFor(y => y.UpdateUserViewModel.phone_number) })
+                                        @Html.ValidationMessageFor(x => x.UpdateUserViewModel.phone_number, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">
+                                @Html.LabelFor(x => x.UpdateUserViewModel.address)
+                            </label>
+                            <div class="col-md-8">
+                                @Html.TextAreaFor(x => x.UpdateUserViewModel.address, new { @class = "form-control", placeholder = Html.DisplayNameFor(y => y.UpdateUserViewModel.address) })
+                                @Html.ValidationMessageFor(x => x.UpdateUserViewModel.address, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">
+                                @Html.LabelFor(x => x.UpdateUserViewModel.alternate_address)
+                            </label>
+                            <div class="col-md-8">
+                                @Html.TextAreaFor(x => x.UpdateUserViewModel.alternate_address, new { @class = "form-control", placeholder = Html.DisplayNameFor(y => y.UpdateUserViewModel.alternate_address) })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">
+                                @Html.LabelFor(x => x.UpdateUserViewModel.country)
+                            </label>
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        @*<select class="form-control" name="">
+                                                 <option value="">Us</option>
+                                                <option value="">Singapore</option>
+                                                <option selected value="">India</option>
+                                            </select>*@
+                                        @Html.DropDownListFor(x => x.UpdateUserViewModel.country_id, new SelectList(Model.UpdateUserViewModel.CountryDetails, "id", "name", Model.UpdateUserViewModel.country_id), "Select Country", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(x => x.UpdateUserViewModel.country_id)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">
+                                @Html.LabelFor(x => x.UpdateUserViewModel.city)
+                            </label>
+                            <div class="col-md-8">
+                                @Html.TextBoxFor(x => x.UpdateUserViewModel.city, new { @class = "form-control", placeholder = Html.DisplayNameFor(y => y.UpdateUserViewModel.city) })
+                                @Html.ValidationMessageFor(x => x.UpdateUserViewModel.city, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">
+                                @Html.LabelFor(x => x.UpdateUserViewModel.zip)
+                            </label>
+                            <div class="col-md-8">
+                                @Html.TextBoxFor(x => x.UpdateUserViewModel.zip, new { @class = "form-control", placeholder = Html.DisplayNameFor(y => y.UpdateUserViewModel.zip) })
+                                @Html.ValidationMessageFor(x => x.UpdateUserViewModel.zip, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <center>  <input type="submit" value=@Html.DisplayNameFor(model=>model.submit) class="btn btn-default" /></center>
+                                @*<input type="submit" value="submit" class="btnsubmit" />*@
+                            </div>
+                        </div>
+                        @*</form>
+
+                            </div>*@
+
+                    </div>
+                }
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+@section scripts{
+    <script src="~/js/jquery.js"></script>
+    @*<script src="~/Scripts/bootstrap.js"></script>*@
+    @*<script src="~/Scripts/jquery-1.7.1.js"></script>*@
+    @*<script src="~/js/jquery.min.js"></script>*@
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/scripts/jquery.maskedinput.js"></script>
+    <script src="js/main.js"></script>
+
+    @*<script src="js/form-validation.js"></script>*@
+    <script>
+        $(".btnsubmit").click(function () {
+            $.ajax({
+                url: "@Url.Action("AddUpdateAccountSetting", "Member")" + "?FirstName=" + $("#first_name").val() + "&LastName=" + $("#last_name").val() + "&Code=" + $("#CountryCode").val() + "&Mobile=" + $("#phone_number").val() + "&Address=" + $("#address").val() + "&AlterAddress=" + $("#alternate_address").val() + "&Country=" + $("#Country").val() + "&City=" + $("#city").val() + "&Zip=" + $("#zip").val(),
+                method: "POST",
+                success: function (result) {
+                    if (result == 1) {
+                        alert("Personal information updated successfully.");
+                        location.reload();
+                    }
+                    else if (result == 2) {
+                        alert("This email address has been taken by another user.");
+                    }
+                    else {
+                        alert("Something went wrong.");
+                    }
+                },
+                error: function (e) {
+                    //alert("created successfully.");
+                }
+            });
+
+        });
+
+
+    </script>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#phone_number").keydown(function (e) {
+                // Allow: backspace, delete, tab, escape, enter and .
+                if ($.inArray(e.keyCode, [46, 8, 9, 27, 13]) !== -1 ||
+                    // Allow: Ctrl+A, Command+A
+                    (e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+                    // Allow: home, end, left, right, down, up
+                    (e.keyCode >= 35 && e.keyCode <= 40)) {
+                    // let it happen, don't do anything
+                    return;
+                }
+                // Ensure that it is a number and stop the keypress
+                if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                    e.preventDefault();
+                }
+
+
+                //var fon = $("#phone_number").val();
+                //if (fon.length != 10) {
+                //    alert: "Exceeding limit";
+                //}
+
+                //$("#phone_number").keyup(function(e) {
+                //    if(("#phone_number").length >10){
+                //        e.preventDefault();
+                //    }
+                //})
+
+
+            });
+
+            $("#phone_number").mask("99-999-99999");
+            //$("#zip").mask("999999999999")
+
+
+
+            $("#zip").keydown(function (e) {
+                // Allow: backspace, delete, tab, escape, enter and .
+                if ($.inArray(e.keyCode, [46, 8, 9, 27, 13]) !== -1 ||
+                    // Allow: Ctrl+A, Command+A
+                    (e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+                    // Allow: home, end, left, right, down, up
+                    (e.keyCode >= 35 && e.keyCode <= 40)) {
+                    // let it happen, don't do anything
+                    return;
+                }
+                // Ensure that it is a number and stop the keypress
+                if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+
+
+
+}

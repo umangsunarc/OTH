@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3E8BB046-05BD-4D27-94A7-C13AD4F3E192}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wollo.Entities</RootNamespace>
+    <AssemblyName>Wollo.Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Error.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IAuditableEntityBase.cs" />
+    <Compile Include="IEntityBase.cs" />
+    <Compile Include="Models\Administration_Fees.cs" />
+    <Compile Include="Models\AspnetRoles.cs" />
+    <Compile Include="Models\AspnetUserclaims.cs" />
+    <Compile Include="Models\AspnetUserroles.cs" />
+    <Compile Include="Models\AspnetUsers.cs" />
+    <Compile Include="Models\AuditLog.cs" />
+    <Compile Include="Models\Audit_Log_Details.cs" />
+    <Compile Include="Models\Cash_Transaction_Detail.cs" />
+    <Compile Include="Models\Cash_Transaction_History.cs" />
+    <Compile Include="Models\Company_Code.cs" />
+    <Compile Include="Models\Company_Stock_Relation_Master.cs" />
+    <Compile Include="Models\Country_Master.cs" />
+    <Compile Include="Models\Currency_Master.cs" />
+    <Compile Include="Models\Dashboard.cs" />
+    <Compile Include="Models\DataCntract.cs" />
+    <Compile Include="Models\Datacontract.cs" />
+    <Compile Include="Models\Holiday_Master.cs" />
+    <Compile Include="Models\Holiday_Status_Master.cs" />
+    <Compile Include="Models\Issue_Cash_Master.cs" />
+    <Compile Include="Models\Issue_Cash_Transfer_Master.cs" />
+    <Compile Include="Models\Issue_Points_Details.cs" />
+    <Compile Include="Models\Issue_Points_Master.cs" />
+    <Compile Include="Models\Issue_Points_Transfer_Master.cs" />
+    <Compile Include="Models\Issue_Point_Transfer_Detail.cs" />
+    <Compile Include="Models\Issue_Withdrawel_Permission_Master.cs" />
+    <Compile Include="Models\JobInfo.cs" />
+    <Compile Include="Models\Audit_Log_Master.cs" />
+    <Compile Include="Models\Market_Rate_Details.cs" />
+    <Compile Include="Models\Member_Status_Master.cs" />
+    <Compile Include="Models\Member_Stock_Details.cs" />
+    <Compile Include="Models\Module.cs" />
+    <Compile Include="Models\Module_Permissions_Mapping.cs" />
+    <Compile Include="Models\Notification_Status_Master.cs" />
+    <Compile Include="Models\organization.cs" />
+    <Compile Include="Models\OrganizationDetails.cs" />
+    <Compile Include="Models\Payment_Method.cs" />
+    <Compile Include="Models\Permissions_Master.cs" />
+    <Compile Include="Models\Queue_Action_Master.cs" />
+    <Compile Include="Models\Queue_Status_Master.cs" />
+    <Compile Include="Models\Reward_Points_Details.cs" />
+    <Compile Include="Models\Reward_Points_Transfer_Details.cs" />
+    <Compile Include="Models\Reward_Points_Transfer_Master.cs" />
+    <Compile Include="Models\Rpe_Notifications.cs" />
+    <Compile Include="Models\RPE_Portal_User.cs" />
+    <Compile Include="Models\Rule_Config_Master.cs" />
+    <Compile Include="Models\Rule_Config_Settings.cs" />
+    <Compile Include="Models\ScheduleType.cs" />
+    <Compile Include="Models\Stock_Code.cs" />
+    <Compile Include="Models\Topup_History.cs" />
+    <Compile Include="Models\Topup_Status_Master.cs" />
+    <Compile Include="Models\Traded_History_Master.cs" />
+    <Compile Include="Models\trading_days.cs" />
+    <Compile Include="Models\Trading_Time_Details.cs" />
+    <Compile Include="Models\Transaction_History.cs" />
+    <Compile Include="Models\Transfer_Action_Master.cs" />
+    <Compile Include="Models\Units_Master.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserInformation.cs" />
+    <Compile Include="Models\Wallet_Details.cs" />
+    <Compile Include="Models\Wallet_Master.cs" />
+    <Compile Include="Models\Withdrawel_History_Details.cs" />
+    <Compile Include="Models\Withdrawel_History_Master.cs" />
+    <Compile Include="Models\Withdrawl_Fees.cs" />
+    <Compile Include="Models\Withdrawl_Status_Master.cs" />
+    <Compile Include="Models\Wollo_Member_Details.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AddTopupModel.cs" />
+    <Compile Include="ViewModels\Administration_Fees.cs" />
+    <Compile Include="ViewModels\AdminIsuuePointsViewModel.cs" />
+    <Compile Include="ViewModels\AdminRuleMasterData.cs" />
+    <Compile Include="ViewModels\Approve_Admin_Cash.cs" />
+    <Compile Include="ViewModels\AspnetRoles.cs" />
+    <Compile Include="ViewModels\AspnetUserclaims.cs" />
+    <Compile Include="ViewModels\AspnetUserroles.cs" />
+    <Compile Include="ViewModels\AspnetUsers.cs" />
+    <Compile Include="ViewModels\Audit_Log_Details.cs" />
+    <Compile Include="ViewModels\Cash_Transaction_Detail.cs" />
+    <Compile Include="ViewModels\Cash_Transaction_History.cs" />
+    <Compile Include="ViewModels\CommonWordsViewModel.cs" />
+    <Compile Include="ViewModels\Company_Code.cs" />
+    <Compile Include="ViewModels\Company_Stock_Relation_Master.cs" />
+    <Compile Include="ViewModels\country_master.cs" />
+    <Compile Include="ViewModels\Currency_Master.cs" />
+    <Compile Include="ViewModels\DashboardViewModel.cs" />
+    <Compile Include="ViewModels\ForgotPasswordViewModel.cs" />
+    <Compile Include="ViewModels\HolidayData.cs" />
+    <Compile Include="ViewModels\Holiday_Master.cs" />
+    <Compile Include="ViewModels\Holiday_Status_Master.cs" />
+    <Compile Include="ViewModels\IssuePointDetails.cs" />
+    <Compile Include="ViewModels\Issue_Cash_Master.cs" />
+    <Compile Include="ViewModels\Issue_Cash_Transfer_Master.cs" />
+    <Compile Include="ViewModels\Issue_Points_Details.cs" />
+    <Compile Include="ViewModels\Issue_Points_Master.cs" />
+    <Compile Include="ViewModels\Issue_Points_Transfer_Master.cs" />
+    <Compile Include="ViewModels\Issue_Point_Transfer_Detail.cs" />
+    <Compile Include="ViewModels\Issue_Withdrawel_Permission_Master.cs" />
+    <Compile Include="ViewModels\Audit_Log_Master.cs" />
+    <Compile Include="ViewModels\LayoutViewModel.cs" />
+    <Compile Include="ViewModels\LogDataViewModel.cs" />
+    <Compile Include="ViewModels\Market_Rate_Details.cs" />
+    <Compile Include="ViewModels\Member_Status_Master.cs" />
+    <Compile Include="ViewModels\Member_Stock_Details.cs" />
+    <Compile Include="ViewModels\Module.cs" />
+    <Compile Include="ViewModels\Module_Permissions_Mapping.cs" />
+    <Compile Include="ViewModels\Multilingual.cs" />
+    <Compile Include="ViewModels\Notification_Status_Master.cs" />
+    <Compile Include="ViewModels\organization.cs" />
+    <Compile Include="ViewModels\OrganizationDetails.cs" />
+    <Compile Include="ViewModels\Payment_Method.cs" />
+    <Compile Include="ViewModels\Permissions_Master.cs" />
+    <Compile Include="ViewModels\PointTransferViewModel.cs" />
+    <Compile Include="ViewModels\PortfolioDetails.cs" />
+    <Compile Include="ViewModels\QueueData.cs" />
+    <Compile Include="ViewModels\QueueDataViewModel.cs" />
+    <Compile Include="ViewModels\QueueTradingViewModel.cs" />
+    <Compile Include="ViewModels\Queue_Action_Master.cs" />
+    <Compile Include="ViewModels\Queue_Status_Master.cs" />
+    <Compile Include="ViewModels\RegisterViewModel.cs" />
+    <Compile Include="ViewModels\Result.cs" />
+    <Compile Include="ViewModels\Reward_Points_Details.cs" />
+    <Compile Include="ViewModels\Reward_Points_Transfer_Details.cs" />
+    <Compile Include="ViewModels\Reward_Points_Transfer_Master.cs" />
+    <Compile Include="ViewModels\Rpe_Notifications.cs" />
+    <Compile Include="ViewModels\Rule_Config_Master.cs" />
+    <Compile Include="ViewModels\Rule_Config_Settings.cs" />
+    <Compile Include="ViewModels\Stock_Code.cs" />
+    <Compile Include="ViewModels\TopUpDetails.cs" />
+    <Compile Include="ViewModels\Topup_History.cs" />
+    <Compile Include="ViewModels\Topup_Status_Master.cs" />
+    <Compile Include="ViewModels\Traded_History_Master.cs" />
+    <Compile Include="ViewModels\TradingViewModel.cs" />
+    <Compile Include="ViewModels\Trading_Time_Details.cs" />
+    <Compile Include="ViewModels\Transaction_History.cs" />
+    <Compile Include="ViewModels\Transfer_Action_Master.cs" />
+    <Compile Include="ViewModels\Units_Master.cs" />
+    <Compile Include="ViewModels\User.cs" />
+    <Compile Include="ViewModels\Wallet_Details.cs" />
+    <Compile Include="ViewModels\Wallet_Master.cs" />
+    <Compile Include="ViewModels\WeakDays.cs" />
+    <Compile Include="ViewModels\WithdrawalData.cs" />
+    <Compile Include="ViewModels\Withdrawel_History_Details.cs" />
+    <Compile Include="ViewModels\Withdrawel_History_Master.cs" />
+    <Compile Include="ViewModels\Withdrawl_Fees.cs" />
+    <Compile Include="ViewModels\Withdrawl_Status_Master.cs" />
+    <Compile Include="ViewModels\WolloMembershipDataViewModel.cs" />
+    <Compile Include="ViewModels\Wollo_Member_Details.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Wollo.Base\Wollo.Base.csproj">
+      <Project>{a8f7e1ec-4505-46f8-ad95-7b0af53861ec}</Project>
+      <Name>Wollo.Base</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

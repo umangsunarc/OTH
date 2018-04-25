@@ -1,0 +1,233 @@
+﻿@model Wollo.Web.Models.StockCodeModel
+@{
+    ViewBag.Title = @Html.DisplayNameFor(x => x.StockCode.FirstOrDefault().points);
+}
+<link href="~/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="~/css/responsive.bootstrap.min.css" rel="stylesheet" />
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    @Html.LabelFor(x => x.StockCode.FirstOrDefault().points)
+                </h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i> <b>@Html.LabelFor(x => x.StockCode.FirstOrDefault().dashboard_points_issued)</b>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        @*<div class="container-fluid">*@
+        <div class="dropdown row">
+            <div class="col-md-2">
+                @{string stock_label = @Html.DisplayNameFor(y => y.StockCode.FirstOrDefault().select_stock).ToString();}
+                @Html.DropDownList("StockCode", new SelectList(Model.StockCode, "id", "full_name"), stock_label, new { @class = "form-control" })
+            </div>
+        </div><br />
+        <div id="history-container">
+        </div>
+        <!-- /.container-fluid -->
+        @*</div>*@
+
+        <!-- /#page-wrapper -->
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">@Html.LabelFor(x => x.StockCode.FirstOrDefault().issue_new_reward_points)</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    @Html.Hidden("Mode", "Add")
+                    @Html.Hidden("issuePointId")
+                    <div class="dropdown col-sm-3" style="margin-bottom:10px;">
+                        @Html.DropDownList("NewStockCode", new SelectList(Model.StockCode, "id", "full_name"), "Select Stock Code", new { @class = "form-control" })
+                    </div>
+                    <div class="dropdown col-sm-4" style="margin-bottom:10px;">
+                        @Html.Hidden("UserId")
+                        @Html.DropDownList("UserDropdown", new SelectList(ViewBag.Users, "id", "user_name"), "Select User", new { @class = "form-control" })
+                        @*@Html.TextBox("UserId", null, new { @class = "form-control", @placeholder = "User Name" })*@
+
+                    </div>
+                    <div class="form-group col-sm-5">
+                        <div class="input-group">
+                            @*<div class="input-group-addon">$</div>*@
+                            @Html.TextBox("Amount", null, new { @class = "form-control", @placeholder =@Html.DisplayNameFor(model=>model.layout_transfer_points) })
+                            @*<div class="input-group-addon">.00</div>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">@Html.LabelFor(model => model.StockCode.FirstOrDefault().cancel)</button>
+                <button type="button" class="btn btn-primary" id="addPoints">@Html.LabelFor(model => model.StockCode.FirstOrDefault().confirm)</button>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/js/jquery.js"></script>
+    @*<script src="~/Scripts/bootstrap.js"></script>*@
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.dataTables.min.js"></script>
+    <script src="~/js/dataTables.bootstrap.min.js"></script>
+    <script>
+        $('#myGroup ul li a').click(function () {
+            $('#myGroup ul li ul.collapse ').removeClass('in');
+            $('#myGroup ul li').removeClass('active');
+        });
+
+        //function generateDatatable() {
+        //    $("#tbl_issuepoint_history").DataTable();
+        //}
+
+        $("#nav-issue-point").addClass("active");
+        $("#StockCode").change(function () {
+            if ($(this).val().length > 0) {
+                $("#history-container").load("@Url.Action("GetIssuePointsHistory","IssuePoint")" + "?stockCodeId=" + $(this).val());
+            }
+            else {
+                $("#history-container").empty();
+                //$("#tbl_issuepoint_history").DataTable();
+            }
+            //generateDatatable();
+        });
+
+        //for filtering according to date range
+        function rangefilter() {
+            if ($('#from').val() == "" && $('#to').val() == "") {
+                alert('Please select the date range.');
+            }
+            else if ($('#from').val() == "") {
+                alert('Please select start date.');
+            }
+            else if ($('#to').val() == "") {
+                alert('Please select end date.');
+            }
+            else {
+                var startDate = $('#from').val();
+                var endDate = $('#to').val();
+                var updatedStartDate = startDate.split("/");
+                updatedStartDate = updatedStartDate[1] + "/" + updatedStartDate[0] + "/" + updatedStartDate[2];
+                var updatedEndDate = endDate.split("/");
+                updatedEndDate = updatedEndDate[1] + "/" + updatedEndDate[0] + "/" + updatedEndDate[2];
+                $("#history-container").load("@Url.Action("RangeFilter9", "IssuePoint")" + "?start_date=" + updatedStartDate + "&end_date=" + updatedEndDate + "&stockId=" + $("#StockCode").val());
+            }
+        }
+        //code ends here
+
+        function rangefilterUser() {
+            if ($('#from').val() == "" && $('#to').val() == "") {
+                alert('Please select the date range.');
+            }
+            else if ($('#from').val() == "") {
+                alert('Please select start date.');
+            }
+            else if ($('#to').val() == "") {
+                alert('Please select end date.');
+            }
+            else {
+                var startDate = $('#from').val();
+                var endDate = $('#to').val();
+                var updatedStartDate = startDate.split("/");
+                updatedStartDate = updatedStartDate[1] + "/" + updatedStartDate[0] + "/" + updatedStartDate[2];
+                var updatedEndDate = endDate.split("/");
+                updatedEndDate = updatedEndDate[1] + "/" + updatedEndDate[0] + "/" + updatedEndDate[2];
+                $("#history-container").load("@Url.Action("RangeFilterUser", "IssuePoint")" + "?start_date=" + updatedStartDate + "&end_date=" + updatedEndDate + "&stockId=" + $("#StockCode").val());
+            }
+        }
+
+        $("#Amount").keydown(function (e) {
+            // Allow: backspace, delete, tab, escape, enter
+            if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110]) !== -1 ||
+                // Allow: Ctrl+A, Command+A
+                (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+                // Allow: home, end, left, right, down, up
+                (e.keyCode >= 35 && e.keyCode <= 40)) {
+                // let it happen, don't do anything
+                return;
+            }
+            // Ensure that it is a number and stop the keypress
+            if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                e.preventDefault();
+            }
+        });
+
+        $("#addPoints").click(function () {
+            $("#addPoints").prop("disabled", true);
+            if ($("#NewStockCode").val().length > 0 && $("#Amount").val() > 0 && $("#UserDropdown option:selected").text() != 'Select User') {
+                if ($("#Mode").val() == "Add") {
+                    $.ajax({
+                        url: "@Url.Action("AddIssuePoint", "IssuePoint")" + "?stockCodeId=" + $("#NewStockCode").val() + "&pointsIssued=" + $("#Amount").val() + "&receiverUserName=" + $("#UserDropdown option:selected").text(),                       
+                        contentType: 'application/json',
+                        method: 'POST',
+                        success: function (result) {
+                            if (result == 1) {
+                                $("#addPoints").prop("disabled", false);
+                                alert("Points issued successfully.");
+                                $("#history-container").load("@Url.Action("GetIssuePointsHistory","IssuePoint")" + "?stockCodeId=" + $("#NewStockCode").val());
+                            }
+                            else if (result == 2) {
+                                $("#addPoints").prop("disabled", false);
+                                alert("You do not have sufficient stock amount to perform this action.")
+                            }
+                            else {
+                                $("#addPoints").prop("disabled", false);
+                                alert("Something went wrong!");
+                            }
+                            $("#StockCode").val($("#NewStockCode").val());
+                            $("#myModal").modal("hide");
+                        },
+                        error: function (e) {
+                            $("#addPoints").prop("disabled", false);
+                            alert("Something went wrong!");
+                            $("#StockCode").val($("#NewStockCode").val());
+                            $("#myModal").modal("hide");
+                        }
+                    });
+                }
+                else {
+                    $.ajax({
+                        url: "@Url.Action("EditIssuePoint", "IssuePoint")" + "?stockCodeId=" + $("#NewStockCode").val() + "&pointsIssued=" + $("#Amount").val() + "&receiverUserId=" + $("#UserId").val() + "&id=" + $("#issuePointId").val(),     
+                        // data: "{ 'stockCodeId': '" + $("#NewStockCode").val() + "', 'points_issued': '" + $("#Amount").val() + "','receiver_user_id':'" + $("#UserId").val() + "', 'id': '" + $("#issuePointId").val() + "' }",
+                        contentType: 'application/json',
+                        method: 'POST',
+                        success: function (result) {
+                            if (result == 1) {
+                                $("#addPoints").prop("disabled", false);
+                                alert("Issued Points updated successfully.");
+                                $("#history-container").load("@Url.Action("GetIssuePointsHistory","IssuePoint")" + "?stockCodeId=" + $("#NewStockCode").val());
+                            }
+                            else if (result == 2) {
+                                $("#addPoints").prop("disabled", false);
+                                alert("Issued points cannot be modified.");
+                            }
+                            else {
+                                $("#addPoints").prop("disabled", false);
+                                alert("Something went wrong!");
+                            }
+                            $("#StockCode").val($("#NewStockCode").val());
+                            $("#myModal").modal("hide");
+                        },
+                        error: function (e) {
+                            $("#addPoints").prop("disabled", false);
+                            alert("Something went wrong!");
+                            $("#StockCode").val($("#NewStockCode").val());
+                            $("#myModal").modal("hide");
+                        }
+                    });
+                }
+            }
+            else {
+                $("#addPoints").prop("disabled", false);
+                alert("Make sure you have selected stock code and provided amount.");
+            }
+        });
+    </script>
+}

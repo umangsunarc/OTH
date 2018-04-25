@@ -1,0 +1,98 @@
+﻿@model Wollo.Web.Models.Portfolio
+@{
+    ViewBag.Title = @Html.DisplayNameFor(model => model.PortfolioDetails.FirstOrDefault().portfolio);
+}
+
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    <b>@Html.LabelFor(model => model.PortfolioDetails.FirstOrDefault().portfolio)</b>
+                </h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i> @Html.LabelFor(model => model.PortfolioDetails.FirstOrDefault().dashboard_portfolio)
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div id="upper-birth">
+                    <div class="table-responsive">
+                        <table id="portfolio_details" class="table table-bordered table-hover table-striped dt-responsive nowrap">
+                            <thead>
+                                <tr>
+                                    <th>@Html.LabelFor(model => model.PortfolioDetails.FirstOrDefault().stock_code)</th>
+                                    <th>@Html.LabelFor(model => model.PortfolioDetails.FirstOrDefault().stock_name)</th>
+                                    <th>@Html.LabelFor(model => model.PortfolioDetails.FirstOrDefault().holdings_amount)</th>
+                                    <th>@Html.LabelFor(model => model.PortfolioDetails.FirstOrDefault().buyable_sellable_quantity)</th>
+                                    <th>@Html.LabelFor(model => model.PortfolioDetails.FirstOrDefault().last_transacted_price)</th>
+                                    <th>@Html.LabelFor(model => model.PortfolioDetails.FirstOrDefault().lates_market_value)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        @*<b>@Model.First().Cash</b>*@
+                                        <b>@Html.DisplayNameFor(model => model.PortfolioDetails.FirstOrDefault().Cash)</b>
+                                    </td>
+                                    <td><b>@Html.DisplayNameFor(model => model.PortfolioDetails.FirstOrDefault().Cash)@*@Model.First().Cash*@</b></td>
+                                    <td><b> @Model.PortfolioDetails.First().HoldingCash</b></td>
+                                    <td><b>@Model.PortfolioDetails.Last().BuyableSellableCash</b></td>
+                                    <td><b>@Model.PortfolioDetails.First().LastTransactedPriceCash.ToString("0.00")</b></td>
+                                    <td><b>@Model.PortfolioDetails.Last().LatestMarketvalueCash.ToString("0.00")</b></td>
+                                </tr>
+                                @foreach (var item in Model.PortfolioDetails)
+                                {
+                                    <tr>
+                                        <td>
+                                            <a href="/Trading/Trading?stockId=@item.StockId">@Html.DisplayFor(x => item.StockCode)</a>
+                                        </td>
+
+
+                                        <td>@Html.DisplayFor(x => item.StockName)</td>
+                                        <td> @Html.DisplayFor(x => item.Holdings)</td>
+                                        <td>@Html.DisplayFor(x => item.BuyableSellableQuantity)</td>
+                                        <td>@Html.DisplayFor(x => item.LastTransactedPrice)</td>
+                                        <td>@Html.DisplayFor(x => item.LatestMarketvalue)</td>
+                                    </tr>
+                                }
+                                <tr>
+                                    <td>
+                                        <b> 
+                                             @*@Model.First().Total*@
+                                            @Html.DisplayNameFor(model => model.PortfolioDetails.FirstOrDefault().Total)
+                                        </b>
+                                    </td>
+                                    <td></td>
+                                    <td> </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td> <b>@Model.PortfolioDetails.Last().LatestMarketvalueCashTotal.ToString("0.00")</b></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- /.container-fluid -->
+        </div>
+    </div>
+</div>
+@section scripts{
+    <!--Reference the SignalR library. -->
+    <script src="~/js/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#myGroup ul li a').click(function () {
+                $('#myGroup ul li ul.collapse ').removeClass('in');
+                $('#myGroup ul li').removeClass('active');
+            });
+        })
+    </script>
+}

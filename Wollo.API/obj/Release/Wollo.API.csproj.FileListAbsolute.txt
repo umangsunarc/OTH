@@ -1,0 +1,589 @@
+E:\Minakshi\RPE\Updated\Wollo.API\bin\Wollo.API.dll.config
+E:\Minakshi\RPE\Updated\Wollo.API\bin\Wollo.API.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\Wollo.API.pdb
+E:\Minakshi\RPE\Updated\Wollo.API\bin\Antlr3.Runtime.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\Autofac.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\Autofac.Integration.WebApi.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\AutoMapper.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\EntityFramework.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\EntityFramework.SqlServer.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\FluentValidation.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\Microsoft.Owin.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\Microsoft.Web.Infrastructure.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\MySql.Data.Entity.EF6.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\Newtonsoft.Json.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\Owin.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\System.Net.Http.Formatting.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\System.Web.Cors.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\System.Web.Helpers.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\System.Web.Http.Cors.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\System.Web.Http.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\System.Web.Http.Owin.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\System.Web.Http.WebHost.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\System.Web.Mvc.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\System.Web.Optimization.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\System.Web.Razor.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\System.Web.Webpages.Deployment.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\System.Web.Webpages.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\System.Web.Webpages.Razor.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\WebGrease.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\Wollo.Base.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\Wollo.Common.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\Wollo.Data.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\Wollo.Entities.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\Wollo.Base.pdb
+E:\Minakshi\RPE\Updated\Wollo.API\bin\Wollo.Common.pdb
+E:\Minakshi\RPE\Updated\Wollo.API\bin\Wollo.Data.pdb
+E:\Minakshi\RPE\Updated\Wollo.API\bin\Wollo.Entities.pdb
+E:\Minakshi\RPE\Updated\Wollo.API\bin\Antlr3.Runtime.pdb
+E:\Minakshi\RPE\Updated\Wollo.API\bin\Autofac.xml
+E:\Minakshi\RPE\Updated\Wollo.API\bin\Autofac.Integration.WebApi.xml
+E:\Minakshi\RPE\Updated\Wollo.API\bin\AutoMapper.xml
+E:\Minakshi\RPE\Updated\Wollo.API\bin\EntityFramework.xml
+E:\Minakshi\RPE\Updated\Wollo.API\bin\EntityFramework.SqlServer.xml
+E:\Minakshi\RPE\Updated\Wollo.API\bin\FluentValidation.pdb
+E:\Minakshi\RPE\Updated\Wollo.API\bin\FluentValidation.xml
+E:\Minakshi\RPE\Updated\Wollo.API\bin\Microsoft.Owin.xml
+E:\Minakshi\RPE\Updated\Wollo.API\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Minakshi\RPE\Updated\Wollo.API\bin\System.Net.Http.Formatting.xml
+E:\Minakshi\RPE\Updated\Wollo.API\bin\System.Web.Http.xml
+E:\Minakshi\RPE\Updated\Wollo.API\bin\System.Web.Http.Cors.xml
+E:\Minakshi\RPE\Updated\Wollo.API\bin\System.Web.Http.Owin.xml
+E:\Minakshi\RPE\Updated\Wollo.API\bin\System.Web.Http.WebHost.xml
+E:\Minakshi\RPE\Updated\Wollo.API\bin\System.Web.Optimization.xml
+E:\Minakshi\RPE\Updated\Wollo.API\bin\System.Web.Razor.xml
+E:\Minakshi\RPE\Updated\Wollo.API\bin\System.Web.Webpages.xml
+E:\Minakshi\RPE\Updated\Wollo.API\bin\System.Web.Webpages.Deployment.xml
+E:\Minakshi\RPE\Updated\Wollo.API\bin\System.Web.Webpages.Razor.xml
+E:\Minakshi\RPE\Updated\Wollo.API\bin\System.Web.Helpers.xml
+E:\Minakshi\RPE\Updated\Wollo.API\bin\System.Web.Mvc.xml
+E:\Minakshi\RPE\Updated\Wollo.API\bin\Newtonsoft.Json.xml
+E:\Minakshi\RPE\Updated\Wollo.API\bin\da\FluentValidation.resources.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\de\FluentValidation.resources.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\es\FluentValidation.resources.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\fi\FluentValidation.resources.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\fr\FluentValidation.resources.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\it\FluentValidation.resources.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\ko\FluentValidation.resources.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\mk\FluentValidation.resources.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\nl\FluentValidation.resources.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\pl\FluentValidation.resources.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\pt\FluentValidation.resources.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\ru\FluentValidation.resources.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\sv\FluentValidation.resources.dll
+E:\Minakshi\RPE\Updated\Wollo.API\bin\tr\FluentValidation.resources.dll
+E:\Minakshi\RPE\Updated\Wollo.API\obj\Release\Wollo.API.csprojResolveAssemblyReference.cache
+E:\Minakshi\RPE\Updated\Wollo.API\obj\Release\Wollo.API.dll
+E:\Minakshi\RPE\Updated\Wollo.API\obj\Release\Wollo.API.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\Wollo.API.dll.config
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\Wollo.API.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\Wollo.API.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\Antlr3.Runtime.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\Autofac.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\Autofac.Integration.WebApi.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\AutoMapper.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\EntityFramework.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\EntityFramework.SqlServer.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\FluentValidation.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\Microsoft.Owin.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\Microsoft.Web.Infrastructure.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\MySql.Data.Entity.EF6.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\Newtonsoft.Json.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\Owin.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\System.Net.Http.Formatting.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\System.Web.Cors.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\System.Web.Helpers.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\System.Web.Http.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\System.Web.Http.Owin.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\System.Web.Http.WebHost.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\System.Web.Mvc.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\System.Web.Optimization.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\System.Web.Razor.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\System.Web.Webpages.Deployment.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\System.Web.Webpages.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\System.Web.Webpages.Razor.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\WebGrease.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\Wollo.Base.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\Wollo.Common.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\Wollo.Data.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\Wollo.Entities.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\Wollo.Base.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\Wollo.Common.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\Wollo.Data.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\Wollo.Entities.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\Antlr3.Runtime.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\Autofac.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\Autofac.Integration.WebApi.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\AutoMapper.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\EntityFramework.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\EntityFramework.SqlServer.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\FluentValidation.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\FluentValidation.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\Microsoft.Owin.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\System.Net.Http.Formatting.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\System.Web.Http.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\System.Web.Http.Owin.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\System.Web.Http.WebHost.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\System.Web.Optimization.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\System.Web.Razor.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\System.Web.Webpages.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\System.Web.Webpages.Deployment.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\System.Web.Webpages.Razor.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\System.Web.Helpers.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\System.Web.Mvc.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\Newtonsoft.Json.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\da\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\de\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\es\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\fi\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\fr\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\it\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\ko\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\mk\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\nl\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\pl\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\pt\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\ru\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\sv\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\tr\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\obj\Release\Wollo.API.csprojResolveAssemblyReference.cache
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\obj\Release\Wollo.API.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\obj\Release\Wollo.API.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.API\bin\MySql.Data.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\LocalResource\Resource.resx
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\LocalResource\Resource.zh-CHS.resx
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\LocalResource\Resource.zh-CHT.resx
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\LocalResource\Resource.en-GB.resx
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\LocalResource\Resource.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\LocalResource\Resource.zh-CHS.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\LocalResource\Resource.zh-CHT.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\LocalResource\Resource.en-GB.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\Wollo.API.dll.config
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\Wollo.API.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\Wollo.API.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\Antlr3.Runtime.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\Autofac.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\Autofac.Integration.WebApi.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\AutoMapper.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\EntityFramework.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\EntityFramework.SqlServer.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\FluentValidation.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\Microsoft.Owin.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\Microsoft.Web.Infrastructure.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\MySql.Data.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\MySql.Data.Entity.EF6.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\Newtonsoft.Json.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\Owin.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\System.Net.Http.Formatting.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\System.Web.Cors.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\System.Web.Helpers.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\System.Web.Http.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\System.Web.Http.Owin.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\System.Web.Http.WebHost.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\System.Web.Mvc.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\System.Web.Optimization.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\System.Web.Razor.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\System.Web.Webpages.Deployment.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\System.Web.Webpages.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\System.Web.Webpages.Razor.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\WebGrease.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\Wollo.Base.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\Wollo.Common.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\Wollo.Data.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\Wollo.Entities.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\Wollo.Base.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\Wollo.Common.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\Wollo.Data.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\Wollo.Entities.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\Antlr3.Runtime.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\Autofac.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\Autofac.Integration.WebApi.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\AutoMapper.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\EntityFramework.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\EntityFramework.SqlServer.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\FluentValidation.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\FluentValidation.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\Microsoft.Owin.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\System.Net.Http.Formatting.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\System.Web.Http.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\System.Web.Http.Owin.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\System.Web.Http.WebHost.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\System.Web.Optimization.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\System.Web.Razor.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\System.Web.Webpages.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\System.Web.Webpages.Deployment.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\System.Web.Webpages.Razor.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\System.Web.Helpers.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\System.Web.Mvc.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\Newtonsoft.Json.xml
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\en-GB\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\zh-CHS\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\zh-CHT\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\da\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\de\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\es\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\fi\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\fr\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\it\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\ko\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\mk\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\nl\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\pl\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\pt\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\ru\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\sv\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\bin\tr\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\obj\Release\Wollo.API.csprojResolveAssemblyReference.cache
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\obj\Release\Wollo.API.dll
+G:\Downloads\Wollo\Wollo by minakshi\Updates Latest\Updated\Wollo.API\obj\Release\Wollo.API.pdb
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\LocalResource\Resource.resx
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\LocalResource\Resource.zh-CHS.resx
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\LocalResource\Resource.zh-CHT.resx
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\LocalResource\Resource.en-GB.resx
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\LocalResource\Resource.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\LocalResource\Resource.zh-CHS.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\LocalResource\Resource.zh-CHT.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\LocalResource\Resource.en-GB.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\Wollo.API.dll.config
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\Wollo.API.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\Wollo.API.pdb
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\Antlr3.Runtime.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\Autofac.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\Autofac.Integration.WebApi.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\AutoMapper.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\EntityFramework.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\EntityFramework.SqlServer.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\FluentValidation.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\Microsoft.Owin.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\Microsoft.Web.Infrastructure.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\MySql.Data.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\MySql.Data.Entity.EF6.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\Newtonsoft.Json.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\Owin.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\System.Net.Http.Formatting.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\System.Web.Cors.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\System.Web.Helpers.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\System.Web.Http.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\System.Web.Http.Owin.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\System.Web.Http.WebHost.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\System.Web.Mvc.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\System.Web.Optimization.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\System.Web.Razor.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\System.Web.Webpages.Deployment.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\System.Web.Webpages.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\System.Web.Webpages.Razor.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\WebGrease.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\Wollo.Base.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\Wollo.Common.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\Wollo.Data.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\Wollo.Entities.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\Wollo.Base.pdb
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\Wollo.Common.pdb
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\Wollo.Data.pdb
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\Wollo.Entities.pdb
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\Antlr3.Runtime.pdb
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\Autofac.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\Autofac.Integration.WebApi.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\AutoMapper.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\EntityFramework.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\EntityFramework.SqlServer.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\FluentValidation.pdb
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\FluentValidation.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\Microsoft.Owin.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\System.Net.Http.Formatting.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\System.Web.Http.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\System.Web.Http.Owin.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\System.Web.Http.WebHost.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\System.Web.Optimization.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\System.Web.Razor.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\System.Web.Webpages.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\System.Web.Webpages.Deployment.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\System.Web.Webpages.Razor.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\System.Web.Helpers.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\System.Web.Mvc.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\Newtonsoft.Json.xml
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\en-GB\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\zh-CHS\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\zh-CHT\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\da\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\de\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\es\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\fi\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\fr\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\it\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\ko\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\mk\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\nl\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\pl\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\pt\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\ru\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\sv\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\bin\tr\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\obj\Release\Wollo.API.csprojResolveAssemblyReference.cache
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\obj\Release\Wollo.API.dll
+G:\Downloads\Wollo\Wollo by minakshi\backup_29092016_before_bitbucket_setup\Updated\Wollo.API\obj\Release\Wollo.API.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\LocalResource\Resource.resx
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\LocalResource\Resource.zh-CHS.resx
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\LocalResource\Resource.zh-CHT.resx
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\LocalResource\Resource.en-GB.resx
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\LocalResource\Resource.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\LocalResource\Resource.zh-CHS.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\LocalResource\Resource.zh-CHT.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\LocalResource\Resource.en-GB.Designer.cs
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\Wollo.API.dll.config
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\Wollo.API.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\Wollo.API.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\Antlr3.Runtime.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\Autofac.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\Autofac.Integration.WebApi.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\AutoMapper.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\EntityFramework.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\EntityFramework.SqlServer.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\FluentValidation.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\Microsoft.Owin.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\Microsoft.Web.Infrastructure.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\MySql.Data.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\MySql.Data.Entity.EF6.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\Newtonsoft.Json.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\Owin.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\System.Net.Http.Formatting.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\System.Web.Cors.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\System.Web.Helpers.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\System.Web.Http.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\System.Web.Http.Owin.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\System.Web.Http.WebHost.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\System.Web.Mvc.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\System.Web.Optimization.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\System.Web.Razor.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\System.Web.Webpages.Deployment.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\System.Web.Webpages.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\System.Web.Webpages.Razor.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\WebGrease.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\Wollo.Base.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\Wollo.Common.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\Wollo.Data.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\Wollo.Entities.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\Wollo.Base.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\Wollo.Common.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\Wollo.Data.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\Wollo.Entities.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\Antlr3.Runtime.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\Autofac.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\Autofac.Integration.WebApi.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\AutoMapper.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\EntityFramework.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\EntityFramework.SqlServer.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\FluentValidation.pdb
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\FluentValidation.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\Microsoft.Owin.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\System.Net.Http.Formatting.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\System.Web.Http.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\System.Web.Http.Owin.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\System.Web.Http.WebHost.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\System.Web.Optimization.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\System.Web.Razor.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\System.Web.Webpages.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\System.Web.Webpages.Deployment.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\System.Web.Webpages.Razor.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\System.Web.Helpers.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\System.Web.Mvc.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\Newtonsoft.Json.xml
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\en-GB\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\zh-CHS\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\zh-CHT\Wollo.Base.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\da\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\de\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\es\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\fi\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\fr\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\it\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\ko\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\mk\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\nl\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\pl\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\pt\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\ru\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\sv\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\bin\tr\FluentValidation.resources.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\obj\Release\Wollo.API.csprojResolveAssemblyReference.cache
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\obj\Release\Wollo.API.dll
+G:\Downloads\Wollo\Wollo by minakshi\Wollo_by_prachi_after_resoucre_file_new_fields_addition\Updated\Wollo.API\obj\Release\Wollo.API.pdb
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\LocalResource\Resource.resx
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\LocalResource\Resource.zh-CHS.resx
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\LocalResource\Resource.zh-CHT.resx
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\LocalResource\Resource.en-GB.resx
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\LocalResource\Resource.Designer.cs
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\Wollo.API.dll.config
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\Wollo.API.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\Wollo.API.pdb
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\Antlr3.Runtime.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\Autofac.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\Autofac.Integration.WebApi.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\AutoMapper.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\EntityFramework.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\EntityFramework.SqlServer.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\FluentValidation.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\Microsoft.Owin.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\Microsoft.Web.Infrastructure.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\MySql.Data.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\MySql.Data.Entity.EF6.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\Newtonsoft.Json.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\Owin.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\System.Net.Http.Formatting.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\System.Web.Cors.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\System.Web.Helpers.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\System.Web.Http.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\System.Web.Http.Owin.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\System.Web.Http.WebHost.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\System.Web.Mvc.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\System.Web.Optimization.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\System.Web.Razor.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\System.Web.Webpages.Deployment.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\System.Web.Webpages.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\System.Web.Webpages.Razor.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\WebGrease.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\Wollo.Base.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\Wollo.Common.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\Wollo.Data.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\Wollo.Entities.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\Wollo.Base.pdb
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\Wollo.Common.pdb
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\Wollo.Data.pdb
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\Wollo.Entities.pdb
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\Antlr3.Runtime.pdb
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\Autofac.xml
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\Autofac.Integration.WebApi.xml
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\AutoMapper.xml
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\EntityFramework.xml
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\EntityFramework.SqlServer.xml
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\FluentValidation.pdb
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\FluentValidation.xml
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\Microsoft.Owin.xml
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\System.Net.Http.Formatting.xml
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\System.Web.Http.xml
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\System.Web.Http.Owin.xml
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\System.Web.Http.WebHost.xml
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\System.Web.Optimization.xml
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\System.Web.Razor.xml
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\System.Web.Webpages.xml
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\System.Web.Webpages.Deployment.xml
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\System.Web.Webpages.Razor.xml
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\System.Web.Helpers.xml
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\System.Web.Mvc.xml
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\Newtonsoft.Json.xml
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\en-GB\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\zh-CHS\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\zh-CHT\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\da\FluentValidation.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\de\FluentValidation.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\es\FluentValidation.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\fi\FluentValidation.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\fr\FluentValidation.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\it\FluentValidation.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\ko\FluentValidation.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\mk\FluentValidation.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\nl\FluentValidation.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\pl\FluentValidation.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\pt\FluentValidation.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\ru\FluentValidation.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\sv\FluentValidation.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\bin\tr\FluentValidation.resources.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\obj\Release\Wollo.API.csprojResolveAssemblyReference.cache
+E:\Umang\updated_wollo\Updated\Wollo.API\obj\Release\Wollo.API.dll
+E:\Umang\updated_wollo\Updated\Wollo.API\obj\Release\Wollo.API.pdb
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\LocalResource\Resource.resx
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\LocalResource\Resource.zh-CHS.resx
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\LocalResource\Resource.zh-CHT.resx
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\LocalResource\Resource.en-GB.resx
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\LocalResource\Resource.Designer.cs
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\Wollo.API.dll.config
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\Wollo.API.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\Wollo.API.pdb
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\Antlr3.Runtime.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\Autofac.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\Autofac.Integration.WebApi.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\AutoMapper.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\EntityFramework.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\EntityFramework.SqlServer.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\FluentValidation.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\Microsoft.Owin.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\Microsoft.Web.Infrastructure.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\MySql.Data.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\MySql.Data.Entity.EF6.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\Newtonsoft.Json.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\Owin.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\System.Net.Http.Formatting.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\System.Web.Cors.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\System.Web.Helpers.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\System.Web.Http.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\System.Web.Http.Owin.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\System.Web.Http.WebHost.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\System.Web.Mvc.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\System.Web.Optimization.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\System.Web.Razor.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\System.Web.Webpages.Deployment.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\System.Web.Webpages.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\System.Web.Webpages.Razor.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\WebGrease.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\Wollo.Base.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\Wollo.Common.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\Wollo.Data.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\Wollo.Entities.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\Wollo.Base.pdb
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\Wollo.Common.pdb
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\Wollo.Data.pdb
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\Wollo.Entities.pdb
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\Antlr3.Runtime.pdb
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\Autofac.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\Autofac.Integration.WebApi.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\AutoMapper.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\EntityFramework.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\EntityFramework.SqlServer.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\FluentValidation.pdb
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\FluentValidation.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\Microsoft.Owin.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\System.Net.Http.Formatting.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\System.Web.Http.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\System.Web.Http.Owin.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\System.Web.Http.WebHost.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\System.Web.Optimization.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\System.Web.Razor.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\System.Web.Webpages.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\System.Web.Webpages.Deployment.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\System.Web.Webpages.Razor.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\System.Web.Helpers.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\System.Web.Mvc.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\Newtonsoft.Json.xml
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\en-GB\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\zh-CHS\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\zh-CHT\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\da\FluentValidation.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\de\FluentValidation.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\es\FluentValidation.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\fi\FluentValidation.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\fr\FluentValidation.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\it\FluentValidation.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\ko\FluentValidation.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\mk\FluentValidation.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\nl\FluentValidation.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\pl\FluentValidation.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\pt\FluentValidation.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\ru\FluentValidation.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\sv\FluentValidation.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\bin\tr\FluentValidation.resources.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\obj\Release\Wollo.API.csprojResolveAssemblyReference.cache
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\obj\Release\Wollo.API.dll
+E:\Umang\updated_wollo\UpdatedWollo\Wollo.API\obj\Release\Wollo.API.pdb

@@ -1,0 +1,307 @@
+﻿@model Wollo.Web.Models.CashTransactionModel
+@{
+    ViewBag.Title = @Html.DisplayNameFor(model => model.CashTransactionHistory.FirstOrDefault().cash_transaction_history);
+}
+<link href="~/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="~/css/responsive.bootstrap.min.css" rel="stylesheet" />
+<link href="~/css/bootstrap-datepicker.css" rel="stylesheet">
+<style>
+    .btn .btn-success {
+        margin-left: -4px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+</style>
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    @Html.LabelFor(model => model.CashTransactionHistory.FirstOrDefault().cash_transaction_history)
+                </h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i> @Html.LabelFor(model => model.CashTransactionHistory.FirstOrDefault().dashboard_cash_transaction_history)
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <span class="input-group-addon" style="display: block;text-align: center; padding: 5px; background: transparent; border: none;position: absolute;top: 5px;right: 30px;">
+                    <span class="fa fa-calendar"></span>
+                </span>
+                <input id="from" name="from" type="text" class="form-control" placeholder=@Html.DisplayNameFor(model => model.CashTransactionHistory.FirstOrDefault().CommonWordsViewModel.from) />
+            </div>
+            <div class="col-sm-3">
+                <span class="input-group-addon" style="display: block;text-align: center; padding: 5px; background: transparent; border: none;position: absolute;top: 5px;right: 30px;">
+                    <span class="fa fa-calendar"></span>
+                </span>
+                <input id="to" name="to" type="text" class="form-control" placeholder=@Html.DisplayNameFor(model => model.CashTransactionHistory.FirstOrDefault().CommonWordsViewModel.to) />
+            </div>
+            <div class="col-sm-3">
+                <input type="button" value=@Html.DisplayNameFor(model => model.CashTransactionHistory.FirstOrDefault().CommonWordsViewModel.filter) onclick="rangefilter()" class="btn btn-primary" id="filter" />
+                <a class="btn btn-primary" href="/Cash/CashTrans">@Html.DisplayNameFor(model => model.CashTransactionHistory.FirstOrDefault().CommonWordsViewModel.refresh)</a>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="upper-birth">
+                    <div class="table-responsive">
+                        <table id="tbl_cash_transaction" class="table table-bordered table-hover table-striped dt-responsive nowrap" cellspacing="0" width="100%">
+                            <thead>
+
+                                <tr>
+                                    <th>@Html.LabelFor(model => model.CashTransactionHistory.FirstOrDefault().created_date)</th>
+                                    <th>@Html.LabelFor(model => model.CashTransactionHistory.FirstOrDefault().currency)</th>
+                                    @if (User.IsInRole("Admin"))
+                                    {
+                                        <th>@Html.LabelFor(model => model.CashTransactionHistory.FirstOrDefault().payee)</th>
+                                    }
+                                    <th>@Html.LabelFor(model => model.CashTransactionHistory.FirstOrDefault().description)</th>
+                                    <th>@Html.LabelFor(model => model.CashTransactionHistory.FirstOrDefault().opening_cash)</th>
+                                    <th>@Html.LabelFor(model => model.CashTransactionHistory.FirstOrDefault().transaction_amount)</th>
+                                    <th>@Html.LabelFor(model => model.CashTransactionHistory.FirstOrDefault().closing_cash)</th>
+                                    @*<th>Comment</th>*@
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.CashTransactionHistory)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(x => item.created_date)
+                                            @*@{string date = item.created_date.HasValue ? item.created_date.Value.ToString("dd-MM-yyyy") : item.created_date.ToString();}
+                                                @Html.DisplayFor(x => date)*@
+                                        </td>
+                                        <td>USD</td>
+                                        @if (User.IsInRole("Admin"))
+                                        {
+                                            <td>@Html.DisplayFor(x => item.AspNetUsers.username)</td>
+                                        }
+                                        <td>@Html.DisplayFor(x => item.description)</td>
+                                        <td>@Html.DisplayFor(x => item.opening_cash)</td>
+                                        <td>@Html.DisplayFor(x => item.transaction_amount)</td>
+                                        <td>@Html.DisplayFor(x => item.closing_cash)</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+</div>
+<!-- /#wrapper -->
+@section scripts{
+    <script src="~/js/jquery.js"></script>
+    @*<script src="~/Scripts/bootstrap.js"></script>*@
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.dataTables.min.js"></script>
+    <script src="~/js/dataTables.bootstrap.min.js"></script>
+    <script src="~/js/dataTables.responsive.min.js"></script>
+    <script src="~/js/responsive.bootstrap.min.js"></script>
+    <script src="~/js/bootstrap-datepicker.js"></script>
+    <script>
+        var english = {
+            "sLengthMenu": "Show _MENU_ entries",
+            "sZeroRecords": "No data available in table",
+            "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+            "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+            "sInfoFiltered": "(filtered from _MAX_ total entries)"
+        };
+        //var chinese = {
+        //    "sProcessing": "Procesando...",
+        //    "sLengthMenu": "展 _MENU_ 项",
+        //    "sZeroRecords": "无表可用数据",
+        //    "sInfo": "显示 _START_ 至 _END_ 的 _TOTAL_ 记录",
+        //    "sInfoEmpty": " 显示0至0 0项",
+        //    "sInfoFiltered": "(filtrado de un total de _MAX_ líneas)",
+        //    "sInfoPostFix": "",
+        //    "sSearch": "搜索:",
+        //    "sUrl": ""
+        //};
+        var chinese = {
+            "sProcessing": "处理中...",
+            "sLengthMenu": "显示 _MENU_ 项结果",
+            "sZeroRecords": "没有匹配结果",
+            "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+            "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+            "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+            "sInfoPostFix": "",
+            "sSearch": "搜索:",
+            "sUrl": "",
+            "sEmptyTable": "表中数据为空",
+            "sLoadingRecords": "载入中...",
+            "sInfoThousands": ",",
+            "oPaginate": {
+                "sFirst": "首页",
+                "sPrevious": "上页",
+                "sNext": "下页",
+                "sLast": "末页"
+            },
+            "oAria": {
+                "sSortAscending": ": 以升序排列此列",
+                "sSortDescending": ": 以降序排列此列"
+            }
+        }
+        $(document).ready(function () {
+            var currentLang = english;
+            if ('@Session["Language"]' != null || '@Session["Language"]' != "") {
+                if ('@Session["Language"]' == "chinese") {
+                    currentLang = chinese;
+                }
+            }
+            $('#myGroup ul li a').click(function () {
+                $('#myGroup ul li ul.collapse ').removeClass('in');
+                $('#myGroup ul li').removeClass('active');
+            });
+
+            $('#tbl_cash_transaction').dataTable({
+                columnDefs: [
+                   { type: 'date-euro', targets: 0 }
+                ],
+                order: [[0, "desc"]],
+                "oLanguage": currentLang
+            });
+
+            if ('@TempData["StartDate"]' != '' && '@TempData["EndDate"]' != '') {
+                var startDate = ('@TempData["StartDate"]').split("/");
+                var endDate = ('@TempData["EndDate"]').split("/");
+                var startYear = startDate[2].split(" ");
+                var endYear = endDate[2].split(" ");
+                var start = new Date(startYear[0], parseInt(startDate[1]) - 1, startDate[0]);
+                var end = new Date(endYear[0], parseInt(endDate[1]) - 1, endDate[0])
+                $('#from').datepicker({ format: 'dd/mm/yyyy' }); // format to show
+                $('#to').datepicker({ format: 'dd/mm/yyyy' });
+                $('#from').datepicker('setDate', start);
+                $('#to').datepicker('setDate', end);
+            }
+        });
+
+        //$("#tbl_cash_transaction").DataTable({
+        //    "order": [[0, "desc"]]
+        //});
+
+        $("#nav-cash").addClass("active");
+
+        //*********************** Plugin to sort date of format DD/MM/YYYY hh:mm:ss**************************//
+        jQuery.extend(jQuery.fn.dataTableExt.oSort, {
+            "date-euro-pre": function (a) {
+                var x;
+
+                if ($.trim(a) !== '') {
+                    var frDatea = $.trim(a).split(' ');
+                    var frTimea = (undefined != frDatea[1]) ? frDatea[1].split(':') : [00, 00, 00];
+                    var frDatea2 = frDatea[0].split('/');
+                    x = (frDatea2[2] + frDatea2[1] + frDatea2[0] + frTimea[0] + frTimea[1] + frTimea[2]) * 1;
+                }
+                else {
+                    x = Infinity;
+                }
+
+                return x;
+            },
+
+            "date-euro-asc": function (a, b) {
+                return a - b;
+            },
+
+            "date-euro-desc": function (a, b) {
+                return b - a;
+            }
+        });
+        //*********************** Plugin to sort date of format DD/MM/YYYY hh:mm:ss**************************//
+
+        //Start and end date validation start
+        var FromEndDate = new Date();
+        var ToEndDate = new Date();
+        ToEndDate.setDate(ToEndDate.getDate() + 365);
+        $('#to')
+            .datepicker({
+                format: 'dd/mm/yyyy',
+                weekStart: 1,
+                //startDate: startDate,
+                endDate: ToEndDate,
+                startView: 'decade',
+                autoclose: true,
+                todayHighlight: true
+            })
+            .on('changeDate', function (selected) {
+                FromEndDate = new Date(selected.date.valueOf());
+                FromEndDate.setDate(FromEndDate.getDate(new Date(selected.date.valueOf())));
+                $('#from').datepicker('setEndDate', FromEndDate);
+            });
+        $('#from').datepicker({
+            format: 'dd/mm/yyyy',
+            weekStart: 1,
+            //startDate: '01/01/2012',
+            endDate: FromEndDate,
+            startView: 'decade',
+            autoclose: true,
+            todayHighlight: true
+        })
+        .on('changeDate', function (selected) {
+            startDate = new Date(selected.date.valueOf());
+            startDate.setDate(startDate.getDate(new Date(selected.date.valueOf())));
+            $('#to').datepicker('setStartDate', startDate);
+        });
+
+        $('.datepicker').datepicker({
+            startView: 'decade',
+            autoclose: true,
+            todayHighlight: true
+        });
+        //Start and end date validation end
+
+        //for filtering according to date range
+        function rangefilter() {
+            if ($('#from').val() == "" && $('#to').val() == "") {
+                alert('@Html.DisplayNameFor(model=>model.PleaseSelectTheDateRange)');
+            }
+            else if ($('#from').val() == "") {
+                alert('Please select start date.');
+            }
+            else if ($('#to').val() == "") {
+                alert('@Html.DisplayNameFor(model=>model.PleaseSelectEndDate)');
+            }
+            else {
+                var startDate = $('#from').val();
+                var endDate = $('#to').val();
+                var updatedStartDate = startDate.split("/");
+                updatedStartDate = updatedStartDate[1] + "/" + updatedStartDate[0] + "/" + updatedStartDate[2];
+                var updatedEndDate = endDate.split("/");
+                updatedEndDate = updatedEndDate[1] + "/" + updatedEndDate[0] + "/" + updatedEndDate[2];
+                window.location.href = "@Url.Action("RangeFilter1", "Cash")" + "?start_date=" + updatedStartDate + "&end_date=" + updatedEndDate
+            }
+        }
+        //code ends here
+    </script>
+}

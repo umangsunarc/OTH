@@ -1,0 +1,1467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Action" xml:space="preserve">
+    <value>行动</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="AddNewHolidayClosingDate" xml:space="preserve">
+    <value>新增假日/截止日期</value>
+  </data>
+  <data name="AddNewWithdrawals" xml:space="preserve">
+    <value>添加新的提款</value>
+  </data>
+  <data name="AddTopup" xml:space="preserve">
+    <value>增值</value>
+  </data>
+  <data name="AdministrationfeePriceperLot" xml:space="preserve">
+    <value>手续费（0）：$：每手收费</value>
+  </data>
+  <data name="AdministrationFeeOnBuyer" xml:space="preserve">
+    <value>买方的管理费：</value>
+  </data>
+  <data name="AdminSettings" xml:space="preserve">
+    <value>管理员设置</value>
+  </data>
+  <data name="AllTradingHistory" xml:space="preserve">
+    <value>所有的交易历史</value>
+  </data>
+  <data name="AM" xml:space="preserve">
+    <value>上午</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>量</value>
+  </data>
+  <data name="Ask" xml:space="preserve">
+    <value>问</value>
+  </data>
+  <data name="AskPrice" xml:space="preserve">
+    <value>卖价</value>
+  </data>
+  <data name="BankTransfer" xml:space="preserve">
+    <value>银行转帐</value>
+  </data>
+  <data name="Bid" xml:space="preserve">
+    <value>出价</value>
+  </data>
+  <data name="BidAsk" xml:space="preserve">
+    <value>投标要求</value>
+  </data>
+  <data name="Buy" xml:space="preserve">
+    <value>购买</value>
+  </data>
+  <data name="BuyerFee" xml:space="preserve">
+    <value>买家费</value>
+  </data>
+  <data name="BuyorSell" xml:space="preserve">
+    <value>买或卖</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Cash" xml:space="preserve">
+    <value>现金</value>
+  </data>
+  <data name="CashAdmin" xml:space="preserve">
+    <value>现金（管理员）</value>
+  </data>
+  <data name="CashEWallet" xml:space="preserve">
+    <value>现金电子钱包</value>
+  </data>
+  <data name="CashInCirculation" xml:space="preserve">
+    <value>现金循环</value>
+  </data>
+  <data name="CashIssuedToMembers" xml:space="preserve">
+    <value>现金发给队员</value>
+  </data>
+  <data name="CashTransactionHistory" xml:space="preserve">
+    <value>现金交易历史记录</value>
+  </data>
+  <data name="CashWithdrawal" xml:space="preserve">
+    <value>取现金</value>
+  </data>
+  <data name="ChangeStatus" xml:space="preserve">
+    <value>更改状态</value>
+  </data>
+  <data name="Cheque" xml:space="preserve">
+    <value>支票</value>
+  </data>
+  <data name="ClosingBalance" xml:space="preserve">
+    <value>期末余额</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>确认</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>联系我们</value>
+  </data>
+  <data name="Currency" xml:space="preserve">
+    <value>货币</value>
+  </data>
+  <data name="CutOffTime" xml:space="preserve">
+    <value>截止时间：</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>仪表板</value>
+  </data>
+  <data name="DashboardAdmin" xml:space="preserve">
+    <value>仪表板（管理）</value>
+  </data>
+  <data name="DashboardCashTransactionHistory" xml:space="preserve">
+    <value>主页/现金交易记录</value>
+  </data>
+  <data name="DashboardCashWithdrawal" xml:space="preserve">
+    <value>仪表板/取款</value>
+  </data>
+  <data name="DashboardHolidayClosingDate" xml:space="preserve">
+    <value>仪表板/度假/截止日期</value>
+  </data>
+  <data name="DashboardIssuePoints" xml:space="preserve">
+    <value>仪表板/问题点</value>
+  </data>
+  <data name="DashboardQueue" xml:space="preserve">
+    <value>仪表板/队列</value>
+  </data>
+  <data name="DashboardTrading" xml:space="preserve">
+    <value>仪表板/贸易</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>约会时间</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>细节</value>
+  </data>
+  <data name="Fee" xml:space="preserve">
+    <value>费用</value>
+  </data>
+  <data name="Fixed" xml:space="preserve">
+    <value>固定</value>
+  </data>
+  <data name="ForaTotalOf" xml:space="preserve">
+    <value>总共</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>星期五</value>
+  </data>
+  <data name="FundTopup" xml:space="preserve">
+    <value>基金/充值</value>
+  </data>
+  <data name="FundTopupMember" xml:space="preserve">
+    <value>充值（会员）</value>
+  </data>
+  <data name="HolidayClosingDate" xml:space="preserve">
+    <value>假日/截止日期</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>主页</value>
+  </data>
+  <data name="Inbox" xml:space="preserve">
+    <value>收件箱</value>
+  </data>
+  <data name="InQueuing" xml:space="preserve">
+    <value>在排队</value>
+  </data>
+  <data name="IssuedPointsDetails" xml:space="preserve">
+    <value>出具详细点</value>
+  </data>
+  <data name="IssuePoints" xml:space="preserve">
+    <value>问题点</value>
+  </data>
+  <data name="IssuePointsInCirculation" xml:space="preserve">
+    <value>问题点循环</value>
+  </data>
+  <data name="IssuePointsIssuedintoSystem" xml:space="preserve">
+    <value>问题点数发放到系统</value>
+  </data>
+  <data name="IssuePointsIssuedToMembers" xml:space="preserve">
+    <value>发给队员的问题点</value>
+  </data>
+  <data name="Iwanttobuy" xml:space="preserve">
+    <value>我想买</value>
+  </data>
+  <data name="Iwanttosell" xml:space="preserve">
+    <value>我想卖</value>
+  </data>
+  <data name="LandingPage" xml:space="preserve">
+    <value>登陆页面</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>登录</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>登出</value>
+  </data>
+  <data name="Manual" xml:space="preserve">
+    <value>手册</value>
+  </data>
+  <data name="Minimum10topup" xml:space="preserve">
+    <value>最低$10起</value>
+  </data>
+  <data name="Modify" xml:space="preserve">
+    <value>修改</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>星期一</value>
+  </data>
+  <data name="MyWithdrawals" xml:space="preserve">
+    <value>我的提款</value>
+  </data>
+  <data name="NewHolidayClosingDate" xml:space="preserve">
+    <value>新假日/截止日期</value>
+  </data>
+  <data name="NewWithdrawal" xml:space="preserve">
+    <value>新的提款</value>
+  </data>
+  <data name="NoticesAndMaintenance" xml:space="preserve">
+    <value>布告栏</value>
+  </data>
+  <data name="NotifyBefore" xml:space="preserve">
+    <value>前通知</value>
+  </data>
+  <data name="NumberofUsers" xml:space="preserve">
+    <value>用户数</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>好</value>
+  </data>
+  <data name="OpeningCashBalance" xml:space="preserve">
+    <value>开幕现金结余</value>
+  </data>
+  <data name="OrderID" xml:space="preserve">
+    <value>订单ID</value>
+  </data>
+  <data name="OrderPrice" xml:space="preserve">
+    <value>订单价格</value>
+  </data>
+  <data name="OrderQTY" xml:space="preserve">
+    <value>订购数量</value>
+  </data>
+  <data name="Percent" xml:space="preserve">
+    <value>百分</value>
+  </data>
+  <data name="PM" xml:space="preserve">
+    <value>下午</value>
+  </data>
+  <data name="PoweredByDigimaticSolutionscopyrightAllRightReserved" xml:space="preserve">
+    <value>Powered By Digimatic Solutions © copyright 2016. All Right Reserved.</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>价钱</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>轮廓</value>
+  </data>
+  <data name="QTY" xml:space="preserve">
+    <value>数量</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>数量</value>
+  </data>
+  <data name="Queue" xml:space="preserve">
+    <value>队列</value>
+  </data>
+  <data name="QueueAdmin" xml:space="preserve">
+    <value>队列（管理员）</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>注册</value>
+  </data>
+  <data name="RemainingOrderQTY" xml:space="preserve">
+    <value>剩余订购数量</value>
+  </data>
+  <data name="RewardPoints" xml:space="preserve">
+    <value>奖励分数</value>
+  </data>
+  <data name="RewardPointsExchange" xml:space="preserve">
+    <value>奖励积分交易平台</value>
+  </data>
+  <data name="RewardPointsInCircualtion" xml:space="preserve">
+    <value>奖励积分在循环</value>
+  </data>
+  <data name="RewardPointsTransferredInByMembers" xml:space="preserve">
+    <value>转移在通过会员奖励积分</value>
+  </data>
+  <data name="RewardPointsTransferredOutByMembers" xml:space="preserve">
+    <value>奖励积分转出到会员</value>
+  </data>
+  <data name="Rules" xml:space="preserve">
+    <value>规则</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>星期六</value>
+  </data>
+  <data name="SelectPaymentMethod" xml:space="preserve">
+    <value>请选择支付方式</value>
+  </data>
+  <data name="SelectRule" xml:space="preserve">
+    <value>选择规则</value>
+  </data>
+  <data name="SelectStock" xml:space="preserve">
+    <value>选择股票</value>
+  </data>
+  <data name="SelectStockCode" xml:space="preserve">
+    <value>选择股票代码</value>
+  </data>
+  <data name="sell" xml:space="preserve">
+    <value>卖</value>
+  </data>
+  <data name="SellerFee" xml:space="preserve">
+    <value>卖家收费</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="SIGNUPFORFREE" xml:space="preserve">
+    <value>免费注册</value>
+  </data>
+  <data name="StartingTime" xml:space="preserve">
+    <value>开始时间：</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="StockCode" xml:space="preserve">
+    <value>股票代码</value>
+  </data>
+  <data name="StockName" xml:space="preserve">
+    <value>股票名称</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>星期日</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>星期四</value>
+  </data>
+  <data name="Timestamp" xml:space="preserve">
+    <value>时间戳</value>
+  </data>
+  <data name="Topup" xml:space="preserve">
+    <value>充值</value>
+  </data>
+  <data name="TopupAction" xml:space="preserve">
+    <value>充值动作</value>
+  </data>
+  <data name="TopupHistory" xml:space="preserve">
+    <value>充值记录</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>总：</value>
+  </data>
+  <data name="TotalCashIssuesIntoSystem" xml:space="preserve">
+    <value>总现金问题纳入系统</value>
+  </data>
+  <data name="TotalTopupByMembers" xml:space="preserve">
+    <value>充值总额按成员</value>
+  </data>
+  <data name="TotalWithdrawOutByMembers" xml:space="preserve">
+    <value>总撤柜Out通过会员</value>
+  </data>
+  <data name="Traded" xml:space="preserve">
+    <value>交易</value>
+  </data>
+  <data name="TradedBidPrice" xml:space="preserve">
+    <value>交易/买入价</value>
+  </data>
+  <data name="Trading" xml:space="preserve">
+    <value>贸易</value>
+  </data>
+  <data name="TradingAdmin" xml:space="preserve">
+    <value>贸易（管理员）</value>
+  </data>
+  <data name="TradingDay" xml:space="preserve">
+    <value>交易日：</value>
+  </data>
+  <data name="TradingHistory" xml:space="preserve">
+    <value>交易历史</value>
+  </data>
+  <data name="TradingTime" xml:space="preserve">
+    <value>交易时间</value>
+  </data>
+  <data name="TransactionAmount" xml:space="preserve">
+    <value>交易金额</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>星期二</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="UserId" xml:space="preserve">
+    <value>用户名</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>用户名</value>
+  </data>
+  <data name="ViewAllCashHistory" xml:space="preserve">
+    <value>查看全部现金史</value>
+  </data>
+  <data name="ViewAllTrading" xml:space="preserve">
+    <value>查看所有交易</value>
+  </data>
+  <data name="ViewDetails" xml:space="preserve">
+    <value>查看详情</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>星期三</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>欢迎</value>
+  </data>
+  <data name="WelcomeUserName" xml:space="preserve">
+    <value>欢迎用户名</value>
+  </data>
+  <data name="Withdrawal" xml:space="preserve">
+    <value>退出</value>
+  </data>
+  <data name="DashboardAllTradingHistory" xml:space="preserve">
+    <value>Dashboard/All Trading History</value>
+  </data>
+  <data name="Method" xml:space="preserve">
+    <value>方法</value>
+  </data>
+  <data name="WithdrawelFee" xml:space="preserve">
+    <value>提款行政费</value>
+  </data>
+  <data name="CashRequest" xml:space="preserve">
+    <value>Cash Request</value>
+  </data>
+  <data name="CashRequestHistory" xml:space="preserve">
+    <value>Cash Request History</value>
+  </data>
+  <data name="DashboardCashMemberCash" xml:space="preserve">
+    <value>现金交易历史记录</value>
+  </data>
+  <data name="DashboardCashRequest" xml:space="preserve">
+    <value>现金交易历史记录</value>
+  </data>
+  <data name="IssueCash" xml:space="preserve">
+    <value>现金交易历史记录</value>
+  </data>
+  <data name="IssuedCashHistory" xml:space="preserve">
+    <value>Issued Cash History</value>
+  </data>
+  <data name="MemberCashHistory" xml:space="preserve">
+    <value>Member Cash History</value>
+  </data>
+  <data name="RequestCash" xml:space="preserve">
+    <value>现金交易历史记录</value>
+  </data>
+  <data name="AdminName" xml:space="preserve">
+    <value>Admin Name</value>
+  </data>
+  <data name="CashIssuedHistory" xml:space="preserve">
+    <value>Cash Issued History</value>
+  </data>
+  <data name="CashIssueRequest" xml:space="preserve">
+    <value>Cash Issue Request</value>
+  </data>
+  <data name="DashboardCashIssueRequest" xml:space="preserve">
+    <value>仪表板/现金发行申请</value>
+  </data>
+  <data name="PaymentMethod" xml:space="preserve">
+    <value>PaymentMethod</value>
+  </data>
+  <data name="DashboardPortfolio" xml:space="preserve">
+    <value>仪表板/组合</value>
+  </data>
+  <data name="Portfolio" xml:space="preserve">
+    <value>投资组合</value>
+  </data>
+  <data name="PointsIssued" xml:space="preserve">
+    <value>现金交易历史记录</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>查询</value>
+  </data>
+  <data name="AddNewRole" xml:space="preserve">
+    <value>添加新角色</value>
+  </data>
+  <data name="AdministrationFees" xml:space="preserve">
+    <value>行政费</value>
+  </data>
+  <data name="AdministrationFeesOnSeller" xml:space="preserve">
+    <value>卖家行政费</value>
+  </data>
+  <data name="Buyer" xml:space="preserve">
+    <value>买家</value>
+  </data>
+  <data name="Createddate" xml:space="preserve">
+    <value>创建日期</value>
+  </data>
+  <data name="CreateUser" xml:space="preserve">
+    <value>创设用户</value>
+  </data>
+  <data name="CurrentAdministrationFeesRule" xml:space="preserve">
+    <value>现定行政费</value>
+  </data>
+  <data name="CurrentTradingRule" xml:space="preserve">
+    <value>目前交易规则</value>
+  </data>
+  <data name="DashboardFundTopup" xml:space="preserve">
+    <value>充值</value>
+  </data>
+  <data name="DashboardNotification" xml:space="preserve">
+    <value>显示板通知</value>
+  </data>
+  <data name="DayHigh" xml:space="preserve">
+    <value>当日最高</value>
+  </data>
+  <data name="DayLow" xml:space="preserve">
+    <value>当日最低</value>
+  </data>
+  <data name="EditPermission" xml:space="preserve">
+    <value>编辑权限</value>
+  </data>
+  <data name="EmailAddress" xml:space="preserve">
+    <value>电邮</value>
+  </data>
+  <data name="entries" xml:space="preserve">
+    <value>记录</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>姓</value>
+  </data>
+  <data name="Forapriceof" xml:space="preserve">
+    <value>以价格</value>
+  </data>
+  <data name="InitialMarketRate" xml:space="preserve">
+    <value>最初的市场价位</value>
+  </data>
+  <data name="IpAddress" xml:space="preserve">
+    <value>IP 地址</value>
+  </data>
+  <data name="IssueNewRewardPoints" xml:space="preserve">
+    <value>发放新奖励积分</value>
+  </data>
+  <data name="IssuerUserName" xml:space="preserve">
+    <value>发行人的用户名</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>名字</value>
+  </data>
+  <data name="LastTraded" xml:space="preserve">
+    <value>最后交易</value>
+  </data>
+  <data name="LogDetails" xml:space="preserve">
+    <value>登入资料</value>
+  </data>
+  <data name="Lot" xml:space="preserve">
+    <value>单位</value>
+  </data>
+  <data name="LotSize" xml:space="preserve">
+    <value>单位</value>
+  </data>
+  <data name="ManageUsers" xml:space="preserve">
+    <value>管理用户</value>
+  </data>
+  <data name="MarketRate" xml:space="preserve">
+    <value>市场价</value>
+  </data>
+  <data name="MinimumBidRate" xml:space="preserve">
+    <value>最低竞标价</value>
+  </data>
+  <data name="MinimumLotToBid" xml:space="preserve">
+    <value>最低竞标的单位</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="NoOfTraded" xml:space="preserve">
+    <value>交易量</value>
+  </data>
+  <data name="Notifications" xml:space="preserve">
+    <value>通知</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>开市</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>选项</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>密码</value>
+  </data>
+  <data name="PrevClose" xml:space="preserve">
+    <value>前日收市价</value>
+  </data>
+  <data name="PriceperLot" xml:space="preserve">
+    <value>每单位的价格</value>
+  </data>
+  <data name="ReceiverUserName" xml:space="preserve">
+    <value>收款方用户名</value>
+  </data>
+  <data name="RoleName" xml:space="preserve">
+    <value>角色名称</value>
+  </data>
+  <data name="RolePermissions" xml:space="preserve">
+    <value>角色权限</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>角色</value>
+  </data>
+  <data name="Rule" xml:space="preserve">
+    <value>原则</value>
+  </data>
+  <data name="RuleOn" xml:space="preserve">
+    <value>原则</value>
+  </data>
+  <data name="SelectMethod" xml:space="preserve">
+    <value>请选</value>
+  </data>
+  <data name="Seller" xml:space="preserve">
+    <value>卖家</value>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>显示</value>
+  </data>
+  <data name="Stock" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="TotalPoints" xml:space="preserve">
+    <value>总积分</value>
+  </data>
+  <data name="TotalVolume" xml:space="preserve">
+    <value>总量</value>
+  </data>
+  <data name="TradingRules" xml:space="preserve">
+    <value>交易原则</value>
+  </data>
+  <data name="TransferPoints" xml:space="preserve">
+    <value>转分</value>
+  </data>
+  <data name="UpdatedOn" xml:space="preserve">
+    <value>更新日期</value>
+  </data>
+  <data name="URL" xml:space="preserve">
+    <value>网址</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>用户</value>
+  </data>
+  <data name="Weeks" xml:space="preserve">
+    <value>52周</value>
+  </data>
+  <data name="WithdrawalFees" xml:space="preserve">
+    <value>提款行政费</value>
+  </data>
+  <data name="ValueTraded" xml:space="preserve">
+    <value>交易额</value>
+  </data>
+  <data name="SystemCash" xml:space="preserve">
+    <value>系统现金</value>
+  </data>
+  <data name="Uname" xml:space="preserve">
+    <value>用户名</value>
+  </data>
+  <data name="AccountSettings" xml:space="preserve">
+    <value>帐号设定</value>
+  </data>
+  <data name="AddNewNotification" xml:space="preserve">
+    <value>添加新通知</value>
+  </data>
+  <data name="AddNewUser" xml:space="preserve">
+    <value>添加新用户</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>地址</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>联系</value>
+  </data>
+  <data name="AdministrationFee" xml:space="preserve">
+    <value>管理费</value>
+  </data>
+  <data name="AlternateAddress" xml:space="preserve">
+    <value>备用地址</value>
+  </data>
+  <data name="Bidprice" xml:space="preserve">
+    <value>竞价</value>
+  </data>
+  <data name="BuyableSellableQuantity" xml:space="preserve">
+    <value>可买/可售数量</value>
+  </data>
+  <data name="ByclickingthebuttontoSignUpIagreetotheUserAgreement" xml:space="preserve">
+    <value>通过点击按钮来报名，我同意用户协议。</value>
+  </data>
+  <data name="CashIssueHistory" xml:space="preserve">
+    <value>现金发行历史</value>
+  </data>
+  <data name="CashRequestApproval" xml:space="preserve">
+    <value>现金请求批准</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>市</value>
+  </data>
+  <data name="CompanyAdmin" xml:space="preserve">
+    <value>公司管理</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>确认密码</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>国家</value>
+  </data>
+  <data name="CurrentStockAmount" xml:space="preserve">
+    <value>目前的库存数量</value>
+  </data>
+  <data name="DashboardLogDetails" xml:space="preserve">
+    <value>仪表板/日志详细信息</value>
+  </data>
+  <data name="DashboardManageUsers" xml:space="preserve">
+    <value>仪表板/管理用户</value>
+  </data>
+  <data name="DashboardPointsIssued" xml:space="preserve">
+    <value>仪表板/分发出</value>
+  </data>
+  <data name="DashboardPointsIssuedSelf" xml:space="preserve">
+    <value>仪表板/分发布/自</value>
+  </data>
+  <data name="DashboardRolePermissions" xml:space="preserve">
+    <value>仪表板/角色权限</value>
+  </data>
+  <data name="DashboardRoles" xml:space="preserve">
+    <value>仪表板/角色权限</value>
+  </data>
+  <data name="DashboardRules" xml:space="preserve">
+    <value>仪表板/规则</value>
+  </data>
+  <data name="DashboardTradingTime" xml:space="preserve">
+    <value>仪表板/交易时间</value>
+  </data>
+  <data name="DashboardTransferRewardPoints" xml:space="preserve">
+    <value>仪表板/转移奖励积分</value>
+  </data>
+  <data name="DashboradMarketRate" xml:space="preserve">
+    <value>仪表板/市场利率</value>
+  </data>
+  <data name="Developer" xml:space="preserve">
+    <value>开发人员</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>编辑权限</value>
+  </data>
+  <data name="EditPermissions" xml:space="preserve">
+    <value>编辑权限</value>
+  </data>
+  <data name="ExporttoCSV" xml:space="preserve">
+    <value>导出为CSV</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>过滤</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>忘记密码？</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>从转移</value>
+  </data>
+  <data name="Guest" xml:space="preserve">
+    <value>客人</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>历史</value>
+  </data>
+  <data name="Holdings" xml:space="preserve">
+    <value>控股</value>
+  </data>
+  <data name="LastTransactedPrice" xml:space="preserve">
+    <value>最后成交价</value>
+  </data>
+  <data name="LatestMarketValue" xml:space="preserve">
+    <value>最新的市场价值</value>
+  </data>
+  <data name="Member" xml:space="preserve">
+    <value>会员</value>
+  </data>
+  <data name="MobileNumber" xml:space="preserve">
+    <value>手机号码</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>下页</value>
+  </data>
+  <data name="Nodataavailableintable" xml:space="preserve">
+    <value>无表可用数据</value>
+  </data>
+  <data name="OrganizationAdmin" xml:space="preserve">
+    <value>组织管理员</value>
+  </data>
+  <data name="PersonalInfo" xml:space="preserve">
+    <value>个人信息</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>电话号码</value>
+  </data>
+  <data name="Pointissuerequest" xml:space="preserve">
+    <value>点发布请求</value>
+  </data>
+  <data name="Points" xml:space="preserve">
+    <value>分数</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>上页</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="Registerifyoudonthaveanaccount" xml:space="preserve">
+    <value>注册，如果你没有一个帐户。</value>
+  </data>
+  <data name="Rememberme" xml:space="preserve">
+    <value>记住我？</value>
+  </data>
+  <data name="RequestForCash" xml:space="preserve">
+    <value>要求现金</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>重启</value>
+  </data>
+  <data name="RESETPASSWORD" xml:space="preserve">
+    <value>重设密码</value>
+  </data>
+  <data name="RewardPointsTransfer" xml:space="preserve">
+    <value>奖励积分转移</value>
+  </data>
+  <data name="Rewardpointstransferhistory" xml:space="preserve">
+    <value>奖励积分转移的历史</value>
+  </data>
+  <data name="Roleadmin" xml:space="preserve">
+    <value>角色管理员</value>
+  </data>
+  <data name="RPE02TestRewardPoints" xml:space="preserve">
+    <value>RPE02-Test奖励积分</value>
+  </data>
+  <data name="Searche" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>选择</value>
+  </data>
+  <data name="SelectEstore" xml:space="preserve">
+    <value>选择E-store</value>
+  </data>
+  <data name="Self" xml:space="preserve">
+    <value>自</value>
+  </data>
+  <data name="Showentries" xml:space="preserve">
+    <value>展项</value>
+  </data>
+  <data name="Showing0to0of0entries" xml:space="preserve">
+    <value>显示0至0 0项</value>
+  </data>
+  <data name="Signup" xml:space="preserve">
+    <value>注册</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>提交</value>
+  </data>
+  <data name="SuperAdmin1" xml:space="preserve">
+    <value>超级管理员1</value>
+  </data>
+  <data name="SuperAdmin2" xml:space="preserve">
+    <value>超级管理员2</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>至</value>
+  </data>
+  <data name="Trade" xml:space="preserve">
+    <value>贸易</value>
+  </data>
+  <data name="Transfer" xml:space="preserve">
+    <value>转让</value>
+  </data>
+  <data name="TransferAmount" xml:space="preserve">
+    <value>转账金额</value>
+  </data>
+  <data name="TransferredAmount" xml:space="preserve">
+    <value>调入适量</value>
+  </data>
+  <data name="TransferredFrom" xml:space="preserve">
+    <value>从转移</value>
+  </data>
+  <data name="TransferredPoints" xml:space="preserve">
+    <value>转移分数</value>
+  </data>
+  <data name="TransferRewardPoints" xml:space="preserve">
+    <value>转移奖励积分</value>
+  </data>
+  <data name="UserandRoleManagement" xml:space="preserve">
+    <value>用户和角色管理</value>
+  </data>
+  <data name="ViewAllHistory" xml:space="preserve">
+    <value>查看全部历史记录</value>
+  </data>
+  <data name="Volume" xml:space="preserve">
+    <value>卷</value>
+  </data>
+  <data name="webdeveloper" xml:space="preserve">
+    <value>网站开发人员</value>
+  </data>
+  <data name="WolloRewardpoints" xml:space="preserve">
+    <value>Wollo-奖励积分</value>
+  </data>
+  <data name="Zip" xml:space="preserve">
+    <value>压缩</value>
+  </data>
+  <data name="AlternativeAssetExchangePlatform" xml:space="preserve">
+    <value>另类资产交易平台</value>
+  </data>
+  <data name="ApprovedBy" xml:space="preserve">
+    <value>由通过</value>
+  </data>
+  <data name="BacktoList" xml:space="preserve">
+    <value>返回目录</value>
+  </data>
+  <data name="BacktoRolePermissions" xml:space="preserve">
+    <value>返回角色权限</value>
+  </data>
+  <data name="BacktoRoles" xml:space="preserve">
+    <value>返回角色</value>
+  </data>
+  <data name="BacktoUsers" xml:space="preserve">
+    <value>返回用户</value>
+  </data>
+  <data name="CancelledIssuedPoints" xml:space="preserve">
+    <value>取消发行点</value>
+  </data>
+  <data name="CashHistory" xml:space="preserve">
+    <value>历史现金</value>
+  </data>
+  <data name="CashInCirculationHistory" xml:space="preserve">
+    <value>流通中现金史</value>
+  </data>
+  <data name="CashIssue" xml:space="preserve">
+    <value>现金发行</value>
+  </data>
+  <data name="CashIssued" xml:space="preserve">
+    <value>现金发行</value>
+  </data>
+  <data name="CashIssuedIntoSystemHistory" xml:space="preserve">
+    <value>现金发放到系统历史记录</value>
+  </data>
+  <data name="CashIssuedToMembersHistory" xml:space="preserve">
+    <value>现金发给队员史</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>更改密码</value>
+  </data>
+  <data name="ClosingCash" xml:space="preserve">
+    <value>贱金属</value>
+  </data>
+  <data name="ClosingPoints" xml:space="preserve">
+    <value>截止点</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>创建</value>
+  </data>
+  <data name="CreateRole" xml:space="preserve">
+    <value>创建角色</value>
+  </data>
+  <data name="CurrentIssuedPoints" xml:space="preserve">
+    <value>当前发行点</value>
+  </data>
+  <data name="CurrentWithdrawalFeeRule" xml:space="preserve">
+    <value>当前取款手续费规则</value>
+  </data>
+  <data name="DashboardCashInCirculationHistory" xml:space="preserve">
+    <value>仪表板/流通中现金史</value>
+  </data>
+  <data name="DashboardCashIssuedIntoSystemHistory" xml:space="preserve">
+    <value>仪表板/现金发放到系统历史记录</value>
+  </data>
+  <data name="DashboardCashIssuedToMembersHistory" xml:space="preserve">
+    <value>仪表板/现金发给队员史</value>
+  </data>
+  <data name="DashboardChangePassword" xml:space="preserve">
+    <value>仪表板/更改密码</value>
+  </data>
+  <data name="DashboardCreateRole" xml:space="preserve">
+    <value>仪表板/创建角色</value>
+  </data>
+  <data name="DashboardCreateUser" xml:space="preserve">
+    <value>仪表板/创建用户</value>
+  </data>
+  <data name="DashboardEditRole" xml:space="preserve">
+    <value>仪表板/编辑角色</value>
+  </data>
+  <data name="DashboardEditUser" xml:space="preserve">
+    <value>仪表板/编辑用户</value>
+  </data>
+  <data name="DashboardMarketRate" xml:space="preserve">
+    <value>仪表板/市场利率</value>
+  </data>
+  <data name="DashboardPointIssueRequest" xml:space="preserve">
+    <value>仪表板/点发布请求</value>
+  </data>
+  <data name="DashboardRewardPointsTransferHistory" xml:space="preserve">
+    <value>仪表板/奖励积分转移历史</value>
+  </data>
+  <data name="DashboardRoleDetails" xml:space="preserve">
+    <value>仪表板/角色细节</value>
+  </data>
+  <data name="DashboardRolePermissionDetails" xml:space="preserve">
+    <value>仪表板/角色权限详细</value>
+  </data>
+  <data name="DashboardTopupByMembersHistory" xml:space="preserve">
+    <value>仪表板/充值成员要历史</value>
+  </data>
+  <data name="DashboardUpdateRolePermission" xml:space="preserve">
+    <value>仪表板/更新角色权限</value>
+  </data>
+  <data name="DashboardUserDetails" xml:space="preserve">
+    <value>仪表板/用户详细信息</value>
+  </data>
+  <data name="DashboardWithdrawOutByMembersHistory" xml:space="preserve">
+    <value>仪表板/撤柜通过会员历史</value>
+  </data>
+  <data name="DashboardWolloRewardPointIssuedIntoSystemHistory" xml:space="preserve">
+    <value>发放到系统记录信息中心/ Wollo奖励点</value>
+  </data>
+  <data name="DashboardWolloRewardPointIssuedToMemberHistory" xml:space="preserve">
+    <value>颁发给会员记录信息中心/ Wollo奖励点</value>
+  </data>
+  <data name="DeactivateUser" xml:space="preserve">
+    <value>停用用户</value>
+  </data>
+  <data name="EditRole" xml:space="preserve">
+    <value>编辑角色</value>
+  </data>
+  <data name="FeaturesBenefits" xml:space="preserve">
+    <value>特点与优势</value>
+  </data>
+  <data name="GETTOKNOWPOINTS" xml:space="preserve">
+    <value>了解点</value>
+  </data>
+  <data name="Issuedpointbalance" xml:space="preserve">
+    <value>发出平衡点</value>
+  </data>
+  <data name="IssuedPointsValue" xml:space="preserve">
+    <value>发行分值</value>
+  </data>
+  <data name="Issuer" xml:space="preserve">
+    <value>发行者</value>
+  </data>
+  <data name="IssueRewardPoints" xml:space="preserve">
+    <value>发行奖励积分</value>
+  </data>
+  <data name="MinimumLot" xml:space="preserve">
+    <value>最小批量</value>
+  </data>
+  <data name="MinimumRate" xml:space="preserve">
+    <value>最低价格</value>
+  </data>
+  <data name="Module" xml:space="preserve">
+    <value>模</value>
+  </data>
+  <data name="MyOrders" xml:space="preserve">
+    <value>我的订单</value>
+  </data>
+  <data name="OpeningCash" xml:space="preserve">
+    <value>开幕现金</value>
+  </data>
+  <data name="OpeningPoints" xml:space="preserve">
+    <value>点开幕</value>
+  </data>
+  <data name="OURSERVICESPOLICIES" xml:space="preserve">
+    <value>我们的服务和政策</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>权限</value>
+  </data>
+  <data name="PermissionsAdmin" xml:space="preserve">
+    <value>权限 - 管理</value>
+  </data>
+  <data name="Receiver" xml:space="preserve">
+    <value>接收者</value>
+  </data>
+  <data name="RewardPoint" xml:space="preserve">
+    <value>奖励积分</value>
+  </data>
+  <data name="RewardPointHistory" xml:space="preserve">
+    <value>奖励积分的历史</value>
+  </data>
+  <data name="RoleDetails" xml:space="preserve">
+    <value>角色细节</value>
+  </data>
+  <data name="RolePermissionDetails" xml:space="preserve">
+    <value>角色权限的详细信息</value>
+  </data>
+  <data name="RPE02PointsInCirculation" xml:space="preserve">
+    <value>RPE02点循环</value>
+  </data>
+  <data name="RPE02PointsIssuedIntosystem" xml:space="preserve">
+    <value>RPE02点发放到系统</value>
+  </data>
+  <data name="RPE02PointsIssuedToMember" xml:space="preserve">
+    <value>RPE02点颁发给会员</value>
+  </data>
+  <data name="RPE02PointsTransferredInByMembers" xml:space="preserve">
+    <value>转移在通过会员RPE02点</value>
+  </data>
+  <data name="RPE02PointsTransferredOutByMembers" xml:space="preserve">
+    <value>RPE02点转出到会员</value>
+  </data>
+  <data name="SystemCashDetails" xml:space="preserve">
+    <value>系统现金详情</value>
+  </data>
+  <data name="TestRewardPointsInCirculationHistory" xml:space="preserve">
+    <value>测试奖励积分流通史</value>
+  </data>
+  <data name="TopupByMembersHistory" xml:space="preserve">
+    <value>通过充值会员历史</value>
+  </data>
+  <data name="UpdateRolePermission" xml:space="preserve">
+    <value>更新角色权限</value>
+  </data>
+  <data name="UserRole" xml:space="preserve">
+    <value>用户角色</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>视图</value>
+  </data>
+  <data name="WithdrawOutByMembersHistory" xml:space="preserve">
+    <value>撤销通过会员历史</value>
+  </data>
+  <data name="WolloPointsInCirculation" xml:space="preserve">
+    <value>Wollo点循环</value>
+  </data>
+  <data name="WolloPointsIssuedToMembers" xml:space="preserve">
+    <value>发给队员Wollo点</value>
+  </data>
+  <data name="WolloPointsIssuedToSystem" xml:space="preserve">
+    <value>颁发给系统Wollo点</value>
+  </data>
+  <data name="WolloPointsTransferredInByMember" xml:space="preserve">
+    <value>转各会员Wollo点</value>
+  </data>
+  <data name="WolloPointsTransferredOutByMember" xml:space="preserve">
+    <value>Wollo点转出到会员</value>
+  </data>
+  <data name="WolloRewardPointIssuedIntoSystemHistory" xml:space="preserve">
+    <value>发放到系统历史Wollo奖励点</value>
+  </data>
+  <data name="WolloRewardPointIssuedToMemberHistory" xml:space="preserve">
+    <value>颁发给会员历史Wollo奖励点</value>
+  </data>
+  <data name="WolloRewardPointsInCirculationHistory" xml:space="preserve">
+    <value>Wollo奖励积分流通史</value>
+  </data>
+  <data name="WithdrawalFee" xml:space="preserve">
+    <value>提款行政费</value>
+  </data>
+  <data name="DashboardTestRewardPointsInCirculatiHistory" xml:space="preserve">
+    <value>仪表板/测试奖励积分流通史</value>
+  </data>
+  <data name="TotalCashIssuedIntoSystem" xml:space="preserve">
+    <value>总现金问题纳入系统</value>
+  </data>
+  <data name="MenuTrade" xml:space="preserve">
+    <value>贸易</value>
+  </data>
+  <data name="Password_Required" xml:space="preserve">
+    <value>密码字段是必填字段。</value>
+  </data>
+  <data name="UserName_Required" xml:space="preserve">
+    <value>用户名字段是必需的。</value>
+  </data>
+  <data name="Address_Required" xml:space="preserve">
+    <value>地址是必需的。</value>
+  </data>
+  <data name="AmountPriceYouEnteredIsInvalid" xml:space="preserve">
+    <value>您输入的金额/价格无效</value>
+  </data>
+  <data name="ANewUserHasBeenCreated" xml:space="preserve">
+    <value>已创建新用户。</value>
+  </data>
+  <data name="CashIssuedSuccessfully" xml:space="preserve">
+    <value>现金已成功发放</value>
+  </data>
+  <data name="City_Required" xml:space="preserve">
+    <value>城市是必需的。</value>
+  </data>
+  <data name="ConfirmPasswordAndPasswordDoNotMatch" xml:space="preserve">
+    <value>确认密码“和”密码“不匹配。</value>
+  </data>
+  <data name="Email_Required" xml:space="preserve">
+    <value>电子邮件地址字段是必填字段。</value>
+  </data>
+  <data name="FirstName_Required" xml:space="preserve">
+    <value>名字是必需的。</value>
+  </data>
+  <data name="IfYouDontHaveAnAccount" xml:space="preserve">
+    <value>如果您没有帐户。</value>
+  </data>
+  <data name="InvalidUsernameOrPassword" xml:space="preserve">
+    <value>用户名或密码无效</value>
+  </data>
+  <data name="IssuedPointsCannotBeCancelled" xml:space="preserve">
+    <value>发行的积分不能取消</value>
+  </data>
+  <data name="IssuedPointsCannotBeModified" xml:space="preserve">
+    <value>发布的点不能修改</value>
+  </data>
+  <data name="LastName_Required" xml:space="preserve">
+    <value>姓氏是必填字段。</value>
+  </data>
+  <data name="MakeSureYouHaveProvidedDataForAllFields" xml:space="preserve">
+    <value>确保您提供了所有字段的数据</value>
+  </data>
+  <data name="MakeSureYouHaveSelectedPaymentMethodAndProvidedAmount" xml:space="preserve">
+    <value>请确保您已选择付款方式和提供金额</value>
+  </data>
+  <data name="MakesureyouprovidedCorrectDetails" xml:space="preserve">
+    <value>确保您提供了正确的详细信息。</value>
+  </data>
+  <data name="NoFeesAvailableForThisMethod" xml:space="preserve">
+    <value>此方法不收费</value>
+  </data>
+  <data name="NotEnoughAmountForBid" xml:space="preserve">
+    <value>抱歉！！您的钱包中没有足够的金额用于此出价。</value>
+  </data>
+  <data name="NotificationAddedSuccessfully" xml:space="preserve">
+    <value>已成功添加通知</value>
+  </data>
+  <data name="NotificationUpdatedSuccessfully" xml:space="preserve">
+    <value>通知已成功更新</value>
+  </data>
+  <data name="PasswordUpdatedSuccessfully" xml:space="preserve">
+    <value>密码已成功更新</value>
+  </data>
+  <data name="PersonalInformationHasBeenUpdatedSuccessfully" xml:space="preserve">
+    <value>个人信息已成功更新！</value>
+  </data>
+  <data name="PhoneNumberIsRequired" xml:space="preserve">
+    <value>电话号码是必填项。</value>
+  </data>
+  <data name="PleaseEnterAskAmount" xml:space="preserve">
+    <value>请输入要求金额</value>
+  </data>
+  <data name="PleaseEnterBidAmount" xml:space="preserve">
+    <value>请输入出价金额</value>
+  </data>
+  <data name="PleaseMakeABidWithLotGreaterThanZero" xml:space="preserve">
+    <value>请出价大于0的拍卖品。</value>
+  </data>
+  <data name="PleaseMakeAnAskWithLotGreaterThanZero" xml:space="preserve">
+    <value>请问大于0的批次。</value>
+  </data>
+  <data name="PleaseSelectEndDate" xml:space="preserve">
+    <value>请选择结束日期</value>
+  </data>
+  <data name="PleaseSelectTheDateRange" xml:space="preserve">
+    <value>请选择日期范围。</value>
+  </data>
+  <data name="PleaseSelectToDate" xml:space="preserve">
+    <value>请选择日期</value>
+  </data>
+  <data name="PointsIssuedSuccessfully" xml:space="preserve">
+    <value>积分发布成功</value>
+  </data>
+  <data name="PointsIssuedToMembers" xml:space="preserve">
+    <value>发给会员的积分</value>
+  </data>
+  <data name="ResetLinkSent" xml:space="preserve">
+    <value>重置密码链接已发送到您的电子邮件地址。请检查  您的电子邮件进一步的帮助。</value>
+  </data>
+  <data name="RuleCreatedSuccessfully" xml:space="preserve">
+    <value>规则创建成功。</value>
+  </data>
+  <data name="SelfRequestForCash" xml:space="preserve">
+    <value>自我请求现金</value>
+  </data>
+  <data name="SelfRequestForPoints" xml:space="preserve">
+    <value>自我请求点</value>
+  </data>
+  <data name="SomethingWentWrong" xml:space="preserve">
+    <value>出了些问题</value>
+  </data>
+  <data name="StatusUpdatedSuccessfully" xml:space="preserve">
+    <value>状态已成功更新</value>
+  </data>
+  <data name="SuperAdminRoleIsAlreadyAssigned" xml:space="preserve">
+    <value>超级管理员角色已分配</value>
+  </data>
+  <data name="ThePasswordMustBeAtLeastSixCharactersLong" xml:space="preserve">
+    <value>密码必须至少为6个字符。</value>
+  </data>
+  <data name="TheTransferAmountShouldBeGreaterThanZero" xml:space="preserve">
+    <value>传输量应大于0</value>
+  </data>
+  <data name="ThisUserHasBeenDeactivatedByAdmin" xml:space="preserve">
+    <value>此用户已被管理员停用</value>
+  </data>
+  <data name="TopupAddedSuccessfully" xml:space="preserve">
+    <value>已成功添加补充</value>
+  </data>
+  <data name="TransactionCancelledSuccessfully" xml:space="preserve">
+    <value>交易已成功取消</value>
+  </data>
+  <data name="UName_Required" xml:space="preserve">
+    <value>用户名是必需的。</value>
+  </data>
+  <data name="UserAgreementLabel" xml:space="preserve">
+    <value>通过点击按钮注册，我同意用户协议。</value>
+  </data>
+  <data name="UserHasBeenActivatedSuccessfully" xml:space="preserve">
+    <value>用户已成功激活。</value>
+  </data>
+  <data name="UserHasBeenDeactivatedSuccessfully" xml:space="preserve">
+    <value>用户已成功取消激活。</value>
+  </data>
+  <data name="UserWithThisEmailAddressDoesNotExist" xml:space="preserve">
+    <value>拥有此电子邮件地址的用户不存在。</value>
+  </data>
+  <data name="WithdrawalAddedSuccessfully" xml:space="preserve">
+    <value>已成功添加提款</value>
+  </data>
+  <data name="WithdrawalUpdatedSuccessfully" xml:space="preserve">
+    <value>提款已成功更新</value>
+  </data>
+  <data name="YouDoNotHaveSufficientStockAmountToPerformThisAction" xml:space="preserve">
+    <value>您没有足够的库存量来执行此操作</value>
+  </data>
+  <data name="YouDontHaveEnoughBalanceToIssueCash" xml:space="preserve">
+    <value>您没有足够的余额发放现金</value>
+  </data>
+  <data name="YourAskHasBeenPlacedSuccessfully" xml:space="preserve">
+    <value>您的要求已成功放置</value>
+  </data>
+  <data name="YourAskHasBeenUpdatedSuccessfully" xml:space="preserve">
+    <value>您的要求已成功更新</value>
+  </data>
+  <data name="YourBidHasBeenPlacedSuccessfully" xml:space="preserve">
+    <value>您的出价已成功放置</value>
+  </data>
+  <data name="YourBidHasBeenUpdatedSuccessfully" xml:space="preserve">
+    <value>您的出价已成功更新</value>
+  </data>
+  <data name="YourRequestHasBeenSentToSuperAdminForApproval" xml:space="preserve">
+    <value>您的请求已发送给超级管理员批准</value>
+  </data>
+  <data name="Zip_Required" xml:space="preserve">
+    <value>需要Zip</value>
+  </data>
+</root>

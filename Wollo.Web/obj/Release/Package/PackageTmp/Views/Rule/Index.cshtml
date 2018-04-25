@@ -1,0 +1,726 @@
+﻿@model Wollo.Web.Models.AdminRuleMasterDataModel
+@{
+    ViewBag.Title = @Html.DisplayNameFor(x => x.AdminRuleMasterData.rules);
+}
+<style>
+    .table {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .circle {
+        position: relative;
+        border-radius: 50%;
+        width: 100%;
+        height: auto;
+        padding-top: 100%;
+        background-image: url(/images/administrator.jpg);
+        background-repeat: round;
+        text-align: center;
+    }
+
+    .circle1 {
+        position: relative;
+        border-radius: 50%;
+        width: 100%;
+        height: auto;
+        padding-top: 100%;
+        background-image: url(/images/Withdraw.jpg);
+        background-repeat: round;
+        text-align: center;
+    }
+
+    .circle2 {
+        position: relative;
+        border-radius: 50%;
+        width: 100%;
+        height: auto;
+        padding-top: 100%;
+        background-image: url(/images/TradeRule.jpg);
+        background-repeat: round;
+        text-align: center;
+    }
+
+    .lblRuleAndlink {
+        text-align: center;
+    }
+
+    .btn {
+        //padding: 3px 60px;
+    }
+</style>
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    @Html.LabelFor(x => x.AdminRuleMasterData.rules)
+                </h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i> @Html.LabelFor(x => x.AdminRuleMasterData.dashboard_rules)
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <br />
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 ">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8 lblRuleAndlink ">
+                        <div class="circle">
+                        </div>
+                        <br />
+                        @Html.LabelFor(x => x.AdminRuleMasterData.administration_fee)
+                        <br /><br /><br /><br />
+                        <input type="button" class="btn btn-block btn-info" value=@Html.DisplayNameFor(model => model.AdminRuleMasterData.select) id="admin-container" /><br />
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8 lblRuleAndlink">
+                        <div class="circle1">
+                        </div>
+                        <br />
+                        @Html.LabelFor(x => x.AdminRuleMasterData.withdrawal_fees)
+                        <br /><br /><br /><br />
+                        <input type="button" class="btn btn-block btn-info" value=@Html.DisplayNameFor(model => model.AdminRuleMasterData.select) id="withdrawal-container" /><br />
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8 lblRuleAndlink">
+                        <div class="circle2">
+
+                        </div>
+                        <br />
+                        @Html.LabelFor(x => x.AdminRuleMasterData.trading_rules)
+                        <br /><br /><br /><br />
+                        <input type="button" class="btn btn-block btn-info" value=@Html.DisplayNameFor(model => model.AdminRuleMasterData.select) id="trading-container" /><br />
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- /.container-fluid -->
+</div>
+<!-- /#page-wrapper -->
+<!-- /#Model Window -->
+
+<div class="modal fade" id="tradingrule" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="tradingruleLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Trading Rule</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="dropdown col-sm-4">
+                        <p class="text-left"> Priority: </p>
+                    </div>
+                    <div class="dropdown col-sm-4">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu11" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Sequence
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu11">
+                            <li><a href="#">Sequence</a></li>
+                            <li><a href="#">Price</a></li>
+                            <li><a href="#">Quantity</a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                    <br />
+                    <div class="clearfix"></div>
+                    <div class="dropdown col-sm-4">
+                        <p class="text-left"> Priority 2: </p>
+                    </div>
+
+                    <div class="dropdown col-sm-4">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu11" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Sequence
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu11">
+                            <li><a href="#">Sequence</a></li>
+                            <li><a href="#">Price</a></li>
+                            <li><a href="#">Quantity</a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                    <br />
+                    <div class="clearfix"></div>
+                    <div class="dropdown col-sm-4">
+                        <p class="text-left"> Priority 3: </p>
+                    </div>
+                    <div class="dropdown col-sm-4">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu11" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Sequence
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu11">
+                            <li><a href="#">Sequence</a></li>
+                            <li><a href="#">Price</a></li>
+                            <li><a href="#">Quantity</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" onclick="this.disabled=true" class="btn btn-primary">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- /#Model Window for Administrator Fee-->
+<div class="modal fade" id="administrator" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="administratorLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">@Html.LabelFor(x => x.AdminRuleMasterData.administration_fee)</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="dropdown col-sm-3">
+                        <p class="text-left"> @Html.LabelFor(x => x.AdminRuleMasterData.select_stock) </p>
+                    </div>
+                    <div class="dropdown col-sm-3">
+                        @{string select_stock_code_label = @Html.DisplayNameFor(model => model.AdminRuleMasterData.select_stock_code).ToString();}
+                        @Html.DropDownList("AdminStock", new SelectList(Model.AdminRuleMasterData.StockCodes, "id", "stock_name"), select_stock_code_label, new { @class = "form-control" })
+                    </div>
+                    <div class="clearfix"></div>
+                    <br />
+                    <div class="clearfix"></div>
+                    <div class="dropdown col-sm-3">
+                        <p class="text-left">@Html.LabelFor(x => x.AdminRuleMasterData.administration_fee_on_buyer) </p>
+                    </div>
+                    <div class="dropdown col-sm-3">
+                        @{string select_rule_label = @Html.DisplayNameFor(model => model.AdminRuleMasterData.select_rule).ToString();}
+                        @Html.DropDownList("FeeRuleBuyer", new SelectList(Model.AdminRuleMasterData.RuleConfigSettings, "rule_id", "RuleConfigMaster.rule_name"), select_rule_label, new { @class = "form-control" })
+                    </div>
+                    <div class="dropdown col-sm-3">
+                        @Html.TextBox("FeeBuyer", null, new { @class = "form-control", @placeholder = @Html.DisplayNameFor(model => model.AdminRuleMasterData.buyer_fee) })
+                    </div>
+                    <div class="clearfix"></div>
+                    @*<br />*@
+                    <div class="clearfix"></div>
+                    <div class="dropdown col-sm-3">
+                        <p class="text-left">@Html.LabelFor(x => x.AdminRuleMasterData.administration_fees_on_seller) </p>
+                    </div>
+                    <div class="dropdown col-sm-3">
+                        @Html.DropDownList("FeeRuleSeller", new SelectList(Model.AdminRuleMasterData.RuleConfigSettings, "rule_id", "RuleConfigMaster.rule_name"), select_rule_label, new { @class = "form-control" })
+                    </div>
+                    <div class="dropdown col-sm-3">
+                        @Html.TextBox("FeeSeller", null, new { @class = "form-control", @placeholder = @Html.DisplayNameFor(model => model.AdminRuleMasterData.seller_fee) })
+                    </div>
+                    <div class="clearfix"></div>
+
+
+                    <div class="dropdown col-sm-12">
+                        <table class="table  table-striped table-bordered table-hovered" style="margin-top:5px;">
+                            <caption><center>@Html.LabelFor(x => x.AdminRuleMasterData.current_administration_fees_rule)</center></caption>
+                            @*<table class="table  table-striped">
+                                <caption>Current Administration Fees Rule</caption>*@
+                            <tr>
+                                <th>@Html.LabelFor(x => x.AdminRuleMasterData.rule_on)</th>
+                                <th>@Html.LabelFor(x => x.AdminRuleMasterData.stock)</th>
+                                <th>@Html.LabelFor(x => x.AdminRuleMasterData.rule)</th>
+                                <th>@Html.LabelFor(x => x.AdminRuleMasterData.fee)</th>
+                                <th>@Html.LabelFor(x => x.AdminRuleMasterData.updated_on)</th>
+
+                            </tr>
+                            @foreach (var item in Model.AdminRuleMasterData.AdministrationFees)
+                            {
+
+                                <tr>
+                                    <td>@Html.DisplayFor(y => item.apply_on)</td>
+                                    <td>@Html.DisplayFor(x => item.StockCode.stock_code)</td>
+                                    <td>@Html.DisplayFor(x => item.RuleConfigMaster.rule_name)</td>
+                                    <td>@Html.DisplayFor(x => item.fees)</td>
+                                    <td>
+                                        @{string date = item.updated_date.Value.ToString("dd'/'MM'/'yyyy HH:mm:ss");}
+                                        @Html.Raw(date)
+                                        @*@Html.DisplayFor(x => item.updated_date.Value.GetDateTimeFormats()[3])*@
+                                    </td>
+                                </tr>
+                            }
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">@Html.LabelFor(x => x.AdminRuleMasterData.cancel)</button>
+                <button type="button" onclick="this.disabled=true" class="btn btn-primary" id="AddAdminRule">@Html.LabelFor(x => x.AdminRuleMasterData.ok)</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- /#Model Window for Withdrawl Fee-->
+@*<div class="modal fade" id="withdra" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="withdraLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Withdrawal Fee</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="dropdown col-sm-3">
+                            <p class="text-left"> Select Method: </p>
+                        </div>
+                        <div class="dropdown col-sm-5">
+                            @Html.DropDownList("WithdrawPaymentMethod", new SelectList(ViewBag.PaymentMethodsList, "Value", "Text"), "Select Payement Method", new { @class = "form-control" })
+                        </div>
+                        <div class="clearfix"></div>
+                        <br />
+                        <div class="clearfix"></div>
+                        <div class="dropdown col-sm-3">
+                            <p class="text-left">Withdrawal fees </p>
+                        </div>
+                        <div class="dropdown col-sm-3">
+                            @Html.DropDownList("FeeRuleWithdraw", new SelectList(Model.RuleConfigSettings, "rule_id", "RuleConfigMaster.rule_name"), "Select Rule", new { @class = "form-control" })
+                        </div>
+                        <div class="dropdown col-sm-3">
+                            @Html.TextBox("FeeWithdraw", null, new { @class = "form-control", @placeholder = "Fee" })
+                        </div>
+                        <div class="clearfix"></div>
+                        <br />
+                        <div class="clearfix"></div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary" id="AddWithdrawalRule">Ok</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*@
+<div class="modal fade" id="withdra" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="withdraLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">@Html.LabelFor(x => x.AdminRuleMasterData.withdrawal_fee)</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="dropdown col-sm-3">
+                        <p class="text-left"> @Html.LabelFor(x => x.AdminRuleMasterData.select_method) </p>
+                    </div>
+                    <div class="dropdown col-sm-5">
+                        @{string payment_method_label = @Html.DisplayNameFor(model => model.AdminRuleMasterData.select_payment_method).ToString();}
+                        @Html.DropDownList("WithdrawPaymentMethod", new SelectList(ViewBag.PaymentMethodsList, "Value", "Text"), payment_method_label, new { @class = "form-control" })
+                    </div>
+                    <div class="clearfix"></div>
+                    <br />
+                    <div class="clearfix"></div>
+                    <div class="dropdown col-sm-3">
+                        <p class="text-left">@Html.LabelFor(x => x.AdminRuleMasterData.withdrawal_fee) </p>
+                    </div>
+                    <div class="dropdown col-sm-3">
+                        @Html.DropDownList("FeeRuleWithdraw", new SelectList(Model.AdminRuleMasterData.RuleConfigSettings, "rule_id", "RuleConfigMaster.rule_name"), select_rule_label, new { @class = "form-control" })
+                    </div>
+                    <div class="dropdown col-sm-3">
+                        @Html.TextBox("FeeWithdraw", null, new { @class = "form-control", @placeholder = @Html.DisplayNameFor(model=>model.AdminRuleMasterData.fee) })
+                    </div>
+                    <div class="clearfix"></div>
+                    <br />
+                    @*<div class="dropdown col-sm-3">
+                            <p>@Html.LabelFor(x => x.current_rules)</p>
+                        </div>*@
+                    <div class="dropdown col-sm-12">
+                        <table class="table  table-striped table-bordered table-hovered" style="margin-top:5px;">
+                            <caption><center>@Html.LabelFor(x => x.AdminRuleMasterData.current_withdrawal_fee_rule)</center></caption>
+                            @*<table class="table table-bordered table-hover table-striped">
+                                <caption>Current Withdrawel Fee Rule</caption>*@
+                            <tr>
+                                <th>@Html.LabelFor(x => x.AdminRuleMasterData.method)</th>
+                                <th>@Html.LabelFor(x => x.AdminRuleMasterData.rule)</th>
+                                <th>@Html.LabelFor(x => x.AdminRuleMasterData.fee)</th>
+                                <th>@Html.LabelFor(x => x.AdminRuleMasterData.updated_on)</th>
+                            </tr>
+                            @foreach (var item in Model.AdminRuleMasterData.WithdrawalFees)
+                            {
+                                <tr>
+                                    <td>@Html.DisplayFor(x => item.method)</td>
+                                    <td>@Html.DisplayFor(x => item.RuleConfigMaster.rule_name)</td>
+                                    <td>@Html.DisplayFor(x => item.fees)</td>
+                                    <td>
+                                        @{string date = item.updated_date.Value.ToString("dd'/'MM'/'yyyy HH:mm:ss");}
+                                        @Html.Raw(date)
+                                        @*@Html.DisplayFor(x => item.updated_date.Value.GetDateTimeFormats()[3])*@
+                                    </td>
+                                </tr>
+                            }
+
+
+                        </table>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-default" data-dismiss="modal">@Html.LabelFor(x => x.AdminRuleMasterData.cancel)</button>
+                        <button type="button" onclick="this.disabled=true" class="btn btn-primary" id="AddWithdrawalRule">@Html.LabelFor(x => x.AdminRuleMasterData.ok)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- model Window For Trading Rule by umang 18-07-16-->
+
+<div class="modal fade" id="trad_rule_lot_rate" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="withdraLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">@Html.LabelFor(x => x.AdminRuleMasterData.trading_rules)</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="dropdown col-sm-3">
+                        <p class="text-left"> @Html.LabelFor(x => x.AdminRuleMasterData.select_stock) </p>
+                    </div>
+                    <div class="dropdown col-sm-5">
+                        @Html.DropDownList("AdminStockTrading", new SelectList(Model.AdminRuleMasterData.StockCodes, "id", "stock_name"), select_stock_code_label, new { @class = "form-control" })
+                    </div>
+                    <div class="clearfix"></div>
+                    <br />
+                    <div class="clearfix"></div>
+                    <div class="dropdown col-sm-3">
+                        <p class="text-left">  @Html.LabelFor(x => x.AdminRuleMasterData.lot) </p>
+                    </div>
+                    <div class="dropdown col-sm-5">
+                        @Html.TextBox("TradingPointEquivalent", null, new { @class = "form-control", @placeholder = @Html.DisplayNameFor(model => model.AdminRuleMasterData.points) })
+                    </div>
+                    <div class="clearfix"></div>
+                    <br />
+                    <div class="clearfix"></div>
+                    <div class="dropdown col-sm-3">
+                        <p class="text-left"> @Html.LabelFor(x => x.AdminRuleMasterData.minimum_lot_to_bid)  </p>
+                    </div>
+                    <div class="dropdown col-sm-5">
+                        @Html.TextBox("TradingMinimumLot", null, new { @class = "form-control", @placeholder = @Html.DisplayNameFor(model => model.AdminRuleMasterData.minimum_lot) })
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="clearfix"></div>
+                    <div class="dropdown col-sm-3">
+                        <p class="text-left">  @Html.LabelFor(x => x.AdminRuleMasterData.minimum_bidding_rate) </p>
+
+                    </div>
+                    <div class="dropdown col-sm-5">
+
+                        @Html.TextBox("TradingMinimumRate", null, new { @class = "form-control", @placeholder = @Html.DisplayNameFor(model => model.AdminRuleMasterData.minimum_rate) })
+                    </div>
+                    <div class="clearfix"></div>
+                    <br />
+                    <div class="dropdown col-sm-12">
+                        <table class="table  table-striped table-bordered table-hovered">
+                            <caption><center>@Html.LabelFor(x => x.AdminRuleMasterData.current_trading_rule)</center></caption>
+                            <tr>
+                                <th>@Html.LabelFor(x => x.AdminRuleMasterData.stock)</th>
+                                <th>@Html.LabelFor(x => x.AdminRuleMasterData.lot)</th>
+                                <th>@Html.LabelFor(x => x.AdminRuleMasterData.minimum_lot_to_bid)</th>
+                                <th>@Html.LabelFor(x => x.AdminRuleMasterData.minimum_bidding_rate)</th>
+                            </tr>
+                            @foreach (var item in Model.AdminRuleMasterData.UnitMaster)
+                            {
+                                <tr>
+                                    <td>@Html.DisplayFor(x => item.StockCode.stock_name)</td>
+                                    <td>@Html.DisplayFor(x => item.points_equivalent)</td>
+                                    <td>@Html.DisplayFor(x => item.minimum_lot)</td>
+                                    <td>@Html.DisplayFor(x => item.minimum_rate)</td>
+                                </tr>
+                            }
+
+                        </table>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">@Html.LabelFor(x => x.AdminRuleMasterData.cancel)</button>
+                        <button type="button" onclick="this.disabled=true" class="btn btn-primary" id="AddTradingRule">@Html.LabelFor(x => x.AdminRuleMasterData.ok)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- /#Model Window for LOTS  Fee-->
+<div class="modal fade" id="lots" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="lotsLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">LOTS</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="dropdown col-sm-3">
+                        <p class="text-left"> @Html.DisplayNameFor(model => model.AdminRuleMasterData.select_stock): </p>
+                    </div>
+                    <div class="dropdown col-sm-3">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu11" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            All Stock
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu11">
+                            <li><a href="#">#121 Sotck </a></li>
+                            <li><a href="#">#123 Stock 2</a></li>
+                            <li><a href="#">Another Stock</a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                    <br />
+                    <div class="clearfix"></div>
+                    <div class="dropdown col-sm-3">
+                        <p class="text-left">	1 Lot =  </p>
+                    </div>
+
+                    <div class="dropdown col-sm-3">
+                        <input placeholder="text here" />
+                    </div>
+
+                    <div class="clearfix"></div>
+                    <br />
+                    <div class="clearfix"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" onclick="this.disabled=true" class="btn btn-primary">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/js/jquery.js"></script>
+    @*<script src="~/Scripts/bootstrap.js"></script>*@
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#myGroup ul li a').click(function () {
+                $('#myGroup ul li ul.collapse ').removeClass('in');
+                $('#myGroup ul li').removeClass('active');
+            });
+        })
+        $("#nav-rule").addClass("active");
+
+        $("#withdrawal-container").click(function () {
+            $("#WithdrawPaymentMethod").val("");
+            $("#FeeRuleWithdraw").val("");
+            $("#FeeWithdraw").val("");
+            $("#withdra").modal("show");
+        });
+        //script code  umang 18-7-16 //
+        $("#trading-container").click(function () {
+            $("#TradingPointEquivalent").val("");
+            $("#TradingMinimumLot").val("");
+            $("#TradingMinimumRate").val("");
+            $("#trad_rule_lot_rate").modal("show");
+        });
+
+        $("#admin-container").click(function () {
+            $("#AdminStock").val("");
+            $("#FeeRuleBuyer").val("");
+            $("#FeeRuleSeller").val("");
+            $("#FeeBuyer").val("");
+            $("#FeeSeller").val("");
+            $("#administrator").modal("show");
+        });
+
+        //$("#FeeWithdraw,#FeeBuyer,#FeeSeller").keydown(function (e) {
+        //    // Allow: backspace, delete, tab, escape, enter
+        //    if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110]) !== -1 ||
+        //        // Allow: Ctrl+A, Command+A
+        //        (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+        //        // Allow: home, end, left, right, down, up
+        //        (e.keyCode >= 35 && e.keyCode <= 40)) {
+        //        // let it happen, don't do anything
+        //        return;
+        //    }
+        //    // Ensure that it is a number and stop the keypress
+        //    if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+        //        e.preventDefault();
+        //    }
+        //});
+
+        $("#FeeBuyer").blur(function () {
+            var str = $("#FeeBuyer").val();
+            //var patt = new RegExp("^[1-9]\d*(\.\d+)?$");
+            var patt = new RegExp("^[0-9]+(\.[0-9]{1,2})?$");
+            var res = patt.test(str);
+            if (res == false) {
+                $("#AddAdminRule").attr("disabled", "disabled");
+                alert("You can enter fee only upto two decimal places.");
+            }
+            else {
+                $("#AddAdminRule").removeAttr("disabled");
+            }
+        })
+
+        $("#FeeSeller").blur(function () {
+            var str = $("#FeeSeller").val();
+            //var patt = new RegExp("^[1-9]\d*(\.\d+)?$");
+            var patt = new RegExp("^[0-9]+(\.[0-9]{1,2})?$");
+            var res = patt.test(str);
+            if (res == false) {
+                $("#AddAdminRule").attr("disabled", "disabled");
+                alert("You can enter fee only upto two decimal places.");
+            }
+            else {
+                $("#AddAdminRule").removeAttr("disabled");
+            }
+        })
+
+        $("#FeeWithdraw").blur(function () {
+            var str = $("#FeeWithdraw").val();
+            //var patt = new RegExp("^[1-9]\d*(\.\d+)?$");
+            var patt = new RegExp("^[0-9]+(\.[0-9]{1,2})?$");
+            var res = patt.test(str);
+            if (res == false) {
+                $("#AddWithdrawalRule").attr("disabled", "disabled");
+                alert("You can enter fee only upto two decimal places.");
+            }
+            else {
+                $("#AddWithdrawalRule").removeAttr("disabled");
+            }
+        })
+
+        $("#AddWithdrawalRule").click(function () {
+            if ($("#WithdrawPaymentMethod").val().length > 0 && $("#FeeRuleWithdraw").val().length > 0 && $("#FeeWithdraw").val().length > 0) {
+                $.ajax({
+                    url: "@Url.Action("AddUpdateWithdrawalRule", "Rule")",
+                    data: "{'method':'" + $("#WithdrawPaymentMethod").val() + "','fees':'" + $("#FeeWithdraw").val() + "','withdrawl_rule_id':'" + $("#FeeRuleWithdraw").val() + "'}",
+                    contentType: "application/json",
+                    method: "POST",
+                    success: function (result) {
+                        if (result == 1) {
+                            alert("Rule created successfully.");
+                            location.reload();
+
+
+                        }
+                        else {
+                            alert('@Html.DisplayNameFor(model => model.SomethingWentWrong)');
+                            $("#AddWithdrawalRule").removeAttr("disabled");
+                        }
+                    },
+                    error: function (e) {
+                        alert("Rule created successfully.");
+                        $("#AddWithdrawalRule").removeAttr("disabled");
+                    }
+                });
+            }
+            else {
+                alert('@Html.DisplayNameFor(model => model.MakeSureYouHaveProvidedDataForAllFields)');
+                $("#AddWithdrawalRule").removeAttr("disabled");
+            }
+        });
+
+        $("#AddAdminRule").click(function () {
+            if ($("#AdminStock").val().length > 0 && $("#FeeRuleBuyer").val().length > 0 && $("#FeeRuleSeller").val().length > 0 && $("#FeeBuyer").val().length > 0 && $("#FeeSeller").val().length > 0) {
+                $.ajax({
+                    url: "@Url.Action("AddUpdateAdminRule", "Rule")" + "?AdminStock=" + $("#AdminStock").val() + "&RuleBuyer=" + $("#FeeRuleBuyer").val() + "&RuleSeller=" + $("#FeeRuleSeller").val() + "&FeeBuyer=" + $("#FeeBuyer").val() + "&FeeSeller=" + $("#FeeSeller").val(),
+                    method: "POST",
+                    success: function (result) {
+                        if (result == 1) {
+                            alert("Rule created successfully.");
+                            location.reload();
+                        }
+                        else {
+                            alert('@Html.DisplayNameFor(model => model.SomethingWentWrong)');
+                            $("#AddAdminRule").removeAttr("disabled");
+                        }
+                    },
+                    error: function (e) {
+                        $("#AddAdminRule").removeAttr("disabled");
+                        alert("Rule created successfully.");
+                    }
+                });
+            }
+            else {
+                $("#AddAdminRule").removeAttr("disabled");
+                alert('@Html.DisplayNameFor(model => model.MakeSureYouHaveProvidedDataForAllFields)');
+            }
+        });
+
+        //  ajax code for Trading rule umang 18-7-16 start//
+
+        $("#AddTradingRule").click(function () {
+            if ($("#TradingPointEquivalent").val().length > 0 && $("#TradingMinimumLot").val().length > 0 && $("#AdminStockTrading").val().length > 0 && $("#TradingMinimumRate").val().length > 0) {
+                $.ajax({
+                    url: "@Url.Action("AddUpdateTradingRule", "Rule")" + "?TradingPointEquivalent=" + $("#TradingPointEquivalent").val() + "&TradingMinimumLot=" + $("#TradingMinimumLot").val() + "&AdminStockTrading=" + $('#AdminStockTrading').val() + "&TradingMinimumRate=" + parseFloat($("#TradingMinimumRate").val()).toFixed(2),
+                    method: "POST",
+                    success: function (result) {
+                        if (result == 1) {
+                            alert("Rule created successfully.");
+                            location.reload();
+                            
+                        }
+                        else {
+                            $("#AddTradingRule").removeAttr("disabled");
+                            alert('@Html.DisplayNameFor(model => model.SomethingWentWrong)');
+                        }
+                    },
+                    error: function (e) {
+                        alert("Rule created successfully.");
+                        $("#AddTradingRule").removeAttr("disabled");
+                    }
+                });
+            }
+            else {
+                $("#AddTradingRule").removeAttr("disabled");
+                alert('@Html.DisplayNameFor(model => model.MakeSureYouHaveProvidedDataForAllFields)');
+            }
+        });
+        // end here //
+        // code updated by umang on 2/8/16
+        $("#trading-container").click(function () {
+            //$("#TradingPointEquivalent").val("");
+            //$("#TradingMinimumLot").val("");
+            //$("#TradingMinimumRate").val("");
+            $.ajax({
+                url: "@Url.Action("GetTradingRule", "Rule")",
+                dataType: "json",
+                method: "GET",
+                success: function (data) {
+                    //$("#TradingMinimumLot").val(data.minimum_lot);
+                    //$("#TradingPointEquivalent").val(data.points_equivalent);
+                    //$("#TradingMinimumRate").val(data.minimum_rate);
+                    $('#plot').text(data.points_equivalent);
+                    $('#pminimumlottobid').text(data.minimum_lot);
+                    $('#pminimumbidrate').text(data.minimum_rate);
+
+                },
+                error: function (e) {
+                    $("#TradingPointEquivalent").val("");
+                    $("#TradingMinimumLot").val("");
+                    $("#TradingMinimumRate").val("");
+
+                }
+            });
+            $("#trad_rule_lot_rate").modal("show");
+        });
+
+
+    </script>
+}

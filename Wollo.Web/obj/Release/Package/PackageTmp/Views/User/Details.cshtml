@@ -1,0 +1,66 @@
+﻿@model Wollo.Web.Models.UserViewModel
+
+@{
+    ViewBag.Title = "User Details";
+}
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    <b>@Html.DisplayNameFor(model => model.user_role)</b>
+                </h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i> <b>@Html.DisplayNameFor(model => model.dashboard_user_details)</b>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="container-fluid">
+
+            <div class="col-lg-12 space">
+
+                <div>
+                    <hr />
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Name)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Role)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Role)
+                        </dd>
+
+                    </dl>
+                </div>
+                <p>
+                    @{string back_to_users_label = @Html.DisplayNameFor(model => model.back_to_users).ToString();}
+                    @Html.ActionLink(back_to_users_label, "Index")
+                </p>
+
+
+            </div>
+        </div>
+
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+</div>
+@section Scripts {
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+}
+
+
+
+

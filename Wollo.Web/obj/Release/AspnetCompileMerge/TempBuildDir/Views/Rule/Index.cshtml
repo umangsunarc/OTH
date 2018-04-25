@@ -1,0 +1,444 @@
+﻿@model Wollo.Entities.ViewModels.AdminRuleMasterData
+@{
+    ViewBag.Title = "Rules";
+}
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Rules
+                </h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i> Dashboard / Rules
+                    </li>
+                </ol>
+            </div>
+        </div>
+        @*<div class="container-fluid">
+
+                <div class="col-lg-12 space">
+
+                    <div data-toggle="modal" data-target="#tradingrule"> <div class="col-lg-6 blue"> <i class="fa fa-puzzle-piece fa-5x" aria-hidden="true"></i><br />Trading Rule</div> </div>
+
+                    <div data-toggle="modal" data-target="#administrator"> <div class="col-lg-6 orange"><i class="fa fa-usd fa-5x" aria-hidden="true"></i><br />  Administration Fee </div></div>
+
+                </div>
+                <br />
+                <br />
+
+                <div class="col-lg-12 space">
+
+                    <div data-toggle="modal" data-target="#withdra"><div class="col-lg-6 blue"><i class="fa fa-usd fa-5x" aria-hidden="true"></i><br />   Withdrawal Fees</div>	</div>
+
+                    <div class="col-lg-6 orange" data-toggle="modal" data-target="#lots"><i class="fa fa-tags fa-5x" aria-hidden="true"></i><br /> Lots</div>
+                </div>
+            </div>*@
+
+        <div class="container-fluid">
+
+            <div class="col-lg-12 space">
+
+                <div id="withdrawal-container"><div class="col-lg-6 blue"><i class="fa fa-usd fa-5x" aria-hidden="true"></i><br />   Withdrawal Fees</div>	</div>
+
+                <div id="admin-container"> <div class="col-lg-6 orange"><i class="fa fa-usd fa-5x" aria-hidden="true"></i><br />  Administration Fee </div></div>
+
+            </div>
+            <div class="col-lg-12 space">
+
+                <div id="trading-container"><div class="col-lg-6 blue"><i class="fa fa-usd fa-5x" aria-hidden="true"></i><br />  Trading Rules </div>	</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+</div>
+
+
+<!-- /#Model Window -->
+
+<div class="modal fade" id="tradingrule" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="tradingruleLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Trading Rule</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="dropdown col-sm-4">
+                        <p class="text-left"> Priority: </p>
+                    </div>
+                    <div class="dropdown col-sm-4">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu11" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Sequence
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu11">
+                            <li><a href="#">Sequence</a></li>
+                            <li><a href="#">Price</a></li>
+                            <li><a href="#">Quantity</a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                    <br />
+                    <div class="clearfix"></div>
+                    <div class="dropdown col-sm-4">
+                        <p class="text-left"> Priority 2: </p>
+                    </div>
+
+                    <div class="dropdown col-sm-4">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu11" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Sequence
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu11">
+                            <li><a href="#">Sequence</a></li>
+                            <li><a href="#">Price</a></li>
+                            <li><a href="#">Quantity</a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                    <br />
+                    <div class="clearfix"></div>
+                    <div class="dropdown col-sm-4">
+                        <p class="text-left"> Priority 3: </p>
+                    </div>
+                    <div class="dropdown col-sm-4">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu11" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Sequence
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu11">
+                            <li><a href="#">Sequence</a></li>
+                            <li><a href="#">Price</a></li>
+                            <li><a href="#">Quantity</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- /#Model Window for Administrator Fee-->
+<div class="modal fade" id="administrator" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="administratorLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Administration Fee</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="dropdown col-sm-3">
+                        <p class="text-left"> Select Stock: </p>
+                    </div>
+                    <div class="dropdown col-sm-3">
+                        @Html.DropDownList("AdminStock", new SelectList(Model.StockCodes, "id", "stock_name"), "Select Stock Code", new { @class = "form-control" })
+                    </div>
+                    <div class="clearfix"></div>
+                    <br />
+                    <div class="clearfix"></div>
+                    <div class="dropdown col-sm-3">
+                        <p class="text-left">Administration fees on buyer: </p>
+                    </div>
+                    <div class="dropdown col-sm-3">
+                        @Html.DropDownList("FeeRuleBuyer", new SelectList(Model.RuleConfigSettings, "rule_id", "RuleConfigMaster.rule_name"), "Select Rule", new { @class = "form-control" })
+                    </div>
+                    <div class="dropdown col-sm-3">
+                        @Html.TextBox("FeeBuyer", null, new { @class = "form-control", @placeholder = "Buyer Fee" })
+                    </div>
+                    <div class="clearfix"></div>
+                    <br />
+                    <div class="clearfix"></div>
+                    <div class="dropdown col-sm-3">
+                        <p class="text-left">Administration fees on seller: </p>
+                    </div>
+                    <div class="dropdown col-sm-3">
+                        @Html.DropDownList("FeeRuleSeller", new SelectList(Model.RuleConfigSettings, "rule_id", "RuleConfigMaster.rule_name"), "Select Rule", new { @class = "form-control" })
+                    </div>
+                    <div class="dropdown col-sm-3">
+                        @Html.TextBox("FeeSeller", null, new { @class = "form-control", @placeholder = "Seller Fee" })
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="AddAdminRule">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- /#Model Window for Withdrawl Fee-->
+<div class="modal fade" id="withdra" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="withdraLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Withdrawal Fee</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="dropdown col-sm-3">
+                        <p class="text-left"> Select Method: </p>
+                    </div>
+                    <div class="dropdown col-sm-5">
+                        @Html.DropDownList("WithdrawPaymentMethod", new SelectList(ViewBag.PaymentMethodsList, "Value", "Text"), "Select Payement Method", new { @class = "form-control" })
+                    </div>
+                    <div class="clearfix"></div>
+                    <br />
+                    <div class="clearfix"></div>
+                    <div class="dropdown col-sm-3">
+                        <p class="text-left">Withdrawal fees </p>
+                    </div>
+                    <div class="dropdown col-sm-3">
+                        @Html.DropDownList("FeeRuleWithdraw", new SelectList(Model.RuleConfigSettings, "rule_id", "RuleConfigMaster.rule_name"), "Select Rule", new { @class = "form-control" })
+                    </div>
+                    <div class="dropdown col-sm-3">
+                        @Html.TextBox("FeeWithdraw", null, new { @class = "form-control", @placeholder = "Fee" })
+                    </div>
+                    <div class="clearfix"></div>
+                    <br />
+                    <div class="clearfix"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" id="AddWithdrawalRule">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- model Window For Trading Rule by umang 18-07-16-->
+
+<div class="modal fade" id="trad_rule_lot_rate" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="withdraLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Trading Rules</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="dropdown col-sm-3">
+                        <p class="text-left">  Lot </p>
+                    </div>
+                    <div class="dropdown col-sm-5">
+                        @Html.TextBox("TradingPointEquivalent", null, new { @class = "form-control", @placeholder = "points" })
+                    </div>
+                    <div class="clearfix"></div>
+                    <br />
+                    <div class="clearfix"></div>
+                    <div class="dropdown col-sm-3">
+                        <p class="text-left">  Minimum Lot to bid  </p>
+                    </div>
+                    <div class="dropdown col-sm-5">
+                        @Html.TextBox("TradingMinimumLot", null, new { @class = "form-control", @placeholder = "Minimum Lote" })
+                    </div>
+                    <div class="clearfix"></div>
+                    <br />
+                    <div class="clearfix"></div>
+                    <div class="dropdown col-sm-3">
+                        <p class="text-left">  Minimum bidding rate </p>
+
+                    </div>
+                    <div class="dropdown col-sm-5">
+
+                        @Html.TextBox("TradingMinimumRate", null, new { @class = "form-control", @placeholder = "Minimum Rate" })
+                    </div>
+                    <div class="clearfix"></div>
+                    <br />
+                    <div class="clearfix"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" id="AddTradingRule">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- /#Model Window for LOTS  Fee-->
+<div class="modal fade" id="lots" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="lotsLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">LOTS</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="dropdown col-sm-3">
+                        <p class="text-left"> Select Stock: </p>
+                    </div>
+                    <div class="dropdown col-sm-3">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu11" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            All Stock
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu11">
+                            <li><a href="#">#121 Sotck </a></li>
+                            <li><a href="#">#123 Stock 2</a></li>
+                            <li><a href="#">Another Stock</a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                    <br />
+                    <div class="clearfix"></div>
+                    <div class="dropdown col-sm-3">
+                        <p class="text-left">	1 Lot =  </p>
+                    </div>
+
+                    <div class="dropdown col-sm-3">
+                        <input placeholder="text here" />
+                    </div>
+
+                    <div class="clearfix"></div>
+                    <br />
+                    <div class="clearfix"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script>
+        $("#nav-rule").addClass("active");
+
+        $("#withdrawal-container").click(function () {
+            $("#WithdrawPaymentMethod").val("");
+            $("#FeeRuleWithdraw").val("");
+            $("#FeeWithdraw").val("");
+            $("#withdra").modal("show");
+        });
+        //script code  umang 18-7-16 //
+        $("#trading-container").click(function () {
+            $("#TradingPointEquivalent").val("");
+            $("#TradingMinimumLot").val("");
+            $("#TradingMinimumRate").val("");
+            $("#trad_rule_lot_rate").modal("show");
+        });
+
+        $("#admin-container").click(function () {
+            $("#AdminStock").val("");
+            $("#FeeRuleBuyer").val("");
+            $("#FeeRuleSeller").val("");
+            $("#FeeBuyer").val("");
+            $("#FeeSeller").val("");
+            $("#administrator").modal("show");
+        });
+
+        $("#FeeWithdraw,#FeeBuyer,#FeeSeller").keydown(function (e) {
+            // Allow: backspace, delete, tab, escape, enter
+            if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110]) !== -1 ||
+                // Allow: Ctrl+A, Command+A
+                (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+                // Allow: home, end, left, right, down, up
+                (e.keyCode >= 35 && e.keyCode <= 40)) {
+                // let it happen, don't do anything
+                return;
+            }
+            // Ensure that it is a number and stop the keypress
+            if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                e.preventDefault();
+            }
+        });
+
+        $("#AddWithdrawalRule").click(function () {
+            if ($("#WithdrawPaymentMethod").val().length > 0 && $("#FeeRuleWithdraw").val().length > 0 && $("#FeeWithdraw").val().length > 0) {
+                $.ajax({
+                    url: "@Url.Action("AddUpdateWithdrawalRule", "Rule")",
+                    data: "{'method':'" + $("#WithdrawPaymentMethod").val() + "','fees':'" + $("#FeeWithdraw").val() + "','withdrawl_rule_id':'" + $("#FeeRuleWithdraw").val() + "'}",
+                    contentType: "application/json",
+                    method: "POST",
+                    success: function (result) {
+                        if (result == 1) {
+                            alert("Rule created successfully.");
+                            location.reload();
+                        }
+                        else {
+                            alert("Something went wrong.");
+                        }
+                    },
+                    error: function (e) {
+                        alert("Rule created successfully.");
+                    }
+                });
+            }
+            else {
+                alert("Make sure you have provided data for all fields.");
+            }
+        });
+
+        $("#AddAdminRule").click(function () {
+            if ($("#AdminStock").val().length > 0 && $("#FeeRuleBuyer").val().length > 0 && $("#FeeRuleSeller").val().length > 0 && $("#FeeBuyer").val().length > 0 && $("#FeeSeller").val().length > 0) {
+                $.ajax({
+                    url: "@Url.Action("AddUpdateAdminRule", "Rule")" + "?AdminStock=" + $("#AdminStock").val() + "&RuleBuyer=" + $("#FeeRuleBuyer").val() + "&RuleSeller=" + $("#FeeRuleSeller").val() + "&FeeBuyer=" + $("#FeeBuyer").val() + "&FeeSeller=" + $("#FeeSeller").val(),
+                    method: "POST",
+                    success: function (result) {
+                        if (result == 1) {
+                            alert("Rule created successfully.");
+                            location.reload();
+                        }
+                        else {
+                            alert("Something went wrong.");
+                        }
+                    },
+                    error: function (e) {
+                        alert("Rule created successfully.");
+                    }
+                });
+            }
+            else {
+                alert("Make sure you have provided data for all fields.");
+            }
+        });
+
+        //  ajax code for Trading rule umang 18-7-16 start//
+
+        $("#AddTradingRule").click(function () {
+            if ($("#TradingPointEquivalent").val().length > 0 && $("#TradingMinimumLot").val().length > 0 && $("#TradingMinimumRate").val().length > 0) {
+                $.ajax({
+                    url: "@Url.Action("AddUpdateTradingRule", "Rule")" + "?TradingPointEquivalent=" + $("#TradingPointEquivalent").val() + "&TradingMinimumLot=" + $("#TradingMinimumLot").val() + "&TradingMinimumRate=" + $("#TradingMinimumRate").val(),
+                    method: "POST",
+                    success: function (result) {
+                    if (result == 1) {
+                        alert("Rule created successfully.");
+                        location.reload();
+                    }
+                    else {
+                        alert("Something went wrong.");
+                    }
+                },
+                error: function (e) {
+                    alert("Rule created successfully.");
+                }
+            });
+        }
+        else {
+                alert("Make sure you have provided data for all fields.");
+        }
+        });
+        // end here //
+    </script>
+}

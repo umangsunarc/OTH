@@ -1,0 +1,142 @@
+﻿@model List<Wollo.Entities.ViewModels.Reward_Points_Transfer_Details>
+
+@{
+    ViewBag.Title = "Reward Points Transfer History";
+}
+<link href="~/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="~/css/responsive.bootstrap.min.css" rel="stylesheet" />
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    @*@Html.LabelFor(model => model.FirstOrDefault().cash_transaction_history)*@
+                    Reward Points Transfer History
+                </h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i> @*@Html.LabelFor(model => model.FirstOrDefault().dashboard_cash_transaction_history)*@Dashboard/Reward Points Transfer History
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="upper-birth">
+
+                    <div class="table-responsive">
+                        <table id="tbl_cash_transaction" class="table table-bordered table-hover table-striped dt-responsive nowrap" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    @*<th>@Html.LabelFor(model => model.FirstOrDefault().created_date)</th>
+                                        <th>@Html.LabelFor(model => model.FirstOrDefault().currency)</th>
+                                        @if (User.IsInRole("Admin"))
+                                        {
+                                            <th>@Html.LabelFor(model => model.FirstOrDefault().payee)</th>
+                                        }
+                                        <th>@Html.LabelFor(model => model.FirstOrDefault().description)</th>
+                                        <th>@Html.LabelFor(model => model.FirstOrDefault().opening_cash)</th>
+                                        <th>@Html.LabelFor(model => model.FirstOrDefault().transaction_amount)</th>
+                                        <th>@Html.LabelFor(model => model.FirstOrDefault().closing_cash)</th>*@
+                                    <th>@Html.LabelFor(model => model.FirstOrDefault().RewardPointTransferMaster.created_date)</th>
+                                    <th>@*@Html.LabelFor(model => model.FirstOrDefault().TransferActionMaster.name)*@Transfered From</th>
+                                    <th>@*@Html.LabelFor(model => model.FirstOrDefault().points_transferred)*@Transfered Amount</th>
+                                    @*@if (User.IsInRole("Admin"))
+                                        {
+                                            <th>@Html.LabelFor(model => model.points_transferred)</th>
+                                        }
+                                        <th>@Html.LabelFor(model => model.FirstOrDefault().opening_cash)</th>
+                                        <th>@Html.LabelFor(model => model.FirstOrDefault().transaction_amount)</th>
+                                        <th>@Html.LabelFor(model => model.FirstOrDefault().closing_cash)</th>*@
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @{string date = item.RewardPointTransferMaster.created_date.Value.ToString("dd'/'MM'/'yyyy HH:mm:ss");}
+                                            @Html.Raw(date)
+                                            @*@Html.DisplayFor(x => item.RewardPointTransferMaster.created_date)*@
+                                        </td>
+                                        <td>@Html.DisplayFor(x => item.TransferActionMaster.name)</td>
+                                        <td>@Html.DisplayFor(x => item.points_transferred)</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+</div>
+<!-- /#wrapper -->
+@section scripts{
+    <script src="~/js/jquery.js"></script>
+    @*<script src="~/Scripts/bootstrap.js"></script>*@
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.dataTables.min.js"></script>
+    <script src="~/js/dataTables.bootstrap.min.js"></script>
+    <script src="~/js/dataTables.responsive.min.js"></script>
+    <script src="~/js/responsive.bootstrap.min.js"></script>
+    <script>
+        //$(document).ready(function () {
+        //    $('#myGroup ul li a').click(function () {
+        //        $('#myGroup ul li ul.collapse ').removeClass('in');
+        //        $('#myGroup ul li').removeClass('active');
+        //    });
+        //});
+
+        //$("#tbl_cash_transaction").DataTable({
+        //    "order": [[0, "desc"]]
+        //});
+
+        $(document).ready(function () {
+            $('#myGroup ul li a').click(function () {
+                $('#myGroup ul li ul.collapse ').removeClass('in');
+                $('#myGroup ul li').removeClass('active');
+            });
+
+            $('#tbl_cash_transaction').dataTable({
+                columnDefs: [
+                   { type: 'date-euro', targets: 0 }
+                ],
+                order: [[0, "desc"]]
+            });
+        });
+
+        //*********************** Plugin to sort date of format DD/MM/YYYY hh:mm:ss**************************//
+        jQuery.extend(jQuery.fn.dataTableExt.oSort, {
+            "date-euro-pre": function (a) {
+                var x;
+
+                if ($.trim(a) !== '') {
+                    var frDatea = $.trim(a).split(' ');
+                    var frTimea = (undefined != frDatea[1]) ? frDatea[1].split(':') : [00, 00, 00];
+                    var frDatea2 = frDatea[0].split('/');
+                    x = (frDatea2[2] + frDatea2[1] + frDatea2[0] + frTimea[0] + frTimea[1] + frTimea[2]) * 1;
+                }
+                else {
+                    x = Infinity;
+                }
+
+                return x;
+            },
+
+            "date-euro-asc": function (a, b) {
+                return a - b;
+            },
+
+            "date-euro-desc": function (a, b) {
+                return b - a;
+            }
+        });
+        //*********************** Plugin to sort date of format DD/MM/YYYY hh:mm:ss**************************//
+
+        $("#nav-cash").addClass("active");
+    </script>
+}

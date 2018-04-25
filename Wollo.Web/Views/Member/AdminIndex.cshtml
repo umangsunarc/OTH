@@ -1,0 +1,308 @@
+﻿@model Wollo.Web.Models.Dashboard
+
+@{
+    ViewBag.Title = @Html.DisplayNameFor(model => model.DashboardViewModel.dashboard);
+}
+<style>
+    .notifidiv {
+        padding: 22px;
+        font-size: 19px;
+        color: #fff;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+
+
+    .pre-scrollable {
+        max-height: 7.4em;
+        overflow-y: scroll;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+        border: solid 1px #337ab7;
+    }
+</style>
+
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    @Html.LabelFor(model => model.DashboardViewModel.welcome) <small>@ViewBag.UserName</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i> @Html.LabelFor(model => model.DashboardViewModel.dashboard)
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="panel panel-yellow">
+                    <div class="panel-heading" id="panelcash">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-usd fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                @{string cash = Model.DashboardViewModel.cash.ToString("0.00");}
+                                <div class="huge">$@Html.Raw(cash)</div>
+                                <div>@Html.LabelFor(model => model.DashboardViewModel.cash)</div>
+                                <div class="clearfix"></div>
+                                <a class="pull-right" href="/Member/CashHistoryViewDetail" style="color:white">@Html.LabelFor(model => model.DashboardViewModel.view_details) &nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <a id="cashAllDetailLink">
+                        <div class="panel-footer">
+                            <span class="pull-left"><b>@Html.LabelFor(model => model.DashboardViewModel.view_all_history)</b></span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading" id="panelreward">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-briefcase fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">@Html.DisplayFor(model => model.DashboardViewModel.reward_points)</div>
+                               
+                                <div><b>@Html.DisplayFor(model => Model.DashboardViewModel.rpe_stockname)</b></div>
+                                <div class="clearfix"></div>
+                                <a class="pull-right" href="/Member/RewardPointHistoryViewDetail" style="color:white">@Html.LabelFor(model => model.DashboardViewModel.view_details) &nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <a id="rewardAllDetailLink">
+                        <div class="panel-footer">
+                            <span class="pull-left"><b>@Html.LabelFor(model => model.DashboardViewModel.view_all_history)</b></span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="panel panel-green">
+                    <div class="panel-heading" id="panelissue">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-spinner fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">@Html.DisplayFor(model => model.DashboardViewModel.issue_points)</div>                             
+                                <div><b>@Html.DisplayFor(model => Model.DashboardViewModel.test_stockname)</b></div>
+                                <div class="clearfix"></div>
+                                <a class="pull-right" href="/Member/TestPointHistoryViewDetail" style="color:white">@Html.LabelFor(model => model.DashboardViewModel.view_details) &nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <a id="testAllDetailLink">
+                        <div class="panel-footer">
+                            <span class="pull-left"><b>@Html.LabelFor(model => model.DashboardViewModel.view_all_history)</b></span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="panel panel-default" id="paneldefaultCash" style="display:none">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> @Html.LabelFor(model => model.DashboardViewModel.cash)</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover table-striped">
+                                <tbody>
+                                    <tr>
+                                        <td>@Html.LabelFor(model => model.DashboardViewModel.total_cash_in_circulation)</td>
+                                        <td><a href="/Member/CashCirculationHistory">$@Html.DisplayFor(model => model.DashboardViewModel.total_cash_in_circulation)</a></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>@Html.LabelFor(model => model.DashboardViewModel.total_topup_by_members)</td>
+                                        <td><a href="/Member/TopupByMembersHistory">$@Html.DisplayFor(model => model.DashboardViewModel.total_topup_by_members)</a></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>@Html.LabelFor(model => model.DashboardViewModel.total_withdrawal_by_member) </td>
+                                        <td><a href="/Member/WithdrawOutByMembersHistory">$@Html.DisplayFor(model => model.DashboardViewModel.total_withdrawal_by_member)</a></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>@Html.LabelFor(model => model.DashboardViewModel.total_cash_issued_to_system)</td>
+                                        <td><a href="/Member/CashIssuedIntoSystemHistory">$@Html.DisplayFor(model => model.DashboardViewModel.total_cash_issued_to_system)</a></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>@Html.LabelFor(model => model.DashboardViewModel.total_cash_issued_to_member)</td>
+                                        <td><a href="/Member/CashIssuedToMembersHistory">$@Html.DisplayFor(model => model.DashboardViewModel.total_cash_issued_to_member)</a></td>
+                                    </tr>
+                                    @if (User.IsInRole("Super Admin 2"))
+                                    {
+                                        <tr>
+                                            <td>@Html.LabelFor(model => model.DashboardViewModel.system_cash)</td>
+                                            <td><a href="/Member/GetSystemCashDetails">$@Html.DisplayFor(model => model.DashboardViewModel.system_cash)</a></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="text-right">
+                            <a href="/Member/CashHistoryViewDetail">@Html.LabelFor(model => model.DashboardViewModel.cash_history) <i class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+
+                <div class="panel panel-default" id="paneldefaultReward" style="display:none">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-money fa-fw"></i>@Html.LabelFor(model => model.DashboardViewModel.reward_points_details)</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover table-striped">
+                                <tbody>
+                                    <tr>
+                                        <td>@Html.LabelFor(model => model.DashboardViewModel.wollo_points_in_circulation)</td>
+                                        <td><a href="/Member/WolloRewardPointsCirculationHistory">@Html.DisplayFor(model => model.DashboardViewModel.total_reward_points_in_circulation)</a></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td> @Html.LabelFor(model => model.DashboardViewModel.wollo_points_transferred_in_by_member)</td>
+                                        <td><a href="/Member/WolloRewardPointsTransferredInByMembersHistory">@Html.DisplayFor(model => model.DashboardViewModel.total_reward_points_transferred_in_by_members)</a></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td> @Html.LabelFor(model => model.DashboardViewModel.wollo_points_transferred_out_by_member) </td>
+                                        <td><a href="/Member/WolloRewardPointsTransferredOutByMembersHistory">@Html.DisplayFor(model => model.DashboardViewModel.total_reward_points_transferred_out_by_member)</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td> @Html.LabelFor(model => model.DashboardViewModel.wollo_points_issued_to_system) </td>
+                                        <td><a href="/Member/WolloRewardPointsIssuedIntoSystemHistory">@Html.DisplayFor(model => model.DashboardViewModel.total_reward_points_issued_into_system)</a></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td> @Html.LabelFor(model => model.DashboardViewModel.wollo_points_issued_to_members) </td>
+                                        <td><a href="/Member/WolloRewardPointsIssuedToMembersHistory">@Html.DisplayFor(model => model.DashboardViewModel.total_reward_points_issued_to_member)</a></td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="text-right">
+                            <a href="/Member/RewardPointHistoryViewDetail">@Html.LabelFor(model => model.DashboardViewModel.trading_history) <i class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="panel panel-default" id="paneldefaultIssue" style="display:none">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> @Html.LabelFor(model => model.DashboardViewModel.issue_point_details)</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-bordered table-hover table-striped">
+                            <tbody>
+                                <tr>
+                                    <td>@Html.LabelFor(model => model.DashboardViewModel.RPE02_points_in_circulation)</td>
+                                    <td><a href="/Member/TestRewardPointCirculationHistory">@Html.DisplayFor(model => model.DashboardViewModel.total_issue_points_in_circulation)</a></td>
+
+                                </tr>
+                                <tr>
+                                    <td>@Html.LabelFor(model => model.DashboardViewModel.RPE02_points_transferred_in_by_members)</td>
+                                    <td>@Html.DisplayFor(model => model.DashboardViewModel.total_issue_points_transferred_in_by_members)</td>
+
+                                </tr>
+                                <tr>
+                                    <td>@Html.LabelFor(model => model.DashboardViewModel.RPE02_points_transferred_out_by_members)</td>
+                                    <td>@Html.DisplayFor(model => model.DashboardViewModel.total_issue_points_transferred_out_by_member)</td>
+
+                                </tr>
+                                <tr>
+                                    <td>@Html.LabelFor(model => model.DashboardViewModel.RPE02_points_issued_into_system)</td>
+                                    <td><a href="/Member/TestRewardPointsIssuedIntoSystemHistory">@Html.DisplayFor(model => model.DashboardViewModel.total_issue_points_issued_to_system)</a></td>
+
+                                </tr>
+                                <tr>
+                                    <td>@Html.LabelFor(model => model.DashboardViewModel.RPE02_points_issued_to_member)</td>
+                                    <td><a href="/Member/TestRewardPointsIssuedToMembersHistory">@Html.DisplayFor(model => model.DashboardViewModel.total_issue_points_issued_to_member)</a></td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="text-right">
+                        <a href="/Member/TestPointHistoryViewDetail">@Html.LabelFor(model => model.DashboardViewModel.trading_history) <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="Color:dimgray; ">
+                <div class="col-sm-12 notifidiv ubid bid-loud blue">
+                    <i class="fa fa-bell"></i> @Html.LabelFor(model => model.DashboardViewModel.notification)@*Notices and Maintenance*@
+                </div>
+                <div class="pre-scrollable col-sm-12">
+
+                    <ul class="wrpe-special" data-offcanvass="yes" style="line-height:2;">
+                        @foreach (var item in Model.DashboardViewModel.HolidayData.lstHolidayMaster)
+                        {
+                            string holiday_date = item.holiday_date.ToString("dd/MM/yyyy");
+                            <li class="glyphicon glyphicon-ok-sign">
+                                <b>@holiday_date - @Html.DisplayFor(model => item.description)</b>
+
+                            </li>
+                            <br />
+                        }
+                        @*<li class="glyphicon glyphicon-ok-sign">
+                                            <b>  </b>
+                                        </li>
+                                        <br />
+                                        <li class="glyphicon glyphicon-ok-sign">
+                                <b> Only For Example</b>
+                            </li>*@
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div><br />
+</div>
+@section scripts{
+    <script src="~/js/jquery.js"></script>
+    @*<script src="~/Scripts/bootstrap.js"></script>*@
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script>
+        $('#myGroup ul li a').click(function () {
+            $('#myGroup ul li ul.collapse ').removeClass('in');
+            $('#myGroup ul li').removeClass('active');
+        });
+        $("#cashAllDetailLink").click(function () {
+
+            $("#paneldefaultCash").toggle();
+        });
+
+        $("#rewardAllDetailLink").click(function () {
+
+            $("#paneldefaultReward").toggle();
+        });
+        $("#testAllDetailLink").click(function () {
+
+            $("#paneldefaultIssue").toggle();
+        });
+    </script>
+}
