@@ -418,7 +418,7 @@
                         <p class="text-left"> @Html.LabelFor(x => x.AdminRuleMasterData.minimum_lot_to_bid)  </p>
                     </div>
                     <div class="dropdown col-sm-5">
-                        @Html.TextBox("TradingMinimumLot",null, new { @class = "form-control", @placeholder = @Html.DisplayNameFor(model => model.AdminRuleMasterData.minimum_lot) })
+                        @Html.TextBox("TradingMinimumLot", null, new { @class = "form-control", @onkeypress = "ValidateNumber(event);", @placeholder = @Html.DisplayNameFor(model => model.AdminRuleMasterData.minimum_lot) })
                     </div>
                     <div class="clearfix"></div>
                     <div class="clearfix"></div>
@@ -428,7 +428,7 @@
                     </div>
                     <div class="dropdown col-sm-5">
 
-                        @Html.TextBox("TradingMinimumRate", null, new { @class = "form-control", @placeholder = @Html.DisplayNameFor(model => model.AdminRuleMasterData.minimum_rate) })
+                        @Html.TextBox("TradingMinimumRate", null, new { @class = "form-control", @onkeypress = "ValidateTextBox(event)", @placeholder = @Html.DisplayNameFor(model => model.AdminRuleMasterData.minimum_rate) })
                     </div>
                     <div class="clearfix"></div>
                     <br />
@@ -547,6 +547,22 @@
             $("#administrator").modal("show");
         });
 
+        function ValidateNumber(event) {
+
+            var theEvent = event || window.event;
+            var key = theEvent.keyCode || theEvent.which;
+            key = String.fromCharCode(key);
+            const regex = /^([0-9]{0,11})+(.)([0-9]{1,8})?$/g;
+
+            if (!regex.test(key)) {
+                theEvent.preventDefault ? theEvent.preventDefault() : (theEvent.returnValue = false);
+            }
+        }
+
+        function ValidateTextBox(strText) {          
+            var regex = /^([0-9]{0,11})+(.)([0-9]{1,8})?$/g;
+            return regex.test(strText);
+        }
         //$("#FeeWithdraw,#FeeBuyer,#FeeSeller").keydown(function (e) {
         //    // Allow: backspace, delete, tab, escape, enter
         //    if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110]) !== -1 ||
@@ -667,25 +683,39 @@
 
         $("#AddTradingRule").click(function () {
             if ($("#TradingPointEquivalent").val().length > 0 && $("#TradingMinimumLot").val().length > 0 && $("#AdminStockTrading").val().length > 0 && $("#TradingMinimumRate").val().length > 0) {
-                $.ajax({
-                    url: "@Url.Action("AddUpdateTradingRule", "Rule")" + "?TradingPointEquivalent=" + $("#TradingPointEquivalent").val() + "&TradingMinimumLot=" + parseFloat($("#TradingMinimumLot").val()).toFixed(2) + "&AdminStockTrading=" + $('#AdminStockTrading').val() + "&TradingMinimumRate=" + parseFloat($("#TradingMinimumRate").val()).toFixed(2),
-                    method: "POST",
-                    success: function (result) {
-                        if (result == 1) {
-                            alert("Rule created successfully.");
-                            location.reload();
-                            
-                        }
-                        else {
+                var checkTradingMinimumRate = ValidateTextBox($("#TradingMinimumRate").val());
+                var checkTradingMinimumLot = ValidateTextBox($("#TradingMinimumLot").val());
+                if (checkTradingMinimumRate) {
+                    if (checkTradingMinimumLot) {
+                        $.ajax({
+                            url: "@Url.Action("AddUpdateTradingRule", "Rule")" + "?TradingPointEquivalent=" + $("#TradingPointEquivalent").val() + "&TradingMinimumLot=" + $("#TradingMinimumLot").val() + "&AdminStockTrading=" + $('#AdminStockTrading').val() + "&TradingMinimumRate=" + $("#TradingMinimumRate").val(),
+                            method: "POST",
+                        success: function (result) {
+                            if (result == 1) {
+                                alert("Rule created successfully.");
+                                location.reload();
+
+                            }
+                            else {
+                                $("#AddTradingRule").removeAttr("disabled");
+                                alert('@Html.DisplayNameFor(model => model.SomethingWentWrong)');
+                            }
+                        },
+                        error: function (e) {
+                            alert("Something Went Wrong");
                             $("#AddTradingRule").removeAttr("disabled");
-                            alert('@Html.DisplayNameFor(model => model.SomethingWentWrong)');
                         }
-                    },
-                    error: function (e) {
-                        alert("Something Went Wrong");
+                    });
+                    }
+                    else {
+                        alert("Invalid Minimum Lot");
                         $("#AddTradingRule").removeAttr("disabled");
                     }
-                });
+                } 
+                else {
+                    alert("Invalid Minimum Rate");
+                    $("#AddTradingRule").removeAttr("disabled");
+                }               
             }
             else {
                 $("#AddTradingRule").removeAttr("disabled");
@@ -722,5 +752,5 @@
         });
 
 
-    </script>
+</script>
 }

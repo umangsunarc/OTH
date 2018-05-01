@@ -31,12 +31,12 @@ namespace Wollo.Entities.Models
         [DataMember]
         [Required(ErrorMessage = "Lot is required.")]
 
-        public int minimum_lot { get; set; }
+        public double minimum_lot { get; set; }
 
         [DataMember]
         [Required(ErrorMessage = "Minimum Rate is required.")]
 
-        public float minimum_rate { get; set; }
+        public double minimum_rate { get; set; }
 
         [DataMember]
         public virtual Stock_Code StockCode { get; set; }

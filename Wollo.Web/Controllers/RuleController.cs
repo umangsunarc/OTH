@@ -202,7 +202,7 @@ namespace Wollo.Web.Controllers
         }
 
         [AuthorizeRole(Module = "Rules", Permission = "Update")]
-        public async Task<int> AddUpdateTradingRule(int TradingPointEquivalent, int TradingMinimumLot, int AdminStockTrading, float TradingMinimumRate)
+        public async Task<int> AddUpdateTradingRule(int TradingPointEquivalent, double TradingMinimumLot, int AdminStockTrading, double TradingMinimumRate)
         {
             int result = 0;
             string userId = User.Identity.GetUserId();

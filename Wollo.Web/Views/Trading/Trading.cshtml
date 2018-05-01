@@ -192,48 +192,104 @@
                 </div>
             </div>
             <br />
-            <div class="row">
-                <div class="col-sm-12 btn-group btn-group-justified">
-                    <div class="btn-group">
-                        <button type="button" id="OneDay" class="btn btn-md btn-color" onclick="GetChartByStock()">1D</button>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" id="FiveDay" class="btn btn-md btn-warning">5D</button>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" id="OneMonth" class="btn btn-md btn-color">1M</button>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" id="SixMonth" class="btn btn-md btn-warning">6M</button>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" id="OneYear" class="btn btn-md btn-color">1Y</button>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" id="FiveYear" class="btn btn-md btn-warning">5Y</button>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" id="Total" class="btn btn-md btn-color">T</button>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-                <br />
-                <div class="col-sm-12">
-                    <div style="height: 20em;">
-                        @*background-color: azure;*@
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">Main Chart</a></li>
+                <li><a data-toggle="tab" href="#menu1">Trading View</a></li>
+                <li><a data-toggle="tab" href="#menu2">Market Overview</a></li>            
+            </ul>
 
-                        <div id="chartDiv" style="height: 20em;width:100%;"></div>
+            <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+                    <div class="row">
+                        <div class="col-sm-12 btn-group btn-group-justified">
+                            <div class="btn-group">
+                                <button type="button" id="OneDay" class="btn btn-md btn-color" onclick="GetChartByStock()">1D</button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" id="FiveDay" class="btn btn-md btn-warning">5D</button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" id="OneMonth" class="btn btn-md btn-color">1M</button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" id="SixMonth" class="btn btn-md btn-warning">6M</button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" id="OneYear" class="btn btn-md btn-color">1Y</button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" id="FiveYear" class="btn btn-md btn-warning">5Y</button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" id="Total" class="btn btn-md btn-color">T</button>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <br />
+                        <div class="col-sm-12">
+                            <div style="height: 20em;">
+                                @*background-color: azure;*@
+
+                                <div id="chartDiv" style="height: 20em;width:100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div style="height: 12em;">
+                                @*background-color:aliceblue;*@
+                                <div id="volumeChartDiv" style="height: 12em;width:100%;"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div style="height: 12em;">
-                        @*background-color:aliceblue;*@
-                        <div id="volumeChartDiv" style="height: 12em;width:100%;"></div>
-                    </div>
+                <div id="menu1" class="tab-pane fade">
+                    
                 </div>
+                <div id="menu2" class="tab-pane fade">
+                    <div style="width: 100%; height: 400px;">
+                        <style>
+                            .tradingview-widget-copyright {
+                                font-size: 13px !important;
+                                line-height: 32px !important;
+                                text-align: center !important;
+                                vertical-align: middle !important;
+                                font-family: 'Trebuchet MS', Tahoma, Arial, sans-serif !important;
+                                color: #9db2bd !important;
+                            }
+
+                                .tradingview-widget-copyright .blue-text {
+                                    color: #3bb3e4 !important;
+                                }
+
+                                .tradingview-widget-copyright a {
+                                    text-decoration: none !important;
+                                    color: #9db2bd !important;
+                                }
+
+                                    .tradingview-widget-copyright a:visited {
+                                        color: #9db2bd !important;
+                                    }
+
+                                    .tradingview-widget-copyright a:hover .blue-text {
+                                        color: #38acdb !important;
+                                    }
+
+                                    .tradingview-widget-copyright a:active .blue-text {
+                                        color: #299dcd !important;
+                                    }
+
+                                    .tradingview-widget-copyright a:visited .blue-text {
+                                        color: #3bb3e4 !important;
+                                    }
+                        </style><iframe scrolling="no" allowtransparency="true" style="box-sizing: border-box; height: 400px; width: 100%;" src="https://s.tradingview.com/marketoverviewwidgetembed/?locale=en#%7B%22belowLineFillColorGrowing%22%3A%22rgba(60%2C%20188%2C%20152%2C%200.05)%22%2C%22gridLineColor%22%3A%22rgba(233%2C%20233%2C%20234%2C%201)%22%2C%22scaleFontColor%22%3A%22rgba(218%2C%20221%2C%20224%2C%201)%22%2C%22tabs%22%3A%5B%7B%22title_raw%22%3A%22Overview%22%2C%22symbols%22%3A%5B%7B%22s%22%3A%22BITFINEX%3ABTCUSD%22%7D%2C%7B%22s%22%3A%22BITFINEX%3AETHUSD%22%7D%5D%2C%22title%22%3A%22Overview%22%7D%2C%7B%22title_raw%22%3A%22Bitcoin%22%2C%22symbols%22%3A%5B%7B%22s%22%3A%22BITFINEX%3ABTCUSD%22%7D%2C%7B%22s%22%3A%22COINBASE%3ABTCEUR%22%7D%5D%2C%22title%22%3A%22Bitcoin%22%7D%2C%7B%22title_raw%22%3A%22Ethereum%22%2C%22symbols%22%3A%5B%7B%22s%22%3A%22COINBASE%3AETHUSD%22%7D%2C%7B%22s%22%3A%22KRAKEN%3AETHEUR%22%7D%2C%7B%22s%22%3A%22KRAKEN%3AETHGBP%22%7D%2C%7B%22s%22%3A%22KRAKEN%3AETHJPY%22%7D%2C%7B%22s%22%3A%22POLONIEX%3AETHBTC%22%7D%2C%7B%22s%22%3A%22WEX%3AETHLTC%22%7D%5D%2C%22title%22%3A%22Ethereum%22%7D%5D%2C%22plotLineColorFalling%22%3A%22rgba(255%2C%2074%2C%20104%2C%201)%22%2C%22plotLineColorGrowing%22%3A%22rgba(60%2C%20188%2C%20152%2C%201)%22%2C%22showChart%22%3Atrue%2C%22symbolActiveColor%22%3A%22rgba(242%2C%20250%2C%20254%2C%201)%22%2C%22belowLineFillColorFalling%22%3A%22rgba(255%2C%2074%2C%20104%2C%200.05)%22%2C%22height%22%3A400%2C%22width%22%3A900%2C%22utm_source%22%3A%22%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22marketoverview%22%7D" frameborder="0"></iframe>
+                    </div>
+
+                </div>               
             </div>
+
+
+           
             <br />
             <div class="row">
                 <div id="row_statistics" class="col-sm-12">
@@ -377,6 +433,130 @@
 
                 </div>
             </div>
+
+@if (!User.IsInRole("Super Admin 1") && !User.IsInRole("Super Admin 2"))
+                {
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="col-lg-6" style="text-align:center;">
+                        <div style="border: 1px solid #ddd;">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="myModalLabel">@Html.DisplayNameFor(model => model.QueueTradingViewModel.bid_property)</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="dropdown col-sm-3">
+                                        <strong>@Html.LabelFor(model => model.QueueTradingViewModel.i_want_to_buy)</strong>
+                                    </div>
+                                    <div class="dropdown col-sm-6">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="bidamount">Amount (in dollars)</label>
+                                            <div class="input-group">
+                                                <div id="divbuyminus" class="input-group-addon">-</div>
+                                                <input type="text" class="form-control" id="bidamount" placeholder="Quantity(Lot)">
+                                                <div id="divbuyplus" class="input-group-addon">+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <br />
+                                    <div class="dropdown col-sm-3">
+                                        <strong>@Html.LabelFor(model => model.QueueTradingViewModel.for_a_price_of)</strong>
+                                    </div>
+                                    <div class="dropdown col-sm-6">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="bidprice">Amount (in dollars)</label>
+                                            <div class="input-group">
+                                                <div class="input-group-addon">$</div>
+                                                <input type="text" class="form-control" id="bidprice" placeholder=@Html.DisplayNameFor(model => model.QueueTradingViewModel.amount)>
+                                                <div class="input-group-addon">.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown col-sm-3" style="padding-left:0; text-align:left">
+                                        <strong>/unit</strong>
+                                    </div>
+
+                                    <div class="clearfix"></div>
+                                    <br />
+                                    <div class="dropdown col-sm-12">
+                                        <b>@Html.DisplayNameFor(model => model.QueueTradingViewModel.price_per_Lot): $ <label id="lblpriceperlotbuy"> </label></b>
+                                    </div>
+                                    <div class="dropdown col-sm-12">
+                                        @{string point = Model.QueueTradingViewModel.unit_master.points_equivalent > 1 ? "Points" : "Point";}
+                                        <b>@Html.DisplayNameFor(model => model.QueueTradingViewModel.total_points) (<label id="lbllotbuy">1</label> lot = @Html.DisplayFor(x => x.QueueTradingViewModel.unit_master.points_equivalent) @Html.Raw(point)): <label id="lbllotbuytotal"></label></b>
+                                    </div>
+                                    <div class="dropdown col-sm-2">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="button" class="btn btn-primary btn-block" value="Buy" id="buyBtn" />
+                            </div>
+                            </div>
+                        </div>
+                    <div class="col-lg-6" style="text-align:center;">
+                        <div style="border: 1px solid #ddd">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="myModalLabel">@Html.DisplayNameFor(model => model.QueueTradingViewModel.ask_property)</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="dropdown col-sm-3">
+                                        <strong>I want to sell</strong>
+                                    </div>
+                                    <div class="dropdown col-sm-6">
+
+                                        <div class="form-group">
+                                            <label class="sr-only" for="askamount">Quantity(Lot)</label>
+                                            <div class="input-group">
+                                                <div id="divsellminus" class="input-group-addon">-</div>
+                                                <input type="text" class="form-control" id="askamount" placeholder="Quantity(Lot)">
+                                                <div id="divsellplus" class="input-group-addon">+</div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <br />
+                                    <div class="dropdown col-sm-3">
+                                        <strong>@Html.LabelFor(model => model.QueueTradingViewModel.for_a_price_of)</strong>
+                                    </div>
+                                    <div class="dropdown col-sm-6">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="askprice">Amount (in dollars)</label>
+                                            <div class="input-group">
+                                                <div class="input-group-addon">$</div>
+                                                <input type="text" class="form-control" id="askprice" placeholder=@Html.DisplayNameFor(model => model.QueueTradingViewModel.amount)>
+                                                <div class="input-group-addon">.00</div> 
+                                            </div>                                          
+                                        </div>
+                                    </div>
+                                    <div class="dropdown col-sm-3" style="padding-left:0; text-align:left">
+                                        <strong>/unit</strong>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <br />
+                                    <div class="dropdown col-sm-12">
+                                        <b>@Html.DisplayNameFor(model => model.QueueTradingViewModel.price_per_Lot): $ <label id="lblpriceperlotsell"> </label></b>
+                                    </div>
+                                    <div class="dropdown col-sm-12">
+                                        <b>@Html.DisplayNameFor(model => model.QueueTradingViewModel.total_points) (<label id="lbllotsell">1</label> lot = @Html.DisplayFor(x => x.QueueTradingViewModel.unit_master.points_equivalent) @Html.Raw(point)): <label id="lbllotselltotal"></label></b>
+                                    </div>
+                                    <div class="dropdown col-sm-2">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="button" class="btn btn-primary btn-block" value=@Html.DisplayNameFor(model => model.QueueTradingViewModel.sell) id="sellBtn" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+}
+
+
+
             <h2 class="page-header">@Html.LabelFor(model => model.QueueTradingViewModel.in_queue)</h2>
             <div class="col-lg-6">
                 @if (!User.IsInRole("Super Admin 1") && !User.IsInRole("Super Admin 2"))
@@ -704,121 +884,7 @@
                 </div>
             </div>
             <!--model window-->
-            <div class="modal fade" id="addBidModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content" style="text-align:center;">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title" id="myModalLabel">@Html.DisplayNameFor(model => model.QueueTradingViewModel.bid_property)</h4>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row">
-                                <div class="dropdown col-sm-3">
-                                    <strong>@Html.LabelFor(model => model.QueueTradingViewModel.i_want_to_buy)</strong>
-                                </div>
-                                <div class="dropdown col-sm-6">
-                                    <div class="form-group">
-                                        <label class="sr-only" for="bidamount">Amount (in dollars)</label>
-                                        <div class="input-group">
-                                            <div id="divbuyminus" class="input-group-addon">-</div>
-                                            <input type="text" class="form-control" id="bidamount" placeholder="Quantity(Lot)">
-                                            <div id="divbuyplus" class="input-group-addon">+</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                                <br />
-                                <div class="dropdown col-sm-3">
-                                    <strong>@Html.LabelFor(model => model.QueueTradingViewModel.for_a_price_of)</strong>
-                                </div>
-                                <div class="dropdown col-sm-6">
-                                    <div class="form-group">
-                                        <label class="sr-only" for="bidprice">Amount (in dollars)</label>
-                                        <div class="input-group">
-                                            <div class="input-group-addon">$</div>
-                                            <input type="text" class="form-control" id="bidprice" placeholder=@Html.DisplayNameFor(model => model.QueueTradingViewModel.amount)>
-                                            <div class="input-group-addon">.00</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="clearfix"></div>
-                                <br />
-                                <div class="dropdown col-sm-12">
-                                    <b>@Html.DisplayNameFor(model => model.QueueTradingViewModel.price_per_Lot): $ <label id="lblpriceperlotbuy"> </label></b>
-                                </div>
-                                <div class="dropdown col-sm-12">
-                                    @{string point = Model.QueueTradingViewModel.unit_master.points_equivalent > 1 ? "Points" : "Point";}
-                                    <b>@Html.DisplayNameFor(model => model.QueueTradingViewModel.total_points) (<label id="lbllotbuy">1</label> lot = @Html.DisplayFor(x => x.QueueTradingViewModel.unit_master.points_equivalent) @Html.Raw(point)): <label id="lbllotbuytotal"></label></b>
-                                </div>
-                                <div class="dropdown col-sm-2">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">@Html.LabelFor(model => model.QueueTradingViewModel.cancel)</button>
-                            <input type="button" class="btn btn-primary" value="Buy" id="buyBtn" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal fade" id="addAskModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content" style="text-align:center;">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title" id="myModalLabel">@Html.DisplayNameFor(model => model.QueueTradingViewModel.ask_property)</h4>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row">
-                                <div class="dropdown col-sm-3">
-                                    <strong>I want to sell</strong>
-                                </div>
-                                <div class="dropdown col-sm-6">
-
-                                    <div class="form-group">
-                                        <label class="sr-only" for="askamount">Quantity(Lot)</label>
-                                        <div class="input-group">
-                                            <div id="divsellminus" class="input-group-addon">-</div>
-                                            <input type="text" class="form-control" id="askamount" placeholder="Quantity(Lot)">
-                                            <div id="divsellplus" class="input-group-addon">+</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                                <br />
-                                <div class="dropdown col-sm-3">
-                                    <strong>@Html.LabelFor(model => model.QueueTradingViewModel.for_a_price_of)</strong>
-                                </div>
-                                <div class="dropdown col-sm-6">
-                                    <div class="form-group">
-                                        <label class="sr-only" for="askprice">Amount (in dollars)</label>
-                                        <div class="input-group">
-                                            <div class="input-group-addon">$</div>
-                                            <input type="text" class="form-control" id="askprice" placeholder=@Html.DisplayNameFor(model => model.QueueTradingViewModel.amount)>
-                                            <div class="input-group-addon">.00</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                                <br />
-                                <div class="dropdown col-sm-12">
-                                    <b>@Html.DisplayNameFor(model => model.QueueTradingViewModel.price_per_Lot): $ <label id="lblpriceperlotsell"> </label></b>
-                                </div>
-                                <div class="dropdown col-sm-12">
-                                    <b>@Html.DisplayNameFor(model => model.QueueTradingViewModel.total_points) (<label id="lbllotsell">1</label> lot = @Html.DisplayFor(x => x.QueueTradingViewModel.unit_master.points_equivalent) @Html.Raw(point)): <label id="lbllotselltotal"></label></b>
-                                </div>
-                                <div class="dropdown col-sm-2">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">@Html.LabelFor(model => model.QueueTradingViewModel.cancel)</button>
-                            <input type="button" class="btn btn-primary" value=@Html.DisplayNameFor(model => model.QueueTradingViewModel.sell) id="sellBtn" />
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </div>
 </body>
@@ -2619,21 +2685,21 @@
         })
 
 
-        $(".bidDiv").click(function () {
-            $("#bidamount").val("");
-            $("#bidprice").val("");
-            $("#lblpriceperlotbuy").text("");
-            $("#lbllotbuytotal").text("");
+        //$(".bidDiv").click(function () {
+        //    $("#bidamount").val("");
+        //    $("#bidprice").val("");
+        //    $("#lblpriceperlotbuy").text("");
+        //    $("#lbllotbuytotal").text("");
 
-            $("#addBidModal").modal("show");
-        })
-        $(".askDiv").click(function () {
-            $("#askamount").val("");
-            $("#askprice").val("");
-            $("#lblpriceperlotsell").text("");
-            $("#lbllotselltotal").text("");
-            $("#addAskModal").modal("show");
-        })
+        //    $("#addBidModal").modal("show");
+        //})
+        //$(".askDiv").click(function () {
+        //    $("#askamount").val("");
+        //    $("#askprice").val("");
+        //    $("#lblpriceperlotsell").text("");
+        //    $("#lbllotselltotal").text("");
+        //    $("#addAskModal").modal("show");
+        //})
 
         $("#buyBtn").click(function () {
             var stockCode = $("#Stock option:selected").val();
@@ -2698,6 +2764,7 @@
                                         queueHub.send("ask", stockCode, JSON.stringify(data), userId);
                                         queueHub.send("completed", stockCode, JSON.stringify(data), userId);
                                         // SignalR Code End
+                                        debugger;
                                         alert('@Html.DisplayNameFor(model=>model.YourBidHasBeenPlacedSuccessfully)');
                                         var stockId = $("#Stock option:selected").val();
                                         window.location.href = '@Url.Action("Trading", "Trading")?stockId=' + stockId;
@@ -3309,4 +3376,7 @@
             window.location.href = '@Url.Action("Trading", "Trading")?stockId=' + stockId;
         }
     </script>
+
 }
+
+

@@ -1487,7 +1487,7 @@
     <value>Your ask has been updated successfully</value>
   </data>
   <data name="YourBidHasBeenPlacedSuccessfully" xml:space="preserve">
-    <value />
+    <value>Your bid has been placed successfully</value>
   </data>
   <data name="YourBidHasBeenUpdatedSuccessfully" xml:space="preserve">
     <value>Your bid has been updated successfully</value>
