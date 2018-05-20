@@ -422,6 +422,20 @@ namespace Wollo.API.Controllers
             response = request.CreateResponse<QueueTradingViewModel>(HttpStatusCode.OK, model);
             return response;
         }
-
-    }
-}
+        [HttpGet]
+        public HttpResponseMessage config(HttpRequestMessage request)
+        {
+            
+            HttpResponseMessage response = null;            
+            Config obj = new Config();
+            obj.supports_group_request = false;
+            obj.supports_search = true;
+            obj.supports_marks = false;
+            obj.supportedResolutions = new string[] { "1", "15", "30", "60", "D", "2D", "3D", "W", "3W", "M", "6M" };
+            obj.exchanges = new Exchanges[] { new Exchanges { name = "NSC", value = "NSC", desc = "NSC" } };
+            obj.symbolsTypes = new SymbolsTypes[] { new SymbolsTypes { name = "Stock", value = "Stock" } };          
+            response = request.CreateResponse<Config>(HttpStatusCode.OK, obj);
+            return response;
+        }
+      }
+ }

@@ -274,16 +274,16 @@
     <value>In-Queueing</value>
   </data>
   <data name="IssuedPointsDetails" xml:space="preserve">
-    <value>RPE02 Points Details</value>
+    <value>ETH Points Details</value>
   </data>
   <data name="IssuePoints" xml:space="preserve">
     <value>Issue Points</value>
   </data>
   <data name="IssuePointsIssuedintoSystem" xml:space="preserve">
-    <value>RPE02 Points Issued into System</value>
+    <value>ETH  Points Issued into System</value>
   </data>
   <data name="IssuePointsIssuedToMembers" xml:space="preserve">
-    <value>RPE02 Points Issued To Members</value>
+    <value>ETH  Points Issued To Members</value>
   </data>
   <data name="Iwanttobuy" xml:space="preserve">
     <value>I want to buy</value>
@@ -376,13 +376,13 @@
     <value>Reward Points Exchange</value>
   </data>
   <data name="RewardPointsInCircualtion" xml:space="preserve">
-    <value>Wollo Points In-Circulation</value>
+    <value>BTC Points In-Circulation</value>
   </data>
   <data name="RewardPointsTransferredInByMembers" xml:space="preserve">
-    <value>Wollo Points Transferred In By Members</value>
+    <value>BTC Points Transferred In By Members</value>
   </data>
   <data name="RewardPointsTransferredOutByMembers" xml:space="preserve">
-    <value>Wollo Points Transferred Out By Members</value>
+    <value>BTC Points Transferred Out By Members</value>
   </data>
   <data name="Rules" xml:space="preserve">
     <value>Rules</value>
@@ -799,43 +799,43 @@
     <value>Dashboard/Portfolio</value>
   </data>
   <data name="RewardPointsIssuedToMember" xml:space="preserve">
-    <value>Wollo Points Issued To Members</value>
+    <value>BTC Points Issued To Members</value>
   </data>
   <data name="RewardPointsIssuedToSystem" xml:space="preserve">
-    <value>Wollo Points Issued To System</value>
+    <value>BTC Points Issued To System</value>
   </data>
   <data name="TestPointsTransferredInByMembers" xml:space="preserve">
-    <value>RPE02 Points Transferred In By Members</value>
+    <value>ETH  Points Transferred In By Members</value>
   </data>
   <data name="TestPointsTransferredOutByMembers" xml:space="preserve">
-    <value>RPE02 PointsTransferred Out By Members</value>
+    <value>ETH  PointsTransferred Out By Members</value>
   </data>
   <data name="Portfolio" xml:space="preserve">
     <value>Portfolio</value>
   </data>
   <data name="RPE02PointDetails" xml:space="preserve">
-    <value>RPE02 Point Details</value>
+    <value>ETH  Point Details</value>
   </data>
   <data name="RPE02PointInCirculation" xml:space="preserve">
-    <value>RPE02 Points In Circulation</value>
+    <value>ETH  Points In Circulation</value>
   </data>
   <data name="RPE02PointIssuedInsystem" xml:space="preserve">
-    <value>RPE02 Points Issued Into system</value>
+    <value>ETH  Points Issued Into system</value>
   </data>
   <data name="RPE02PointIssuedToMember" xml:space="preserve">
-    <value>RPE02 Points Issued To Member</value>
+    <value>ETH  Points Issued To Member</value>
   </data>
   <data name="WolloPointDetails" xml:space="preserve">
-    <value>Wollo Point Details</value>
+    <value>BTC Point Details</value>
   </data>
   <data name="WolloPointInCirculation" xml:space="preserve">
-    <value>Wollo Points In Circulation</value>
+    <value>BTC Points In Circulation</value>
   </data>
   <data name="WolloPointTransferredInByMember" xml:space="preserve">
-    <value>Wollo Points Transferred In By Member</value>
+    <value>BTC Points Transferred In By Member</value>
   </data>
   <data name="WolloPointsTransferredOutByMember" xml:space="preserve">
-    <value>Wollo Point Transferred Out By Member</value>
+    <value>BTC Point Transferred Out By Member</value>
   </data>
   <data name="PointsIssued" xml:space="preserve">
     <value>Points</value>
@@ -1093,7 +1093,7 @@
     <value>Role admin</value>
   </data>
   <data name="RPE02TestRewardPoints" xml:space="preserve">
-    <value>RPE02-Test Reward Points</value>
+    <value>ETH - Reward Points</value>
   </data>
   <data name="Select" xml:space="preserve">
     <value>Select</value>
@@ -1159,7 +1159,7 @@
     <value>web developer</value>
   </data>
   <data name="WolloRewardpoints" xml:space="preserve">
-    <value>Wollo-Reward points</value>
+    <value>BTC-Reward points</value>
   </data>
   <data name="AlternativeAssetExchangePlatform" xml:space="preserve">
     <value>Alternative Asset Exchange Platform</value>
@@ -1273,10 +1273,10 @@
     <value>Dashboard/Withdraw Out By Members History</value>
   </data>
   <data name="DashboardWolloRewardPointIssuedIntoSystemHistory" xml:space="preserve">
-    <value>Dashboard/Wollo Reward Point Issued Into System History</value>
+    <value>Dashboard/BTC  Reward Point Issued Into System History</value>
   </data>
   <data name="DashboardWolloRewardPointIssuedToMemberHistory" xml:space="preserve">
-    <value>Dashboard/Wollo Reward Point Issued To Member History</value>
+    <value>Dashboard/BTC  Reward Point Issued To Member History</value>
   </data>
   <data name="DeactivateUser" xml:space="preserve">
     <value>Deactivate User</value>
@@ -1336,7 +1336,7 @@
     <value />
   </data>
   <data name="qw" xml:space="preserve">
-    <value>Wollo Points In Circulation</value>
+    <value>BTC  Points In Circulation</value>
   </data>
   <data name="Receiver" xml:space="preserve">
     <value>Receiver</value>
@@ -1345,7 +1345,7 @@
     <value>Reward Point</value>
   </data>
   <data name="RewardPointHistory" xml:space="preserve">
-    <value>Reward Point History</value>
+    <value>BTC Reward Point History</value>
   </data>
   <data name="RoleDetails" xml:space="preserve">
     <value>Role Details</value>
@@ -1354,19 +1354,19 @@
     <value>Role Permission Details</value>
   </data>
   <data name="RPE02PointsInCirculation" xml:space="preserve">
-    <value>RPE02 Points In Circulation</value>
+    <value>ETH Points In Circulation</value>
   </data>
   <data name="RPE02PointsIssuedIntosystem" xml:space="preserve">
-    <value>RPE02 Points Issued Into system</value>
+    <value>ETH Points Issued Into system</value>
   </data>
   <data name="RPE02PointsIssuedToMember" xml:space="preserve">
-    <value>RPE02 Points Issued To Member</value>
+    <value>ETH  Points Issued To Member</value>
   </data>
   <data name="RPE02PointsTransferredInByMembers" xml:space="preserve">
-    <value>RPE02 Points Transferred In By Members</value>
+    <value>ETH  Points Transferred In By Members</value>
   </data>
   <data name="RPE02PointsTransferredOutByMembers" xml:space="preserve">
-    <value>RPE02 Points Transferred Out By Members</value>
+    <value>ETH  Points Transferred Out By Members</value>
   </data>
   <data name="String1" xml:space="preserve">
     <value>Wollo Points Transferred In By Member</value>
@@ -1375,7 +1375,7 @@
     <value>System Cash Details</value>
   </data>
   <data name="TestRewardPointsInCirculationHistory" xml:space="preserve">
-    <value>Test Reward Points In Circulation History</value>
+    <value>ETH Reward Points In Circulation History</value>
   </data>
   <data name="TopupByMembersHistory" xml:space="preserve">
     <value>Topup By Members History</value>
@@ -1393,28 +1393,28 @@
     <value>Withdraw Out By Members History</value>
   </data>
   <data name="WolloPointsInCirculation" xml:space="preserve">
-    <value>Wollo Points In Circulation</value>
+    <value>BTC Points In Circulation</value>
   </data>
   <data name="WolloPointsIssuedToMembers" xml:space="preserve">
-    <value>Wollo Points Issued To Members</value>
+    <value>BTC Points Issued To Members</value>
   </data>
   <data name="WolloPointsIssuedToSystem" xml:space="preserve">
-    <value>Wollo Points Issued To System</value>
+    <value>BTC Points Issued To System</value>
   </data>
   <data name="WolloPointsTransferredInByMember" xml:space="preserve">
-    <value>Wollo Points Transferred In By Member</value>
+    <value>BTC Points Transferred In By Member</value>
   </data>
   <data name="WolloRewardPointIssuedIntoSystemHistory" xml:space="preserve">
-    <value>Wollo Reward Point Issued Into System History</value>
+    <value>BTC Reward Point Issued Into System History</value>
   </data>
   <data name="WolloRewardPointIssuedToMemberHistory" xml:space="preserve">
-    <value>Wollo Reward Point Issued To Member History</value>
+    <value>BTC Reward Point Issued To Member History</value>
   </data>
   <data name="WolloRewardPointsInCirculationHistory" xml:space="preserve">
-    <value>Wollo Reward Points In Circulation History</value>
+    <value>BTC Reward Points In Circulation History</value>
   </data>
   <data name="DashboardTestRewardPointsInCirculatioHistory" xml:space="preserve">
-    <value>Dashboard/Test Reward Points In Circulation History</value>
+    <value>Dashboard/ETH Reward Points In Circulation History</value>
   </data>
   <data name="Minimum10topup" xml:space="preserve">
     <value>Minimum $10 topup</value>

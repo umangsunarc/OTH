@@ -124,7 +124,7 @@ else
                         @foreach (var item in Model.IssuePointsMaster)
                         {
                             <tr>
-                                <td>@(item.StockCode.stock_code + "-" + item.StockCode.stock_name)</td>
+                                <td>@(item.StockCode.stock_name)</td>
                                 <td>
                                     @Html.DisplayFor(x => item.created_date)
                                 </td>

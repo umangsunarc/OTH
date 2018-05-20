@@ -177,6 +177,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Config.cs" />
     <Compile Include="Controllers\AdminSettingController.cs" />
     <Compile Include="Controllers\LogsController.cs" />
     <Compile Include="Controllers\TestController.cs" />

@@ -16,7 +16,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/03/2016 23:00:53</publishTime>
     </File>
     <File Include="bin/en-GB/Wollo.Base.resources.dll">
-      <publishTime>03/21/2018 16:03:59</publishTime>
+      <publishTime>05/15/2018 18:53:41</publishTime>
     </File>
     <File Include="bin/en-GB/Wollo.Web.resources.dll">
       <publishTime>09/20/2016 18:06:26</publishTime>
@@ -43,22 +43,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/08/2016 10:30:59</publishTime>
     </File>
     <File Include="bin/LocalResource/Resource.en-GB.resx">
-      <publishTime>11/21/2016 18:33:28</publishTime>
+      <publishTime>04/26/2018 13:42:11</publishTime>
     </File>
     <File Include="bin/LocalResource/Resource.resx">
-      <publishTime>11/21/2016 18:33:24</publishTime>
+      <publishTime>04/26/2018 13:39:41</publishTime>
     </File>
     <File Include="bin/LocalResource/Resource.zh-CHS.Designer.cs">
       <publishTime>11/08/2016 10:31:32</publishTime>
     </File>
     <File Include="bin/LocalResource/Resource.zh-CHS.resx">
-      <publishTime>03/17/2018 10:29:54</publishTime>
+      <publishTime>04/25/2018 11:52:19</publishTime>
     </File>
     <File Include="bin/LocalResource/Resource.zh-CHT.Designer.cs">
       <publishTime>11/04/2016 11:36:42</publishTime>
     </File>
     <File Include="bin/LocalResource/Resource.zh-CHT.resx">
-      <publishTime>11/23/2016 14:38:20</publishTime>
+      <publishTime>04/25/2018 11:35:20</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
       <publishTime>07/03/2016 23:00:12</publishTime>
@@ -169,22 +169,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/03/2016 21:04:05</publishTime>
     </File>
     <File Include="bin/Wollo.Base.dll">
-      <publishTime>03/21/2018 16:03:58</publishTime>
+      <publishTime>05/15/2018 18:53:40</publishTime>
     </File>
     <File Include="bin/Wollo.Data.dll">
-      <publishTime>03/21/2018 16:04:01</publishTime>
+      <publishTime>05/15/2018 18:53:43</publishTime>
     </File>
     <File Include="bin/Wollo.Entities.dll">
-      <publishTime>03/21/2018 16:04:00</publishTime>
+      <publishTime>05/15/2018 18:53:41</publishTime>
     </File>
     <File Include="bin/Wollo.Web.dll">
-      <publishTime>03/21/2018 16:04:04</publishTime>
+      <publishTime>05/19/2018 11:25:27</publishTime>
     </File>
     <File Include="bin/zh-CHS/Wollo.Base.resources.dll">
-      <publishTime>03/21/2018 16:03:59</publishTime>
+      <publishTime>05/15/2018 18:53:41</publishTime>
     </File>
     <File Include="bin/zh-CHT/Wollo.Base.resources.dll">
-      <publishTime>03/21/2018 16:03:59</publishTime>
+      <publishTime>05/15/2018 18:53:41</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
       <publishTime>06/14/2016 10:52:42</publishTime>
@@ -1039,19 +1039,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/24/2016 00:25:16</publishTime>
     </File>
     <File Include="Views/IssuePoint/AdminIndex.cshtml">
-      <publishTime>03/17/2018 17:30:21</publishTime>
+      <publishTime>04/24/2018 17:51:50</publishTime>
     </File>
     <File Include="Views/IssuePoint/AdminPointIssue.cshtml">
       <publishTime>11/22/2016 12:07:50</publishTime>
     </File>
     <File Include="Views/IssuePoint/GetIssuePointsHistory.cshtml">
-      <publishTime>11/23/2016 12:57:35</publishTime>
+      <publishTime>04/24/2018 17:50:45</publishTime>
     </File>
     <File Include="Views/IssuePoint/GetIssuePointsHistorySelf.cshtml">
       <publishTime>11/23/2016 12:56:32</publishTime>
     </File>
     <File Include="Views/IssuePoint/Index.cshtml">
-      <publishTime>03/17/2018 17:39:02</publishTime>
+      <publishTime>04/24/2018 17:54:33</publishTime>
     </File>
     <File Include="Views/Logs/Index.cshtml">
       <publishTime>11/22/2016 12:28:06</publishTime>
@@ -1063,7 +1063,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/11/2016 12:39:27</publishTime>
     </File>
     <File Include="Views/Member/AdminIndex.cshtml">
-      <publishTime>11/14/2016 13:56:20</publishTime>
+      <publishTime>04/24/2018 17:47:31</publishTime>
     </File>
     <File Include="Views/Member/CashCirculationHistory.cshtml">
       <publishTime>11/22/2016 12:38:26</publishTime>
@@ -1090,7 +1090,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/22/2016 12:39:13</publishTime>
     </File>
     <File Include="Views/Member/Index.cshtml">
-      <publishTime>11/11/2016 10:57:17</publishTime>
+      <publishTime>04/25/2018 12:11:53</publishTime>
     </File>
     <File Include="Views/Member/Queue.cshtml">
       <publishTime>07/16/2016 16:58:02</publishTime>
@@ -1099,7 +1099,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/22/2016 12:39:29</publishTime>
     </File>
     <File Include="Views/Member/TestPointHistoryViewDetail.cshtml">
-      <publishTime>11/22/2016 12:39:38</publishTime>
+      <publishTime>04/25/2018 12:02:40</publishTime>
     </File>
     <File Include="Views/Member/TestRewardPointCirculationHistory.cshtml">
       <publishTime>11/11/2016 14:13:16</publishTime>
@@ -1192,7 +1192,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/11/2016 13:01:20</publishTime>
     </File>
     <File Include="Views/Rule/Index.cshtml">
-      <publishTime>11/22/2016 12:39:49</publishTime>
+      <publishTime>04/27/2018 12:10:14</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>06/14/2016 10:52:52</publishTime>
@@ -1210,13 +1210,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/04/2016 11:22:14</publishTime>
     </File>
     <File Include="Views/Trading/Index.cshtml">
-      <publishTime>08/22/2016 22:28:04</publishTime>
+      <publishTime>04/30/2018 14:07:38</publishTime>
     </File>
     <File Include="Views/Trading/PortfolioDetails.cshtml">
       <publishTime>11/11/2016 11:53:03</publishTime>
     </File>
     <File Include="Views/Trading/Trading.cshtml">
-      <publishTime>11/22/2016 11:42:08</publishTime>
+      <publishTime>05/15/2018 18:55:22</publishTime>
     </File>
     <File Include="Views/TransferRewardPoints/AdminIndex.cshtml">
       <publishTime>11/22/2016 12:10:50</publishTime>
@@ -1225,7 +1225,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/23/2016 15:42:10</publishTime>
     </File>
     <File Include="Views/TransferRewardPoints/Index.cshtml">
-      <publishTime>11/22/2016 12:10:43</publishTime>
+      <publishTime>04/25/2018 12:19:05</publishTime>
     </File>
     <File Include="Views/UnAuthorized/Index.cshtml">
       <publishTime>07/27/2016 15:54:05</publishTime>
@@ -1252,7 +1252,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/14/2016 10:52:40</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>03/21/2018 16:04:22</publishTime>
+      <publishTime>05/18/2018 18:36:28</publishTime>
     </File>
   </ItemGroup>
 </Project>

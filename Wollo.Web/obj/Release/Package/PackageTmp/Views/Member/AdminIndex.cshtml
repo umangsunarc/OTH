@@ -75,8 +75,8 @@
                             </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge">@Html.DisplayFor(model => model.DashboardViewModel.reward_points)</div>
-                                @{string stockfullname = Model.DashboardViewModel.rpe_stockcode + "-" + Model.DashboardViewModel.rpe_stockname;}
-                                <div><b>@stockfullname</b></div>
+                               
+                                <div><b>@Html.DisplayFor(model => Model.DashboardViewModel.rpe_stockname)</b></div>
                                 <div class="clearfix"></div>
                                 <a class="pull-right" href="/Member/RewardPointHistoryViewDetail" style="color:white">@Html.LabelFor(model => model.DashboardViewModel.view_details) &nbsp;<i class="fa fa-arrow-circle-right"></i></a>
                             </div>
@@ -99,9 +99,8 @@
                                 <i class="fa fa-spinner fa-5x"></i>
                             </div>
                             <div class="col-xs-9 text-right">
-                                <div class="huge">@Html.DisplayFor(model => model.DashboardViewModel.issue_points)</div>
-                                @{string sfullname = Model.DashboardViewModel.test_stockcode + "-" + Model.DashboardViewModel.test_stockname;}
-                                <div><b>@sfullname</b></div>
+                                <div class="huge">@Html.DisplayFor(model => model.DashboardViewModel.issue_points)</div>                             
+                                <div><b>@Html.DisplayFor(model => Model.DashboardViewModel.test_stockname)</b></div>
                                 <div class="clearfix"></div>
                                 <a class="pull-right" href="/Member/TestPointHistoryViewDetail" style="color:white">@Html.LabelFor(model => model.DashboardViewModel.view_details) &nbsp;<i class="fa fa-arrow-circle-right"></i></a>
                             </div>

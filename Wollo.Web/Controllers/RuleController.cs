@@ -1,4 +1,4 @@
-﻿using Wollo.Entities.ViewModels;
+using Wollo.Entities.ViewModels;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;

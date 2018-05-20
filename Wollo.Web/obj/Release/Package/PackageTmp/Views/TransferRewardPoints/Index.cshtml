@@ -74,7 +74,7 @@
                                 @{string select_store_label = @Html.DisplayNameFor(model => model.select_e_store).ToString();}
                                 <div class="col-md-3"><strong>@Html.LabelFor(model=>model.select_e_store)</strong></div>
                                 <div class="col-md-4">
-                                    @Html.DropDownListFor(model => model.stock_id, new SelectList(ViewBag.StockCode, "id", "full_name", ViewBag.StockId), select_store_label, new { @class = "form-control" })
+                                    @Html.DropDownListFor(model => model.stock_id, new SelectList(ViewBag.StockCode, "id", "stock_name", ViewBag.StockId), select_store_label, new { @class = "form-control" })
                                 </div>
                             </div>
                         </div>

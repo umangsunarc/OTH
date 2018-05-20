@@ -34,7 +34,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/03/2016 21:03:54</publishTime>
     </File>
     <File Include="bin/en-GB/Wollo.Base.resources.dll">
-      <publishTime>03/17/2018 17:54:24</publishTime>
+      <publishTime>05/15/2018 18:53:41</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>07/03/2016 21:03:49</publishTime>
@@ -67,22 +67,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/08/2016 10:30:59</publishTime>
     </File>
     <File Include="bin/LocalResource/Resource.en-GB.resx">
-      <publishTime>11/21/2016 18:33:28</publishTime>
+      <publishTime>04/26/2018 13:42:11</publishTime>
     </File>
     <File Include="bin/LocalResource/Resource.resx">
-      <publishTime>11/21/2016 18:33:24</publishTime>
+      <publishTime>04/26/2018 13:39:41</publishTime>
     </File>
     <File Include="bin/LocalResource/Resource.zh-CHS.Designer.cs">
       <publishTime>11/08/2016 10:31:32</publishTime>
     </File>
     <File Include="bin/LocalResource/Resource.zh-CHS.resx">
-      <publishTime>03/17/2018 10:29:54</publishTime>
+      <publishTime>04/25/2018 11:52:19</publishTime>
     </File>
     <File Include="bin/LocalResource/Resource.zh-CHT.Designer.cs">
       <publishTime>11/04/2016 11:36:42</publishTime>
     </File>
     <File Include="bin/LocalResource/Resource.zh-CHT.resx">
-      <publishTime>11/23/2016 14:38:20</publishTime>
+      <publishTime>04/25/2018 11:35:20</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.dll">
       <publishTime>07/08/2016 11:24:32</publishTime>
@@ -169,25 +169,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/03/2016 21:04:05</publishTime>
     </File>
     <File Include="bin/Wollo.API.dll">
-      <publishTime>03/17/2018 17:54:31</publishTime>
+      <publishTime>05/15/2018 18:53:44</publishTime>
     </File>
     <File Include="bin/Wollo.Base.dll">
-      <publishTime>03/17/2018 17:54:23</publishTime>
+      <publishTime>05/15/2018 18:53:40</publishTime>
     </File>
     <File Include="bin/Wollo.Common.dll">
-      <publishTime>03/17/2018 17:54:26</publishTime>
+      <publishTime>05/15/2018 18:53:43</publishTime>
     </File>
     <File Include="bin/Wollo.Data.dll">
-      <publishTime>03/17/2018 17:54:26</publishTime>
+      <publishTime>05/15/2018 18:53:43</publishTime>
     </File>
     <File Include="bin/Wollo.Entities.dll">
-      <publishTime>03/17/2018 17:54:24</publishTime>
+      <publishTime>05/15/2018 18:53:41</publishTime>
     </File>
     <File Include="bin/zh-CHS/Wollo.Base.resources.dll">
-      <publishTime>03/17/2018 17:54:23</publishTime>
+      <publishTime>05/15/2018 18:53:41</publishTime>
     </File>
     <File Include="bin/zh-CHT/Wollo.Base.resources.dll">
-      <publishTime>03/17/2018 17:54:24</publishTime>
+      <publishTime>05/15/2018 18:53:41</publishTime>
     </File>
     <File Include="Global.asax">
       <publishTime>07/06/2016 10:30:59</publishTime>
@@ -205,7 +205,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/03/2016 20:36:53</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>03/17/2018 17:55:17</publishTime>
+      <publishTime>05/15/2018 18:53:45</publishTime>
     </File>
   </ItemGroup>
 </Project>

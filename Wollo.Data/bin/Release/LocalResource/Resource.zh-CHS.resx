@@ -952,7 +952,7 @@
     <value>角色管理员</value>
   </data>
   <data name="RPE02TestRewardPoints" xml:space="preserve">
-    <value>RPE02-Test奖励积分</value>
+    <value>ETH t奖励积分</value>
   </data>
   <data name="Searche" xml:space="preserve">
     <value />
@@ -1021,7 +1021,7 @@
     <value>网站开发人员</value>
   </data>
   <data name="WolloRewardpoints" xml:space="preserve">
-    <value>Wollo-奖励积分</value>
+    <value>BTC-奖励积分</value>
   </data>
   <data name="Zip" xml:space="preserve">
     <value>压缩</value>
@@ -1210,19 +1210,19 @@
     <value>角色权限的详细信息</value>
   </data>
   <data name="RPE02PointsInCirculation" xml:space="preserve">
-    <value>RPE02点循环</value>
+    <value>ETH 点循环</value>
   </data>
   <data name="RPE02PointsIssuedIntosystem" xml:space="preserve">
-    <value>RPE02点发放到系统</value>
+    <value>ETH 点发放到系统</value>
   </data>
   <data name="RPE02PointsIssuedToMember" xml:space="preserve">
-    <value>RPE02点颁发给会员</value>
+    <value>ETH 点颁发给会员</value>
   </data>
   <data name="RPE02PointsTransferredInByMembers" xml:space="preserve">
     <value>转移在通过会员RPE02点</value>
   </data>
   <data name="RPE02PointsTransferredOutByMembers" xml:space="preserve">
-    <value>RPE02点转出到会员</value>
+    <value>ETH 点转出到会员</value>
   </data>
   <data name="SystemCashDetails" xml:space="preserve">
     <value>系统现金详情</value>
@@ -1246,7 +1246,7 @@
     <value>撤销通过会员历史</value>
   </data>
   <data name="WolloPointsInCirculation" xml:space="preserve">
-    <value>Wollo点循环</value>
+    <value>BTC 点循环</value>
   </data>
   <data name="WolloPointsIssuedToMembers" xml:space="preserve">
     <value>发给队员Wollo点</value>
@@ -1267,7 +1267,7 @@
     <value>颁发给会员历史Wollo奖励点</value>
   </data>
   <data name="WolloRewardPointsInCirculationHistory" xml:space="preserve">
-    <value>Wollo奖励积分流通史</value>
+    <value>BTC 奖励积分流通史</value>
   </data>
   <data name="WithdrawalFee" xml:space="preserve">
     <value>提款行政费</value>
