@@ -208,7 +208,6 @@ E:\Umang\updated_wollo\OTH\Wollo.Data\bin\Debug\MySql.Data.dll
 E:\Umang\updated_wollo\OTH\Wollo.Data\bin\Debug\MySql.Data.Entity.EF6.dll
 E:\Umang\updated_wollo\OTH\Wollo.Data\bin\Debug\Wollo.Base.dll
 E:\Umang\updated_wollo\OTH\Wollo.Data\bin\Debug\Wollo.Entities.dll
-E:\Umang\updated_wollo\OTH\Wollo.Data\bin\Debug\Newtonsoft.Json.dll
 E:\Umang\updated_wollo\OTH\Wollo.Data\bin\Debug\Wollo.Base.pdb
 E:\Umang\updated_wollo\OTH\Wollo.Data\bin\Debug\Wollo.Entities.pdb
 E:\Umang\updated_wollo\OTH\Wollo.Data\bin\Debug\EntityFramework.xml

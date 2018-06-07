@@ -24,3 +24,45 @@ G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\bin\Debug\System.Ne
 G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\obj\Debug\Wollo.Scheduler.csprojResolveAssemblyReference.cache
 G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\obj\Debug\Wollo.Scheduler.exe
 G:\Downloads\Wollo\Wollo by minakshi\Updated\Wollo.Scheduler\obj\Debug\Wollo.Scheduler.pdb
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\LocalResource\Resource.resx
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\LocalResource\Resource.zh-CHS.resx
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\LocalResource\Resource.zh-CHT.resx
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\LocalResource\Resource.en-GB.resx
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\LocalResource\Resource.Designer.cs
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\Wollo.Scheduler.exe.config
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\Wollo.Scheduler.exe.manifest
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\Wollo.Scheduler.application
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\Wollo.Scheduler.exe
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\Wollo.Scheduler.pdb
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\EntityFramework.dll
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\MySql.Data.Entity.EF6.dll
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\NLog.dll
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\NLog.Extended.dll
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\Quartz.dll
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\System.Configuration.dll
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\System.Configuration.Install.dll
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\System.Data.DataSetExtensions.dll
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\System.Data.dll
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\System.dll
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\System.ServiceProcess.dll
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\System.Xml.dll
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\System.Xml.Linq.dll
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\Wollo.Base.dll
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\Wollo.Data.dll
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\Wollo.Entities.dll
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\Wollo.Base.pdb
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\Wollo.Data.pdb
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\Wollo.Entities.pdb
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\EntityFramework.xml
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\NLog.xml
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\NLog.Extended.xml
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\Quartz.pdb
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\Quartz.xml
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\en-GB\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\zh-CHS\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\bin\Debug\zh-CHT\Wollo.Base.resources.dll
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\obj\Debug\Wollo.Scheduler.csprojResolveAssemblyReference.cache
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\obj\Debug\Wollo.Scheduler.exe.manifest
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\obj\Debug\Wollo.Scheduler.application
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\obj\Debug\Wollo.Scheduler.exe
+E:\Umang\updated_wollo\OTH\Wollo.Scheduler\obj\Debug\Wollo.Scheduler.pdb

@@ -682,9 +682,18 @@
         //  ajax code for Trading rule umang 18-7-16 start//
 
         $("#AddTradingRule").click(function () {
+            debugger;
             if ($("#TradingPointEquivalent").val().length > 0 && $("#TradingMinimumLot").val().length > 0 && $("#AdminStockTrading").val().length > 0 && $("#TradingMinimumRate").val().length > 0) {
                 var checkTradingMinimumRate = ValidateTextBox($("#TradingMinimumRate").val());
                 var checkTradingMinimumLot = ValidateTextBox($("#TradingMinimumLot").val());
+
+                var reg = new RegExp('^[0-9]+$');
+                let value = $("#TradingPointEquivalent").val();
+                var lotValue = Number(value);
+                var result = reg.test(lotValue);
+                if (result) {
+
+                
                 if (checkTradingMinimumRate) {
                     if (checkTradingMinimumLot) {
                         $.ajax({
@@ -715,7 +724,12 @@
                 else {
                     alert("Invalid Minimum Rate");
                     $("#AddTradingRule").removeAttr("disabled");
-                }               
+                }
+                }
+                else {
+                    alert("Invalid Lot Value");
+                    $("#AddTradingRule").removeAttr("disabled");
+                }
             }
             else {
                 $("#AddTradingRule").removeAttr("disabled");

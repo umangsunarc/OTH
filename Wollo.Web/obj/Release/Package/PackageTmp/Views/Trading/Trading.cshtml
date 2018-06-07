@@ -11,8 +11,11 @@
     #hidedisplayask {
         display: initial;
     }
-
-    .left-td {
+    #tv_chart_container > * {
+     width:100%!important;
+    }
+    
+     .left-td {
         width: 50%;
     }
 
@@ -245,10 +248,10 @@
                     </div>
                 </div>
                 <div id="menu1" class="tab-pane fade">
-                    
+                    <div id="tv_chart_container"></div>
                 </div>
                 <div id="menu2" class="tab-pane fade">
-                    @*<div style="width: 100%; height: 400px;">
+                    <div style="width: 100%; height: 400px;">
                         <style>
                             .tradingview-widget-copyright {
                                 font-size: 13px !important;
@@ -293,7 +296,7 @@
                                  src="https://s.tradingview.com/marketoverviewwidgetembed/?locale=en#%7B%22belowLineFillColorGrowing%22%3A%22rgba(60%2C%20188%2C%20152%2C%200.05)%22%2C%22gridLineColor%22%3A%22rgba(233%2C%20233%2C%20234%2C%201)%22%2C%22scaleFontColor%22%3A%22rgba(218%2C%20221%2C%20224%2C%201)%22%2C%22tabs%22%3A%5B%7B%22title_raw%22%3A%22Overview%22%2C%22symbols%22%3A%5B%7B%22s%22%3A%22BITFINEX%3ABTCUSD%22%7D%2C%7B%22s%22%3A%22BITFINEX%3AETHUSD%22%7D%5D%2C%22title%22%3A%22Overview%22%7D%2C%7B%22title_raw%22%3A%22Bitcoin%22%2C%22symbols%22%3A%5B%7B%22s%22%3A%22BITFINEX%3ABTCUSD%22%7D%2C%7B%22s%22%3A%22COINBASE%3ABTCEUR%22%7D%5D%2C%22title%22%3A%22Bitcoin%22%7D%2C%7B%22title_raw%22%3A%22Ethereum%22%2C%22symbols%22%3A%5B%7B%22s%22%3A%22COINBASE%3AETHUSD%22%7D%2C%7B%22s%22%3A%22KRAKEN%3AETHEUR%22%7D%2C%7B%22s%22%3A%22KRAKEN%3AETHGBP%22%7D%2C%7B%22s%22%3A%22KRAKEN%3AETHJPY%22%7D%2C%7B%22s%22%3A%22POLONIEX%3AETHBTC%22%7D%2C%7B%22s%22%3A%22WEX%3AETHLTC%22%7D%5D%2C%22title%22%3A%22Ethereum%22%7D%5D%2C%22plotLineColorFalling%22%3A%22rgba(255%2C%2074%2C%20104%2C%201)%22%2C%22plotLineColorGrowing%22%3A%22rgba(60%2C%20188%2C%20152%2C%201)%22%2C%22showChart%22%3Atrue%2C%22symbolActiveColor%22%3A%22rgba(242%2C%20250%2C%20254%2C%201)%22%2C%22belowLineFillColorFalling%22%3A%22rgba(255%2C%2074%2C%20104%2C%200.05)%22%2C%22height%22%3A400%2C%22width%22%3A900%2C%22utm_source%22%3A%22%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22marketoverview%22%7D" 
                                  frameborder="0">
                         </iframe>
-                    </div>*@
+                    </div>
 
                 </div>               
             </div>
@@ -471,25 +474,24 @@
                                     <div class="clearfix"></div>
                                     <br />
                                     <div class="dropdown col-sm-3">
-                                        <strong>@Html.LabelFor(model => model.QueueTradingViewModel.for_a_price_of)</strong>
+                                        @*<strong>@Html.LabelFor(model => model.QueueTradingViewModel.for_a_price_of)</strong>*@
+                                        <strong>Minimum Bid Rate</strong>
                                     </div>
                                     <div class="dropdown col-sm-6">
                                         <div class="form-group">
                                             <label class="sr-only" for="bidprice">Amount (in dollars)</label>
                                             <div class="input-group">
                                                 <div class="input-group-addon">$</div>
-                                                <input type="text" class="form-control" id="bidprice" placeholder=@Html.DisplayNameFor(model => model.QueueTradingViewModel.amount)>
+                                                <input type="text" class="form-control" id="bidprice" placeholder="Amount / Unit">
                                                 <div class="input-group-addon">.00</div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="dropdown col-sm-3" style="padding-left:0; text-align:left">
-                                        <strong>/unit</strong>
-                                    </div>
+                                   
 
                                     <div class="clearfix"></div>
                                     <br />
-                                    <div class="dropdown col-sm-12">
+                                    @*<div class="dropdown col-sm-12">
                                         <b>@Html.DisplayNameFor(model => model.QueueTradingViewModel.price_per_Lot): $ <label id="lblpriceperlotbuy"> </label></b>
                                     </div>
                                     <div class="dropdown col-sm-12">
@@ -497,7 +499,7 @@
                                         <b>@Html.DisplayNameFor(model => model.QueueTradingViewModel.total_points) (<label id="lbllotbuy">1</label> lot = @Html.DisplayFor(x => x.QueueTradingViewModel.unit_master.points_equivalent) @Html.Raw(point)): <label id="lbllotbuytotal"></label></b>
                                     </div>
                                     <div class="dropdown col-sm-2">
-                                    </div>
+                                    </div>*@
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -529,31 +531,29 @@
                                     <div class="clearfix"></div>
                                     <br />
                                     <div class="dropdown col-sm-3">
-                                        <strong>@Html.LabelFor(model => model.QueueTradingViewModel.for_a_price_of)</strong>
+                                        @*<strong>@Html.LabelFor(model => model.QueueTradingViewModel.for_a_price_of)</strong>*@
+                                        <strong>Minimum Bid Rate</strong>
                                     </div>
                                     <div class="dropdown col-sm-6">
                                         <div class="form-group">
                                             <label class="sr-only" for="askprice">Amount (in dollars)</label>
                                             <div class="input-group">
                                                 <div class="input-group-addon">$</div>
-                                                <input type="text" class="form-control" id="askprice" placeholder=@Html.DisplayNameFor(model => model.QueueTradingViewModel.amount)>
+                                                <input type="text" class="form-control" id="askprice" placeholder="Amount / Unit">
                                                 <div class="input-group-addon">.00</div> 
                                             </div>                                          
                                         </div>
-                                    </div>
-                                    <div class="dropdown col-sm-3" style="padding-left:0; text-align:left">
-                                        <strong>/unit</strong>
-                                    </div>
+                                    </div>                                 
                                     <div class="clearfix"></div>
                                     <br />
-                                    <div class="dropdown col-sm-12">
-                                        <b>@Html.DisplayNameFor(model => model.QueueTradingViewModel.price_per_Lot): $ <label id="lblpriceperlotsell"> </label></b>
-                                    </div>
-                                    <div class="dropdown col-sm-12">
-                                        <b>@Html.DisplayNameFor(model => model.QueueTradingViewModel.total_points) (<label id="lbllotsell">1</label> lot = @Html.DisplayFor(x => x.QueueTradingViewModel.unit_master.points_equivalent) @Html.Raw(point)): <label id="lbllotselltotal"></label></b>
-                                    </div>
-                                    <div class="dropdown col-sm-2">
-                                    </div>
+                                    @*<div class="dropdown col-sm-12">
+        <b>@Html.DisplayNameFor(model => model.QueueTradingViewModel.price_per_Lot): $ <label id="lblpriceperlotsell"> </label></b>
+    </div>
+    <div class="dropdown col-sm-12">
+        <b>@Html.DisplayNameFor(model => model.QueueTradingViewModel.total_points) (<label id="lbllotsell">1</label> lot = @Html.DisplayFor(x => x.QueueTradingViewModel.unit_master.points_equivalent) @Html.Raw(point)): <label id="lbllotselltotal"></label></b>
+    </div>
+    <div class="dropdown col-sm-2">
+    </div>*@
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -929,6 +929,10 @@
         <script src="~/Scripts/jquery.flot.stack.js"></script>*@
     <script src="~/Scripts/jquery.flot.symbol.js"></script>
     <script src="~/Scripts/jquery.flot.crosshair.js"></script>
+
+<script type="text/javascript" src="~/charting_library/charting_library.min.js"></script>
+<script type="text/javascript" src="~/datafeeds/udf/dist/polyfills.js"></script>
+<script type="text/javascript" src="~/datafeeds/udf/dist/bundle.js"></script>
 
     <script>
         var language = '@ViewBag.CurrentLanguage';
@@ -3385,6 +3389,52 @@
             var stockId = parseInt($("#Stock option:selected").val());
             window.location.href = '@Url.Action("Trading", "Trading")?stockId=' + stockId;
         }
+
+
+
+
+        var data = '';
+
+
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            // alert(name);
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                    results = regex.exec(location.search);
+            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+
+        TradingView.onready(function () {
+            if (data == '') {
+                 data =  new Datafeeds.UDFCompatibleDatafeed("http://13.250.90.41:81/api/Queue");
+               // data = new Datafeeds.UDFCompatibleDatafeed("http://localhost:1487/api/Queue");
+            }
+            var widget = window.tvWidget = new TradingView.widget({
+                // debug: true, // uncomment this line to see Library errors and warnings in the console
+                //fullscreen: true,
+                symbol: 'BITUSD',
+                interval: 'D',
+                container_id: "tv_chart_container",
+
+                //	BEWARE: no trailing slash is expected in feed URL
+                //datafeed: new Datafeeds.UDFCompatibleDatafeed("https://demo_feed.tradingview.com"),
+                datafeed: data,
+
+                library_path: "/charting_library/",
+                locale: getParameterByName('lang') || "en",
+                //	Regression Trend-related functionality is not implemented yet, so it's hidden for a while
+                drawings_access: { type: 'black', tools: [{ name: "Regression Trend" }] },
+                disabled_features: ["use_localstorage_for_settings"],
+                enabled_features: ["study_templates"],
+                charts_storage_url: 'http://saveload.tradingview.com',
+                charts_storage_api_version: "1.1",
+                client_id: 'tradingview.com',
+                user_id: 'public_user_id',
+                callback: function () {
+                    alert("hello");
+                },
+            });
+        });
     </script>
 
 }

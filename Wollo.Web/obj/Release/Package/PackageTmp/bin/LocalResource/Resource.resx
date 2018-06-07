@@ -403,7 +403,7 @@
     <value>Select Stock Code</value>
   </data>
   <data name="sell" xml:space="preserve">
-    <value>sell</value>
+    <value>Sell</value>
   </data>
   <data name="SellerFee" xml:space="preserve">
     <value>Seller Fee</value>

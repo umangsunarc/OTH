@@ -16,7 +16,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/03/2016 23:00:53</publishTime>
     </File>
     <File Include="bin/en-GB/Wollo.Base.resources.dll">
-      <publishTime>05/15/2018 18:53:41</publishTime>
+      <publishTime>06/07/2018 17:16:54</publishTime>
     </File>
     <File Include="bin/en-GB/Wollo.Web.resources.dll">
       <publishTime>09/20/2016 18:06:26</publishTime>
@@ -43,10 +43,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/08/2016 10:30:59</publishTime>
     </File>
     <File Include="bin/LocalResource/Resource.en-GB.resx">
-      <publishTime>04/26/2018 13:42:11</publishTime>
+      <publishTime>06/07/2018 15:01:51</publishTime>
     </File>
     <File Include="bin/LocalResource/Resource.resx">
-      <publishTime>04/26/2018 13:39:41</publishTime>
+      <publishTime>06/07/2018 15:02:17</publishTime>
     </File>
     <File Include="bin/LocalResource/Resource.zh-CHS.Designer.cs">
       <publishTime>11/08/2016 10:31:32</publishTime>
@@ -169,22 +169,298 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/03/2016 21:04:05</publishTime>
     </File>
     <File Include="bin/Wollo.Base.dll">
-      <publishTime>05/15/2018 18:53:40</publishTime>
+      <publishTime>06/07/2018 17:16:53</publishTime>
     </File>
     <File Include="bin/Wollo.Data.dll">
-      <publishTime>05/15/2018 18:53:43</publishTime>
+      <publishTime>06/07/2018 17:16:55</publishTime>
     </File>
     <File Include="bin/Wollo.Entities.dll">
-      <publishTime>05/15/2018 18:53:41</publishTime>
+      <publishTime>06/07/2018 17:16:55</publishTime>
     </File>
     <File Include="bin/Wollo.Web.dll">
-      <publishTime>05/19/2018 11:25:27</publishTime>
+      <publishTime>06/07/2018 17:17:28</publishTime>
     </File>
     <File Include="bin/zh-CHS/Wollo.Base.resources.dll">
-      <publishTime>05/15/2018 18:53:41</publishTime>
+      <publishTime>06/07/2018 17:16:54</publishTime>
     </File>
     <File Include="bin/zh-CHT/Wollo.Base.resources.dll">
-      <publishTime>05/15/2018 18:53:41</publishTime>
+      <publishTime>06/07/2018 17:16:54</publishTime>
+    </File>
+    <File Include="charting_library/charting_library.min.d.ts">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/charting_library.min.js">
+      <publishTime>05/25/2018 11:28:32</publishTime>
+    </File>
+    <File Include="charting_library/datafeed-api.d.ts">
+      <publishTime>05/25/2018 11:28:32</publishTime>
+    </File>
+    <File Include="charting_library/static/bundles/13.416855bb3e77f54b85bc.js">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/bundles/crosshair.6c091f7d5427d0c5e6d9dc3a90eb2b20.cur">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/bundles/dot.ed68e83c16f77203e73dbc4c3a7c7fa1.cur">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/bundles/ds-property-pages.1d6127a623f51513ea4f.js">
+      <publishTime>05/25/2018 11:28:32</publishTime>
+    </File>
+    <File Include="charting_library/static/bundles/editobjectdialog.25fa62e6b4f8125e697e.js">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/bundles/eraser.0579d40b812fa2c3ffe72e5803a6e14c.cur">
+      <publishTime>05/25/2018 11:28:32</publishTime>
+    </File>
+    <File Include="charting_library/static/bundles/go-to-date-dialog-impl.62cf944ccbbc265f35d6.js">
+      <publishTime>05/25/2018 11:28:32</publishTime>
+    </File>
+    <File Include="charting_library/static/bundles/grab.bc156522a6b55a60be9fae15c14b66c5.cur">
+      <publishTime>05/25/2018 11:28:32</publishTime>
+    </File>
+    <File Include="charting_library/static/bundles/grabbing.1c0862a8a8c0fb02885557bc97fdafe7.cur">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/bundles/ie-fallback-logos.1e0142e3b30300ec0153.js">
+      <publishTime>05/25/2018 11:28:32</publishTime>
+    </File>
+    <File Include="charting_library/static/bundles/lazy-jquery-ui.8a95a81e0b032b2d76df.js">
+      <publishTime>05/25/2018 11:28:32</publishTime>
+    </File>
+    <File Include="charting_library/static/bundles/lazy-velocity.97588d47c84409f2bc4b.js">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/bundles/library.3a1dac88649135c71a7d.js">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/bundles/library.a8de6f8cf4dda6895071c6ec45f900d9.css">
+      <publishTime>05/25/2018 11:28:32</publishTime>
+    </File>
+    <File Include="charting_library/static/bundles/lt-pane-views.58e294a05422f60f49f9.js">
+      <publishTime>05/25/2018 11:28:32</publishTime>
+    </File>
+    <File Include="charting_library/static/bundles/objecttreedialog.e036091976a3fed3c8c9.js">
+      <publishTime>05/25/2018 11:28:32</publishTime>
+    </File>
+    <File Include="charting_library/static/bundles/propertypagesfactory.54b21a18753b2d8c83c2.js">
+      <publishTime>05/25/2018 11:28:32</publishTime>
+    </File>
+    <File Include="charting_library/static/bundles/symbol-info-dialog-impl.a3697f845094a08295ab.js">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/bundles/take-chart-image-dialog-impl.53880c50752269d86d3a.js">
+      <publishTime>05/25/2018 11:28:32</publishTime>
+    </File>
+    <File Include="charting_library/static/bundles/vendors.a94ef44ed5c201cefcf6ad7460788c1a.css">
+      <publishTime>05/25/2018 11:28:32</publishTime>
+    </File>
+    <File Include="charting_library/static/bundles/vendors.e76774664d65ba2c90ff.js">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/bundles/zoom.e21f24dd632c7069139bc47ae89c54b5.cur">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/fonts/fontawesome-webfont.svg">
+      <publishTime>05/25/2018 11:28:32</publishTime>
+    </File>
+    <File Include="charting_library/static/fonts/fontawesome-webfont.ttf">
+      <publishTime>05/25/2018 11:28:32</publishTime>
+    </File>
+    <File Include="charting_library/static/fonts/fontawesome-webfont.woff">
+      <publishTime>05/25/2018 11:28:32</publishTime>
+    </File>
+    <File Include="charting_library/static/images/balloon.png">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/bar-loader.gif">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/button-bg.png">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/charting_library/logo-widget-copyright-faded.png">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/charting_library/logo-widget-copyright.png">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/controlll.png">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/delayed.png">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/dialogs/checkbox.png">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/dialogs/close-flat.png">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/dialogs/large-slider-handle.png">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/dialogs/linewidth-slider.png">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/dialogs/opacity-slider.png">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/icons.png">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/prediction-clock-black.png">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/prediction-clock-white.png">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/prediction-failure-white.png">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/prediction-success-white.png">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/select-bg.png">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/sidetoolbar/instruments.png">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/sidetoolbar/toolgroup.png">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/svg/chart/bucket2.svg">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/svg/chart/font.svg">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/svg/chart/large-slider-handle.svg">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/svg/chart/pencil2.svg">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/svg/question-mark-rounded.svg">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/tvcolorpicker-bg-gradient.png">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/tvcolorpicker-bg.png">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/tvcolorpicker-check.png">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/tvcolorpicker-sprite.png">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/images/warning-icon.png">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/js/external/spin.min.js">
+      <publishTime>05/25/2018 11:28:32</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/ar.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/cs.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/da_DK.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/de.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/el.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/en.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/es.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/et_EE.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/fa.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/fr.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/he_IL.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/hu_HU.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/id_ID.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/it.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/ja.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/ko.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/ms_MY.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/nl_NL.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/no.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/pl.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/pt.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/ro.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/ru.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/sk_SK.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/sv.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/th.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/tr.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/vi.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/widgets-copyrights.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/widgets-copyrights.json.example">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/zh.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/localization/translations/zh_TW.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="charting_library/static/tv-chart.e816a7a6edc9de3ed709.html">
+      <publishTime>05/25/2018 11:28:33</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
       <publishTime>06/14/2016 10:52:42</publishTime>
@@ -194,6 +470,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/Site.css">
       <publishTime>06/14/2016 10:52:52</publishTime>
+    </File>
+    <File Include="CONTRIBUTING.md">
+      <publishTime>05/25/2018 11:28:34</publishTime>
     </File>
     <File Include="css/.DS_Store">
       <publishTime>12/26/2015 23:25:50</publishTime>
@@ -260,6 +539,96 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="css/wrp-member.css">
       <publishTime>07/01/2016 12:14:43</publishTime>
+    </File>
+    <File Include="datafeed.json">
+      <publishTime>05/25/2018 11:28:34</publishTime>
+    </File>
+    <File Include="datafeeds/README.md">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="datafeeds/udf/.npmrc">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="datafeeds/udf/dist/bundle.js">
+      <publishTime>05/25/2018 11:28:34</publishTime>
+    </File>
+    <File Include="datafeeds/udf/dist/polyfills.js">
+      <publishTime>05/25/2018 11:28:34</publishTime>
+    </File>
+    <File Include="datafeeds/udf/lib/data-pulse-provider.js">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="datafeeds/udf/lib/helpers.js">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="datafeeds/udf/lib/history-provider.js">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="datafeeds/udf/lib/iquotes-provider.js">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="datafeeds/udf/lib/quotes-provider.js">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="datafeeds/udf/lib/quotes-pulse-provider.js">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="datafeeds/udf/lib/requester.js">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="datafeeds/udf/lib/symbols-storage.js">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="datafeeds/udf/lib/udf-compatible-datafeed-base.js">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="datafeeds/udf/lib/udf-compatible-datafeed.js">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="datafeeds/udf/package.json">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="datafeeds/udf/README.md">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="datafeeds/udf/rollup.config.js">
+      <publishTime>05/25/2018 11:28:34</publishTime>
+    </File>
+    <File Include="datafeeds/udf/src/data-pulse-provider.ts">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="datafeeds/udf/src/helpers.ts">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="datafeeds/udf/src/history-provider.ts">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="datafeeds/udf/src/iquotes-provider.ts">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="datafeeds/udf/src/polyfills.es6">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="datafeeds/udf/src/quotes-provider.ts">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="datafeeds/udf/src/quotes-pulse-provider.ts">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="datafeeds/udf/src/requester.ts">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="datafeeds/udf/src/symbols-storage.ts">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="datafeeds/udf/src/udf-compatible-datafeed-base.ts">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="datafeeds/udf/src/udf-compatible-datafeed.ts">
+      <publishTime>05/25/2018 11:28:33</publishTime>
+    </File>
+    <File Include="datafeeds/udf/tsconfig.json">
+      <publishTime>05/25/2018 11:28:34</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>06/14/2016 10:52:40</publishTime>
@@ -458,6 +827,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="images/wollo.png">
       <publishTime>06/17/2016 18:17:54</publishTime>
+    </File>
+    <File Include="ISSUE_TEMPLATE.md">
+      <publishTime>05/25/2018 11:28:32</publishTime>
     </File>
     <File Include="js/.DS_Store">
       <publishTime>10/30/2015 07:37:12</publishTime>
@@ -913,7 +1285,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/16/2016 16:26:26</publishTime>
     </File>
     <File Include="Scripts/_references.js">
-      <publishTime>10/25/2016 12:40:58</publishTime>
+      <publishTime>05/25/2018 11:28:46</publishTime>
     </File>
     <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
       <publishTime>07/04/2016 11:13:41</publishTime>
@@ -1192,7 +1564,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/11/2016 13:01:20</publishTime>
     </File>
     <File Include="Views/Rule/Index.cshtml">
-      <publishTime>04/27/2018 12:10:14</publishTime>
+      <publishTime>06/07/2018 17:11:58</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>06/14/2016 10:52:52</publishTime>
@@ -1216,7 +1588,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/11/2016 11:53:03</publishTime>
     </File>
     <File Include="Views/Trading/Trading.cshtml">
-      <publishTime>05/15/2018 18:55:22</publishTime>
+      <publishTime>06/07/2018 17:15:10</publishTime>
     </File>
     <File Include="Views/TransferRewardPoints/AdminIndex.cshtml">
       <publishTime>11/22/2016 12:10:50</publishTime>

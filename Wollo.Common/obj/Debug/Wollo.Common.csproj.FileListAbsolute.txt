@@ -83,7 +83,6 @@ E:\Umang\updated_wollo\OTH\Wollo.Common\bin\Debug\Wollo.Common.pdb
 E:\Umang\updated_wollo\OTH\Wollo.Common\bin\Debug\Wollo.Base.dll
 E:\Umang\updated_wollo\OTH\Wollo.Common\bin\Debug\Wollo.Entities.dll
 E:\Umang\updated_wollo\OTH\Wollo.Common\bin\Debug\EntityFramework.dll
-E:\Umang\updated_wollo\OTH\Wollo.Common\bin\Debug\Newtonsoft.Json.dll
 E:\Umang\updated_wollo\OTH\Wollo.Common\bin\Debug\Wollo.Base.pdb
 E:\Umang\updated_wollo\OTH\Wollo.Common\bin\Debug\Wollo.Entities.pdb
 E:\Umang\updated_wollo\OTH\Wollo.Common\bin\Debug\en-GB\Wollo.Base.resources.dll
